@@ -128,7 +128,7 @@
     {
       "displayName": "CRM Transaction",
       "name": "Transactions",
-      "url": "Transactions"
+      "url": "tag/Transactions"
     },
     {
       "displayName": "CRM Opportunity",

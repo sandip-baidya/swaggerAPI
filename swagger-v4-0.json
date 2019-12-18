@@ -14,7 +14,7 @@
   "tags": [
     {
       "name": "Introduction",
-      "description": "<p>Managing a Franchise System requires that all users have access to timely and reliable information that is appropriate for their role. Yet, crucial information can be siloed in disparate applications limiting the ability to get a complete view across the entire franchise, reducing the efficiency of users performing their daily tasks. Getting a collection of enterprise applications to effectively work together can tie-up the IT resources needed to develop and maintain an integrated solution or perhaps is outside the core capabilities of the organization. To help meet this need while addressing the challenge, FranConnect offers several options for integrating FranConnect Sky with other business software.</p><p><h4 class=\"western\">Off-the Shelf Integrations</h4>A number of popular third-party business applications are available for integration with your FranConnect Sky system. Using FranConnect-provided, pre-built integrations provide additional functionality such as document e-signature, lead assessment, and brand reputation management.</p><p><h4 class=\"western\">FranConnect Delivered Integrations</h4>Customers can also choose to have FranConnect deliver and maintain an integrated solution. Working with the customer to understand their work processes, the applications that need to be integrated, and the desired outcome, FranConnect can propose a solution that best meets the customer’s business requirements.</p><h4 class=\"western\">Customer Initiated Integrations</h4><p>FranConnect makes available documented REST APIs for several FranConnect Sky application modules. Providing the greatest degree of control, customers can use these APIs to develop and support custom integrations using their own in-house or third-party development resources.</p><h4 class=\"western\">FranConnect APIs</h4><p>FranConnect APIs enable users to import and/or export data between FranConnect Sky and third-party applications. APIs make HTTP calls using the standard HTTP POST method in \"x-www-form-urlencoded\" format. You must provide the input to the API as an XML string whereas the output can either be in XML or JSON format, depending on how you would like to receive the response in your application. Various operations can be performed with the API by appending (and, thereby, replacing) variables in the request URL. FranConnect APIs support the following operations: login, module, subModule, query, create, update, retrieve, delete, log, and logout.</p><p>To perform the create and/or update operations, you must pass the attributes for the specific record in an xmlString. To perform the retrieve and/or delete operations, you must specify the parameters and their values in the filterXML. Other parameters that are used to specify the request (such as module name and sub module name) must be appended in the request as URL parameters.</p><h4 class=\"western\">Getting Started</h4><p>Contact the Integrations team <a href=\"mailto:integrations@franconnect.com\">(integrations@franconnect.com)</a> to get the client ID, client secret, and redirect URI that are required to generate the access token.</p><h4 class=\"western\">Supported Modules</h4><p>The FranConnect API provides access to all entities in the FranConnect system within the Sales (fs), Info Manager  (fim), CRM (cm) and the Admin (admin) modules.</p><h4 class=\"western\">Rate Limits and Accounts</h4><p>The FranConnect API does not impose any rate limit restrictions at present, but the users are expected to retrieve data after certain interval and retrieve only the deltas (wherever applicable) so as to not overload the system. Retrieving a large dataset might result in slowness and impede the overall system performance.</p><h4 class=\"western\">Concurrent Requests</h4><p>The FranConnect API does not support concurrent requests and the requests must be made one at a time.</p><h4 class=\"western\">Testing</h4><p>You can perform testing in your UAT environment and then move the code over to your production environment. In case you don’t have a UAT environment, you can request for one from your customer advocate or by sending an email to our HelpDesk team <a href=\"mailto:helpdesk@franconnect.com\">(helpdesk@franconnect.com</a>). A temporary UAT environment can be provided to you, but there might be some cost associated with it.</p><p><span style=\"color: rgb(184, 49, 47);\"><strong>Important!</strong> This document uses <strong>Postman</strong> as the GUI client for testing the FranConnect API. However, you can emulate the API using your preferred programming language.</span></p>"
+      "description": "<p>Managing a Franchise System requires that all users have access to timely and reliable information that is appropriate for their role. Yet, crucial information can be siloed in disparate applications limiting the ability to get a complete view across the entire franchise, reducing the efficiency of users performing their daily tasks. Getting a collection of enterprise applications to effectively work together can tie-up the IT resources needed to develop and maintain an integrated solution or perhaps is outside the core capabilities of the organization. To help meet this need while addressing the challenge, FranConnect offers several options for integrating FranConnect Sky with other business software.</p><p><h4 class=\"western\">Off-the Shelf Integrations</h4>A number of popular third-party business applications are available for integration with your FranConnect Sky system. Using FranConnect-provided, pre-built integrations provide additional functionality such as document e-signature, lead assessment, and brand reputation management.</p><p><h4 class=\"western\">FranConnect Delivered Integrations</h4>Customers can also choose to have FranConnect deliver and maintain an integrated solution. Working with the customer to understand their work processes, the applications that need to be integrated, and the desired outcome, FranConnect can propose a solution that best meets the customer’s business requirements.</p><h4 class=\"western\">Customer Initiated Integrations</h4><p>FranConnect makes available documented REST APIs for several FranConnect Sky application modules. Providing the greatest degree of control, customers can use these APIs to develop and support custom integrations using their own in-house or third-party development resources.</p><h4 class=\"western\">FranConnect APIs</h4><p>FranConnect APIs enable users to import and/or export data between FranConnect Sky and third-party applications. APIs make HTTP calls using the standard HTTP POST method in \"x-www-form-urlencoded\" format. You must provide the input to the API as an XML string whereas the output can either be in XML or JSON format, depending on how you would like to receive the response in your application. Various operations can be performed with the API by appending (and, thereby, replacing) variables in the request URL. FranConnect APIs support the following operations: login, module, subModule, query, create, update, retrieve, delete, log, and logout.</p><p>To perform the create and/or update operations, you must pass the attributes for the specific record in an xmlString. To perform the retrieve and/or delete operations, you must specify the parameters and their values in the filterXML. Other parameters that are used to specify the request (such as module name and sub module name) must be appended in the request as URL parameters.</p><h4 class=\"western\">Getting Started</h4><p>Contact the Integrations team <a href=\"mailto:integrations@franconnect.com\">(integrations@franconnect.com)</a> to get the client ID, client secret, and redirect URI that are required to generate the access token.</p><h4 class=\"western\">Supported Modules</h4><p>The FranConnect API provides access to all entities in the FranConnect system within the Sales (fs), Info Manager  (fim), CRM (cm), Admin (admin) and the Finance (manage-finance) modules.</p><h4 class=\"western\">Rate Limits and Accounts</h4><p>The FranConnect API does not impose any rate limit restrictions at present, but the users are expected to retrieve data after certain interval and retrieve only the deltas (wherever applicable) so as to not overload the system. Retrieving a large dataset might result in slowness and impede the overall system performance.</p><h4 class=\"western\">Concurrent Requests</h4><p>The FranConnect API does not support concurrent requests and the requests must be made one at a time.</p><h4 class=\"western\">Testing</h4><p>You can perform testing in your UAT environment and then move the code over to your production environment. In case you don’t have a UAT environment, you can request for one from your customer advocate or by sending an email to our HelpDesk team <a href=\"mailto:helpdesk@franconnect.com\">(helpdesk@franconnect.com</a>). A temporary UAT environment can be provided to you, but there might be some cost associated with it.</p><p><span style=\"color: rgb(184, 49, 47);\"><strong>Important!</strong> This document uses <strong>Postman</strong> as the GUI client for testing the FranConnect API. However, you can emulate the API using your preferred programming language.</span></p>"
     },
     {
       "name": "Authentication",
@@ -155,10 +155,10 @@
         ],
         "summary": "Retrieve for all Locations",
         "description": "<table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"28%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://api.franconnect.net/common/franchisee</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://api.franconnectuat.net/common/franchisee</td></tr></table><h4>To retrieve the Franchisee Number, you must provide the following items in the header of the GET request: </h4><ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.<br>Note that you are required to select the option <strong>Inherit auth from parent</strong> for the <strong>Type</strong> field under the <strong>Authorization</strong> tab before generating the access token.</p></li><li><p>Specify &ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>Specify &ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p class=\"western\">Performing the above mentioned steps will provide the franchisee number and the franchisee names of all the locations.</p><img src=\"images/Retrieve_Franchise_Number_All.png\">",
-                "produces": [
+        "produces": [
           "application/json"
         ],
-                "responses": {
+        "responses": {
           "200": {
             "$ref": "#/components/responses/RetrieveFranchiseeNumberResp"
           },
@@ -184,7 +184,7 @@
         ],
         "summary": "Retrieve for a specific Location",
         "description": "<table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"28%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://api.franconnect.net/common/franchisee/filter</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://api.franconnectuat.net/common/franchisee/filter</td></tr></table><h4>To retrieve the Franchisee Number for a specific location, you must provide the following items in the header of the POST request: </h4><ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.<br>Note that you are required to select the option <strong>Inherit auth from parent</strong> for the <strong>Type</strong> field under the <strong>Authorization</strong> tab before generating the access token.</p></li><li><p>Specify &ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>Specify &ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p class=\"western\">You can specify any of the following as the filter criteria in the body of the request: areas, countries, divisions, entities, fields, and franchisee numbers. Performing the above mentioned steps will provide the franchisee number and the franchisee name for the required location.</p><img src=\"images/Retrieve_Franchise_Number_Specific.png\">",
-                "consumes": [
+        "consumes": [
           "application/json"
         ],
         "produces": [
@@ -208,7 +208,7 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                 "franchisee_name": {
+                  "franchisee_name": {
                     "type": "string"
                   }
                 },
@@ -774,7 +774,7 @@
         }
       }
     },
-      "/retrieve?module=fim&subModule=franchisee": {
+    "/retrieve?module=fim&subModule=franchisee": {
       "post": {
         "tags": [
           "Franchisee"
@@ -1741,7 +1741,7 @@
           "Sales Reports"
         ],
         "summary": "Retrieve Sales Report Periods",
-        "description": "<p class=\"western\">The report period in Finance > Sales refers to that time duration for which sales is to be reported by the franchisees. The report period for each location is defined in the financial agreement that is associated with that location.</p><p class=\"western\">You must make a GET request to the request URL, along with other required details, to retrieve the report periods. This would provide a list of all the report periods for which sales is to be reported by the franchisees.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://api.franconnect.net/manage-finance/sales/<br>periods/franchiseeNo/{id}</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td> https://api.franconnectuat.net/manage-finance/sales/<br>periods/franchiseeNo/{id}</td></tr></table>To retrieve the report periods for which sales data has not been entered for a particular franchisee location, you must make a GET request on the request URL. The request URL comprises of the context path followed by the API endpoint mentioned above. The following items must be used as path parameters: <ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.<br>Note that you are required to select the option <strong>Inherit auth from parent</strong> for the <strong>Type</strong> field under the <strong>Authorization</strong> tab before generating the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li><li><p>Franchisee number as the internal unique reference number of the location. Click <u><a href=\"#tag/Retrieve-Franchisee-Number\">here</a></u> for details on retrieving the franchisee number. </p></li></ol><p class=\"western\">Performing the above mentioned steps would return all the report periods for which sales has not been reported by that location.</p><img src=\"images/Retrieve_Sales_Reports_Period.png\">",
+        "description": "<p class=\"western\">The report period in Finance > Sales refers to that time duration for which sales is to be reported by the franchisees. The report period for each location is defined in the financial agreement that is associated with that location.</p><p class=\"western\">You must make a GET request to the request URL, along with other required details, to retrieve the report periods. This would provide a list of all the report periods for which sales is to be reported by the franchisees.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://api.franconnect.net/manage-finance/sales/periods/franchiseeNo/{id}</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td> https://api.franconnectuat.net/manage-finance/sales/periods/franchiseeNo/{id}</td></tr></table>To retrieve the report periods for which sales data has not been entered for a particular franchisee location, you must make a GET request on the request URL. The request URL comprises of the context path followed by the API endpoint mentioned above. The following items must be used as path parameters: <ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.<br>Note that you are required to select the option <strong>Inherit auth from parent</strong> for the <strong>Type</strong> field under the <strong>Authorization</strong> tab before generating the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li><li><p>Franchisee number as the internal unique reference number of the location. Click <u><a href=\"#tag/Retrieve-Franchisee-Number\">here</a></u> for details on retrieving the franchisee number. </p></li></ol><p class=\"western\">Performing the above mentioned steps would return all the report periods for which sales has not been reported by that location.</p><img src=\"images/Retrieve_Sales_Reports_Period.png\">",
         "operationId": "Retrieve_Sales_Reports_Periods",
         "produces": [
           "application/json"
@@ -1784,7 +1784,7 @@
           "Sales Reports"
         ],
         "summary": "Retrieve Finance Categories",
-        "description": "<p class=\"western\">Finance categories are an important part of the sales report. These represent the categories that are used to report Sales data. To retrieve all the finance categories, you must use the report period as input parameter for the GET request. Click <u><a href=\"#tag/Sales-Reports\">here</a></u> for details on retrieving these report periods.</p><p>Then, use this report period, and perform a GET request to retrieve a list of financial categories that are available to report the sales for the given report period. </p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://api.franconnect.net/manage-finance/sales/categories/finance-categories/<br>franchiseeNo/{franchisee_number}/reportPeriod/{reportPeriod}</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://api.franconnectuat.net/manage-finance/sales/categories/finance-categories/<br>franchiseeNo/{franchisee_number}/reportPeriod/{reportPeriod}</td></tr></table><img src=\"images/Retrieve_Finance_Categories.png\">",
+        "description": "<p class=\"western\">Finance categories are an important part of the sales report. These represent the categories that are used to report Sales data. To retrieve all the finance categories, you must use the report period as input parameter for the GET request. Click <u><a href=\"#tag/Sales-Reports\">here</a></u> for details on retrieving these report periods.</p><p>Then, use this report period, and perform a GET request to retrieve a list of financial categories that are available to report the sales for the given report period. </p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://api.franconnect.net/manage-finance/sales/categories/finance-categories/franchiseeNo/{franchisee_number}/reportPeriod/{reportPeriod}</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://api.franconnectuat.net/manage-finance/sales/categories/finance-categories/franchiseeNo/{franchisee_number}/reportPeriod/{reportPeriod}</td></tr></table><img src=\"images/Retrieve_Finance_Categories.png\">",
         "operationId": "Retrieve_Finance_Categories",
         "produces": [
           "application/json"
@@ -2135,10 +2135,10 @@
                   "totalSales": {
                     "type": "string"
                   },
-                   "reportStatus": {
+                  "reportStatus": {
                     "type": "string"
                   },
-                   "reportType": {
+                  "reportType": {
                     "type": "string"
                   }
                 },
@@ -2219,7 +2219,7 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                    "name": {
+                  "name": {
                     "type": "string"
                   }
                 },
@@ -2557,7 +2557,7 @@
         "produces": [
           "application/json"
         ],
-                "responses": {
+        "responses": {
           "200": {
             "$ref": "#/components/responses/RetrieveProfitLossCategoriesResp"
           },
@@ -2721,7 +2721,7 @@
                   "franchiseeNo": {
                     "type": "string"
                   },
-                   "plrepld": {
+                  "plrepld": {
                     "type": "string"
                   },
                   "statementPeriod": {
@@ -2811,7 +2811,7 @@
                   "plrepld": {
                     "type": "string"
                   },
-                    "submissionDate": {
+                  "submissionDate": {
                     "type": "date"
                   }
                 },
@@ -2893,7 +2893,7 @@
       "Module": {
         "type": "object",
         "properties": {
-                    "responseType": {
+          "responseType": {
             "type": "string"
           }
         },
@@ -2904,7 +2904,7 @@
       "AdminSubModule": {
         "type": "object",
         "properties": {
-                   "module": {
+          "module": {
             "type": "string"
           },
           "responseType": {
@@ -2918,7 +2918,7 @@
       "CreateSchema": {
         "type": "object",
         "properties": {
-                    "module": {
+          "module": {
             "type": "string"
           },
           "subModule": {
@@ -2938,7 +2938,6 @@
       "FSCreateLead": {
         "type": "object",
         "properties": {
-          
           "module": {
             "type": "string"
           },
@@ -5288,4 +5287,3 @@
     }
   }
 }
-

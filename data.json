@@ -33,7 +33,7 @@
     {
       "displayName": "Password Credentials",
       "name": "Authentication",
-      "url": "tag/Authentication"
+      "url": "tag/Password-Credentials"
     },
     {
       "displayName": "Client Credentials",

@@ -28,7 +28,7 @@
     {
       "displayName": "Implicit",
       "name": "Authentication",
-      "url": "tag/Authentication"
+      "url": "tag/Implicit"
     },
     {
       "displayName": "Password Credentials",
@@ -38,7 +38,7 @@
     {
       "displayName": "Client Credentials",
       "name": "Authentication",
-      "url": "tag/Authentication"
+      "url": "tag/Client-Credentials"
     },
     {
       "displayName": "Franchise Number",

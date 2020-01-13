@@ -26,6 +26,21 @@
       "url": "tag/Authentication"
     },
     {
+      "displayName": "Implicit",
+      "name": "Authentication",
+      "url": "tag/Authentication"
+    },
+    {
+      "displayName": "Password Credentials",
+      "name": "Authentication",
+      "url": "tag/Authentication"
+    },
+    {
+      "displayName": "Client Credentials",
+      "name": "Authentication",
+      "url": "tag/Authentication"
+    },
+    {
       "displayName": "Franchise Number",
       "name": "Franchisee Number",
       "url": "tag/Franchisee-Number"
@@ -96,6 +111,11 @@
       "url": "tag/Sales-Lead"
     },
     {
+      "displayName": "Retrieve Field Values",
+      "name": "Lead",
+      "url": "tag/Sales-Lead"
+    },
+    {
       "displayName": "Info Mgr",
       "name": "Info Manager",
       "url": "tag/Info-Manager"
@@ -140,7 +160,7 @@
       "name": "Tasks",
       "url": "tag/Tasks"
     },
-        {
+    {
       "displayName": "Email",
       "name": "Emails",
       "url": "tag/Emails"

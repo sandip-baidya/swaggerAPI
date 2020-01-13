@@ -14,7 +14,7 @@
   "tags": [
     {
       "name": "Introduction",
-      "description": "<p>Managing a Franchise System requires that all users have access to timely and reliable information that is appropriate for their role. Yet, crucial information can be siloed in disparate applications limiting the ability to get a complete view across the entire franchise, reducing the efficiency of users performing their daily tasks. Getting a collection of enterprise applications to effectively work together can tie-up the IT resources needed to develop and maintain an integrated solution or perhaps is outside the core capabilities of the organization. To help meet this need while addressing the challenge, FranConnect offers several options for integrating FranConnect Sky with other business software.</p><p><h4 class=\"western\">Off-the Shelf Integrations</h4>A number of popular third-party business applications are available for integration with your FranConnect Sky system. Using FranConnect-provided, pre-built integrations provide additional functionality such as document e-signature, lead assessment, and brand reputation management.</p><p><h4 class=\"western\">FranConnect Delivered Integrations</h4>Customers can also choose to have FranConnect deliver and maintain an integrated solution. Working with the customer to understand their work processes, the applications that need to be integrated, and the desired outcome, FranConnect can propose a solution that best meets the customer’s business requirements.</p><h4 class=\"western\">Customer Initiated Integrations</h4><p>FranConnect makes available documented REST APIs for several FranConnect Sky application modules. Providing the greatest degree of control, customers can use these APIs to develop and support custom integrations using their own in-house or third-party development resources.</p><h4 class=\"western\">FranConnect APIs</h4><p>FranConnect APIs enable users to import and/or export data between FranConnect Sky and third-party applications. APIs make HTTP calls using the standard HTTP POST method in \"x-www-form-urlencoded\" format. You must provide the input to the API as an XML string whereas the output can either be in XML or JSON format, depending on how you would like to receive the response in your application. Various operations can be performed with the API by appending (and, thereby, replacing) variables in the request URL. FranConnect APIs support the following operations: login, module, subModule, query, create, update, retrieve, delete, log, and logout.</p><p>To perform the create and/or update operations, you must pass the attributes for the specific record in an xmlString. To perform the retrieve and/or delete operations, you must specify the parameters and their values in the filterXML. Other parameters that are used to specify the request (such as module name and sub module name) must be appended in the request as URL parameters.</p><h4 class=\"western\">Getting Started</h4><p>Contact the Integrations team <a href=\"mailto:integrations@franconnect.com\">(integrations@franconnect.com)</a> to get the Client ID, Client Secret, and redirect URI that are required to generate the access token.</p><h4 class=\"western\">Supported Modules</h4><p>The FranConnect API provides access to all entities in the FranConnect system within the Finance (manage-finance), Sales (fs), Info Manager  (fim), CRM (cm), and the Admin (admin) modules.</p><h4 class=\"western\">Rate Limits and Accounts</h4><p>The FranConnect API does not impose any rate limit restrictions at present, but the users are expected to retrieve data after certain interval and retrieve only the deltas (wherever applicable) so as to not overload the system. Retrieving a large dataset might result in slowness and impede the overall system performance.</p><h4 class=\"western\">Concurrent Requests</h4><p>The FranConnect API does not support concurrent requests and the requests must be made one at a time.</p><h4 class=\"western\">Testing</h4><p>You can perform testing in your UAT environment and then move the code over to your production environment. In case you don’t have a UAT environment, you can request for one from your customer advocate or by sending an email to our HelpDesk team <a href=\"mailto:helpdesk@franconnect.com\">(helpdesk@franconnect.com</a>). A temporary UAT environment can be provided to you, but there might be some cost associated with it.</p><p><span style=\"color: rgb(184, 49, 47);\"><strong>Important!</strong> This document uses <strong>Postman</strong> as the GUI client for testing the FranConnect API. However, you can emulate the API using your preferred programming language.</span></p>"
+      "description": "<p>Managing a Franchise System requires that all users have access to timely and reliable information that is appropriate for their role. Yet, crucial information can be siloed in disparate applications limiting the ability to get a complete view across the entire franchise, reducing the efficiency of users performing their daily tasks. Getting a collection of enterprise applications to effectively work together can tie-up the IT resources needed to develop and maintain an integrated solution or perhaps is outside the core capabilities of the organization. To help meet this need while addressing the challenge, FranConnect offers several options for integrating FranConnect Sky with other business software.</p><p><h4 class=\"western\">Off-the Shelf Integrations</h4>A number of popular third-party business applications are available for integration with your FranConnect Sky system. Using FranConnect-provided, pre-built integrations provide additional functionality such as document e-signature, lead assessment, and brand reputation management.</p><p><h4 class=\"western\">FranConnect Delivered Integrations</h4>Customers can also choose to have FranConnect deliver and maintain an integrated solution. Working with the customer to understand their work processes, the applications that need to be integrated, and the desired outcome, FranConnect can propose a solution that best meets the customer’s business requirements.</p><h4 class=\"western\">Customer Initiated Integrations</h4><p>FranConnect makes available documented REST APIs for several FranConnect Sky application modules. Providing the greatest degree of control, customers can use these APIs to develop and support custom integrations using their own in-house or third-party development resources.</p><h4 class=\"western\">FranConnect APIs</h4><p>FranConnect APIs enable users to import and/or export data between FranConnect Sky and third-party applications. APIs make HTTP calls using the standard HTTP POST method in \"x-www-form-urlencoded\" format. You must provide the input to the API as an XML string whereas the output can either be in XML or JSON format, depending on how you would like to receive the response in your application. Various operations can be performed with the API by appending (and, thereby, replacing) variables in the request URL. FranConnect APIs support the following operations: login, module, subModule, query, create, update, retrieve, delete, log, and logout.</p><p>To perform the create and/or update operations, you must pass the attributes for the specific record in an xmlString. To perform the retrieve and/or delete operations, you must specify the parameters and their values in the filterXML. Other parameters that are used to specify the request (such as module name and sub module name) must be appended in the request as URL parameters.</p><h4 class=\"western\">Getting Started</h4><p>Contact the helpdesk team (<a href=\"mailto:helpdesk@franconnect.com\">helpdesk@franconnect.com</a>) to get the Client ID, Client Secret, and redirect URI that are required to generate the access token.</p><h4 class=\"western\">Supported Modules</h4><p>The FranConnect API provides access to all entities in the FranConnect system within the Finance (manage-finance), Sales (fs), Info Manager  (fim), CRM (cm), and the Admin (admin) modules.</p><h4 class=\"western\">Rate Limits and Accounts</h4><p>The FranConnect API does not impose any rate limit restrictions at present, but the users are expected to retrieve data after certain interval and retrieve only the deltas (wherever applicable) so as to not overload the system. Retrieving a large dataset might result in slowness and impede the overall system performance.</p><h4 class=\"western\">Concurrent Requests</h4><p>The FranConnect API does not support concurrent requests and the requests must be made one at a time.</p><h4 class=\"western\">Testing</h4><p>You can perform testing in your UAT environment and then move the code over to your production environment. In case you don’t have a UAT environment, you can request for one from your customer advocate or by sending an email to our HelpDesk team (<a href=\"mailto:helpdesk@franconnect.com\">helpdesk@franconnect.com</a>). A temporary UAT environment can be provided to you, but there might be some cost associated with it.</p><p><span style=\"color: rgb(184, 49, 47);\"><strong>Important!</strong> This document uses <strong>Postman</strong> as the GUI client for testing the FranConnect API. However, you can emulate the API using your preferred programming language.</span></p>"
     },
     {
       "name": "Authentication",
@@ -22,19 +22,19 @@
     },
     {
       "name": "Authorization Code",
-      "description": "<p><img src=\"images/Get-New-Access-Token.png\"><br>For using the grant type as <strong>Authorization Code</strong>, enter the details in the <strong>Get New Access Token&nbsp;</strong>dialog as explained in the following steps:<ol> <li style=\"margin-left: 1px;\">Enter a name for your Access Token (Optional).</li><li style=\"margin-left: 1px;\">Select the <strong>Grant Type</strong> as <strong>Authorization Code</strong>.</li><li style=\"margin-left: 1px;\">Enter the callback URL to which the generated access token would be redirected. The callback URL is also known as redirect URI and this URL should match the one that you use during the application registration process.<br>Example: Callback URL can be https://oauth.powerbi.com/views/oauthredirect.html<br>To register your callback/redirect URL, contact <a href=\"mailto:integrations@franconnect.com\">integrations@franconnect.com</a></li><strong>Note:</strong> The above mentioned example uses the callback URL using the Postman client. If you are using any other GUI client, use your own redirect URI.<li style=\"margin-left: 1px;\">Enter the endpoint for the authorization server as the <strong>Auth URL</strong>. This is used to get the authorization code.<br>Note that the redirect URI is same as the callback URL.<br>Example: Auth URL can be https://auth.franconnectuat.net/userauth/oauth/authorize?response_type=code&amp;client_id=FRANC0NN3CT_API&amp;redirect_uri=https://oauth.powerbi.com/views/oauthredirect.html</li><p><strong>Note:</strong> The response_type is <strong>code</strong> for the Grant Type <strong>Authorization</strong>.</p><li style=\"margin-left: 1px;\">Enter the endpoint for the authentication server in the <strong>Access Token URL&nbsp;</strong>field. This is used to exchange the authorization code for an access token.<br>Example: Access Token URL can be https://auth.franconnectuat.net/userauth/oauth/token?X-tenantID=developers.franconnectdemo.net&amp;grant_type=authorization_code&amp;client_id=FRANC0NN3CT_API&amp;<br>redirect_uri=https://oauth.powerbi.com/views/oauthredirect.html</li><li style=\"margin-left: 1px;\">Enter the Client ID provided to you by FranConnect in the <strong>Client ID</strong> field. <br>Example: Client ID can be FRANC0NN3CT_API</li><li style=\"margin-left: 1px;\">Enter the Client Secret provided to you by FranConnect in the <strong>Client Secret</strong> field.<br>Example: Client Secret can be DDEEMVOE2L0O1P9E<br>Contact <a href=\"mailto:integrations@franconnect.com\">integrations@franconnect.com</a> to get your Client ID and Client Secret.</li><li style=\"margin-left: 1px;\">Select the option <strong>Send as Basic Auth header</strong> for the <strong>Client Authentication&nbsp;</strong>field.</li></ol></li></ol></p><p>Enter all these details, and click <strong>Request Token</strong> to request for a token.</p><p>The FranConnect API validates all the details and displays a dialog to enter the following additional information: <strong>Company Code</strong>, <strong>Username</strong> and <strong>Password</strong>.</p> </p><img src=\"images/Auth-Comp-Code.png\"><ol><li>If the login URL for your FranConnect system is https://developers.franconnectdemo.net/fc, then the company code will be developers.franconnectdemo.net</li><li>Your username and password will be your login credentials for your FranConnect system</li></ol><p>If all the details are valid, then, the access token is generated that can be used for the API calls.</p><p><strong>Note:</strong> The access token is valid for 12 hours, after which a new access token is to be generated using the refresh token. This refresh token is valid for 30 days. Refresh tokens that were generated more than 30 days back cannot be used to generate a new access token.</p>"
+      "description": "<p><img src=\"images/Get-New-Access-Token.png\"><br>For using the grant type as <strong>Authorization Code</strong>, enter the details in the <strong>Get New Access Token&nbsp;</strong>dialog as explained in the following steps:<ol> <li style=\"margin-left: 1px;\">Enter a name for your Access Token (Optional).</li><li style=\"margin-left: 1px;\">Select the <strong>Grant Type</strong> as <strong>Authorization Code</strong>.</li><li style=\"margin-left: 1px;\">Enter the callback URL to which the generated access token would be redirected. The callback URL is also known as redirect URI and this URL should match the one that you use during the application registration process.<br>Example: Callback URL can be https://oauth.powerbi.com/views/oauthredirect.html<br>To register your callback/redirect URL, contact <a href=\"mailto:helpdesk@franconnect.com\">helpdesk@franconnect.com</a></li><strong>Note:</strong> The above mentioned example uses the callback URL using the Postman client. If you are using any other GUI client, use your own redirect URI.<li style=\"margin-left: 1px;\">Enter the endpoint for the authorization server as the <strong>Auth URL</strong>. This is used to get the authorization code.<br>Note that the redirect URI is same as the callback URL.<br>Example: Auth URL can be https://auth.franconnectuat.net/userauth/oauth/authorize?response_type=code&amp;client_id=FRANC0NN3CT_API&amp;redirect_uri=https://oauth.powerbi.com/views/oauthredirect.html</li><p><strong>Note:</strong> The response_type is <strong>code</strong> for the Grant Type <strong>Authorization</strong>.</p><li style=\"margin-left: 1px;\">Enter the endpoint for the authentication server in the <strong>Access Token URL&nbsp;</strong>field. This is used to exchange the authorization code for an access token.<br>Example: Access Token URL can be https://auth.franconnectuat.net/userauth/oauth/token?X-tenantID=developers.franconnectdemo.net&amp;grant_type=authorization_code&amp;client_id=FRANC0NN3CT_API&amp;<br>redirect_uri=https://oauth.powerbi.com/views/oauthredirect.html</li><li style=\"margin-left: 1px;\">Enter the Client ID provided to you by FranConnect in the <strong>Client ID</strong> field. <br>Example: Client ID can be FRANC0NN3CT_API</li><li style=\"margin-left: 1px;\">Enter the Client Secret provided to you by FranConnect in the <strong>Client Secret</strong> field.<br>Example: Client Secret can be DDEEMVOE2L0O1P9E<br>Contact <a href=\"mailto:helpdesk@franconnect.com\">helpdesk@franconnect.com</a> to get your Client ID and Client Secret.</li><li style=\"margin-left: 1px;\">Select the option <strong>Send as Basic Auth header</strong> for the <strong>Client Authentication&nbsp;</strong>field.</li></ol></li></ol></p><p>Enter all these details, and click <strong>Request Token</strong> to request for a token.</p><p>The FranConnect API validates all the details and displays a dialog to enter the following additional information: <strong>Company Code</strong>, <strong>Username</strong> and <strong>Password</strong>.</p> </p><img src=\"images/Auth-Comp-Code.png\"><ol><li>If the login URL for your FranConnect system is https://developers.franconnectdemo.net/fc, then the company code will be developers.franconnectdemo.net</li><li>Your username and password will be your login credentials for your FranConnect system</li></ol><p>If all the details are valid, then, the access token is generated that can be used for the API calls.</p><p><strong>Note:</strong> The access token is valid for 12 hours, after which a new access token is to be generated using the refresh token. This refresh token is valid for 30 days. Refresh tokens that were generated more than 30 days back cannot be used to generate a new access token.</p>"
     },
     {
       "name": "Implicit",
-      "description": "<p><img src=\"images/Access_Token_Implicit.png\"><br>For using the grant type as <strong>Implicit</strong>, enter the details in the <strong>Get New Access Token&nbsp;</strong>dialog as explained in the following steps:<ol> <li style=\"margin-left: 1px;\">Enter a name for your Access Token (Optional).</li><li style=\"margin-left: 1px;\">Select the <strong>Grant Type</strong> as <strong>Implicit</strong>.</li><li style=\"margin-left: 1px;\">Enter the callback URL that you want to be redirected to, once your application is authorized. The callback URL is also known as redirect URI. This URL should match the one that you use during the application registration process.<br>Example: Callback URL can be https://oauth.powerbi.com/views/oauthredirect.html<br>To register your callback/redirect URL, contact <a href=\"mailto:integrations@franconnect.com\">integrations@franconnect.com</a></li><li style=\"margin-left: 1px;\">Enter the endpoint for the authorization server as the <strong>Auth URL</strong>. This is used to get the authorization code.<br>Note that the redirect URI is same as the callback URL.<br>Example: Auth URL can be https://auth.franconnectuat.net/userauth/oauth/authorize?response_type=token&amp;client_id=FRANC0NN3CT_API&amp;redirect_uri=https://oauth.powerbi.com/views/oauthredirect.html</li><p><strong>Note:</strong> The response_type is <strong>token</strong> for the grant type <strong>Authorization</strong>.</p><li style=\"margin-left: 1px;\">Enter the Client ID provided to you by FranConnect in the <strong>Client ID</strong> field. <br>Example: Client ID can be FRANC0NN3CT_API</li><li style=\"margin-left: 1px;\">Select the option <strong>Send as Basic Auth header</strong> for the <strong>Client Authentication&nbsp;</strong>field.</li></ol></li></ol></p><p>The FranConnect API validates all the details and displays a dialog to enter the following additional information: <strong>Company Code</strong>, <strong>Username</strong> and <strong>Password</strong>.</p> </p><ol><li>If the login URL for your FranConnect system is https://developers.franconnectdemo.net/fc, then the company code will be developers.franconnectdemo.net</li><li>Your username and password will be your login credentials for your FranConnect system</li></ol><p>If all the details are valid, then, the access token is generated that can be used for the API calls.</p><p><strong>Note:</strong> For this grant type, no refresh token is generated. The access token is valid for 12 hours, after which a new access token is to be generated. </p>"
+      "description": "<p><img src=\"images/Access_Token_Implicit.png\"><br>For using the grant type as <strong>Implicit</strong>, enter the details in the <strong>Get New Access Token&nbsp;</strong>dialog as explained in the following steps:<ol> <li style=\"margin-left: 1px;\">Enter a name for your Access Token (Optional).</li><li style=\"margin-left: 1px;\">Select the <strong>Grant Type</strong> as <strong>Implicit</strong>.</li><li style=\"margin-left: 1px;\">Enter the callback URL that you want to be redirected to, once your application is authorized. The callback URL is also known as redirect URI. This URL should match the one that you use during the application registration process.<br>Example: Callback URL can be https://oauth.powerbi.com/views/oauthredirect.html<br>To register your callback/redirect URL, contact <a href=\"mailto:helpdesk@franconnect.com\">helpdesk@franconnect.com</a></li><li style=\"margin-left: 1px;\">Enter the endpoint for the authorization server as the <strong>Auth URL</strong>. This is used to get the authorization code.<br>Note that the redirect URI is same as the callback URL.<br>Example: Auth URL can be https://auth.franconnectuat.net/userauth/oauth/authorize?response_type=token&amp;client_id=FRANC0NN3CT_API&amp;redirect_uri=https://oauth.powerbi.com/views/oauthredirect.html</li><p><strong>Note:</strong> The response_type is <strong>token</strong> for the grant type <strong>Authorization</strong>.</p><li style=\"margin-left: 1px;\">Enter the Client ID provided to you by FranConnect in the <strong>Client ID</strong> field. <br>Example: Client ID can be FRANC0NN3CT_API</li><li style=\"margin-left: 1px;\">Select the option <strong>Send as Basic Auth header</strong> for the <strong>Client Authentication&nbsp;</strong>field.</li></ol></li></ol></p><p>The FranConnect API validates all the details and displays a dialog to enter the following additional information: <strong>Company Code</strong>, <strong>Username</strong> and <strong>Password</strong>.</p> </p><ol><li>If the login URL for your FranConnect system is https://developers.franconnectdemo.net/fc, then the company code will be developers.franconnectdemo.net</li><li>Your username and password will be your login credentials for your FranConnect system</li></ol><p>If all the details are valid, then, the access token is generated that can be used for the API calls.</p><p><strong>Note:</strong> For this grant type, no refresh token is generated. The access token is valid for 12 hours, after which a new access token is to be generated. </p>"
     },
     {
       "name": "Password Credentials",
-      "description": "<p><img src=\"images/Access_Token_Pwd_Cred.png\"><br>For using the grant type as <strong>Password Credentials</strong>, enter the details in the <strong>Get New Access Token&nbsp;</strong>dialog as explained in the following steps:<ol> <li style=\"margin-left: 1px;\">Enter a name for your Access Token (Optional).</li><li style=\"margin-left: 1px;\">Select the <strong>Grant Type</strong> as <strong>Password Credentials</strong>.</li><li style=\"margin-left: 1px;\">Enter the endpoint for the authentication server in the <strong>Access Token URL&nbsp;</strong>field. This is used to exchange the authorization code for an access token.<br>Example: Access Token URL can be https://auth.franconnectuat.net/userauth/oauth/token?X-tenantID=developers.franconnectdemo.net</li><li style=\"margin-left: 1px;\">Enter the login credentials for your FranConnect system in the <strong>Username</strong> and <strong>Password</strong> fields.</li><li style=\"margin-left: 1px;\">Enter the Client ID provided to you by FranConnect in the <strong>Client ID</strong> field. <br>Example: Client ID can be FRANC0NN3CT_API</li><li style=\"margin-left: 1px;\">Enter the Client Secret provided to you by FranConnect in the <strong>Client Secret</strong> field.<br>Example: Client Secret can be DDEEMVOE2L0O1P9E<br>Contact <a href=\"mailto:integrations@franconnect.com\">integrations@franconnect.com</a> to get your Client ID and Client Secret</li><li style=\"margin-left: 1px;\">Select the option <strong>Send as Basic Auth header</strong> for the <strong>Client Authentication&nbsp;</strong>field.</li></ol></li></ol></p><p>Enter all these details, and click <strong>Request Token</strong> to request for a token.</p><p>The FranConnect API validates all the details and generates an access token that can be used for the API calls.</p><p><strong>Note:</strong> The access token is valid for 12 hours, after which a new access token is to be generated using the refresh token. This refresh token is valid for 30 days. Refresh tokens that were generated more than 30 days back cannot be used to generate a new access token.</p>"
+      "description": "<p><img src=\"images/Access_Token_Pwd_Cred.png\"><br>For using the grant type as <strong>Password Credentials</strong>, enter the details in the <strong>Get New Access Token&nbsp;</strong>dialog as explained in the following steps:<ol> <li style=\"margin-left: 1px;\">Enter a name for your Access Token (Optional).</li><li style=\"margin-left: 1px;\">Select the <strong>Grant Type</strong> as <strong>Password Credentials</strong>.</li><li style=\"margin-left: 1px;\">Enter the endpoint for the authentication server in the <strong>Access Token URL&nbsp;</strong>field. This is used to exchange the authorization code for an access token.<br>Example: Access Token URL can be https://auth.franconnectuat.net/userauth/oauth/token?X-tenantID=developers.franconnectdemo.net</li><li style=\"margin-left: 1px;\">Enter the login credentials for your FranConnect system in the <strong>Username</strong> and <strong>Password</strong> fields.</li><li style=\"margin-left: 1px;\">Enter the Client ID provided to you by FranConnect in the <strong>Client ID</strong> field. <br>Example: Client ID can be FRANC0NN3CT_API</li><li style=\"margin-left: 1px;\">Enter the Client Secret provided to you by FranConnect in the <strong>Client Secret</strong> field.<br>Example: Client Secret can be DDEEMVOE2L0O1P9E<br>Contact <a href=\"mailto:helpdesk@franconnect.com\">helpdesk@franconnect.com</a> to get your Client ID and Client Secret</li><li style=\"margin-left: 1px;\">Select the option <strong>Send as Basic Auth header</strong> for the <strong>Client Authentication&nbsp;</strong>field.</li></ol></li></ol></p><p>Enter all these details, and click <strong>Request Token</strong> to request for a token.</p><p>The FranConnect API validates all the details and generates an access token that can be used for the API calls.</p><p><strong>Note:</strong> The access token is valid for 12 hours, after which a new access token is to be generated using the refresh token. This refresh token is valid for 30 days. Refresh tokens that were generated more than 30 days back cannot be used to generate a new access token.</p>"
     },
     {
       "name": "Client Credentials",
-      "description": "<p><img src=\"images/Access_Token_Client_Cred.png\"><br>For using the grant type as <strong>Client Credentials</strong>, enter the details in the <strong>Get New Access Token&nbsp;</strong>dialog as explained in the following steps:<ol><li style=\"margin-left: 1px;\">Enter a name for your Access Token (Optional).</li><li style=\"margin-left: 1px;\">Select the <strong>Grant Type</strong> as <strong>Client Credentials</strong>.</li><li style=\"margin-left: 1px;\">Enter the endpoint for the authentication server in the <strong>Access Token URL&nbsp;</strong>field. This is used to exchange the authorization code for an access token.<br>Example: Access Token URL can be https://auth.franconnectuat.net/userauth/oauth/token?X-tenantID=developers.franconnectdemo.net</li><li style=\"margin-left: 1px;\">Enter the Client ID provided to you by FranConnect in the <strong>Client ID</strong> field. <br>Example: Client ID can be FRANC0NN3CT_API</li><li style=\"margin-left: 1px;\">Enter the Client Secret provided to you by FranConnect in the <strong>Client Secret</strong> field.<br>Example: Client Secret can be DDEEMVOE2L0O1P9E<br>Contact <a href=\"mailto:integrations@franconnect.com\">integrations@franconnect.com</a> to get your Client ID and Client Secret</li><li style=\"margin-left: 1px;\">Select the option <strong>Send as Basic Auth header</strong> for the <strong>Client Authentication&nbsp;</strong>field.</li></ol></li></ol></p><p>Enter all these details, and click <strong>Request Token</strong> to request for a token.</p><p>The FranConnect API validates all the details and generates an access token that can be used for the API calls.</p><p><strong>Note:</strong> The access token is valid for 12 hours, after which a new access token is to be generated using the refresh token. This refresh token is valid for 30 days. Refresh tokens that were generated more than 30 days back cannot be used to generate a new access token.</p>"
+      "description": "<p><img src=\"images/Access_Token_Client_Cred.png\"><br>For using the grant type as <strong>Client Credentials</strong>, enter the details in the <strong>Get New Access Token&nbsp;</strong>dialog as explained in the following steps:<ol><li style=\"margin-left: 1px;\">Enter a name for your Access Token (Optional).</li><li style=\"margin-left: 1px;\">Select the <strong>Grant Type</strong> as <strong>Client Credentials</strong>.</li><li style=\"margin-left: 1px;\">Enter the endpoint for the authentication server in the <strong>Access Token URL&nbsp;</strong>field. This is used to exchange the authorization code for an access token.<br>Example: Access Token URL can be https://auth.franconnectuat.net/userauth/oauth/token?X-tenantID=developers.franconnectdemo.net</li><li style=\"margin-left: 1px;\">Enter the Client ID provided to you by FranConnect in the <strong>Client ID</strong> field. <br>Example: Client ID can be FRANC0NN3CT_API</li><li style=\"margin-left: 1px;\">Enter the Client Secret provided to you by FranConnect in the <strong>Client Secret</strong> field.<br>Example: Client Secret can be DDEEMVOE2L0O1P9E<br>Contact <a href=\"mailto:helpdesk@franconnect.com\">helpdesk@franconnect.com</a> to get your Client ID and Client Secret</li><li style=\"margin-left: 1px;\">Select the option <strong>Send as Basic Auth header</strong> for the <strong>Client Authentication&nbsp;</strong>field.</li></ol></li></ol></p><p>Enter all these details, and click <strong>Request Token</strong> to request for a token.</p><p>The FranConnect API validates all the details and generates an access token that can be used for the API calls.</p><p><strong>Note:</strong> The access token is valid for 12 hours, after which a new access token is to be generated using the refresh token. This refresh token is valid for 30 days. Refresh tokens that were generated more than 30 days back cannot be used to generate a new access token.</p>"
     },
     {
       "name": "Error Codes",
@@ -203,7 +203,7 @@
           "Retrieve Franchisee Number"
         ],
         "summary": "Retrieve for a specific Location",
-        "description": "<table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"28%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/common/franchisee/filter</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/common/franchisee/filter</td></tr></table><h4>To retrieve the Franchisee Number for a specific location, you must provide the following items in the header of the POST request: </h4><ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.<br>Note that you are required to select the option <strong>Inherit auth from parent</strong> for the <strong>Type</strong> field under the <strong>Authorization</strong> tab before generating the access token.</p></li><li><p>Specify &ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>Specify &ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p class=\"western\">You can specify any of the following as the filter criteria in the body of the request: areas, countries, divisions, entities, fields, and franchisee numbers. Performing the above mentioned steps will provide the franchisee number and the franchisee name for the required location.</p><img src=\"images/Retrieve_Franchise_Number_Specific.png\">",
+        "description": "<table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"28%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/common/franchisee/filter</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/common/franchisee/filter</td></tr></table><h4>To retrieve the Franchisee Number for a specific location, you must provide the following items in the header of the POST request: </h4><ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.<br>Note that you are required to select the option <strong>Inherit auth from parent</strong> for the <strong>Type</strong> field under the <strong>Authorization</strong> tab before generating the access token.</p></li><li><p>Specify &ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>Specify &ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p class=\"western\">You can specify any of the following as the filter criteria in the body of the request: areas, countries, divisions, entities, fields, and franchisee numbers. Performing the above mentioned steps will provide the franchisee number and the franchisee name for the required location.<p class=\"western\">In the example that is included, the “franchisee_name” has been used as a ‘constraints’ criterion. Other acceptable values of constraints, that can be used to filter and retrieve franchisee number for a specific location, are explained in the following table:</p><center><table width=\"623\" cellspacing=\"0\" cellpadding=\"7\"><colgroup><col width=\"157\"/> <col width=\"135\"/> <col width=\"223\"/> <col width=\"51\"/> </colgroup><tbody><tr valign=\"top\"><td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"157\"><p class=\"western\" align=\"center\"><strong><span style=\"color: #00000a;\">Field</span></strong></p><p class=\"western\" align=\"center\">&nbsp;</p></td><td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"135\"><p class=\"western\" align=\"center\"><strong><span style=\"color: #00000a;\">Field Description</span></strong></p></td><td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"223\"><p class=\"western\" align=\"center\"><strong><span style=\"color: #00000a;\">Applied Clause</span></strong></p><p class=\"western\" align=\"center\">&nbsp;</p></td><td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"51\"><p class=\"western\" align=\"center\"><strong><span style=\"color: #00000a;\">Format</span></strong></p></td></tr><tr valign=\"top\"><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"157\"><p class=\"western\" align=\"center\"><strong>franchisee_name</strong></p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"135\"><p class=\"western\" align=\"center\">Franchisee Name as seen in UI</p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"223\"><p class=\"western\" align=\"center\">EQUAL, IN</p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"51\"><p class=\"western\" align=\"center\">String</p></td></tr><tr valign=\"top\"><td width=\"157\"><p class=\"western\" align=\"center\"><strong>franchisee_no</strong></p></td><td width=\"135\"><p class=\"western\" align=\"center\">Internal Unique Reference Number of the location</p></td><td width=\"223\"><p class=\"western\" align=\"center\">EQUAL, IN</p></td><td width=\"51\"><p class=\"western\" align=\"center\">String</p></td></tr><tr valign=\"top\"><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"157\"><p class=\"western\" align=\"center\"><strong>area_id</strong></p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"135\"><p class=\"western\" align=\"center\">Internal Unique Reference Number of the area</p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"223\"><p class=\"western\" align=\"center\">EQUAL, IN</p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"51\"><p class=\"western\" align=\"center\">String</p></td></tr></tbody></table></center><p class=\"western\">&nbsp;</p><p class=\"western\">&nbsp;</p></p><img src=\"images/Retrieve_Franchise_Number_Specific.png\">",
         "consumes": [
           "application/json"
         ],
@@ -234,18 +234,14 @@
                 },
                 "example": [
                   {
-                    "data": [
-                      {
-                        "constraints": {
-                          "franchisee_name": {
-                            "clause": "EQUAL",
-                            "values": [
-                              "10002"
-                            ]
-                          }
-                        }
+                    "constraints": {
+                      "franchisee_name": {
+                        "clause": "EQUAL",
+                        "values": [
+                          "10002"
+                        ]
                       }
-                    ]
+                    }
                   }
                 ]
               }
@@ -762,6 +758,35 @@
         },
         "requestBody": {
           "$ref": "#/components/requestBodies/FSCreateLeadArray"
+        }
+      }
+    },
+    "/retrieveFieldData?module=fs&subModule=lead": {
+      "post": {
+        "tags": [
+          "Sales Lead"
+        ],
+        "summary": "Retrieve Field Values",
+        "description": "<p class=\"western\">This section details the Retrieve operation performed to retrieve the values of different fields under the “Primary Info” tab/sub-module for a Sales lead. Using the <strong>retrieveFieldData </strong>endpoint, you can retrieve the values of following fields for a Sales lead: stateID, countyID, country, leadOwnerID, leadRatingID, leadStatusID, leadSource3ID, leadSource2ID, leadRatingID, and serviceID.</p><p>The fields whose values can be retrieved can be of the following two types: dependent and independent fields. For example, stateID and the leadSource3ID are dependent fields. To retrieve the value of a dependent field, you must provide the dependent field name and value as parameters in the request URL. To retrieve the value of an independent field, you must pass the field name as a path parameter in the request URL.</p><p>This section contains an example of the Retrieve operation performed to retrieve the values of the field <strong>county ID </strong>which is dependent on the field <strong>country</strong>.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"20%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>API Endpoint</strong></td><td>:</td><td><context-path>/rest/dataservices/retrieveFieldData?module=fs&subModule=lead&responseType=XML&fieldName=fieldInternalName&dependentFieldName=dependentFieldInternalName&dependentFieldValue=dependentFieldInternalValue</td></tr><tr><td></td></tr></table><h4 class=\"western\">Prerequisites to perform a Retrieve operation using the retrieveFieldData endpoint</h4><p class=\"western\">To perform a Retrieve operation for the above mentioned fields using the FranConnect API, you must make a POST request on the request URL. The request URL comprises of the context path followed by the API endpoint mentioned above. The following items must be used in the body of the request:</p><ol><li><p>An access token as a key. Steps on how an access token is generated are documented <u><a href=\"#tag/Authentication\">here</a></u>.</p></li><li><p>The module for which the Retrieve operation is being performed. In this case, the module to be used is “fs”</u>.</p></li><li><p>The sub-module for which the Retrieve operation is being performed. A list of all sub-modules can be retrieved from the “subModule” endpoint mentioned <span style=\"color: #0563c1;\"><u><a href=\"#tag/List-of-Sub-Modules\">here</a></u></span>. In this case, the subModule to be used is “lead”.</p></li><li><p>Response type as XML or JSON, depending on the type of response that is desired. If this parameter is not provided, the default response type is XML.</p></li><p><li>Name of the field whose value is to be retrieved using this endpoint. In this case, the name of the field is “countyID”.</p></li><p><li>The independent or dependent (if any) field values that would be used to retrieve the values of the desired field. In this case, the dependent field name to be used is “country” and dependent field value to be used is “USA”.</li></ol></p><img src=\"images/RetrieveFieldData_Sales_Lead.png\">",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/retrieveFieldDataResp"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "requestBody": {
+          "$ref": "#/components/requestBodies/retrieveFieldDataArray"
         }
       }
     },
@@ -2955,6 +2980,29 @@
           "name": "CreateSchema"
         }
       },
+      "retrievefield": {
+        "type": "object",
+        "properties": {
+          "module": {
+            "type": "string"
+          },
+          "subModule": {
+            "type": "string"
+          },
+          "fieldName": {
+            "type": "string"
+          },
+          "dependentfieldName": {
+            "type": "string"
+          },
+          "dependentfieldValue": {
+            "type": "string"
+          }
+        },
+        "XML": {
+          "name": "retrievefield"
+        }
+      },
       "FSCreateLead": {
         "type": "object",
         "properties": {
@@ -2980,7 +3028,7 @@
       "ModuleArray": {
         "content": {
           "application/xml": {
-            "example": "POST/<context-path>/rest/dataservices/module HTTP/1.1\nContent-type: application/x-www-form-urlencoded/\n&responseType=XML",
+            "example": "POST/<context-path>/rest/dataservices/module?responseType=XML",
             "schema": {
               "type": "array",
               "items": {
@@ -2998,7 +3046,7 @@
       "CreateSchemaArray": {
         "content": {
           "application/xml": {
-            "example": "POST/<context-path>/rest/dataservices/query HTTP/1.1\nContent-type: application/x-www-form-urlencoded/module=admin&subModule=user&roleTypeForQuery=1&operation=create",
+            "example": "POST/<context-path>/rest/dataservices/query?module=admin&subModule=user&roleTypeForQuery=1&operation=create",
             "schema": {
               "type": "array",
               "items": {
@@ -3016,7 +3064,7 @@
       "RetrieveSchemaArray": {
         "content": {
           "application/xml": {
-            "example": "POST/<context-path>/rest/dataservices/query HTTP/1.1\nContent-type: application/x-www-form-urlencoded/module=admin&subModule=user&operation=retrieve",
+            "example": "POST/<context-path>/rest/dataservices/query?module=admin&subModule=user&operation=retrieve",
             "schema": {
               "type": "array",
               "items": {
@@ -3034,7 +3082,7 @@
       "UpdateSchemaArray": {
         "content": {
           "application/xml": {
-            "example": "POST/<context-path>/rest/dataservices/query HTTP/1.1\nContent-type: application/x-www-form-urlencoded/module=admin&subModule=user&roleTypeForQuery=1&operation=update",
+            "example": "POST/<context-path>/rest/dataservices/query?module=admin&subModule=user&roleTypeForQuery=1&operation=update",
             "schema": {
               "type": "array",
               "items": {
@@ -3052,7 +3100,7 @@
       "DeleteSchemaArray": {
         "content": {
           "application/xml": {
-            "example": "POST/<context-path>/rest/dataservices/query HTTP/1.1\nContent-type: application/x-www-form-urlencoded/module=admin&subModule=user&operation=delete",
+            "example": "POST/<context-path>/rest/dataservices/query?module=admin&subModule=user&operation=delete",
             "schema": {
               "type": "array",
               "items": {
@@ -3146,7 +3194,7 @@
       "AdminSubModuleArray": {
         "content": {
           "application/xml": {
-            "example": "POST/<context-path>/rest/dataservices/submodule HTTP/1.1\nContent-type: application/x-www-form-urlencoded/\nmodule=admin&responseType=XML",
+            "example": "POST/<context-path>/rest/dataservices/submodule?module=admin&responseType=XML",
             "schema": {
               "type": "array",
               "items": {
@@ -3164,7 +3212,7 @@
       "SalesSubModuleArray": {
         "content": {
           "application/xml": {
-            "example": "POST/<context-path>/rest/dataservices/submodule HTTP/1.1\nContent-type: application/x-www-form-urlencoded/module=fs&responseType=XML",
+            "example": "POST/<context-path>/rest/dataservices/submodule?module=fs&responseType=XML",
             "schema": {
               "type": "array",
               "items": {
@@ -3183,7 +3231,7 @@
       "InfoMgrSubModuleArray": {
         "content": {
           "application/xml": {
-            "example": "POST/<context-path>/rest/dataservices/submodule HTTP/1.1\nContent-type: application/x-www-form-urlencoded/module=fim&responseType=XML",
+            "example": "POST/<context-path>/rest/dataservices/submodule?module=fim&responseType=XML",
             "schema": {
               "type": "array",
               "items": {
@@ -3278,7 +3326,7 @@
       "AdminDeleteUserArray": {
         "content": {
           "application/xml": {
-            "example": "POST/<context-path>/rest/dataservices/query HTTP/1.1/Content-type: application/x-www-form-urlencoded/module=admin&subModule=user&operation=delete",
+            "example": "POST/<context-path>/rest/dataservices/query?module=admin&subModule=user&operation=delete",
             "schema": {
               "type": "array",
               "items": {
@@ -3292,6 +3340,24 @@
           }
         },
         "description": "Admin User Deletion object",
+        "required": true
+      },
+      "retrieveFieldDataArray": {
+        "content": {
+          "application/xml": {
+            "example": "POST/<context-path>/rest/dataservices/retrieveFieldData?module=fs&subModule=lead&responseType=XML&fieldName=countyID&dependentFieldName=country&dependentFieldValue=USA",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/retrievefield"
+              },
+              "xml": {
+                "wrapped": true
+              }
+            }
+          }
+        },
+        "description": "Lead Creation object",
         "required": true
       },
       "FimCreateFranchiseeArray": {
@@ -3354,7 +3420,7 @@
       "FimDeleteFranchiseeArray": {
         "content": {
           "application/xml": {
-            "example": "POST/<context-path>/rest/dataservices/query HTTP/1.1/Content-type: application/x-www-form-urlencoded/module=admin&subModule=user&operation=delete",
+            "example": "POST/<context-path>/rest/dataservices/query?module=admin&subModule=user&operation=delete",
             "schema": {
               "type": "array",
               "items": {
@@ -4078,6 +4144,14 @@
         },
         "description": "Successful"
       },
+      "retrieveFieldDataResp": {
+        "content": {
+          "application/xml": {
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>382399713</responseId>\n<responseData>\n<countyID>Abbeville</countyID>\n<countyID>Acadia Parish</countyID>\n<countyID>Ballard</countyID>\n<countyID>Baltimore</countyID>\n<countyID>Cambria</countyID>\n<countyID>Campbell</countyID>\n<countyID>Dallas</countyID>\n<countyID>Dane</countyID>\n<countyID>Eagle</countyID>\n<countyID>Edgefield</countyID>\n<countyID>Fairfield</countyID>\n<countyID>Florence</countyID>\n<countyID>Garfield</countyID>\n<countyID>Geneva</countyID>\n<countyID>Hampshire</countyID>\n<countyID>Hawaii</countyID>\n<countyID>Isle of Wight</countyID>\n<countyID>James City</countyID>\n<countyID>Kenedy</countyID>\n<countyID>La Crosse</countyID>\n<countyID>Madison</countyID>\n<countyID>Navajo</countyID>\n<countyID>Oakland</countyID>\n<countyID>Palo Alto</countyID>\n<countyID>Queens</countyID>\n<countyID>Republic</countyID>\n<countyID>Salt Lake</countyID>\n<countyID>Texas</countyID>\n<countyID>Union Parish</countyID>\n<countyID>Vermilion</countyID>\n<countyID>Walsh</countyID>\n<countyID>Yadkin</countyID><countyID>Ziebach</countyID>\n</responseData>\n</fcResponse>"
+          }
+        },
+        "description": "Successful"
+      },
       "FimCreateFranchiseeResp": {
         "content": {
           "application/xml": {
@@ -4369,7 +4443,7 @@
                       "is_franchisee": "Y",
                       "status": "0"
                     },
-                                        {
+                    {
                       "is_store": "N",
                       "franchisee_name": "fran25",
                       "f_name": "null null",

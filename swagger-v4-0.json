@@ -30,7 +30,7 @@
     },
     {
       "name": "Password Credentials",
-      "description": "<p><img src=\"images/Access_Token_Pwd_Cred.png\"><br>For using the grant type as <strong>Password Credentials</strong>, enter the details in the <strong>Get New Access Token&nbsp;</strong>dialog as explained in the following steps:<ol> <li style=\"margin-left: 1px;\">Enter a name for your Access Token (Optional).</li><li style=\"margin-left: 1px;\">Select the <strong>Grant Type</strong> as <strong>Password Credentials</strong>.</li><li style=\"margin-left: 1px;\">Enter the endpoint for the authentication server in the <strong>Access Token URL&nbsp;</strong>field. This is used to exchange the authorization code for an access token.<br>Example: Access Token URL can be https://auth.franconnectuat.net/userauth/oauth/token?X-tenantID=developers.franconnectdemo.net<p><strong>Note:</strong> If the login URL for your FranConnect system is https://developers.franconnectdemo.net/fc, then the X-TenantID will be developers.franconnectdemo.net</li><li style=\"margin-left: 1px;\">Enter the login credentials for your FranConnect system in the <strong>Username</strong> and <strong>Password</strong> fields.</li><li style=\"margin-left: 1px;\">Enter the Client ID provided to you by FranConnect in the <strong>Client ID</strong> field. <br>Example: Client ID can be FRANC0NN3CT_API</li><li style=\"margin-left: 1px;\">Enter the Client Secret provided to you by FranConnect in the <strong>Client Secret</strong> field.<br>Example: Client Secret can be DDEEMVOE2L0O1P9E<br>Contact <a href=\"mailto:helpdesk@franconnect.com\">helpdesk@franconnect.com</a> to get your Client ID and Client Secret</li><li style=\"margin-left: 1px;\">Select the option <strong>Send as Basic Auth header</strong> for the <strong>Client Authentication&nbsp;</strong>field.</li></ol></li></ol></p><p>Enter all these details, and click <strong>Request Token</strong> to request for a token.</p><p>The FranConnect API validates all the details and generates an access token that can be used for the API calls.</p><p><strong>Note:</strong> The access token is valid for 12 hours, after which a new access token is to be generated using the refresh token. This refresh token is valid for 30 days. Refresh tokens that were generated more than 30 days back cannot be used to generate a new access token.</p>"
+      "description": "<p><img src=\"images/Access_Token_Pwd_Cred.png\"><br>For using the grant type as <strong>Password Credentials</strong>, enter the details in the <strong>Get New Access Token&nbsp;</strong>dialog as explained in the following steps:<ol> <li style=\"margin-left: 1px;\">Enter a name for your Access Token (Optional).</li><li style=\"margin-left: 1px;\">Select the <strong>Grant Type</strong> as <strong>Password Credentials</strong>.</li><li style=\"margin-left: 1px;\">Enter the endpoint for the authentication server in the <strong>Access Token URL&nbsp;</strong>field. This is used to exchange the authorization code for an access token.<br>Example: Access Token URL can be https://auth.franconnectuat.net/userauth/oauth/token?X-TenantID=developers.franconnectdemo.net<p><strong>Note:</strong> If the login URL for your FranConnect system is https://developers.franconnectdemo.net/fc, then the X-TenantID will be developers.franconnectdemo.net</li><li style=\"margin-left: 1px;\">Enter the login credentials for your FranConnect system in the <strong>Username</strong> and <strong>Password</strong> fields.</li><li style=\"margin-left: 1px;\">Enter the Client ID provided to you by FranConnect in the <strong>Client ID</strong> field. <br>Example: Client ID can be FRANC0NN3CT_API</li><li style=\"margin-left: 1px;\">Enter the Client Secret provided to you by FranConnect in the <strong>Client Secret</strong> field.<br>Example: Client Secret can be DDEEMVOE2L0O1P9E<br>Contact <a href=\"mailto:helpdesk@franconnect.com\">helpdesk@franconnect.com</a> to get your Client ID and Client Secret</li><li style=\"margin-left: 1px;\">Select the option <strong>Send as Basic Auth header</strong> for the <strong>Client Authentication&nbsp;</strong>field.</li></ol></li></ol></p><p>Enter all these details, and click <strong>Request Token</strong> to request for a token.</p><p>The FranConnect API validates all the details and generates an access token that can be used for the API calls.</p><p><strong>Note:</strong> The access token is valid for 12 hours, after which a new access token is to be generated using the refresh token. This refresh token is valid for 30 days. Refresh tokens that were generated more than 30 days back cannot be used to generate a new access token.</p>"
     },
     {
       "name": "Client Credentials",
@@ -232,18 +232,17 @@
                     "type": "string"
                   }
                 },
-                "example": 
-                  {
-                    "constraints": {
-                      "franchisee_name": {
-                        "clause": "EQUAL",
-                        "values": [
-                          "10002"
-                        ]
-                      }
+                "example": {
+                  "constraints": {
+                    "franchisee_name": {
+                      "clause": "EQUAL",
+                      "values": [
+                        "10002"
+                      ]
                     }
                   }
-                              }
+                }
+              }
             }
           }
         },

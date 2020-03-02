@@ -242,7 +242,7 @@
                     "franchisee_name": {
                       "clause": "EQUAL",
                       "values": [
-                        "10002"
+                        "10012"
                       ]
                     }
                   }
@@ -916,7 +916,7 @@
           "CRM Lead"
         ],
         "summary": "Create",
-        "description": "<p class=\"western\">This section contains an example of the Create operation to add a CRM lead through the CRM > Leads module. Similarly, you can use the Create operation to add data to any of the tabs/ sub-modules in CRM > Leads.</p>For the Retrieve operation, you can also use pagination to chain through the records using the limit and offset parameters appended in the URL. Click <a href=\"#Pagination\">here</a> for more details.<table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"20%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>API Endpoint</strong></td><td>:</td><td><context-path>/rest/dataservices/create?module=cm&subModule=lead&xmlString=requiredxmlString&responseType=XML</td></tr><tr><td></td></tr></table><p class=\"western\">To perform a Create operation for adding a CRM lead using the FranConnect API, you must make a POST request on the request URL. The request URL comprises of the context path followed by the API endpoint mentioned above. The following items must be included in the header of the request:</p><ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>Content-Type as the key and its value in the format “application/x-www-form-urlencoded“.</p></li></ol><p>The following items must be used as path parameters:</p><ol><li><p>The module for which the Create operation is being performed. In this case, the module to be used is “cm”</u>.</p></li><li><p>The sub-module for which the Create operation is being performed. A list of all sub-modules can be retrieved from the “subModule” endpoint mentioned <span style=\"color: #0563c1;\"><u><a href=\"#tag/List-of-Sub-Modules\">here</a></u></span>. In this case, the subModule to be used is “lead”.</p></li><li><p>Response type as XML or JSON, depending on the type of response that is desired. If this parameter is not provided, the default response type is XML.</p></li><li><p class=\"western\">xmlString that would contain the attribute names and their values in the request that is to be used to add a CRM lead. In order to determine the parameter names/ schema, a query operation is to be performed with the corresponding module and sub-module names and the operation as Create. Details on how the query operation is to be performed is mentioned <u><a href=\"#tag/List-of-Field-Names\">here.</a></u></li></ol></p><p class=\"western\">Performing the above mentioned steps would create a new CRM lead. The response received from the API contains <strong>“referenceId”</strong> which represents the unique reference ID for that CRM lead and can be used for the Update, Retrieve and the Delete operations.</p><p><strong>Note:</strong> In order to create data in any tab/sub-module other than “Lead Info”, it is mandatory to specify the lead for which this data is to be created. The best way to uniquely specify a lead is through its <u><a href=\"#operation/CM_Retrieve_Lead\">Reference ID</a></u>. You can also perform a Query operation to retrieve the schema that would be used to create data for that module-subModule combination. Click <u><a href=\"#tag/List-of-Field-Names\">here</a></u> for more details.</p><img src=\"images/CRM_CreateLead.png\">",
+        "description": "<p class=\"western\">This section contains an example of the Create operation to add a CRM lead through the CRM > Leads module. Similarly, you can use the Create operation to add data to any of the tabs/ sub-modules in CRM > Leads.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"20%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>API Endpoint</strong></td><td>:</td><td><context-path>/rest/dataservices/create?module=cm&subModule=lead&xmlString=requiredxmlString&responseType=XML</td></tr><tr><td></td></tr></table><p class=\"western\">To perform a Create operation for adding a CRM lead using the FranConnect API, you must make a POST request on the request URL. The request URL comprises of the context path followed by the API endpoint mentioned above. The following items must be included in the header of the request:</p><ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>Content-Type as the key and its value in the format “application/x-www-form-urlencoded“.</p></li></ol><p>The following items must be used as path parameters:</p><ol><li><p>The module for which the Create operation is being performed. In this case, the module to be used is “cm”</u>.</p></li><li><p>The sub-module for which the Create operation is being performed. A list of all sub-modules can be retrieved from the “subModule” endpoint mentioned <span style=\"color: #0563c1;\"><u><a href=\"#tag/List-of-Sub-Modules\">here</a></u></span>. In this case, the subModule to be used is “lead”.</p></li><li><p>Response type as XML or JSON, depending on the type of response that is desired. If this parameter is not provided, the default response type is XML.</p></li><li><p class=\"western\">xmlString that would contain the attribute names and their values in the request that is to be used to add a CRM lead. In order to determine the parameter names/ schema, a query operation is to be performed with the corresponding module and sub-module names and the operation as Create. Details on how the query operation is to be performed is mentioned <u><a href=\"#tag/List-of-Field-Names\">here.</a></u></li></ol></p><p class=\"western\">Performing the above mentioned steps would create a new CRM lead. The response received from the API contains <strong>“referenceId”</strong> which represents the unique reference ID for that CRM lead and can be used for the Update, Retrieve and the Delete operations.</p><p><strong>Note:</strong> In order to create data in any tab/sub-module other than “Lead Info”, it is mandatory to specify the lead for which this data is to be created. The best way to uniquely specify a lead is through its <u><a href=\"#operation/CM_Retrieve_Lead\">Reference ID</a></u>. You can also perform a Query operation to retrieve the schema that would be used to create data for that module-subModule combination. Click <u><a href=\"#tag/List-of-Field-Names\">here</a></u> for more details.</p><img src=\"images/CRM_CreateLead.png\">",
         "responses": {
           "200": {
             "$ref": "#/components/responses/CMCreateLeadResp"
@@ -2472,6 +2472,90 @@
         }
       }
     },
+    "/manage-finance/payments": {
+      "post": {
+        "tags": [
+          "Payments"
+        ],
+        "summary": "Create Payments",
+        "description": "<p class=\"western\">You can create payments for a royalty by making a POST request to the Payments endpoint.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/payments</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/payments</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p>Using the FranConnect API, you can create payments by using the following types of royalties: Royalty,  Advertisement, Promissory Notes, Late Fees, Additional Fees,  Tax, and All. <p class=\"western\">&nbsp;</p><img src=\"images/Create_Payments.png\">",
+        "operationId": "Create_Payments",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "salesFilter",
+            "description": "ParameterType:PaymentFilter",
+            "required": false,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "franchiseeRoyaltyID": {
+                    "type": "string"
+                  },
+                  "royaltyType": {
+                    "type": "string"
+                  },
+                  "franchiseeNo": {
+                    "type": "string"
+                  },
+                  "dateReceived": {
+                    "type": "date"
+                  }
+                },
+                "example": [
+                  {
+                    "data": [
+                      {
+                        "franchiseeNo": "1812536030",
+                        "dateReceived": "2019-12-31",
+                        "royaltyType": "Promissory Notes",
+                        "franchiseRoyaltyID": [
+                          "1042018448"
+                        ],
+                        "debitMemos": [],
+                        "collectionMethod": {
+                          "mode": "cash",
+                          "amount": "10.2"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/CreatePaymentResp"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
     "/manage-finance/payments/filter": {
       "post": {
         "tags": [
@@ -3127,7 +3211,7 @@
       "FSCreateLeadArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<fsLead>\n<salutation>Mr.</salutation>\n<firstName>Josn</firstName>\n<lastName>Marsh</lastName>\n<address>100 Main St</address>\n<address2></address2>\n<city>Seattle</city>\n<country>USA</country>\n<stateID>Washington</stateID>\n<sendAutomaticMail>Yes</sendAutomaticMail>\n<zip>98102</zip>\n<countyID>Adams</countyID>\n<primaryPhoneToCall>Email</primaryPhoneToCall>\n<bestTimeToContact></bestTimeToContact>\n<phone></phone>\n<phoneExt></phoneExt>\n<homePhone></homePhone>\n<homePhoneExt></homePhoneExt>\n<fax></fax>\n<mobile></mobile>\n<emailID>support@franconnect.com</emailID>\n<companyName>Vortex Restoration</companyName>\n<comments>Newly added lead in this area</comments>\n<basedOnAssignmentRule>No</basedOnAssignmentRule>\n<leadOwnerID>Doug Lynn</leadOwnerID>\n<leadRatingID>Warm</leadRatingID>\n<marketingCodeId></marketingCodeId>\n<leadSource2ID>Advertisement</leadSource2ID>\n<leadSource3ID>Advertising</leadSource3ID>\n<otherLeadSourceDetail>Service Call</otherLeadSourceDetail>\n<liquidCapitalMin>10000</liquidCapitalMin>\n<liquidCapitalMax>Yes</liquidCapitalMax>\n<investTimeframe>5</investTimeframe>\n<background>Business</background>\n<sourceOfFunding>Business</sourceOfFunding>\n<division>Affiliates</division>\n<noOfUnitReq>1</noOfUnitReq>\n<preferredCity1>Reston</preferredCity1>\n<preferredCountry1>USA</preferredCountry1>\n<preferredStateId1>Albahama</preferredStateId1>\n<preferredCity2>Delhi</preferredCity2>\n<preferredCountry2>India</preferredCountry2>\n<preferredStateId2>Delhi</preferredStateId2>\n<probability>10</probability>\n<forecastRating>Upside</forecastRating>\n<forecastRevenue>1500</forecastRevenue>\n<basedOnWorkflowAssignmentRule>No</basedOnWorkflowAssignmentRule>\n<serviceID>Product/Service Update,Newsletters,Offers</serviceID>\n</fsLead>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<fsLead>\n<salutation>Mr.</salutation>\n<firstName>Gary</firstName>\n<lastName>Daniel</lastName>\n<address>100 Main St</address>\n<address2></address2>\n<city>Seattle</city>\n<country>USA</country>\n<stateID>Washington</stateID>\n<sendAutomaticMail>Yes</sendAutomaticMail>\n<zip>98102</zip>\n<countyID>Adams</countyID>\n<primaryPhoneToCall>Email</primaryPhoneToCall>\n<bestTimeToContact></bestTimeToContact>\n<phone></phone>\n<phoneExt></phoneExt>\n<homePhone></homePhone>\n<homePhoneExt></homePhoneExt>\n<fax></fax>\n<mobile></mobile>\n<emailID>support@franconnect.com</emailID>\n<companyName>Vortex Restoration</companyName>\n<comments>Newly added lead in this area</comments>\n<basedOnAssignmentRule>No</basedOnAssignmentRule>\n<leadOwnerID>Doug Lynn</leadOwnerID>\n<leadRatingID>Warm</leadRatingID>\n<marketingCodeId></marketingCodeId>\n<leadSource2ID>Advertisement</leadSource2ID>\n<leadSource3ID>Advertising</leadSource3ID>\n<otherLeadSourceDetail>Service Call</otherLeadSourceDetail>\n<liquidCapitalMin>10000</liquidCapitalMin>\n<liquidCapitalMax>Yes</liquidCapitalMax>\n<investTimeframe>5</investTimeframe>\n<background>Business</background>\n<sourceOfFunding>Business</sourceOfFunding>\n<division>Affiliates</division>\n<noOfUnitReq>1</noOfUnitReq>\n<preferredCity1>Reston</preferredCity1>\n<preferredCountry1>USA</preferredCountry1>\n<preferredStateId1>Albahama</preferredStateId1>\n<preferredCity2>Delhi</preferredCity2>\n<preferredCountry2>India</preferredCountry2>\n<preferredStateId2>Delhi</preferredStateId2>\n<probability>10</probability>\n<forecastRating>Upside</forecastRating>\n<forecastRevenue>1500</forecastRevenue>\n<basedOnWorkflowAssignmentRule>No</basedOnWorkflowAssignmentRule>\n<serviceID>Product/Service Update,Newsletters,Offers</serviceID>\n</fsLead>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3278,7 +3362,7 @@
       "AdminCreateUserArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<adminUser>\n<userID>JamesW</userID>\n<password>James@1232</password>\n<userLevel>Corporate</userLevel>\n<userLanguage>Language(Default 'English')</userLanguage>\n<timezone>GMT -06:30</timezone>\n<type>Normal</type>\n<expirationTime>NA</expirationTime>\n<role>Corporate Administrator</role>\n<jobTitle>Project Manager</jobTitle>\n<firstname>Carl</firstname>\n<lastname>Williams</lastname>\n<isAuditor>Y</isAuditor>\n<address>Park Avenue, Hudson Lane</address>\n<city>Reston</city>\n<state>Virginia</state>\n<zipCode>201301</zipCode>\n<country>USA</country>\n<phone1>9858452152</phone1>\n<phoneExt1>53</phoneExt1>\n<phone2>9858452162</phone2>\n<phoneExt2>63</phoneExt2>\n<fax>Fax</fax>\n<mobile>9999999995</mobile>\n<email>james.williams@yahoo.com</email>\n<sendNotification>Y</sendNotification>\n<loginUserIp>192.168.1.217</loginUserIp>\n><isDaylight>Y</isDaylight>\n</adminUser>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<adminUser>\n<userID>JamesW</userID>\n<password>James@1232</password>\n<userLevel>Corporate</userLevel>\n<userLanguage>English</userLanguage>\n<timezone>GMT -06:30</timezone>\n<type>Normal</type>\n<expirationTime>NA</expirationTime>\n<role>Corporate Administrator</role>\n<jobTitle>Project Manager</jobTitle>\n<firstname>Carl</firstname>\n<lastname>Williams</lastname>\n<isAuditor>Y</isAuditor>\n<address>Park Avenue, Hudson Lane</address>\n<city>Reston</city>\n<state>Virginia</state>\n<zipCode>201301</zipCode>\n<country>USA</country>\n<phone1>9858452152</phone1>\n<phoneExt1>53</phoneExt1>\n<phone2>9858452162</phone2>\n<phoneExt2>63</phoneExt2>\n<fax>Fax</fax>\n<mobile>9999999995</mobile>\n<email>james.williams@yahoo.com</email>\n<sendNotification>Y</sendNotification>\n<loginUserIp>192.168.1.217</loginUserIp>\n><isDaylight>Y</isDaylight>\n</adminUser>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3467,7 +3551,7 @@
       "RetrieveCRMLeadArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<filter>\n<referenceId>837476009</referenceId>\n</filter>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<filter>\n<referenceId>436155293</referenceId>\n</filter>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3486,7 +3570,7 @@
       "UpdateCRMLeadArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<cmLead>\n<referenceId>837476009</referenceId>\n<leadFirstName>Philip</leadFirstName></cmLead>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<cmLead>\n<referenceId>436155293</referenceId>\n<leadFirstName>Philip</leadFirstName></cmLead>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3524,7 +3608,7 @@
       "CreateCRMContactArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<cmContact>\n<contactType>Prospect_Sponsor</contactType>\n<title>Mr.</title>\n<contactFirstName>Joe</contactFirstName>\n<contactLastName>Larsen</contactLastName>\n<suffix></suffix>\n<position></position>\n<address>PO Box 1022</address>\n<city>Seattle</city>\n<country>USA</country>\n<zipcode>98104</zipcode>\n<state>Washington</state>\n<primaryContactMethod>Email</primaryContactMethod>\n<bestTimeToContact>Morning</bestTimeToContact>\n<phoneNumbers>122121</phoneNumbers>\n<extn>121</extn>\n<faxNumbers></faxNumbers>\n<mobileNumbers>454545454</mobileNumbers>\n<emailIds>Joe.larsen@yahoo.com</emailIds>\n<alternateEmail></alternateEmail>\n<birthdate></birthdate>\n<sendAutomaticMail>Yes</sendAutomaticMail>\n<anniversarydate></anniversarydate>\n<cmSource1ID>Email</cmSource1ID>\n<cmRatingID></cmRatingID>\n<cmSource2ID>Advertisement</cmSource2ID>\n<cmSource3ID>Magazine</cmSource3ID>\n<ownerTypeValue>CORP</ownerTypeValue>\n<contactOwnerID>David Henry</contactOwnerID>\n<franchiseeNo></franchiseeNo>\n<areaID></areaID>\n<divisionID>Division</divisionID>\n<comments>This is new contact</comments>\n<accountName>Bank Account 01</accountName>\n<facebook></facebook>\n<twitter></twitter>\n<Youtube></Youtube>\n<linkedin></linkedin>\n<google></google>\n<serviceID>Product/Service Update, Announcements</serviceID>\n</cmContact>\n<cmContact>\n</cmContact>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<cmContact>\n<contactType>Contacts</contactType>\n<title>Mr.</title>\n<contactFirstName>Amanda</contactFirstName>\n<contactLastName>Jacques</contactLastName>\n<suffix></suffix>\n<position></position>\n<address>PO Box 1022</address>\n<city>Seattle</city>\n<country>USA</country>\n<zipcode>98104</zipcode>\n<state>Washington</state>\n<primaryContactMethod>Email</primaryContactMethod>\n<bestTimeToContact>Morning</bestTimeToContact>\n<phoneNumbers>122121</phoneNumbers>\n<extn>121</extn>\n<faxNumbers></faxNumbers>\n<mobileNumbers>454545454</mobileNumbers>\n<emailIds>Amanda.Jacques@yahoo.com</emailIds>\n<alternateEmail></alternateEmail>\n<birthdate></birthdate>\n<sendAutomaticMail>Yes</sendAutomaticMail>\n<anniversarydate></anniversarydate>\n<cmSource1ID>Email</cmSource1ID>\n<cmRatingID></cmRatingID>\n<cmSource2ID>Advertisement</cmSource2ID>\n<cmSource3ID>Magazine</cmSource3ID>\n<ownerTypeValue>CORP</ownerTypeValue>\n<contactOwnerID>David Henry</contactOwnerID>\n<franchiseeNo></franchiseeNo>\n<areaID></areaID>\n<divisionID>Division</divisionID>\n<comments>This is new contact</comments>\n<accountName>Bank Account 01</accountName>\n<facebook></facebook>\n<twitter></twitter>\n<Youtube></Youtube>\n<linkedin></linkedin>\n<google></google>\n<serviceID>Product/Service Update, Announcements</serviceID>\n</cmContact>\n<cmContact>\n</cmContact>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3980,7 +4064,7 @@
       "CMRetrieveCampaignEmailArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<filter>\n <referenceId>1268014445</referenceId>\n</filter>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<filter>\n <referenceId>1970068020</referenceId>\n</filter>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -4100,7 +4184,7 @@
       "AdminRetrieveUserResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseId>466451737</responseId>\n<responseData>\n<adminUser>\n<referenceId>2055098927</referenceId>\n<userID>jamesw</userID>\n<userLevel>Corporate Users</userLevel>\n<firstname>Carl</firstname>\n<lastname>Williams</lastname>\n<role>Corporate Administrator</role>\n<expirationTime>Not Applicable</expirationTime>\n<type>Normal User</type>\n<timeZone>GMT -06:30</timeZone>\n<division></division>\n<creationDate>01/20/2020 07:20 AM</creationDate>\n<createdBy>Web Service</createdBy>\n<createdByReferenceId>2</createdByReferenceId>\n<lastModifiedBy>Web Service</lastModifiedBy>\n<lastModifiedByReferenceId>2</lastModifiedByReferenceId>\n<lastModifiedOn>01/20/2020 07:20 AM</lastModifiedOn>\n<personalDetails>\n<franchiseeName></franchiseeName>\n<address>Park Avenue, Hudson Lane</address>\n<city>Reston </city>\n<state>Virginia</state>\n<country>USA</country>\n<zipcode>201301</zipcode>\n<phone1>(985) 845-2152</phone1>\n<phone1Extn>53</phone1Extn>\n<fax/>\n<mobile>(999) 999-9995</mobile>\n<emailID>james.williams@yahoo.com</emailID>\n<jobTitle>Project Manager</jobTitle>\n<phone2>9858452162</phone2>\n<phone2Extn>63</phone2Extn>\n<language>English</language>\n<loginUserIp>192.168.1.217</loginUserIp>\n<isDaylight>Y</isDaylight>\n<isAuditor>Y</isAuditor>\n<salutation></salutation><canAddEmployee></canAddEmployee>\n<unsubscribeCampaign>N</unsubscribeCampaign>\n<birthDate></birthDate>\n<muidValue></muidValue>\n<region></region>visibleToStore></visibleToStore></personalDetails></adminUser>/responseData></fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseId>466451737</responseId>\n<responseData>\n<adminUser>\n<referenceId>2055098927</referenceId>\n<userID>JamesW</userID>\n<userLevel>Corporate Users</userLevel>\n<firstname>Carl</firstname>\n<lastname>Williams</lastname>\n<role>Corporate Administrator</role>\n<expirationTime>Not Applicable</expirationTime>\n<type>Normal User</type>\n<timeZone>GMT -06:30</timeZone>\n<division></division>\n<creationDate>01/20/2020 07:20 AM</creationDate>\n<createdBy>Web Service</createdBy>\n<createdByReferenceId>2</createdByReferenceId>\n<lastModifiedBy>Web Service</lastModifiedBy>\n<lastModifiedByReferenceId>2</lastModifiedByReferenceId>\n<lastModifiedOn>01/20/2020 07:20 AM</lastModifiedOn>\n<personalDetails>\n<franchiseeName></franchiseeName>\n<address>Park Avenue, Hudson Lane</address>\n<city>Reston </city>\n<state>Virginia</state>\n<country>USA</country>\n<zipcode>201301</zipcode>\n<phone1>(985) 845-2152</phone1>\n<phone1Extn>53</phone1Extn>\n<fax/>\n<mobile>(999) 999-9995</mobile>\n<emailID>james.williams@yahoo.com</emailID>\n<jobTitle>Project Manager</jobTitle>\n<phone2>9858452162</phone2>\n<phone2Extn>63</phone2Extn>\n<language>English</language>\n<loginUserIp>192.168.1.217</loginUserIp>\n<isDaylight>Y</isDaylight>\n<isAuditor>Y</isAuditor>\n<salutation></salutation><canAddEmployee></canAddEmployee>\n<unsubscribeCampaign>N</unsubscribeCampaign>\n<birthDate></birthDate>\n<muidValue></muidValue>\n<region></region>visibleToStore></visibleToStore></personalDetails></adminUser>/responseData></fcResponse>"
           }
         },
         "description": "Successful"
@@ -4132,7 +4216,7 @@
       "FSRetrieveLeadResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1223103215</responseId>\n<responseData>\n<fsLead>\n<referenceId>1583840676</referenceId>\n<requestDate>01/21/2020 02:32 AM</requestDate>\n<salutation>Mr.</salutation>\n<firstName>Josn</firstName>\n<lastName>Marsh</lastName>\n<address>100 Main St</address>\n<address2></address2>\n<city>Seattle</city>\n<country>USA</country>\n<stateID>Washington</stateID>\n<zip>98102</zip>\n<countyID>Adams</countyID>\n<primaryPhoneToCall>Email</primaryPhoneToCall>\n<bestTimeToContact>Morning</bestTimeToContact>\n<phone>9858452152</phone>\n<phoneExt>53</phoneExt>\n<homePhone></homePhone>\n<homePhoneExt></homePhoneExt>\n<fax></fax>\n<mobile></mobile>\n<emailID>support@franconnect.com</emailID>\n<companyName>Vortex Restoration</companyName>\n<comments>Newly added lead in this area</comments>\n<leadStatusID>New Lead</leadStatusID>\n<leadOwnerID>Doug Lynn</leadOwnerID>\n<leadRatingID>Warm</leadRatingID>\n<leadKilledReason/>\n<leadKilledReasonComment/>\n<leadSource2ID>Advertisement</leadSource2ID>\n<leadSource3ID>Advertising</leadSource3ID>\n<otherLeadSourceDetail/>\n<liquidCapitalMin>10000</liquidCapitalMin>\n<liquidCapitalMax>Yes</liquidCapitalMax>\n<background>Business</background>\n<sourceOfFunding>Business</sourceOfFunding>\n<nextCallDate></nextCallDate>\n<noOfUnitReq>5</noOfUnitReq>\n<franchiseAwarded></franchiseAwarded>\n<noOfFieldSold></noOfFieldSold>\n<dateOfOpen></dateOfOpen>\n<statusChangeDate></statusChangeDate>\n<webSiteLead></webSiteLead>\n<forecastClosureDate></forecastClosureDate>\n    <coApplicantRelationshipID></coApplicantRelationshipID>\n<ipAddress></ipAddress>\n<browserType></browserType>\n<locationId1></locationId1>\n<locationId1b></locationId1b>\n<locationId2></locationId2>\npreferredCountry1>USA</preferredCountry1>\n<preferredCity1>Reston</preferredCity1>\n<preferredStateId1></preferredStateId1>\n  <preferredCountry2></preferredCountry2>\n<preferredStateId2></preferredStateId2>\n<preferredCity2>Delhi</preferredCity2>\n     <lastUpdate>01/21/2020 02:32 AM</lastUpdate>\n<lastAttended></lastAttended>\n<bounceEmailStatus>No</bounceEmailStatus>\n  <spamEmailStatus>No</spamEmailStatus>\n<bounceReason></bounceReason>\nhapter1565657277></_chapter1565657277>\n<_title1888084963></_title1888084963>\n<_website349743092></_website349743092>\n<unsubscribeReason></unsubscribeReason>\n<unsubscribeReasonDetail></unsubscribeReasonDetail>\n<_referredByDoug1528878294></_referredByDoug1528878294>\n<_formerUfoc667296911></_formerUfoc667296911>\n<_entity2098672343></_entity2098672343>\n   <_reasonForOpportunity1634205648></_reasonForOpportunity1634205648>\n<_opportunityType1201200696></_opportunityType1201200696>\n  <_contractType1977583155></_contractType1977583155>\n<_stage958675199></_stage958675199>\n<_opportunityName1430307925></_opportunityName1430307925>\n<_probability275705792></_probability275705792>\n<_opportunityDescription2123592049></_opportunityDescription2123592049>\n<appointmentScheduledFor>01/21/2020 02:33 AM</appointmentScheduledFor>\n<divisionReferenceId>1638714739</divisionReferenceId>\n<division>Affiliates</division>\n  <leadOwnerReferenceId>278728587</leadOwnerReferenceId>\n<serviceID>Newsletters,Offers</serviceID>\n<forecastvalues1584373214>\n    <referenceId></referenceId>\n<_opportunityAdded118333113></_opportunityAdded118333113>\n<_frequency197422997></_frequency197422997>\n<_typeOfRevenue427179396></_typeOfRevenue427179396>\n<_salesAmount779222718></_salesAmount779222718>\n<_additionalRevenueSources1006608410></_additionalRevenueSources1006608410>\n</forecastvalues1584373214>\n  <opportunity1128722035>\n<referenceId></referenceId>\n           </opportunity1128722035></fsLead>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1223103215</responseId>\n<responseData>\n<fsLead>\n<referenceId>1583840676</referenceId>\n<requestDate>01/21/2020 02:32 AM</requestDate>\n<salutation>Mr.</salutation>\n<firstName>Gary</firstName>\n<lastName>Daniel</lastName>\n<address>100 Main St</address>\n<address2></address2>\n<city>Seattle</city>\n<country>USA</country>\n<stateID>Washington</stateID>\n<zip>98102</zip>\n<countyID>Adams</countyID>\n<primaryPhoneToCall>Email</primaryPhoneToCall>\n<bestTimeToContact>Morning</bestTimeToContact>\n<phone>9858452152</phone>\n<phoneExt>53</phoneExt>\n<homePhone></homePhone>\n<homePhoneExt></homePhoneExt>\n<fax></fax>\n<mobile></mobile>\n<emailID>support@franconnect.com</emailID>\n<companyName>Vortex Restoration</companyName>\n<comments>Newly added lead in this area</comments>\n<leadStatusID>New Lead</leadStatusID>\n<leadOwnerID>Doug Lynn</leadOwnerID>\n<leadRatingID>Warm</leadRatingID>\n<leadKilledReason/>\n<leadKilledReasonComment/>\n<leadSource2ID>Advertisement</leadSource2ID>\n<leadSource3ID>Advertising</leadSource3ID>\n<otherLeadSourceDetail/>\n<liquidCapitalMin>10000</liquidCapitalMin>\n<liquidCapitalMax>Yes</liquidCapitalMax>\n<background>Business</background>\n<sourceOfFunding>Business</sourceOfFunding>\n<nextCallDate></nextCallDate>\n<noOfUnitReq>5</noOfUnitReq>\n<franchiseAwarded></franchiseAwarded>\n<noOfFieldSold></noOfFieldSold>\n<dateOfOpen></dateOfOpen>\n<statusChangeDate></statusChangeDate>\n<webSiteLead></webSiteLead>\n<forecastClosureDate></forecastClosureDate>\n    <coApplicantRelationshipID></coApplicantRelationshipID>\n<ipAddress></ipAddress>\n<browserType></browserType>\n<locationId1></locationId1>\n<locationId1b></locationId1b>\n<locationId2></locationId2>\n<preferredCountry1>USA</preferredCountry1>\n<preferredCity1>Reston</preferredCity1>\n<preferredStateId1></preferredStateId1>\n  <preferredCountry2></preferredCountry2>\n<preferredStateId2></preferredStateId2>\n<preferredCity2>Delhi</preferredCity2>\n     <lastUpdate>01/21/2020 02:32 AM</lastUpdate>\n<lastAttended></lastAttended>\n<bounceEmailStatus>No</bounceEmailStatus>\n  <spamEmailStatus>No</spamEmailStatus>\n<bounceReason></bounceReason>\nhapter1565657277></_chapter1565657277>\n<_title1888084963></_title1888084963>\n<_website349743092></_website349743092>\n<unsubscribeReason></unsubscribeReason>\n<unsubscribeReasonDetail></unsubscribeReasonDetail>\n<_referredByDoug1528878294></_referredByDoug1528878294>\n<_formerUfoc667296911></_formerUfoc667296911>\n<_entity2098672343></_entity2098672343>\n   <_reasonForOpportunity1634205648></_reasonForOpportunity1634205648>\n<_opportunityType1201200696></_opportunityType1201200696>\n  <_contractType1977583155></_contractType1977583155>\n<_stage958675199></_stage958675199>\n<_opportunityName1430307925></_opportunityName1430307925>\n<_probability275705792></_probability275705792>\n<_opportunityDescription2123592049></_opportunityDescription2123592049>\n<appointmentScheduledFor>01/21/2020 02:33 AM</appointmentScheduledFor>\n<divisionReferenceId>1638714739</divisionReferenceId>\n<division>Affiliates</division>\n  <leadOwnerReferenceId>278728587</leadOwnerReferenceId>\n<serviceID>Newsletters,Offers</serviceID>\n<forecastvalues1584373214>\n    <referenceId></referenceId>\n<_opportunityAdded118333113></_opportunityAdded118333113>\n<_frequency197422997></_frequency197422997>\n<_typeOfRevenue427179396></_typeOfRevenue427179396>\n<_salesAmount779222718></_salesAmount779222718>\n<_additionalRevenueSources1006608410></_additionalRevenueSources1006608410>\n</forecastvalues1584373214>\n  <opportunity1128722035>\n<referenceId></referenceId>\n           </opportunity1128722035></fsLead>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4196,7 +4280,7 @@
       "CMCreateLeadResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1915513385</responseId>\n<responseData>\n<cmLead>\n<status>Success</status>\n<referenceId>837476009</referenceId>\n</cmLead>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>727907439</responseId>\n<responseData>\n<cmLead>\n<status>Success</status>\n<referenceId>436155293</referenceId>\n</cmLead>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4204,7 +4288,7 @@
       "CMRetrieveLeadResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n    <responseStatus>Success</responseStatus>\n<responseId>777803570</responseId>\n<responseData>\n<cmLead>\n<referenceId>837476009</referenceId>\n<title>Mr.</title>\n<cmLeadStatusID>New</cmLeadStatusID>\n<leadAddDate>01/22/2020 05:59 AM</leadAddDate>\n<leadFirstName>Shaun</leadFirstName>\n<leadLastName>Henry</leadLastName>\n<companyName>Atrium Office Suites</companyName>\n    <primaryContactMethod>Email</primaryContactMethod>\n<franchiseeNo></franchiseeNo>\n<divisionID></divisionID>\n<leadModifyDate></leadModifyDate>\n<address>Street 1</address>\n<city>Saint Louis</city>\n<country>USA</country>\n<zipcode>63132</zipcode>\n<state>Missouri</state>\n<phoneNumbers>(314) 570-8568</phoneNumbers>\n    <extn>011</extn>\n<faxNumbers></faxNumbers>\n<mobileNumbers>(989) 898-9898</mobileNumbers>\n<emailIds>shaun.henry@franconnect.com</emailIds>\n<alternateEmail></alternateEmail>\n<suffix></suffix>\n<position></position>\n<birthdate></birthdate>\n<anniversarydate></anniversarydate>\n<cmLeadTypeID></cmLeadTypeID>\n<cmRatingID>Cold</cmRatingID>\n<cmSource2ID>Advertisement</cmSource2ID>\n<cmSource3ID></cmSource3ID>\n<cmSource1ID>Email</cmSource1ID>\n<bestTimeToContact></bestTimeToContact><comments>Welcome to FC System</comments>\n    <unsubscribe>Opt-In Request not Sent</unsubscribe>\n           <unsubscribeDate></unsubscribeDate>\n<leadOwnerID>DKI Connect Administrator</leadOwnerID>\n<leadAddedBy>Web Service</leadAddedBy>\n<bounceEmailStatus>No</bounceEmailStatus>\n<spamEmailStatus>No</spamEmailStatus>\n<bounceReason></bounceReason>\n<smsUnsubscribe></smsUnsubscribe>\n<smsUnsubscribeDate></smsUnsubscribeDate>\n  <lastContactedField></lastContactedField>\n<unsubscribeReason></unsubscribeReason>\n<unsubscribeReasonDetail></unsubscribeReasonDetail>\n<franchiseeReferenceId></franchiseeReferenceId>\n<leadOwnerReferenceId>356393263</leadOwnerReferenceId>\n<leadAddedByReferenceId>2</leadAddedByReferenceId>\n<convertedBy></convertedBy>\n<convertedOn></convertedOn>\n<ownerType>Corporate</ownerType>\n<divisionReferenceId></divisionReferenceId>\n<areaReferenceId></areaReferenceId>\n<areaID></areaID>\n<contactDetails>\n        <referenceId></referenceId>\n<contactFirstName></contactFirstName>\n <contactLastName></contactLastName>\n</contactDetails>\n<serviceID>Product/Service Update, Announcements</serviceID>\n</cmLead>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n    <responseStatus>Success</responseStatus>\n<responseId>90963566</responseId>\n<responseData>\n<cmLead>\n<referenceId>436155293</referenceId>\n<title>Mr.</title>\n<cmLeadStatusID>Contacted</cmLeadStatusID>\n<leadAddDate>2020-02-28T07:14Z</leadAddDate>\n<leadFirstName>Shaun</leadFirstName>\n<leadLastName>Henry</leadLastName>\n<companyName>Atrium Office Suites</companyName>\n    <primaryContactMethod>Email</primaryContactMethod>\n<franchiseeNo></franchiseeNo>\n<divisionID></divisionID>\n<leadModifyDate></leadModifyDate>\n<address>Street 1</address>\n<city>Saint Louis</city>\n<country>USA</country>\n<zipcode>63132</zipcode>\n<state>Missouri</state>\n<phoneNumbers>(314) 570-8568</phoneNumbers>\n    <extn>011</extn>\n<faxNumbers></faxNumbers>\n<mobileNumbers>(989) 898-9898</mobileNumbers>\n<emailIds>shaun.henry@franconnect.com</emailIds>\n<alternateEmail></alternateEmail>\n<suffix></suffix>\n<position></position>\n<birthdate></birthdate>\n<anniversarydate></anniversarydate>\n<cmLeadTypeID></cmLeadTypeID>\n<cmRatingID>Cold</cmRatingID>\n<cmSource2ID>Advertisement</cmSource2ID>\n<cmSource3ID></cmSource3ID>\n<cmSource1ID>Email</cmSource1ID>\n<bestTimeToContact></bestTimeToContact><comments>Welcome to FC System</comments>\n    <unsubscribe>Opt-In Request not Sent</unsubscribe>\n           <unsubscribeDate></unsubscribeDate>\n<leadOwnerID>FranConnect Administrator</leadOwnerID>\n<leadAddedBy>Web Service</leadAddedBy>\n<bounceEmailStatus>No</bounceEmailStatus>\n<spamEmailStatus>No</spamEmailStatus>\n<bounceReason></bounceReason>\n<smsUnsubscribe>Opt-In Request not Sent</smsUnsubscribe>\n<smsUnsubscribeDate></smsUnsubscribeDate>\n  <lastContactedField></lastContactedField>\n<unsubscribeReason></unsubscribeReason>\n<unsubscribeReasonDetail></unsubscribeReasonDetail>\n<franchiseeReferenceId></franchiseeReferenceId>\n<leadOwnerReferenceId>356393263</leadOwnerReferenceId>\n<leadAddedByReferenceId>2</leadAddedByReferenceId>\n<convertedBy></convertedBy>\n<convertedOn></convertedOn>\n<ownerType>Corporate</ownerType>\n<divisionReferenceId></divisionReferenceId>\n<areaReferenceId></areaReferenceId>\n<areaID></areaID>\n<contactDetails>\n        <referenceId></referenceId>\n<contactFirstName></contactFirstName>\n <contactLastName></contactLastName>\n</contactDetails>\n<serviceID>Product/Service Update, Announcements</serviceID>\n</cmLead>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4212,7 +4296,7 @@
       "CMUpdateLeadResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>85246348</responseId>\n<responseData>\n<cmLead>\n<status>Success</status>\n<referenceId>837476009</referenceId>\n</cmLead>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>85246348</responseId>\n<responseData>\n<cmLead>\n<status>Success</status>\n<referenceId>436155293</referenceId>\n</cmLead>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4228,7 +4312,7 @@
       "CMCreateContactResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1385377519</responseId>\n<responseData>\n<cmContact>\n<status>Success</status>\n<referenceId>976934640</referenceId>\n</cmContact>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>586252913</responseId>\n<responseData>\n<cmContact>\n<status>Success</status>\n<referenceId>1970068020</referenceId>\n</cmContact>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4236,7 +4320,7 @@
       "CMRetrieveContactResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1045649967</responseId>\n<responseData>\n<cmContact>\n<referenceId>976934640</referenceId>\n<contactType>Prospect_Sponsor</contactType>\n<contactAddDate>01/23/2020 01:28 AM</contactAddDate>\n<contactOwnerID> DKI Connect Administrator</contactOwnerID>\n<contactAddedBy>Web Service</contactAddedBy><title>Mr.</title>\n<contactFirstName>Joe</contactFirstName><contactLastName>Larsen</contactLastName>\n<primaryContactMethod></primaryContactMethod>\n<bestTimeToContact>Morning</bestTimeToContact><suffix></suffix>\n<cmLeadStatusID>New</cmLeadStatusID>\n<cmLeadSubStatusID></cmLeadSubStatusID>\n  <cmLeadTypeID></cmLeadTypeID>\n<cmSource1ID>Email</cmSource1ID>\n    <cmRatingID></cmRatingID>\n<cmSource2ID>Advertisement</cmSource2ID>\n<cmSource3ID></cmSource3ID>\n<franchiseeNo></franchiseeNo>\n<divisionID></divisionID>\n<comments>This is new contact</comments>\n <position></position>\n<address>PO Box 1022</address>\n<city>Seattle</city>\n<country>USA</country>\n<zipcode>98104</zipcode>\n<state>Washington</state>\n<phoneNumbers>122121</phoneNumbers>\n<extn>121</extn>\n <faxNumbers></faxNumbers>\n<mobileNumbers>454545454</mobileNumbers>\n<emailIds>Joe.larsen@yahoo.com</emailIds>\n<alternateEmail></alternateEmail>\n<birthdate></birthdate>\n<anniversarydate></anniversarydate>\n<contactModifyDate></contactModifyDate>\n<lastContactedField></lastContactedField>\n    <unsubscribe>Opted In</unsubscribe>\n<unsubscribeDate></unsubscribeDate>\n<smsUnsubscribeDate></smsUnsubscribeDate>\n  <facebook></facebook>\n<twitter></twitter>\n<Youtube></Youtube>\n    <linkedin></linkedin>\n<google></google>\n<bounceEmailStatus>No</bounceEmailStatus>\n<spamEmailStatus>No</spamEmailStatus>\n        <bounceReason></bounceReason>\n<smsUnsubscribe></smsUnsubscribe>\n<_businessType319370392></_businessType319370392>\n<_anniversaryDate1353960078></_anniversaryDate1353960078>\n           <_propertySqFt1556721726></_propertySqFt1556721726>\n           <_latitude1078746944></_latitude1078746944>\n<_longitude1185604513></_longitude1185604513>\n<_bestTimeToContact52494304></_bestTimeToContact52494304>\n<_propertyCode915460063></_propertyCode915460063>\n<_numberOfBuildings1987530759></_numberOfBuildings1987530759>\n<_numberOfUnits959283769></_numberOfUnits959283769>\n<_typeOfProperty829088228></_typeOfProperty829088228><unsubscribeReasonDetail></unsubscribeReasonDetail>\n<unsubscribeReason></unsubscribeReason>\n <_renewalDate1041739061></_renewalDate1041739061>\n           <_initateRenewalDiscussions175216171></_initateRenewalDiscussions175216171>\n          <franchiseeReferenceId></franchiseeReferenceId>\n            <contactOwnerReferenceId>356393263</contactOwnerReferenceId>\n        <contactAddedByReferenceId>2</contactAddedByReferenceId>\n        <ownerType>Corporate</ownerType>\n<divisionReferenceId></divisionReferenceId>\n<areaReferenceId></areaReferenceId>\n<areaID></areaID>\n<serviceID>Product/Service Update, Announcements</serviceID>\n<accountDetails>\n<referenceId></referenceId>\n        <accountName></accountName>\n<accountType></accountType>\n            <emailIds></emailIds>\n<companyAddDate></companyAddDate>\n        </accountDetails>\n</cmContact>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1586797350</responseId>\n<responseData>\n<cmContact>\n<referenceId>1970068020</referenceId>\n<contactType>Contacts</contactType>\n<contactAddDate>2020-02-28T09:38Z</contactAddDate>\n<contactOwnerID>FranConnect Administrator</contactOwnerID>\n<contactAddedBy>Web Service</contactAddedBy><title>Mr.</title>\n<contactFirstName>Amanda</contactFirstName><contactLastName>Jacques</contactLastName>\n<primaryContactMethod>Email</primaryContactMethod>\n<bestTimeToContact>Morning</bestTimeToContact><suffix></suffix>\n<cmLeadStatusID>New</cmLeadStatusID>\n<cmLeadSubStatusID></cmLeadSubStatusID>\n  <cmLeadTypeID></cmLeadTypeID>\n<cmSource1ID>Email</cmSource1ID>\n    <cmRatingID></cmRatingID>\n<cmSource2ID>Advertisement</cmSource2ID>\n<cmSource3ID></cmSource3ID>\n<franchiseeNo></franchiseeNo>\n<divisionID></divisionID>\n<comments>This is new contact</comments>\n <position></position>\n<address>PO Box 1022</address>\n<city>Seattle</city>\n<country>USA</country>\n<zipcode>98104</zipcode>\n<state>Washington</state>\n<phoneNumbers>122121</phoneNumbers>\n<extn>121</extn>\n <faxNumbers></faxNumbers>\n<mobileNumbers>454545454</mobileNumbers>\n<emailIds>Amanda.Jacques@yahoo.com</emailIds>\n<alternateEmail></alternateEmail>\n<birthdate></birthdate>\n<anniversarydate></anniversarydate>\n<contactModifyDate></contactModifyDate>\n<lastContactedField></lastContactedField>\n    <unsubscribe>Opted In</unsubscribe>\n<unsubscribeDate></unsubscribeDate>\n<smsUnsubscribeDate></smsUnsubscribeDate>\n  <facebook></facebook>\n<twitter></twitter>\n<Youtube></Youtube>\n    <linkedin></linkedin>\n<google></google>\n<bounceEmailStatus>No</bounceEmailStatus>\n<spamEmailStatus>No</spamEmailStatus>\n        <bounceReason></bounceReason>\n<smsUnsubscribe></smsUnsubscribe>\n<_businessType319370392></_businessType319370392>\n<_anniversaryDate1353960078></_anniversaryDate1353960078>\n           <_propertySqFt1556721726></_propertySqFt1556721726>\n           <_latitude1078746944></_latitude1078746944>\n<_longitude1185604513></_longitude1185604513>\n<_bestTimeToContact52494304></_bestTimeToContact52494304>\n<_propertyCode915460063></_propertyCode915460063>\n<_numberOfBuildings1987530759></_numberOfBuildings1987530759>\n<_numberOfUnits959283769></_numberOfUnits959283769>\n<_typeOfProperty829088228></_typeOfProperty829088228><unsubscribeReasonDetail></unsubscribeReasonDetail>\n<unsubscribeReason></unsubscribeReason>\n <_renewalDate1041739061></_renewalDate1041739061>\n           <_initateRenewalDiscussions175216171></_initateRenewalDiscussions175216171>\n          <franchiseeReferenceId></franchiseeReferenceId>\n            <contactOwnerReferenceId>356393263</contactOwnerReferenceId>\n        <contactAddedByReferenceId>2</contactAddedByReferenceId>\n        <ownerType>Corporate</ownerType>\n<divisionReferenceId></divisionReferenceId>\n<areaReferenceId></areaReferenceId>\n<areaID></areaID>\n<serviceID>Product/Service Update, Announcements</serviceID>\n<accountDetails>\n<referenceId></referenceId>\n        <accountName></accountName>\n<accountType></accountType>\n            <emailIds></emailIds>\n<companyAddDate></companyAddDate>\n        </accountDetails>\n</cmContact>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4372,7 +4456,7 @@
       "FSUpdateTaskResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>971648450</responseId>\n<responseData>\n<fsTask>\n<status>Success</status>\n<referenceId>1442059186</referenceId>\n</ fsTask>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>971648450</responseId>\n<responseData>\n<fsTask>\n<status>Success</status>\n<referenceId>1442059186</referenceId>\n</fsTask>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4380,7 +4464,7 @@
       "FSDeleteTaskResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1790617288</responseId>\n<responseData>\n<fsTask>\n<status>Success</status>\n<referenceId>1661907438</referenceId>\n</ fsTask>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1790617288</responseId>\n<responseData>\n<fsTask>\n<status>Success</status>\n<referenceId>1661907438</referenceId>\n</fsTask>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4404,7 +4488,7 @@
       "CMDeleteMailResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1790617288</responseId>\n<responseData>\n<cmMail>\n<status>Success</status>\n<referenceId>1661907438</referenceId>\n</ cmMail>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1790617288</responseId>\n<responseData>\n<cmMail>\n<status>Success</status>\n<referenceId>1661907438</referenceId>\n</cmMail>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4420,7 +4504,7 @@
       "CMRetrieveCampaignEmailResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n    <responseStatus>Success</responseStatus>\n<responseId>767081748</responseId>\n<responseData>\n<cmContact>\n<referenceId>1268014445</referenceId>\n<contactType>Sponsor</contactType>\n<contactAddDate>10/08/2019 03:54 PM</contactAddDate>\n<franchiseeNo></franchiseeNo>\n  <contactOwnerID>Ken Copeland</contactOwnerID>\n<contactAddedBy>Lynette Boria</contactAddedBy>\n<contactFirstName>John</contactFirstName>\n  <contactLastName>Swaney</contactLastName>\n<franchiseeReferenceId></franchiseeReferenceId>\n<contactOwnerReferenceId>779917850</contactOwnerReferenceId>\n<contactAddedByReferenceId>283566669</contactAddedByReferenceId>\n<accountDetails>\n<referenceId>334225869</referenceId>\n<accountName>United Rentals</accountName>\n<accountType>B2B</accountType>\n<emailIds>qatest@staffex.com</emailIds>\n<companyAddDate>01/04/2017 04:33 PM</companyAddDate>\n</accountDetails>\n<cmCampaignEmail>\n<referenceId>87511</referenceId>\n<mailRead></mailRead>\n<mailSent>11/04/2019</mailSent>\n<cmTemplates>\n<referenceId>1767716012</referenceId>\n<mailSubject>Current list of DKI Contractors</mailSubject>\n</cmTemplates>\n      </cmCampaignEmail>\n<cmCampaignEmail>\n<referenceId>97482</referenceId>\n<mailRead></mailRead>\n<mailSent>12/02/2019</mailSent>\n        <cmTemplates>\n<referenceId>1767716012</referenceId>\n              <mailSubject>Current list of DKI Contractors</mailSubject>\n  </cmTemplates>\n</cmCampaignEmail>\n</cmContact>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n    <responseStatus>Success</responseStatus>\n<responseId>1377941630</responseId>\n<responseData>\n<cmContact>\n<referenceId>1970068020</referenceId>\n<contactType>Contacts</contactType>\n<contactAddDate>2020-02-28T09:38Z</contactAddDate>\n<franchiseeNo></franchiseeNo>\n<contactOwnerID>FranConnect Administrator</contactOwnerID>\n<contactAddedBy>Web Service</contactAddedBy>\n<contactFirstName>Amanda</contactFirstName>\n<contactLastName>Jacques</contactLastName>\n  <franchiseeReferenceId></franchiseeReferenceId>\n<contactOwnerReferenceId>1</contactOwnerReferenceId>\n    <contactAddedByReferenceId>2</contactAddedByReferenceId>\n           <accountDetails>\n<referenceId></referenceId>\n<accountName></accountName>\n<accountType></accountType>\n<emailIds></emailIds>\n<companyAddDate></companyAddDate>\n</accountDetails>\n<cmCampaignEmail>\n<referenceId></referenceId>\n<mailRead></mailRead>\n<mailSent></mailSent>\n<cmTemplates>\n<referenceId></referenceId>\n<mailSubject></mailSubject>\n</cmTemplates>\n</cmCampaignEmail>\n</cmContact>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4441,12 +4525,12 @@
                 "data": [
                   [
                     {
-                      "is_store": "N",
-                      "franchisee_name": "Automationc16111608",
+                      "is_store": "Y",
+                      "franchisee_name": "12345",
                       "f_name": "null null",
-                      "franchisee_no": "1780217527",
+                      "franchisee_no": "1319673313",
                       "last_name": null,
-                      "area_id": "342822512",
+                      "area_id": "2075199050",
                       "is_store_archive": null,
                       "first_name": null,
                       "is_franchisee": "Y",
@@ -4454,11 +4538,11 @@
                     },
                     {
                       "is_store": "N",
-                      "franchisee_name": "fran25",
+                      "franchisee_name": "Naples",
                       "f_name": "null null",
-                      "franchisee_no": "1478262530",
+                      "franchisee_no": "1961077604",
                       "last_name": null,
-                      "area_id": "93095410",
+                      "area_id": "2075199050",
                       "is_store_archive": null,
                       "first_name": null,
                       "is_franchisee": "Y",
@@ -4482,15 +4566,15 @@
                   [
                     {
                       "is_store": "N",
-                      "franchisee_name": "Automationc16111608",
+                      "franchisee_name": "10012",
                       "f_name": "null null",
-                      "franchisee_no": "1780217527",
+                      "franchisee_no": "318618828",
                       "last_name": null,
-                      "area_id": "342822512",
+                      "area_id": "311783348",
                       "is_store_archive": null,
                       "first_name": null,
                       "is_franchisee": "Y",
-                      "status": "0"
+                      "status": "1"
                     }
                   ]
                 ],
@@ -4958,83 +5042,97 @@
               "response": {
                 "data": [
                   {
-                    "962399155": {
-                      "franchiseRoyaltyID": "962399155",
-                      "invoiceNO": "2",
-                      "franchiseeNo": "403951414",
+                    "1042018448": {
+                      "franchiseRoyaltyID": "1042018448",
+                      "parentID": "1042018448",
+                      "invoiceNO": "274",
+                      "franchiseeNo": "1812536030",
                       "taxRateId": "-1",
-                      "totalSales": "700.0",
-                      "addlAmount": "0.0",
-                      "invoiceAmount": "685.0",
-                      "taxAmount": "0.0",
-                      "invoiceDate": "2019-06-26 06:45:26",
-                      "paymentStatus": "N",
+                      "totalSales": "1500.0",
+                      "addlAmount": "10.0",
+                      "invoiceAmount": "265.56",
+                      "taxAmount": null,
+                      "invoiceDate": "2020-02-07 04:50:29",
+                      "paymentStatus": "P",
                       "reportStatus": "I",
                       "invType": "R",
                       "amountPaid": "0.0",
                       "openBalAdv": "0.0",
                       "openBalTax": "0.0",
                       "openBalRoy": "0.0",
-                      "addlFees": "300.0",
-                      "openBalAddlFees": "300.0",
-                      "totalQuantity": "52.0",
-                      "Open Royalty": "350.0",
-                      "Royalty": "350.0",
-                      "Open Adv.": "35.0",
-                      "Adv.": "35.0",
-                      "Open Royalty (Area Franchise)": "35.0",
-                      "Royalty (Area Franchise)": "35.0",
-                      "Open Adv. (Area Franchise)": "5.25",
-                      "Adv. (Area Franchise)": "5.25",
+                      "addlFees": "10.0",
+                      "openBalAddlFees": "10.0",
+                      "totalQuantity": "0.0",
+                      "Open Royalty": "28.0",
+                      "Royalty": "28.0",
+                      "Open Adv.": "28.0",
+                      "Adv.": "28.0",
+                      "Open Royalty (Area Franchise)": "10.02",
+                      "Royalty (Area Franchise)": "10.02",
+                      "Open Adv. (Area Franchise)": "10.02",
+                      "Adv. (Area Franchise)": "10.02",
+                      "Open Promissory Notes": "161.36",
+                      "Promissory Notes": "171.56",
+                      "Open Late Fee": "28.0",
+                      "Late Fee": "28.0",
+                      "Open Late Fee(Area Franchise)": "10.02",
+                      "Late Fee(Area Franchise)": "10.02",
                       "lineItems": {},
-                      "totalOpenBalance": "685.0",
-                      "reportNo": "2",
-                      "salesReportID": "991157129",
-                      "reportPeriodStart": "2019-01-01",
-                      "reportPeriodEnd": "2019-01-31",
-                      "reportSubmitDate": "2019-06-26 10:39:12",
-                      "dateReceived": "2019-06-26",
+                      "totalOpenBalance": "255.36",
+                      "reportNo": "274",
+                      "salesReportID": "1562253270",
+                      "reportPeriodStart": "2019-04-01",
+                      "reportPeriodEnd": "2019-04-30",
+                      "reportSubmitDate": "2020-02-07 04:49:58",
+                      "dateReceived": "2020-02-07",
                       "reportType": "M",
-                      "versionID": "Monthly Agr"
+                      "versionID": "Category Sales Based Version"
                     },
-                    "1928694199": {
-                      "franchiseRoyaltyID": "1928694199",
-                      "invoiceNO": "6",
-                      "franchiseeNo": "403951414",
+                    "1319427657": {
+                      "franchiseRoyaltyID": "1319427657",
+                      "parentID": "1319427657",
+                      "invoiceNO": "263",
+                      "franchiseeNo": "1812536030",
                       "taxRateId": "-1",
-                      "totalSales": "700.0",
-                      "addlAmount": "0.0",
-                      "invoiceAmount": "685.0",
-                      "taxAmount": "0.0",
-                      "invoiceDate": "2019-06-26 08:00:15",
-                      "paymentStatus": "P",
+                      "totalSales": "1000.0",
+                      "addlAmount": "10.0",
+                      "invoiceAmount": "400.89",
+                      "taxAmount": null,
+                      "invoiceDate": "2020-01-31 02:43:06",
+                      "paymentStatus": "C",
                       "reportStatus": "I",
                       "invType": "R",
-                      "amountPaid": "600.0",
+                      "amountPaid": "-38.0",
                       "openBalAdv": "0.0",
                       "openBalTax": "0.0",
                       "openBalRoy": "0.0",
-                      "addlFees": "300.0",
-                      "openBalAddlFees": "85.0",
-                      "totalQuantity": "52.0",
+                      "addlFees": "10.0",
+                      "openBalAddlFees": "0.0",
+                      "totalQuantity": "0.0",
                       "Open Royalty": "0.0",
-                      "Royalty": "350.0",
+                      "Royalty": "19.0",
                       "Open Adv.": "0.0",
-                      "Adv.": "35.0",
-                      "Open Royalty (Area Franchise)": "35.0",
-                      "Royalty (Area Franchise)": "35.0",
-                      "Open Adv. (Area Franchise)": "5.25",
-                      "Adv. (Area Franchise)": "5.25",
+                      "Adv.": "19.0",
+                      "Open Royalty (Area Franchise)": "5.01",
+                      "Royalty (Area Franchise)": "5.01",
+                      "Open Adv. (Area Franchise)": "5.01",
+                      "Adv. (Area Franchise)": "5.01",
+                      "Open Promissory Notes": "0.0",
+                      "Promissory Notes": "333.89",
+                      "Open Late Fee": "0.0",
+                      "Late Fee": "19.0",
+                      "Open Late Fee(Area Franchise)": "5.01",
+                      "Late Fee(Area Franchise)": "5.01",
                       "lineItems": {},
-                      "totalOpenBalance": "85.0",
-                      "reportNo": "6",
-                      "salesReportID": "71764009",
-                      "reportPeriodStart": "2019-03-01",
-                      "reportPeriodEnd": "2019-03-31",
-                      "reportSubmitDate": "2019-06-26 11:24:46",
-                      "dateReceived": "2019-02-26",
+                      "totalOpenBalance": "0.0",
+                      "reportNo": "263",
+                      "salesReportID": "155495205",
+                      "reportPeriodStart": "2019-11-01",
+                      "reportPeriodEnd": "2019-11-30",
+                      "reportSubmitDate": "2020-01-31 02:38:20",
+                      "dateReceived": "2020-01-31",
                       "reportType": "M",
-                      "versionID": "Monthly Agr"
+                      "versionID": "Category Sales Based Version"
                     },
                     "response": "Success"
                   }
@@ -5068,6 +5166,24 @@
                       "name": "Unpaid",
                       "description": ""
                     }
+                  }
+                ],
+                "page": null
+              }
+            }
+          }
+        },
+        "description": "Successful"
+      },
+      "CreatePaymentResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "data": [
+                  {
+                    "paymentNo": "45",
+                    "paymentID": "822049897"
                   }
                 ],
                 "page": null

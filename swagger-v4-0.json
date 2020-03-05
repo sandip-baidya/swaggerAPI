@@ -2046,7 +2046,7 @@
                   {
                     "data": [
                       {
-                        "franchiseeNo": "403951414",
+                        "franchiseeNo": "403968414",
                         "reportPeriod": "Jan - 2019",
                         "dateReceived": "2019-06-26",
                         "acknowledgeSalesReport": "yes",
@@ -2063,7 +2063,7 @@
                               ]
                             },
                             "24340465": {
-                              "name": "Test Sales Category (+)",
+                              "name": "Total Sales Category (+)",
                               "calculationType": "(+)",
                               "data": [
                                 {
@@ -2086,7 +2086,7 @@
                               ]
                             },
                             "450294864": {
-                              "name": "Non-Fin Integer Categ2",
+                              "name": "Non-Fin Category",
                               "calculationType": "(+)",
                               "data": [
                                 {
@@ -2195,7 +2195,7 @@
                     "salesReportID": {
                       "clause": "EQUAL",
                       "values": [
-                        "1758518040"
+                        "1758848040"
                       ]
                     }
                   },
@@ -2313,7 +2313,7 @@
                               ]
                             },
                             "450294864": {
-                              "name": "Non-Fin Integer Categ2",
+                              "name": "Non-Fin Category",
                               "calculationType": "(+)",
                               "data": [
                                 {
@@ -2413,7 +2413,7 @@
                     "franchiseeNo": {
                       "clause": "EQUAL",
                       "values": [
-                        "403951414"
+                        "403968414"
                       ]
                     }
                   },
@@ -2522,7 +2522,7 @@
                         "dateReceived": "2019-12-31",
                         "royaltyType": "Promissory Notes",
                         "franchiseRoyaltyID": [
-                          "1042018448"
+                          "1042268448"
                         ],
                         "debitMemos": [],
                         "collectionMethod": {
@@ -2606,7 +2606,7 @@
                     "franchiseeNo": {
                       "clause": "EQUAL",
                       "values": [
-                        "403951414"
+                        "403968414"
                       ]
                     }
                   },
@@ -2751,7 +2751,7 @@
                   {
                     "data": [
                       {
-                        "franchiseeNo": "403951414",
+                        "franchiseeNo": "403968414",
                         "statementPeriod": "Jun - 2019",
                         "submissionDate": "2019-06-26",
                         "plItems": [
@@ -2783,7 +2783,7 @@
                                 }
                               ]
                             },
-                            "1495583145": {
+                            "4": {
                               "name": "P&L Addition Type Categ",
                               "calculationType": "(+)",
                               "data": [
@@ -2868,7 +2868,7 @@
                     "franchiseeNo": {
                       "clause": "EQUAL",
                       "values": [
-                        "403951414"
+                        "403968414"
                       ]
                     }
                   },
@@ -2981,7 +2981,7 @@
                                 }
                               ]
                             },
-                            "1495583145": {
+                            "4": {
                               "name": "P&L Addition Type Categ",
                               "calculationType": "(+)",
                               "data": [
@@ -3211,7 +3211,7 @@
       "FSCreateLeadArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<fsLead>\n<salutation>Mr.</salutation>\n<firstName>Gary</firstName>\n<lastName>Daniel</lastName>\n<address>100 Main St</address>\n<address2></address2>\n<city>Seattle</city>\n<country>USA</country>\n<stateID>Washington</stateID>\n<sendAutomaticMail>Yes</sendAutomaticMail>\n<zip>98102</zip>\n<countyID>Adams</countyID>\n<primaryPhoneToCall>Email</primaryPhoneToCall>\n<bestTimeToContact></bestTimeToContact>\n<phone></phone>\n<phoneExt></phoneExt>\n<homePhone></homePhone>\n<homePhoneExt></homePhoneExt>\n<fax></fax>\n<mobile></mobile>\n<emailID>support@franconnect.com</emailID>\n<companyName>Vortex Restoration</companyName>\n<comments>Newly added lead in this area</comments>\n<basedOnAssignmentRule>No</basedOnAssignmentRule>\n<leadOwnerID>Doug Lynn</leadOwnerID>\n<leadRatingID>Warm</leadRatingID>\n<marketingCodeId></marketingCodeId>\n<leadSource2ID>Advertisement</leadSource2ID>\n<leadSource3ID>Advertising</leadSource3ID>\n<otherLeadSourceDetail>Service Call</otherLeadSourceDetail>\n<liquidCapitalMin>10000</liquidCapitalMin>\n<liquidCapitalMax>Yes</liquidCapitalMax>\n<investTimeframe>5</investTimeframe>\n<background>Business</background>\n<sourceOfFunding>Business</sourceOfFunding>\n<division>Affiliates</division>\n<noOfUnitReq>1</noOfUnitReq>\n<preferredCity1>Reston</preferredCity1>\n<preferredCountry1>USA</preferredCountry1>\n<preferredStateId1>Albahama</preferredStateId1>\n<preferredCity2>Delhi</preferredCity2>\n<preferredCountry2>India</preferredCountry2>\n<preferredStateId2>Delhi</preferredStateId2>\n<probability>10</probability>\n<forecastRating>Upside</forecastRating>\n<forecastRevenue>1500</forecastRevenue>\n<basedOnWorkflowAssignmentRule>No</basedOnWorkflowAssignmentRule>\n<serviceID>Product/Service Update,Newsletters,Offers</serviceID>\n</fsLead>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<fsLead>\n<salutation>Mr.</salutation>\n<firstName>Alex</firstName>\n<lastName>VJohn</lastName>\n<address>100 Main St</address>\n<address2></address2>\n<city>Seattle</city>\n<country>USA</country>\n<stateID>Washington</stateID>\n<sendAutomaticMail>Yes</sendAutomaticMail>\n<zip>98102</zip>\n<countyID>Adams</countyID>\n<primaryPhoneToCall>Email</primaryPhoneToCall>\n<bestTimeToContact></bestTimeToContact>\n<phone></phone>\n<phoneExt></phoneExt>\n<homePhone></homePhone>\n<homePhoneExt></homePhoneExt>\n<fax></fax>\n<mobile></mobile>\n<emailID>example@franconnect.com</emailID>\n<companyName>Waterwell Restoration</companyName>\n<comments>Newly added lead in this area</comments>\n<basedOnAssignmentRule>No</basedOnAssignmentRule>\n<leadOwnerID>FranConnect Administrator</leadOwnerID>\n<leadRatingID>Warm</leadRatingID>\n<marketingCodeId></marketingCodeId>\n<leadSource2ID>Internet</leadSource2ID>\n<leadSource3ID>franchising.com</leadSource3ID>\n<otherLeadSourceDetail>Service Call</otherLeadSourceDetail>\n<liquidCapitalMin>10000</liquidCapitalMin>\n<liquidCapitalMax>Yes</liquidCapitalMax>\n<investTimeframe>5</investTimeframe>\n<background>Business</background>\n<sourceOfFunding>Business</sourceOfFunding>\n<noOfUnitReq>1</noOfUnitReq>\n<preferredCity1>Reston</preferredCity1>\n<preferredCountry1>USA</preferredCountry1>\n<preferredCity2>Virginia</preferredCity2>\n<probability>10</probability>\n<forecastRating></forecastRating>\n<forecastRevenue>1500</forecastRevenue>\n<basedOnWorkflowAssignmentRule>No</basedOnWorkflowAssignmentRule>\n<serviceID>Product/Service Update,Newsletters,Offers</serviceID>\n</fsLead>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3230,7 +3230,7 @@
       "FSRetrieveLeadArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<filter>\n<referenceId>1583840676</referenceId>\n</filter>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<filter>\n<referenceId>166110471</referenceId>\n</filter>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3268,7 +3268,7 @@
       "FSDeleteLeadArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<fsLead>\n<referenceId>2078759704</referenceId>\n</fsLead>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<fsLead>\n<referenceId>884520437</referenceId>\n</fsLead>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3362,7 +3362,7 @@
       "AdminCreateUserArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<adminUser>\n<userID>JamesW</userID>\n<password>James@1232</password>\n<userLevel>Corporate</userLevel>\n<userLanguage>English</userLanguage>\n<timezone>GMT -06:30</timezone>\n<type>Normal</type>\n<expirationTime>NA</expirationTime>\n<role>Corporate Administrator</role>\n<jobTitle>Project Manager</jobTitle>\n<firstname>Carl</firstname>\n<lastname>Williams</lastname>\n<isAuditor>Y</isAuditor>\n<address>Park Avenue, Hudson Lane</address>\n<city>Reston</city>\n<state>Virginia</state>\n<zipCode>201301</zipCode>\n<country>USA</country>\n<phone1>9858452152</phone1>\n<phoneExt1>53</phoneExt1>\n<phone2>9858452162</phone2>\n<phoneExt2>63</phoneExt2>\n<fax>Fax</fax>\n<mobile>9999999995</mobile>\n<email>james.williams@yahoo.com</email>\n<sendNotification>Y</sendNotification>\n<loginUserIp>192.168.1.217</loginUserIp>\n><isDaylight>Y</isDaylight>\n</adminUser>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<adminUser>\n<userID>CarlW</userID>\n<password>Carl12345</password>\n<userLevel>Corporate</userLevel>\n<userLanguage>English</userLanguage>\n<timezone>GMT -06:30</timezone>\n<type>Normal</type>\n<expirationTime>NA</expirationTime>\n<role>Corporate Administrator</role>\n<jobTitle>Project Manager</jobTitle>\n<firstname>Carl</firstname>\n<lastname>Williams</lastname>\n<isAuditor>Y</isAuditor>\n<address>Street3, Hudson Lane</address>\n<city>Reston</city>\n<state>Virginia</state>\n<zipCode>201301</zipCode>\n<country>USA</country>\n<phone1>987654321</phone1>\n<phoneExt1>53</phoneExt1>\n<phone2>9876543210</phone2>\n<phoneExt2>63</phoneExt2>\n<fax>Fax</fax>\n<mobile>9876543210</mobile>\n<email>example@franconnect.com</email>\n<sendNotification>Y</sendNotification>\n<loginUserIp>192.169.1.214</loginUserIp>\n><isDaylight>Y</isDaylight>\n</adminUser>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3381,7 +3381,7 @@
       "AdminRetrieveUserArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<filter>\n<referenceId>2055098927</referenceId>\n</filter>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<filter>\n<referenceId>3451843</referenceId>\n</filter>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3400,7 +3400,7 @@
       "AdminUpdateUserArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<adminUser>\n<referenceId>2055098927</referenceId>\n<userID>jamesv</userID>\n</adminUser>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<adminUser>\n<referenceId>3451843</referenceId>\n<userID>jamesv</userID>\n</adminUser>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3419,7 +3419,7 @@
       "AdminDeleteUserArray": {
         "content": {
           "application/xml": {
-            "example": "POST/<context-path>/rest/dataservices/delete?module=admin&subModule=user&responseType=XML&xmlString=<fcRequest><adminUser><referenceId>2055098927</referenceId><userID>jamesv</userID></adminUser></fcRequest>",
+            "example": "POST/<context-path>/rest/dataservices/delete?module=admin&subModule=user&responseType=XML&xmlString=<fcRequest><adminUser><referenceId>3451843</referenceId><userID>jamesv</userID></adminUser></fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3456,7 +3456,7 @@
       "FimCreateFranchiseeArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<fimFranchisee>\n<status>Yes</status>\n<franchiseeName>West Corporate Collection Store</franchiseeName>\n<centerName>North Center</centerName>\n<areaID>MIDWEST USA</areaID>\n<division>Affiliates</division>\n<licenseNo>021542</licenseNo>\n<fbc></fbc>\n<openingDate>10/01/2013</openingDate>\n<storeTypeId>Default</storeTypeId>\n<address>C-08</address>\n<address2>Lane-08</address2>\n<city>New York City</city>\n<country>USA</country>\n<state>New York</state>\n<zipcode>201254</zipcode>\n<storePhone>5212542513</storePhone>\n<storePhoneExtn>12</storePhoneExtn>\n<storeFax></storeFax>\n<storeMobile></storeMobile>\n<storeEmail>Emma_Gomez@hotmail.com</storeEmail>\n<storeWebsite>www.google.com</storeWebsite>\n<contactTitle>Mrs</contactTitle>\n<contactFirstName>Emma</contactFirstName>\n<contactLastName>Gomez</contactLastName>\n<phone1>8458451254</phone1>\n<phone1Extn>55</phone1Extn>\n<fax></fax>\n<mobile></mobile>\n<emailID>Emma_Gomez@hotmail.com</emailID>\n<versionID>1.0</versionID>\n<taxRateId>Tax Rate</taxRateId>\n<entityDetail>Individual</entityDetail>\n<entityType>New</entityType>\n<fimCbEntityType></fimCbEntityType>\n<fimTtEntityName></fimTtEntityName>\n<fimTtTaxpayer></fimTtTaxpayer>\n<fimCbStateOfFormation>USA</fimCbStateOfFormation>\n<fimCbCountryOfFormation>New York</fimCbCountryOfFormation>\n<ownerType>New</ownerType>\n<ownerTitle>Mr.</ownerTitle>\n<firstName>Shane</firstName>\n<lastName>Root</lastName>\n<muidValue></muidValue>\n</fimFranchisee>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<fimFranchisee>\n<status>Yes</status>\n<franchiseeName>West Collection</franchiseeName>\n<centerName>Franchise-100001</centerName>\n<areaID>EST</areaID>\n<division></division>\n<licenseNo>10354</licenseNo>\n<fbc></fbc>\n<openingDate>2019-06-13</openingDate>\n<storeTypeId>Default</storeTypeId>\n<address>C-08</address>\n<address2>Lane-08</address2>\n<city>New York City</city>\n<country>USA</country>\n<state>New York</state>\n<zipcode>201254</zipcode>\n<storePhone>9876543210</storePhone>\n<storePhoneExtn>12</storePhoneExtn>\n<storeFax></storeFax>\n<storeMobile></storeMobile>\n<storeEmail>example@franconnect.com</storeEmail>\n<storeWebsite>www.google.com</storeWebsite>\n<contactTitle>Mrs</contactTitle>\n<contactFirstName>Freddie</contactFirstName>\n<contactLastName>Louis</contactLastName>\n<phone1>9876543210</phone1>\n<phone1Extn>55</phone1Extn>\n<fax></fax>\n<mobile></mobile>\n<emailID></emailID>\n<versionID></versionID>\n<taxRateId></taxRateId>\n<entityDetail>Individual</entityDetail>\n<entityType>New</entityType>\n<fimCbEntityType></fimCbEntityType>\n<fimTtEntityName></fimTtEntityName>\n<fimTtTaxpayer></fimTtTaxpayer>\n<fimCbStateOfFormation>USA</fimCbStateOfFormation>\n<fimCbCountryOfFormation>New York</fimCbCountryOfFormation>\n<ownerType>New</ownerType>\n<ownerTitle>Mr.</ownerTitle>\n<firstName>Freddie</firstName>\n<lastName>Louis</lastName>\n<muidValue></muidValue>\n</fimFranchisee>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3475,7 +3475,7 @@
       "FimRetrieveFranchiseeArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<filter>\n<referenceId>1174579387</referenceId>\n</filter>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<filter>\n<referenceId>557097219</referenceId>\n</filter>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3532,7 +3532,7 @@
       "CreateCRMLeadArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest><cmLead><title>Mr.</title>\n<leadFirstName>Shaun</leadFirstName>\n<leadLastName>Henry</leadLastName>\n<companyName>Atrium Office Suites</companyName>\n<primaryContactMethod>Email</primaryContactMethod>\n<ownerTypeValue> CORP</ownerTypeValue>\n<franchiseeNo></franchiseeNo>\n<areaID></areaID>\n<divisionID>Affiliates</divisionID>\n<address>Street 1</address>\n<city>Saint Louis</city>\n<country>USA</country>\n<zipcode>63132</zipcode>\n<state>Missouri</state>\n<phoneNumbers>(314) 570-8568</phoneNumbers>\n<extn>011</extn>\n<faxNumbers> </faxNumbers>\n<mobileNumbers>9898989898</mobileNumbers>\n<emailIds>shaun.henry@franconnect.com</emailIds>\n<alternateEmail> </alternateEmail>\n<suffix></suffix>\n<position></position>\n<birthdate></birthdate>\n<anniversarydate></anniversarydate>\n<cmLeadTypeID></cmLeadTypeID>\n<cmRatingID>Cold</cmRatingID>\n<cmSource2ID>Advertisement</cmSource2ID>\n<cmSource3ID>Newspaper</cmSource3ID>\n<cmSource1ID>Email</cmSource1ID>\n<bestTimeToContact></bestTimeToContact>\n<comments>Welcome to FC System</comments>\n<serviceID>Product/Service Update, Announcements</serviceID>\n</cmLead>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest><cmLead><title>Mr.</title>\n<leadFirstName>Francis</leadFirstName>\n<leadLastName>Wagner</leadLastName>\n<companyName>Wagner Office Suites</companyName>\n<primaryContactMethod>Email</primaryContactMethod>\n<ownerTypeValue> CORP</ownerTypeValue>\n<franchiseeNo></franchiseeNo>\n<areaID></areaID>\n<divisionID>Division</divisionID>\n<address>Street 1</address>\n<city>Saint Louis</city>\n<country>USA</country>\n<zipcode>63132</zipcode>\n<state>Missouri</state>\n<phoneNumbers>(314) 570-1234</phoneNumbers>\n<extn>011</extn>\n<faxNumbers> </faxNumbers>\n<mobileNumbers>9876543210</mobileNumbers>\n<emailIds>example@franconnect.com</emailIds>\n<alternateEmail> </alternateEmail>\n<suffix></suffix>\n<position></position>\n<birthdate></birthdate>\n<anniversarydate></anniversarydate>\n<cmLeadTypeID></cmLeadTypeID>\n<cmRatingID>Cold</cmRatingID>\n<cmSource2ID>Advertisement</cmSource2ID>\n<cmSource3ID>Newspaper</cmSource3ID>\n<cmSource1ID>Email</cmSource1ID>\n<bestTimeToContact></bestTimeToContact>\n<comments>Welcome to FC System</comments>\n<serviceID>Product/Service Update, Announcements</serviceID>\n</cmLead>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3551,7 +3551,7 @@
       "RetrieveCRMLeadArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<filter>\n<referenceId>436155293</referenceId>\n</filter>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<filter>\n<referenceId>926951689</referenceId>\n</filter>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3608,7 +3608,7 @@
       "CreateCRMContactArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<cmContact>\n<contactType>Contacts</contactType>\n<title>Mr.</title>\n<contactFirstName>Amanda</contactFirstName>\n<contactLastName>Jacques</contactLastName>\n<suffix></suffix>\n<position></position>\n<address>PO Box 1022</address>\n<city>Seattle</city>\n<country>USA</country>\n<zipcode>98104</zipcode>\n<state>Washington</state>\n<primaryContactMethod>Email</primaryContactMethod>\n<bestTimeToContact>Morning</bestTimeToContact>\n<phoneNumbers>122121</phoneNumbers>\n<extn>121</extn>\n<faxNumbers></faxNumbers>\n<mobileNumbers>454545454</mobileNumbers>\n<emailIds>Amanda.Jacques@yahoo.com</emailIds>\n<alternateEmail></alternateEmail>\n<birthdate></birthdate>\n<sendAutomaticMail>Yes</sendAutomaticMail>\n<anniversarydate></anniversarydate>\n<cmSource1ID>Email</cmSource1ID>\n<cmRatingID></cmRatingID>\n<cmSource2ID>Advertisement</cmSource2ID>\n<cmSource3ID>Magazine</cmSource3ID>\n<ownerTypeValue>CORP</ownerTypeValue>\n<contactOwnerID>David Henry</contactOwnerID>\n<franchiseeNo></franchiseeNo>\n<areaID></areaID>\n<divisionID>Division</divisionID>\n<comments>This is new contact</comments>\n<accountName>Bank Account 01</accountName>\n<facebook></facebook>\n<twitter></twitter>\n<Youtube></Youtube>\n<linkedin></linkedin>\n<google></google>\n<serviceID>Product/Service Update, Announcements</serviceID>\n</cmContact>\n<cmContact>\n</cmContact>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<cmContact>\n<contactType>Contacts</contactType>\n<title>Mr.</title>\n<contactFirstName>Amanda</contactFirstName>\n<contactLastName>Jacques</contactLastName>\n<suffix></suffix>\n<position></position>\n<address>PO Box 1022</address>\n<city>Seattle</city>\n<country>USA</country>\n<zipcode>98104</zipcode>\n<state>Washington</state>\n<primaryContactMethod>Email</primaryContactMethod>\n<bestTimeToContact>Morning</bestTimeToContact>\n<phoneNumbers>12121</phoneNumbers>\n<extn>121</extn>\n<faxNumbers></faxNumbers>\n<mobileNumbers>9876543210</mobileNumbers>\n<emailIds>example@franconnect.com</emailIds>\n<alternateEmail></alternateEmail>\n<birthdate></birthdate>\n<sendAutomaticMail>Yes</sendAutomaticMail>\n<anniversarydate></anniversarydate>\n<cmSource1ID>Email</cmSource1ID>\n<cmRatingID></cmRatingID>\n<cmSource2ID>Advertisement</cmSource2ID>\n<cmSource3ID>Magazine</cmSource3ID>\n<ownerTypeValue>CORP</ownerTypeValue>\n<contactOwnerID>David Henry</contactOwnerID>\n<franchiseeNo></franchiseeNo>\n<areaID></areaID>\n<divisionID>Division</divisionID>\n<comments>This is new contact</comments>\n<accountName>Account 01</accountName>\n<facebook></facebook>\n<twitter></twitter>\n<Youtube></Youtube>\n<linkedin></linkedin>\n<google></google>\n<serviceID>Product/Service Update, Announcements</serviceID>\n</cmContact>\n<cmContact>\n</cmContact>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3684,7 +3684,7 @@
       "CreateCRMAccountArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<cmAccount>\n<accountName>MindBody</accountName>\n<accountType>B2B</accountType>\n<type>Corporate</type>\n<areaID></areaID>\n<franchiseeNo></franchiseeNo>\n<isParent>Yes</isParent>\n<parentAccountID></parentAccountID>\n<address>Park Avenue</address>\n<city>Reston</city>\n<country>USA</country>\n<zipcode>20139</zipcode>\n<state>Virginia</state>\n<phoneNumbers>5212563201</phoneNumbers>\n<extn>02</extn>\n<faxNumbers></faxNumbers>\n<mobileNumbers>9858458752</mobileNumbers>\n<emailIds>mindbody@hotmail.com</emailIds>\n<noOfEmployee>200</noOfEmployee>\n<industry></industry>\n<sicCode></sicCode>\n<servicesProvided></servicesProvided>\n<stockSymbol></stockSymbol>\n<revenue>5000</revenue>\n<website></website>\n<comments></comments>\n</cmAccount>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<cmAccount>\n<accountName>SharpMinds</accountName>\n<accountType>B2B</accountType>\n<type>Corporate</type>\n<areaID></areaID>\n<franchiseeNo></franchiseeNo>\n<isParent>Yes</isParent>\n<parentAccountID></parentAccountID>\n<address>Park Avenue</address>\n<city>Reston</city>\n<country>USA</country>\n<zipcode>20139</zipcode>\n<state>Virginia</state>\n<phoneNumbers>9876543210</phoneNumbers>\n<extn>02</extn>\n<faxNumbers></faxNumbers>\n<mobileNumbers>9876543210</mobileNumbers>\n<emailIds>example@franconnect.com</emailIds>\n<noOfEmployee>200</noOfEmployee>\n<industry></industry>\n<sicCode></sicCode>\n<servicesProvided></servicesProvided>\n<stockSymbol></stockSymbol>\n<revenue>5000</revenue>\n<website></website>\n<comments></comments>\n</cmAccount>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3703,7 +3703,7 @@
       "RetrieveCRMAccountArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<filter>\n<referenceId>2112135651</referenceId>\n</filter>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<filter>\n<referenceId>1778692554</referenceId>\n</filter>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3760,7 +3760,7 @@
       "CreateCRMTransactionArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<cmTransaction>\n<parentReferenceId>9000002</parentReferenceId>\n<invoiceDate>02/16/2016</invoiceDate>\n<isReported>Yes</isReported>\n<cmtmsTransactionDetails>\n<category>ProSupply</category>\n<productID>Bronze Sponsor</productID>\n<quantity>10</quantity>\n<rate>10</rate>\n<amount>100</amount>\n<description>This is the default service</description>\n</cmtmsTransactionDetails>\n<cmtmsTransactionDetails>\n</cmtmsTransactionDetails>\n</cmTransaction>\n<cmTransaction>\n</cmTransaction>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<cmTransaction>\n<parentReferenceId>9000002</parentReferenceId>\n<invoiceDate>02/16/2016</invoiceDate>\n<isReported>Yes</isReported>\n<cmtmsTransactionDetails>\n<category></category>\n<productID>Product 2</productID>\n<quantity>10</quantity>\n<rate>10</rate>\n<amount>100</amount>\n<description>This is the default service</description>\n</cmtmsTransactionDetails>\n<cmtmsTransactionDetails>\n</cmtmsTransactionDetails>\n</cmTransaction>\n<cmTransaction>\n</cmTransaction>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3798,7 +3798,7 @@
       "UpdateCRMTransactionArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<cmTransaction>\n<referenceId>39614076</referenceId>\n<invoiceDate>02/16/2016</invoiceDate>\n<isReported>No</isReported>\n<cmtmsTransactionDetails>\n<referenceId>464080221</referenceId>\n<productID>Water Mitigation</productID>\n<quantity>10</quantity>\n<rate>10</rate>\n<amount>100 </amount>\n<description>This is the default service</description>\n</cmtmsTransactionDetails></cmTransaction>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<cmTransaction>\n<referenceId>39614076</referenceId>\n<invoiceDate>02/16/2016</invoiceDate>\n<isReported>No</isReported>\n<cmtmsTransactionDetails>\n<referenceId>464080221</referenceId>\n<productID>Product 2</productID>\n<quantity>10</quantity>\n<rate>10</rate>\n<amount>100 </amount>\n<description>This is the default service</description>\n</cmtmsTransactionDetails></cmTransaction>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3836,7 +3836,7 @@
       "CreateCRMOpportunityArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<fcRequest>\n<cmOpportunity>\n<opportunityName>ABC opportunity</opportunityName>\n<oppAccountID>1734810351</oppAccountID>\n<opportunityOwner>Larry</opportunityOwner>\n<stage>Prospecting</stage>\n<opportunityType>New Business</opportunityType>\n<probability>10</probability>\n<opportunitySource>Advertisement</opportunitySource>\n<salesAmount>1000</salesAmount>\n</cmOpportunity>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<fcRequest>\n<cmOpportunity>\n<opportunityName>Leah opportunity</opportunityName>\n<oppAccountID>1734810351</oppAccountID>\n<opportunityOwner>Sandy</opportunityOwner>\n<stage>Prospecting</stage>\n<opportunityType>New Business</opportunityType>\n<probability>10</probability>\n<opportunitySource>Advertisement</opportunitySource>\n<salesAmount>1000</salesAmount>\n</cmOpportunity>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3874,7 +3874,7 @@
       "UpdateCRMOpportunityArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<cmOpportunity>\n<referenceId>913876584</referenceId>\n<opportunityName>ABC opportunity</opportunityName>\n<oppAccountID>ABC account</oppAccountID>\n<oppContactID>ABC contact</oppContactID>\n<opportunityOwner>Larry</opportunityOwner>\n<stage>Prospecting</stage>\n<opportunityType>New Business</opportunityType>\n<probability>10</probability>\n<opportunitySource>Advertisement</opportunitySource>\n<closerDate>2017-01-25</closerDate>\n<salesAmount>1000</salesAmount>\n</cmOpportunity>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<cmOpportunity>\n<referenceId>913876584</referenceId>\n<opportunityName>Leah opportunity</opportunityName>\n<oppAccountID>Account 1</oppAccountID>\n<oppContactID>Contact 2</oppContactID>\n<opportunityOwner>Sandy</opportunityOwner>\n<stage>Prospecting</stage>\n<opportunityType>New Business</opportunityType>\n<probability>10</probability>\n<opportunitySource>Advertisement</opportunitySource>\n<closerDate>2017-01-25</closerDate>\n<salesAmount>1000</salesAmount>\n</cmOpportunity>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3912,7 +3912,7 @@
       "FSCreateTaskArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<fsTask>\n<parentReferenceId>265565881</parentReferenceId>\n<assignmentTo>OWNER</assignmentTo>\n<assignTo></assignTo>\n<status>Not Started</status>\n<taskType>Default</taskType>\n<subject>ABC task</subject>\n<timelessTask>N</timelessTask>\n<priority>Low</priority>\n<date>09/02/2015</date>\n<calendarTask>Y</calendarTask>\n<startTime>01:00 AM</startTime>\n<endTime>02:00 PM</endTime>\n<comments></comments>\n<schduleTime>15 Minutes Prior</schduleTime>\n<taskEmailReminder>Y</taskEmailReminder>\n<reminderDate>2017-11-02</reminderDate>\n<reminderTime>01:00 PM</reminderTime>\n</fsTask>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<fsTask>\n<parentReferenceId>166110471</parentReferenceId>\n<assignmentTo>OWNER</assignmentTo>\n<assignTo></assignTo>\n<status>Not Started</status>\n<taskType>Default</taskType>\n<subject>Task 1</subject>\n<timelessTask>N</timelessTask>\n<priority>Low</priority>\n<date>2020-03-02</date>\n<calendarTask>Y</calendarTask>\n<startTime>10:00Z</startTime>\n<endTime>11:00Z</endTime>\n<comments></comments>\n<schduleTime>15 Minutes Prior</schduleTime>\n<taskEmailReminder>Y</taskEmailReminder>\n<reminderDate>2017-11-02</reminderDate>\n<reminderTime>01:00 PM</reminderTime>\n</fsTask>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -3988,7 +3988,7 @@
       "CMCreateMailArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<cmMail><parentReferenceId>2016620620</parentReferenceId>\n<subject>FDD Discussions</subject>\n<mailText>Test Mail</mailText>\n<mailFrom>noreply@franconnect.com</mailFrom>\n</cmMail>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<cmMail><parentReferenceId>2016620620</parentReferenceId>\n<subject>Mail Discussions</subject>\n<mailText>Mail for general discussion</mailText>\n<mailFrom>noreply@franconnect.com</mailFrom>\n</cmMail>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -4083,7 +4083,7 @@
       "CMRetrieveCampaignSMSArray": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<filter>\n<contactFirstName>John</contactFirstName>\n<contactLastName>Karter</contactLastName>\n</filter>\n</fcRequest>",
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcRequest>\n<filter>\n<contactFirstName>John</contactFirstName>\n<contactLastName>James</contactLastName>\n</filter>\n</fcRequest>",
             "schema": {
               "type": "array",
               "items": {
@@ -4144,7 +4144,7 @@
       "AdminCreateQueryResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1769195025</responseId>\n<responseData>\n<fcRequest>\n<adminUser>\n<userID>User ID(Mandatory)</userID>\n<password>Password(Mandatory)</password>\n<userLevel>User Level(Mandatory)(Corporate)</userLevel>\n<timezone>Time Zone(Mandatory)</timezone>\n<type>User Type(Normal/Guest) (Default 'Normal')</type>\n<expirationTime>Expiration Time(NA for userType 'Normal')(7/14/21/28 for userType 'Guest')</expirationTime>\n<role>Role(Mandatory)</role>\n<jobTitle>Job Title</jobTitle>\n<firstname>First Name(Mandatory)</firstname>\n<lastname>Last Name(Mandatory)</lastname>\n<isAuditor>Consultant?(Y/N)</isAuditor>\n<address>Address</address>\n35<city>City(Mandatory)</city>\n<state>State(Mandatory)</state>\n<zipCode>Zip/Postal Code</zipCode>\n<country>Country</country>\n<phone1>Phone1(Mandatory)</phone1>\n<phoneExt1>Phone1 Extension</phoneExt1>\n<phone2>Phone2</phone2>\n<phoneExt2>Phone2 Extension</phoneExt2>\n<fax>Fax</fax>\n<mobile>Mobile</mobile>\n<email>Email(Mandatory)</email>\n<sendNotification>Send Notification(Y/N)</sendNotification>\n<loginUserIp>IP Address</loginUserIp>\n<isDaylight>Allow DST(Y/N)</isDaylight>\n</adminUser>\n</fcRequest>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1769195025</responseId>\n<responseData>\n<fcRequest>\n<adminUser>\n<userID>User ID(Mandatory)</userID>\n<password>Password(Mandatory)</password>\n<userLevel>User Level(Mandatory)(Corporate)</userLevel>\n<timezone>Time Zone(Mandatory)</timezone>\n<type>User Type(Normal/Guest) (Default 'Normal')</type>\n<expirationTime>Expiration Time(NA for userType 'Normal')(7/14/21/28 for userType 'Guest')</expirationTime>\n<role>Role(Mandatory)</role>\n<jobTitle>Job Title</jobTitle>\n<firstname>First Name(Mandatory)</firstname>\n<lastname>Last Name(Mandatory)</lastname>\n<isAuditor>Consultant?(Y/N)</isAuditor>\n<address>Address</address>\n<city>City(Mandatory)</city>\n<state>State(Mandatory)</state>\n<zipCode>Zip/Postal Code</zipCode>\n<country>Country</country>\n<phone1>Phone1(Mandatory)</phone1>\n<phoneExt1>Phone1 Extension</phoneExt1>\n<phone2>Phone2</phone2>\n<phoneExt2>Phone2 Extension</phoneExt2>\n<fax>Fax</fax>\n<mobile>Mobile</mobile>\n<email>Email(Mandatory)</email>\n<sendNotification>Send Notification(Y/N)</sendNotification>\n<loginUserIp>IP Address</loginUserIp>\n<isDaylight>Allow DST(Y/N)</isDaylight>\n</adminUser>\n</fcRequest>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4152,7 +4152,7 @@
       "AdminRetrieveQueryResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>656966018</responseId>\n<responseData>\n<fcRequest>\n<filter>\n<referenceId>Comma separated User referenceId.</referenceId>\n<userID>User Login ID</userID>\n<userLevel>User Type(zero or more repetition)</userLevel>\n<firstname>User First Name</firstname>\n<lastname>User Last Name</lastname>\n<creationDateFrom>User Creation Date From(YYYY-MM-DD)</creationDateFrom>\n<creationDateTo>User Creation Date To(YYYY-MM-DD)</creationDateTo>\n<createdBy>User Created By (zero or more repetition)</createdBy>\n<createdByReferenceId>User Created By referenceId(zero or more repetition)</createdByReferenceId>\n<lastModifiedBy>User Last Modified By(zero or more repetition)</lastModifiedBy>\n<lastModifiedByReferenceId>User Last Modified By referenceId(zero or more repetition)</lastModifiedByReferenceId>\n<lastModifiedOnFrom>User Last Modified On From(YYYY-MM-DD)</lastModifiedOnFrom>\n<lastModifiedOnTo>User Last Modified On To(YYYY-MM-DD)</lastModifiedOnTo>\n</filter>\n</fcRequest>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>656966018</responseId>\n<responseData>\n<fcRequest>\n<filter>\n<referenceId>Comma separated User referenceId.</referenceId>\n<userID>User Login ID</userID>\n<userLevel>User Type(zero or more repetition)</userLevel>\n<firstname>User First Name</firstname>\n<lastname>User Last Name</lastname>\n<creationDateFrom>User Creation Date From(YYYY-MM-DD)</creationDateFrom>\n<creationDateTo>User Creation Date To(YYYY-MM-DD)</creationDateTo>\n<createdBy>User Created By (zero or more repetition)</createdBy>\n<createdByReferenceId>User Created By referenceId(zero or more repetition)</crzeatedByReferenceId>\n<lastModifiedBy>User Last Modified By(zero or more repetition)</lastModifiedBy>\n<lastModifiedByReferenceId>User Last Modified By referenceId(zero or more repetition)</lastModifiedByReferenceId>\n<lastModifiedOnFrom>User Last Modified On From(YYYY-MM-DD)</lastModifiedOnFrom>\n<lastModifiedOnTo>User Last Modified On To(YYYY-MM-DD)</lastModifiedOnTo>\n</filter>\n</fcRequest>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4176,7 +4176,7 @@
       "AdminCreateUserResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>980752871</responseId>\n<responseData>\n<adminUser>\n<status>Success</status>\n<referenceId>2055098927</referenceId>\n</adminUser>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>450450221</responseId>\n<responseData>\n<adminUser>\n<status>Success</status>\n<referenceId>572479316</referenceId>\n</adminUser>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4184,7 +4184,7 @@
       "AdminRetrieveUserResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseId>466451737</responseId>\n<responseData>\n<adminUser>\n<referenceId>2055098927</referenceId>\n<userID>JamesW</userID>\n<userLevel>Corporate Users</userLevel>\n<firstname>Carl</firstname>\n<lastname>Williams</lastname>\n<role>Corporate Administrator</role>\n<expirationTime>Not Applicable</expirationTime>\n<type>Normal User</type>\n<timeZone>GMT -06:30</timeZone>\n<division></division>\n<creationDate>01/20/2020 07:20 AM</creationDate>\n<createdBy>Web Service</createdBy>\n<createdByReferenceId>2</createdByReferenceId>\n<lastModifiedBy>Web Service</lastModifiedBy>\n<lastModifiedByReferenceId>2</lastModifiedByReferenceId>\n<lastModifiedOn>01/20/2020 07:20 AM</lastModifiedOn>\n<personalDetails>\n<franchiseeName></franchiseeName>\n<address>Park Avenue, Hudson Lane</address>\n<city>Reston </city>\n<state>Virginia</state>\n<country>USA</country>\n<zipcode>201301</zipcode>\n<phone1>(985) 845-2152</phone1>\n<phone1Extn>53</phone1Extn>\n<fax/>\n<mobile>(999) 999-9995</mobile>\n<emailID>james.williams@yahoo.com</emailID>\n<jobTitle>Project Manager</jobTitle>\n<phone2>9858452162</phone2>\n<phone2Extn>63</phone2Extn>\n<language>English</language>\n<loginUserIp>192.168.1.217</loginUserIp>\n<isDaylight>Y</isDaylight>\n<isAuditor>Y</isAuditor>\n<salutation></salutation><canAddEmployee></canAddEmployee>\n<unsubscribeCampaign>N</unsubscribeCampaign>\n<birthDate></birthDate>\n<muidValue></muidValue>\n<region></region>visibleToStore></visibleToStore></personalDetails></adminUser>/responseData></fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseId>1552776447</responseId>\n<responseData>\n<adminUser>\n<referenceId>3451843</referenceId>\n<userID>dickson</userID>\n<userLevel>Corporate Users</userLevel>\n<firstname>Dickson</firstname>\n<lastname>Robert</lastname>\n<role>Corporate Administrator</role>\n<expirationTime>Not Applicable</expirationTime>\n<type>Normal User</type>\n<timeZone>GMT -05:00 US/Canada/Eastern</timeZone>\n<division></division>\n<creationDate>2019-08-19T12:18Z</creationDate>\n<createdBy>Web Service</createdBy>\n<createdByReferenceId>2</createdByReferenceId>\n<lastModifiedBy>FranConnect Administrator</lastModifiedBy>\n<lastModifiedByReferenceId>1</lastModifiedByReferenceId>\n<lastModifiedOn>2020-01-15T07:10Z</lastModifiedOn>\n<personalDetails>\n<franchiseeName></franchiseeName>\n<address>Park Avenue, Hudson Lane</address>\n<city>Virginia</city>\n<state>Virginia</state>\n<country>USA</country>\n<zipcode></zipcode>\n<phone1>123456789</phone1>\n<phone1Extn>54</phone1Extn>\n<fax>54561</fax>\n<mobile></mobile>\n<emailID>example@franconnect.com</emailID>\n<jobTitle>Corporate</jobTitle>\n<phone2>9876543210</phone2>\n<phone2Extn>24</phone2Extn>\n<language>English</language>\n<loginUserIp></loginUserIp>\n<isDaylight>Y</isDaylight>\n            <isAuditor>Y</isAuditor>\n<salutation></salutation>\n<canAddEmployee></canAddEmployee>\n<unsubscribeCampaign>N</unsubscribeCampaign>\n<birthDate></birthDate>\n<muidValue></muidValue>\n<region></region>\n<visibleToStore></visibleToStore>\n</personalDetails>\n</adminUser>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4192,7 +4192,7 @@
       "AdminUpdateUserResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1042377380</responseId>\n<responseData>\n<adminUser>\n<status>Success</status>\n<referenceId>2055098927</referenceId>\n</adminUser>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1042377380</responseId>\n<responseData>\n<adminUser>\n<status>Success</status>\n<referenceId>3451843</referenceId>\n</adminUser>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4200,7 +4200,7 @@
       "AdminDeleteUserResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1348340529</responseId>\n<responseData>\n<adminUser>\n<status>Success</status>\n<referenceId>2055098927</referenceId>\n</adminUser>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1348340529</responseId>\n<responseData>\n<adminUser>\n<status>Success</status>\n<referenceId>3451843</referenceId>\n</adminUser>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4208,7 +4208,7 @@
       "FSCreateLeadResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1954422955</responseId>\n<responseData>\n<fsLead>\n<status>Success</status>\n<referenceId>1583840676</referenceId>\n</fsLead>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1577449152</responseId>\n<responseData>\n<fsLead>\n<status>Success</status>\n<referenceId>166110471</referenceId>\n</fsLead>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4216,7 +4216,7 @@
       "FSRetrieveLeadResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1223103215</responseId>\n<responseData>\n<fsLead>\n<referenceId>1583840676</referenceId>\n<requestDate>01/21/2020 02:32 AM</requestDate>\n<salutation>Mr.</salutation>\n<firstName>Gary</firstName>\n<lastName>Daniel</lastName>\n<address>100 Main St</address>\n<address2></address2>\n<city>Seattle</city>\n<country>USA</country>\n<stateID>Washington</stateID>\n<zip>98102</zip>\n<countyID>Adams</countyID>\n<primaryPhoneToCall>Email</primaryPhoneToCall>\n<bestTimeToContact>Morning</bestTimeToContact>\n<phone>9858452152</phone>\n<phoneExt>53</phoneExt>\n<homePhone></homePhone>\n<homePhoneExt></homePhoneExt>\n<fax></fax>\n<mobile></mobile>\n<emailID>support@franconnect.com</emailID>\n<companyName>Vortex Restoration</companyName>\n<comments>Newly added lead in this area</comments>\n<leadStatusID>New Lead</leadStatusID>\n<leadOwnerID>Doug Lynn</leadOwnerID>\n<leadRatingID>Warm</leadRatingID>\n<leadKilledReason/>\n<leadKilledReasonComment/>\n<leadSource2ID>Advertisement</leadSource2ID>\n<leadSource3ID>Advertising</leadSource3ID>\n<otherLeadSourceDetail/>\n<liquidCapitalMin>10000</liquidCapitalMin>\n<liquidCapitalMax>Yes</liquidCapitalMax>\n<background>Business</background>\n<sourceOfFunding>Business</sourceOfFunding>\n<nextCallDate></nextCallDate>\n<noOfUnitReq>5</noOfUnitReq>\n<franchiseAwarded></franchiseAwarded>\n<noOfFieldSold></noOfFieldSold>\n<dateOfOpen></dateOfOpen>\n<statusChangeDate></statusChangeDate>\n<webSiteLead></webSiteLead>\n<forecastClosureDate></forecastClosureDate>\n    <coApplicantRelationshipID></coApplicantRelationshipID>\n<ipAddress></ipAddress>\n<browserType></browserType>\n<locationId1></locationId1>\n<locationId1b></locationId1b>\n<locationId2></locationId2>\n<preferredCountry1>USA</preferredCountry1>\n<preferredCity1>Reston</preferredCity1>\n<preferredStateId1></preferredStateId1>\n  <preferredCountry2></preferredCountry2>\n<preferredStateId2></preferredStateId2>\n<preferredCity2>Delhi</preferredCity2>\n     <lastUpdate>01/21/2020 02:32 AM</lastUpdate>\n<lastAttended></lastAttended>\n<bounceEmailStatus>No</bounceEmailStatus>\n  <spamEmailStatus>No</spamEmailStatus>\n<bounceReason></bounceReason>\nhapter1565657277></_chapter1565657277>\n<_title1888084963></_title1888084963>\n<_website349743092></_website349743092>\n<unsubscribeReason></unsubscribeReason>\n<unsubscribeReasonDetail></unsubscribeReasonDetail>\n<_referredByDoug1528878294></_referredByDoug1528878294>\n<_formerUfoc667296911></_formerUfoc667296911>\n<_entity2098672343></_entity2098672343>\n   <_reasonForOpportunity1634205648></_reasonForOpportunity1634205648>\n<_opportunityType1201200696></_opportunityType1201200696>\n  <_contractType1977583155></_contractType1977583155>\n<_stage958675199></_stage958675199>\n<_opportunityName1430307925></_opportunityName1430307925>\n<_probability275705792></_probability275705792>\n<_opportunityDescription2123592049></_opportunityDescription2123592049>\n<appointmentScheduledFor>01/21/2020 02:33 AM</appointmentScheduledFor>\n<divisionReferenceId>1638714739</divisionReferenceId>\n<division>Affiliates</division>\n  <leadOwnerReferenceId>278728587</leadOwnerReferenceId>\n<serviceID>Newsletters,Offers</serviceID>\n<forecastvalues1584373214>\n    <referenceId></referenceId>\n<_opportunityAdded118333113></_opportunityAdded118333113>\n<_frequency197422997></_frequency197422997>\n<_typeOfRevenue427179396></_typeOfRevenue427179396>\n<_salesAmount779222718></_salesAmount779222718>\n<_additionalRevenueSources1006608410></_additionalRevenueSources1006608410>\n</forecastvalues1584373214>\n  <opportunity1128722035>\n<referenceId></referenceId>\n           </opportunity1128722035></fsLead>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n    <responseStatus>Success</responseStatus>\n<responseId>1680358165</responseId>\n<responseData>\n<fsLead>\n<referenceId>166110471</referenceId>\n<requestDate>2020-03-02T11:10Z</requestDate>\n       <salutation>Mr.</salutation>\n<firstName>Alex</firstName>\n        <lastName>VJohn</lastName>\n<address>100 Main St</address>\n       <address2></address2>\n<city>Seattle</city>\n<country>USA</country>\n <stateID>Washington</stateID>\n<zip>98102</zip>\n<countyID>Adams</countyID>\n<primaryPhoneToCall>Email</primaryPhoneToCall>\n        <bestTimeToContact></bestTimeToContact>\n<phone></phone>\n          <phoneExt></phoneExt>\n<homePhone></homePhone>\n<homePhoneExt></homePhoneExt>\n<fax></fax>\n<mobile></mobile>\n<emailID>example@franconnect.com</emailID>\n<companyName>Waterwell Restoration</companyName>\n<comments>Newly added lead in this area</comments>\n<leadStatusID>New Lead</leadStatusID>\n<leadOwnerID>FranConnect Administrator</leadOwnerID>\n<leadRatingID>Warm</leadRatingID>\n    <leadKilledReason></leadKilledReason>\n<leadKilledReasonComment></leadKilledReasonComment>\n<leadSource2ID>Internet</leadSource2ID>\n<leadSource3ID>franchising.com</leadSource3ID>\n<otherLeadSourceDetail>Service Call</otherLeadSourceDetail>\n<marketingCodeId></marketingCodeId>\n<liquidCapitalMin>10000</liquidCapitalMin>\n   <liquidCapitalMax>Yes</liquidCapitalMax>\n<investTimeframe>5</investTimeframe>\n<background>Business</background>\n   <sourceOfFunding>Business</sourceOfFunding>\n<nextCallDate></nextCallDate>\n<noOfUnitReq>1</noOfUnitReq>\n<franchiseAwarded></franchiseAwarded>\n<noOfFieldSold></noOfFieldSold>\n<dateOfOpen></dateOfOpen>\n<statusChangeDate></statusChangeDate>\n<webSiteLead></webSiteLead>\n<forecastClosureDate></forecastClosureDate>\n  <probability>10</probability>\n<forecastRating></forecastRating>\n  <forecastRevenue>1500.00</forecastRevenue>\n<coApplicantRelationshipID></coApplicantRelationshipID>\n<ipAddress></ipAddress>\n<browserType></browserType>\n<locationId1></locationId1>\n<locationId1b></locationId1b>\n<locationId2></locationId2>\n<preferredCountry1>USA</preferredCountry1>\n<preferredCity1>Reston</preferredCity1>\n       <preferredStateId1></preferredStateId1>\n<preferredCountry2></preferredCountry2>\n<preferredStateId2></preferredStateId2>\n     <preferredCity2>Virginia</preferredCity2>\n<lastUpdate>2020-03-02T11:10Z</lastUpdate>\n<lastAttended></lastAttended>\n<bounceEmailStatus>No</bounceEmailStatus>\n<spamEmailStatus>No</spamEmailStatus>\n    <bounceReason></bounceReason>\n<unsubscribeReason></unsubscribeReason>\n<unsubscribeReasonDetail></unsubscribeReasonDetail>\n<appointmentScheduledFor>2020-03-02T11:10Z</appointmentScheduledFor>\n<_dob1672783918></_dob1672783918>\n<divisionReferenceId></divisionReferenceId>\n<division></division>\n<leadOwnerReferenceId>1</leadOwnerReferenceId>\n<serviceID>Product/Service Update,Newsletters,Offers</serviceID>\n</fsLead>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4224,7 +4224,7 @@
       "FSUpdateLeadResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n    <responseStatus>Success</responseStatus>\n<responseId>914186332</responseId>\n<responseData>\n<fsLead>\n<status>Success</status>\n<referenceId>691482979</referenceId>\n</fsLead>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n    <responseStatus>Success</responseStatus>\n<responseId>914186332</responseId>\n<responseData>\n<fsLead>\n<status>Success</status>\n<referenceId>926850934</referenceId>\n</fsLead>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4232,7 +4232,7 @@
       "FSDeleteLeadResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>913623338</responseId>\n<responseData>\n<fsLead>\n<status>Success</status>\n<referenceId>2078759704</referenceId>\n</fsLead>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>913623338</responseId>\n<responseData>\n<fsLead>\n<status>Success</status>\n<referenceId>884520437</referenceId>\n</fsLead>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4248,7 +4248,7 @@
       "FimCreateFranchiseeResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>980752871</responseId>\n<responseData>\n<fimFranchisee>\n<status>Success</status>\n<referenceId>1174579387</referenceId>\n</fimFranchisee>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>980752871</responseId>\n<responseData>\n<fimFranchisee>\n<status>Success</status>\n<referenceId>1665635279</referenceId>\n</fimFranchisee>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4256,7 +4256,7 @@
       "FimRetrieveFranchiseeResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\nfcResponse>\n    <responseStatus>Success</responseStatus>\n<responseId>1395357583</responseId>\n<responseData>\n<fimFranchisee>\n<referenceId>1174579387</referenceId>\n<status>Corporate Locations</status>\n  <franchiseeName>West Corporate Collection Store</franchiseeName>\n<centerName>North Center</centerName>\n<areaID>MIDWEST USA</areaID>\n<openingDate>10/01/2013</openingDate>\n<storeTypeId>Default</storeTypeId>\n<address>C-08</address>\n<city>New York City</city>\n<country>USA</country>\n<state>New York</state>\n<zipcode>201254</zipcode>\n<storePhone>(521) 254-2513</storePhone>\n<storePhoneExtn>12</storePhoneExtn>\n<storeFax></storeFax>\n<storeEmail>Emma_Gomez@hotmail.com</storeEmail>\n<contactFirstName>Emma</contactFirstName>\n<contactLastName>Gomez</contactLastName>\n    <phone1>(845) 845-1254</phone1>\n<mobile></mobile>\n<emailID>Emma_Gomez@hotmail.com</emailID>\n<franchiseeStatus>Active</franchiseeStatus>\n<division>Affiliates</division>\n<website></website>\n<competitor></competitor>\n<serviceCategory></serviceCategory>\n<keyBusinessPerson></keyBusinessPerson>\n  <commonBusinessName></commonBusinessName>\n<twitterSearch></twitterSearch>\n<businessCategory></businessCategory>\n          <description></description>\n<tagLine></tagLine>\n<altPhone></altPhone><paymentType></paymentType>\n<businessType></businessType>\n        <fimEntity>\n<referenceId></referenceId>\n<fimCbEntityType></fimCbEntityType>\n<fimTtEntityName></fimTtEntityName>\n         <fimTtTaxpayer></fimTtTaxpayer>\n<fimCbCountryOfFormation></fimCbCountryOfFormation>\n<fimCbStateOfFormation></fimCbStateOfFormation>\n</fimEntity>\n<fimOwner>\n<referenceId>896049967</referenceId>\n<ownerTitle>Mr.</ownerTitle>\n<firstName>Shane</firstName>\n<lastName>Root</lastName>\n<muidValue></muidValue>\n</fimOwner>\n<socialURL>\n<referenceId></referenceId>\n<linkTitle></linkTitle>\n<linkUrl></linkUrl>\n</socialURL>\n<storeHours>\n  <referenceId></referenceId>\n<operatingDay></operatingDay>\n      <openingTime></openingTime>\n<closingTime></closingTime>\n</storeHours>\n</fimFranchisee>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1546252019</responseId>\n<responseData>\n<fimFranchisee>\n<referenceId>557097219</referenceId>\n<status>Corporate Locations</status>\n<franchiseeName>10001</franchiseeName>\n<centerName>Franchise-100001</centerName>\n<areaID>EST</areaID>\n<licenseNo>10354</licenseNo>\n<reportPeriodStartDate></reportPeriodStartDate>\n<fbc></fbc>\n        <openingDate>2019-06-13</openingDate>\n<storeStatus></storeStatus>\n  <storeTypeId>Default</storeTypeId>\n<address>39 HOLLANDBUSH CT.</address>\n<address2>8883 18 Ave</address2>\n<city>ST.PETERS</city>\n<country>USA</country>\n<state>New York</state>\n<zipcode>63304</zipcode>\n<storePhone>(866) 987-5432</storePhone>\n<storePhoneExtn>8669786</storePhoneExtn>\n<storeFax>(654) 987-5432</storeFax>\n     <storeMobile>(756) 984-5323</storeMobile>\n<storeEmail>example@franconnect.com</storeEmail>\n<storeWebsite>www.franconnect.com</storeWebsite>\n<contactTitle>Mr.</contactTitle>\n          <contactFirstName>Oliver</contactFirstName>\n          <contactLastName>Williams</contactLastName>\n<phone1>(654) 987-6543</phone1>\n<phone1Extn>5487954</phone1Extn>\n<fax>(654) 789-6543</fax>\n<mobile>(702) 987-6543</mobile>\n<emailID>example@franconnect.com</emailID>\n<franchiseeStatus>Active</franchiseeStatus>\n<division></division>\n<website>www.franconnect.com</website>\n<competitor></competitor>\n<serviceCategory></serviceCategory>\n<keyBusinessPerson></keyBusinessPerson>\n<commonBusinessName></commonBusinessName>\n<twitterSearch></twitterSearch>\n  <businessCategory></businessCategory>\n<description></description>\n<tagLine></tagLine>\n<altPhone></altPhone>\n<paymentType></paymentType>\n<businessType></businessType>\n<fimEntity>\n<referenceId></referenceId>\n<fimCbEntityType></fimCbEntityType>\n   <fimTtEntityName></fimTtEntityName>\n<fimTtTaxpayer></fimTtTaxpayer>\n<fimCbCountryOfFormation></fimCbCountryOfFormation>\n          <fimCbStateOfFormation></fimCbStateOfFormation>\n</fimEntity>\n  <fimOwner>\n<referenceId>1917033192</referenceId>\n<ownerTitle>Mr.</ownerTitle>\n<firstName>Sandy</firstName>\n<lastName>Nadia</lastName>\n<muidValue>MUID1</muidValue>\n</fimOwner>\n<socialURL>\n<referenceId></referenceId>\n<linkTitle></linkTitle>\n<linkUrl></linkUrl>\n</socialURL>\n<storeHours>\n<referenceId></referenceId>\n<operatingDay></operatingDay>\n<openingTime></openingTime>\n         <closingTime></closingTime>\n</storeHours>\n</fimFranchisee>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4280,7 +4280,7 @@
       "CMCreateLeadResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>727907439</responseId>\n<responseData>\n<cmLead>\n<status>Success</status>\n<referenceId>436155293</referenceId>\n</cmLead>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>727907439</responseId>\n<responseData>\n<cmLead>\n<status>Success</status>\n<referenceId>951568372</referenceId>\n</cmLead>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4288,7 +4288,7 @@
       "CMRetrieveLeadResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n    <responseStatus>Success</responseStatus>\n<responseId>90963566</responseId>\n<responseData>\n<cmLead>\n<referenceId>436155293</referenceId>\n<title>Mr.</title>\n<cmLeadStatusID>Contacted</cmLeadStatusID>\n<leadAddDate>2020-02-28T07:14Z</leadAddDate>\n<leadFirstName>Shaun</leadFirstName>\n<leadLastName>Henry</leadLastName>\n<companyName>Atrium Office Suites</companyName>\n    <primaryContactMethod>Email</primaryContactMethod>\n<franchiseeNo></franchiseeNo>\n<divisionID></divisionID>\n<leadModifyDate></leadModifyDate>\n<address>Street 1</address>\n<city>Saint Louis</city>\n<country>USA</country>\n<zipcode>63132</zipcode>\n<state>Missouri</state>\n<phoneNumbers>(314) 570-8568</phoneNumbers>\n    <extn>011</extn>\n<faxNumbers></faxNumbers>\n<mobileNumbers>(989) 898-9898</mobileNumbers>\n<emailIds>shaun.henry@franconnect.com</emailIds>\n<alternateEmail></alternateEmail>\n<suffix></suffix>\n<position></position>\n<birthdate></birthdate>\n<anniversarydate></anniversarydate>\n<cmLeadTypeID></cmLeadTypeID>\n<cmRatingID>Cold</cmRatingID>\n<cmSource2ID>Advertisement</cmSource2ID>\n<cmSource3ID></cmSource3ID>\n<cmSource1ID>Email</cmSource1ID>\n<bestTimeToContact></bestTimeToContact><comments>Welcome to FC System</comments>\n    <unsubscribe>Opt-In Request not Sent</unsubscribe>\n           <unsubscribeDate></unsubscribeDate>\n<leadOwnerID>FranConnect Administrator</leadOwnerID>\n<leadAddedBy>Web Service</leadAddedBy>\n<bounceEmailStatus>No</bounceEmailStatus>\n<spamEmailStatus>No</spamEmailStatus>\n<bounceReason></bounceReason>\n<smsUnsubscribe>Opt-In Request not Sent</smsUnsubscribe>\n<smsUnsubscribeDate></smsUnsubscribeDate>\n  <lastContactedField></lastContactedField>\n<unsubscribeReason></unsubscribeReason>\n<unsubscribeReasonDetail></unsubscribeReasonDetail>\n<franchiseeReferenceId></franchiseeReferenceId>\n<leadOwnerReferenceId>356393263</leadOwnerReferenceId>\n<leadAddedByReferenceId>2</leadAddedByReferenceId>\n<convertedBy></convertedBy>\n<convertedOn></convertedOn>\n<ownerType>Corporate</ownerType>\n<divisionReferenceId></divisionReferenceId>\n<areaReferenceId></areaReferenceId>\n<areaID></areaID>\n<contactDetails>\n        <referenceId></referenceId>\n<contactFirstName></contactFirstName>\n <contactLastName></contactLastName>\n</contactDetails>\n<serviceID>Product/Service Update, Announcements</serviceID>\n</cmLead>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n    <responseStatus>Success</responseStatus>\n<responseId>761787385</responseId>\n<responseData>\n<cmLead>\n<referenceId>926951689</referenceId>\n<title>Mr.</title>\n<cmLeadStatusID>Contacted</cmLeadStatusID>\n<leadAddDate>2019-09-05T04:00Z</leadAddDate>\n<leadFirstName>Mcbride</leadFirstName>\n<leadLastName>Henry</leadLastName>\n<companyName>Henry Office Suites</companyName>\n    <primaryContactMethod>Email</primaryContactMethod>\n<franchiseeNo></franchiseeNo>\n<divisionID></divisionID>\n<leadModifyDate></leadModifyDate>\n<address>Street 1</address>\n<city>Saint Louis</city>\n<country>USA</country>\n<zipcode>63132</zipcode>\n<state>Missouri</state>\n<phoneNumbers>(314) 987-8568</phoneNumbers>\n    <extn>011</extn>\n<faxNumbers></faxNumbers>\n<mobileNumbers>(989) 898-9898</mobileNumbers>\n<emailIds>example@franconnect.com</emailIds>\n<alternateEmail></alternateEmail>\n<suffix></suffix>\n<position></position>\n<birthdate></birthdate>\n<anniversarydate></anniversarydate>\n<cmLeadTypeID></cmLeadTypeID>\n<cmRatingID>Cold</cmRatingID>\n<cmSource2ID>Advertisement</cmSource2ID>\n<cmSource3ID></cmSource3ID>\n<cmSource1ID>Email</cmSource1ID>\n<bestTimeToContact></bestTimeToContact><comments>Welcome to FC System</comments>\n    <unsubscribe>Opt-In Request not Sent</unsubscribe>\n           <unsubscribeDate></unsubscribeDate>\n<leadOwnerID>FranConnect Administrator</leadOwnerID>\n<leadAddedBy>Web Service</leadAddedBy>\n<bounceEmailStatus>No</bounceEmailStatus>\n<spamEmailStatus>No</spamEmailStatus>\n<bounceReason></bounceReason>\n<smsUnsubscribe>Opt-In Request not Sent</smsUnsubscribe>\n<smsUnsubscribeDate></smsUnsubscribeDate>\n  <lastContactedField></lastContactedField>\n<unsubscribeReason></unsubscribeReason>\n<unsubscribeReasonDetail></unsubscribeReasonDetail>\n<franchiseeReferenceId></franchiseeReferenceId>\n<leadOwnerReferenceId>356393263</leadOwnerReferenceId>\n<leadAddedByReferenceId>2</leadAddedByReferenceId>\n<convertedBy></convertedBy>\n<convertedOn></convertedOn>\n<ownerType>Corporate</ownerType>\n<divisionReferenceId></divisionReferenceId>\n<areaReferenceId></areaReferenceId>\n<areaID></areaID>\n<contactDetails>\n        <referenceId></referenceId>\n<contactFirstName></contactFirstName>\n <contactLastName></contactLastName>\n</contactDetails>\n<serviceID>Product/Service Update, Announcements</serviceID>\n</cmLead>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4320,7 +4320,7 @@
       "CMRetrieveContactResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1586797350</responseId>\n<responseData>\n<cmContact>\n<referenceId>1970068020</referenceId>\n<contactType>Contacts</contactType>\n<contactAddDate>2020-02-28T09:38Z</contactAddDate>\n<contactOwnerID>FranConnect Administrator</contactOwnerID>\n<contactAddedBy>Web Service</contactAddedBy><title>Mr.</title>\n<contactFirstName>Amanda</contactFirstName><contactLastName>Jacques</contactLastName>\n<primaryContactMethod>Email</primaryContactMethod>\n<bestTimeToContact>Morning</bestTimeToContact><suffix></suffix>\n<cmLeadStatusID>New</cmLeadStatusID>\n<cmLeadSubStatusID></cmLeadSubStatusID>\n  <cmLeadTypeID></cmLeadTypeID>\n<cmSource1ID>Email</cmSource1ID>\n    <cmRatingID></cmRatingID>\n<cmSource2ID>Advertisement</cmSource2ID>\n<cmSource3ID></cmSource3ID>\n<franchiseeNo></franchiseeNo>\n<divisionID></divisionID>\n<comments>This is new contact</comments>\n <position></position>\n<address>PO Box 1022</address>\n<city>Seattle</city>\n<country>USA</country>\n<zipcode>98104</zipcode>\n<state>Washington</state>\n<phoneNumbers>122121</phoneNumbers>\n<extn>121</extn>\n <faxNumbers></faxNumbers>\n<mobileNumbers>454545454</mobileNumbers>\n<emailIds>Amanda.Jacques@yahoo.com</emailIds>\n<alternateEmail></alternateEmail>\n<birthdate></birthdate>\n<anniversarydate></anniversarydate>\n<contactModifyDate></contactModifyDate>\n<lastContactedField></lastContactedField>\n    <unsubscribe>Opted In</unsubscribe>\n<unsubscribeDate></unsubscribeDate>\n<smsUnsubscribeDate></smsUnsubscribeDate>\n  <facebook></facebook>\n<twitter></twitter>\n<Youtube></Youtube>\n    <linkedin></linkedin>\n<google></google>\n<bounceEmailStatus>No</bounceEmailStatus>\n<spamEmailStatus>No</spamEmailStatus>\n        <bounceReason></bounceReason>\n<smsUnsubscribe></smsUnsubscribe>\n<_businessType319370392></_businessType319370392>\n<_anniversaryDate1353960078></_anniversaryDate1353960078>\n           <_propertySqFt1556721726></_propertySqFt1556721726>\n           <_latitude1078746944></_latitude1078746944>\n<_longitude1185604513></_longitude1185604513>\n<_bestTimeToContact52494304></_bestTimeToContact52494304>\n<_propertyCode915460063></_propertyCode915460063>\n<_numberOfBuildings1987530759></_numberOfBuildings1987530759>\n<_numberOfUnits959283769></_numberOfUnits959283769>\n<_typeOfProperty829088228></_typeOfProperty829088228><unsubscribeReasonDetail></unsubscribeReasonDetail>\n<unsubscribeReason></unsubscribeReason>\n <_renewalDate1041739061></_renewalDate1041739061>\n           <_initateRenewalDiscussions175216171></_initateRenewalDiscussions175216171>\n          <franchiseeReferenceId></franchiseeReferenceId>\n            <contactOwnerReferenceId>356393263</contactOwnerReferenceId>\n        <contactAddedByReferenceId>2</contactAddedByReferenceId>\n        <ownerType>Corporate</ownerType>\n<divisionReferenceId></divisionReferenceId>\n<areaReferenceId></areaReferenceId>\n<areaID></areaID>\n<serviceID>Product/Service Update, Announcements</serviceID>\n<accountDetails>\n<referenceId></referenceId>\n        <accountName></accountName>\n<accountType></accountType>\n            <emailIds></emailIds>\n<companyAddDate></companyAddDate>\n        </accountDetails>\n</cmContact>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1586797350</responseId>\n<responseData>\n<cmContact>\n<referenceId>1970068020</referenceId>\n<contactType>Contacts</contactType>\n<contactAddDate>2020-02-28T09:38Z</contactAddDate>\n<contactOwnerID>FranConnect Administrator</contactOwnerID>\n<contactAddedBy>Web Service</contactAddedBy><title>Mr.</title>\n<contactFirstName>Amanda</contactFirstName><contactLastName>Jacques</contactLastName>\n<primaryContactMethod>Email</primaryContactMethod>\n<bestTimeToContact>Morning</bestTimeToContact><suffix></suffix>\n<cmLeadStatusID>New</cmLeadStatusID>\n<cmLeadSubStatusID></cmLeadSubStatusID>\n  <cmLeadTypeID></cmLeadTypeID>\n<cmSource1ID>Email</cmSource1ID>\n    <cmRatingID></cmRatingID>\n<cmSource2ID>Advertisement</cmSource2ID>\n<cmSource3ID></cmSource3ID>\n<franchiseeNo></franchiseeNo>\n<divisionID></divisionID>\n<comments>This is new contact</comments>\n <position></position>\n<address>PO Box 1022</address>\n<city>Seattle</city>\n<country>USA</country>\n<zipcode>98104</zipcode>\n<state>Washington</state>\n<phoneNumbers>123456</phoneNumbers>\n<extn>121</extn>\n <faxNumbers></faxNumbers>\n<mobileNumbers>9876543210</mobileNumbers>\n<emailIds>example@franconnect.com</emailIds>\n<alternateEmail></alternateEmail>\n<birthdate></birthdate>\n<anniversarydate></anniversarydate>\n<contactModifyDate></contactModifyDate>\n<lastContactedField></lastContactedField>\n    <unsubscribe>Opted In</unsubscribe>\n<unsubscribeDate></unsubscribeDate>\n<smsUnsubscribeDate></smsUnsubscribeDate>\n  <facebook></facebook>\n<twitter></twitter>\n<Youtube></Youtube>\n    <linkedin></linkedin>\n<google></google>\n<bounceEmailStatus>No</bounceEmailStatus>\n<spamEmailStatus>No</spamEmailStatus>\n        <bounceReason></bounceReason>\n<smsUnsubscribe></smsUnsubscribe>\n<_businessType319370392></_businessType319370392>\n<_anniversaryDate1353960078></_anniversaryDate1353960078>\n           <_propertySqFt1556721726></_propertySqFt1556721726>\n           <_latitude1078746944></_latitude1078746944>\n<_longitude1185604513></_longitude1185604513>\n<_bestTimeToContact52494304></_bestTimeToContact52494304>\n<_propertyCode915460063></_propertyCode915460063>\n<_numberOfBuildings1987530759></_numberOfBuildings1987530759>\n<_numberOfUnits959283769></_numberOfUnits959283769>\n<_typeOfProperty829088228></_typeOfProperty829088228><unsubscribeReasonDetail></unsubscribeReasonDetail>\n<unsubscribeReason></unsubscribeReason>\n <_renewalDate1041739061></_renewalDate1041739061>\n           <_initateRenewalDiscussions175216171></_initateRenewalDiscussions175216171>\n          <franchiseeReferenceId></franchiseeReferenceId>\n            <contactOwnerReferenceId>356393263</contactOwnerReferenceId>\n        <contactAddedByReferenceId>2</contactAddedByReferenceId>\n        <ownerType>Corporate</ownerType>\n<divisionReferenceId></divisionReferenceId>\n<areaReferenceId></areaReferenceId>\n<areaID></areaID>\n<serviceID>Product/Service Update, Announcements</serviceID>\n<accountDetails>\n<referenceId></referenceId>\n        <accountName></accountName>\n<accountType></accountType>\n            <emailIds></emailIds>\n<companyAddDate></companyAddDate>\n        </accountDetails>\n</cmContact>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4336,7 +4336,7 @@
       "CMDeleteContactResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1790617288</responseId>\n<responseData>\n<cmContact >\n<status>Success</status>\n<referenceId>1661907438</referenceId>\n</cmContact >\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1790617288</responseId>\n<responseData>\n<cmContact >\n<status>Success</status>\n<referenceId>344545</referenceId>\n</cmContact >\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4344,7 +4344,7 @@
       "CMCreateAccountResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>80428348</responseId>\n<responseData>\n<cmAccount>\n<status>Success</status>\n<referenceId>1778420554</referenceId>\n</cmAccount>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>80428348</responseId>\n<responseData>\n<cmAccount>\n<status>Success</status>\n<referenceId>1778692554</referenceId>\n</cmAccount>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4352,7 +4352,7 @@
       "CMRetrieveAccountResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>SUCCESS</responseStatus>\n<responseId>985485485</responseId>\n<responseData>\n<cmAccount>\n<referenceId>2112135651</referenceId>\n<accountName>Jersey Associates</accountName>\n<accountType>B2B</accountType>\n<parentAccountID/>\n<address>4567 Crime Way</address>\n<city>Jersey City</city>\n<country>USA</country>\n<zipcode>201301</zipcode>\n<state>New Jersey</state>\n<phoneNumbers>(985) 845-8215</phoneNumbers>\n<extn>46</extn>\n<faxNumbers/>\n<mobileNumbers>(888) 888-8888</mobileNumbers>\n<emailIds>matt.dwyer@yahoo.com</emailIds>\n<noOfEmployee>200</noOfEmployee>\n<industry/>\n<sicCode/>\n<servicesProvided/>\n<stockSymbol/>\n<revenue>10000</revenue>\n<website>www.google.com</website>\n<comments>Hello ! I am an Jersey account.</comments>\n<companyAddDate>2016-05-12</companyAddDate>\n<type>All Network</type>\n<areaReferenceId/>\n<areaID/>\n<franchiseeReferenceId/>\n<franchiseeNo/>\n<divisionReferenceId/>\n<divisionID/>\n<contactDetails>\n<referenceId/>\n<contactAddDate/>\n<contactFirstName/>\n<contactLastName/>\n<emailIds/>\n<contactModifyDate/>\n</contactDetails>\n</cmAccount>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>SUCCESS</responseStatus>\n<responseId>985485485</responseId>\n<responseData>\n<cmAccount>\n<referenceId>2112135651</referenceId>\n<accountName>Heading Associates</accountName>\n<accountType>B2B</accountType>\n<parentAccountID/>\n<address>4567 Hudson Way</address>\n<city>Jersey City</city>\n<country>USA</country>\n<zipcode>201301</zipcode>\n<state>New Jersey</state>\n<phoneNumbers>(985) 876-5432</phoneNumbers>\n<extn>46</extn>\n<faxNumbers/>\n<mobileNumbers>(838) 987-6543</mobileNumbers>\n<emailIds>example@franconnect.com</emailIds>\n<noOfEmployee>200</noOfEmployee>\n<industry/>\n<sicCode/>\n<servicesProvided/>\n<stockSymbol/>\n<revenue>10000</revenue>\n<website>www.google.com</website>\n<comments>Hello ! This is a Heading Associates.</comments>\n<companyAddDate>2016-05-12</companyAddDate>\n<type>All Network</type>\n<areaReferenceId/>\n<areaID/>\n<franchiseeReferenceId/>\n<franchiseeNo/>\n<divisionReferenceId/>\n<divisionID/>\n<contactDetails>\n<referenceId/>\n<contactAddDate/>\n<contactFirstName/>\n<contactLastName/>\n<emailIds/>\n<contactModifyDate/>\n</contactDetails>\n</cmAccount>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4384,7 +4384,7 @@
       "CMRetrieveTransactionResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>SUCCESS</responseStatus>\n<responseId>589658425</responseId>\n<responseData>\n<cmOpportunity>\n<referenceId>263507742</referenceId>\n<opportunityName>Larry James</opportunityName>\n<contactDetails>\n<referenceId>1464597864</referenceId>\n<contactFirstName>Mark</contactFirstName>\n<contactLastName>Blair</contactLastName>\n</contactDetails>\n<accountDetails>\n<referenceId>1082145073</referenceId>\n<accountName>Allgreen</accountName>\n</accountDetails>\n<cmTransaction>\n<referenceId>659838712</referenceId>\n<transactionNumber>INV1001</transactionNumber>\n<invoiceDate>2016-05-12</invoiceDate>\n<totalAmount>10.00</totalAmount>\n<isReported>No</isReported>\n<cmtmsTransactionDetails>\n<referenceId>1089265217</referenceId>\n<productID>Service</productID>\n<quantity>1</quantity>\n<rate>10.00</rate>\n<amount>10.00</amount>\n<description>Service</description>\n</cmtmsTransactionDetails>\n</cmTransaction>\n</cmOpportunity>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>SUCCESS</responseStatus>\n<responseId>589658425</responseId>\n<responseData>\n<cmOpportunity>\n<referenceId>263507742</referenceId>\n<opportunityName>Sandy James</opportunityName>\n<contactDetails>\n<referenceId>1464597864</referenceId>\n<contactFirstName>Tom</contactFirstName>\n<contactLastName>Blair</contactLastName>\n</contactDetails>\n<accountDetails>\n<referenceId>1082145073</referenceId>\n<accountName>Account 1</accountName>\n</accountDetails>\n<cmTransaction>\n<referenceId>659838712</referenceId>\n<transactionNumber>INV1001</transactionNumber>\n<invoiceDate>2016-05-12</invoiceDate>\n<totalAmount>10.00</totalAmount>\n<isReported>No</isReported>\n<cmtmsTransactionDetails>\n<referenceId>1089265217</referenceId>\n<productID>Service</productID>\n<quantity>1</quantity>\n<rate>10.00</rate>\n<amount>10.00</amount>\n<description>Service</description>\n</cmtmsTransactionDetails>\n</cmTransaction>\n</cmOpportunity>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4416,7 +4416,7 @@
       "CMRetrieveOpportunityResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>422575173</responseId>\n<responseData>\n<cmOpportunity>\n<referenceId>1896975234</referenceId>\n<opportunityName>ABC opportunity</opportunityName>\n<oppAccountID>1-800-PackOuts</oppAccountID>\n<opportunityOwner>Tracey Smith</opportunityOwner>\n<opportunityAddDate>01/27/2020 12:47 AM</opportunityAddDate>\n<stage>Prospecting</stage>\n<opportunityType>New Business</opportunityType>\n<probability>10</probability>\n<opportunitySource>Advertisement</opportunitySource>\n<salesAmount>1000.0</salesAmount>\n<opportunityOwnerReferenceId>47691556</opportunityOwnerReferenceId>\n<accountDetails>\n<referenceId>1734810351</referenceId>\n<accountName>1-800-PackOuts<accountType>B2B</accountType>\n<emailIds>qatest@staffex.com</emailIds><companyAddDate>12/16/2015 12:00 AM</companyAddDate>\n</accountDetails></cmOpportunity>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>422575173</responseId>\n<responseData>\n<cmOpportunity>\n<referenceId>1896975234</referenceId>\n<opportunityName>Leah opportunity</opportunityName>\n<oppAccountID>1-800-PackOuts</oppAccountID>\n<opportunityOwner>Sandy Nadia</opportunityOwner>\n<opportunityAddDate>01/27/2020 12:47 AM</opportunityAddDate>\n<stage>Prospecting</stage>\n<opportunityType>New Business</opportunityType>\n<probability>10</probability>\n<opportunitySource>Advertisement</opportunitySource>\n<salesAmount>1000.0</salesAmount>\n<opportunityOwnerReferenceId>47691556</opportunityOwnerReferenceId>\n<accountDetails>\n<referenceId>1734810351</referenceId>\n<accountName><accountType>B2B</accountType>\n<emailIds>example@franconnect.com</emailIds><companyAddDate>12/16/2015 12:00 AM</companyAddDate>\n</accountDetails></cmOpportunity>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4448,7 +4448,7 @@
       "FSRetrieveTaskResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>445098613</responseId>\n<responseData>\n<fsLead>\n<referenceId>1696458950</referenceId>\n<requestDate>2016-12-01</requestDate>\n<salutation>Mr.</salutation>\n<firstName>Yulia</firstName>\n<lastName>Klein</lastName>\n<fsTask>\n<referenceId>1375071536</referenceId>\n<assignBy>FranConnect Administrator</assignBy>\n<subject>Application Task</subject>\n<priority>Medium</priority>\n<date>2016-12-01 07:30 AM</date>\n<duration>2016-12-01 08:30 AM</duration>\n<status>Not Started</status>\n<taskType>Default</taskType>\n<reminderTime>2016-12-01 12:00 AM</reminderTime>\n<comments>Hello! This is my first task.</comments>\n<assignTo>Test User,Test1 User11,FranConnect Administrator</assignTo>\n</fsTask>\n</fsLead>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>445098613</responseId>\n<responseData>\n<fsLead>\n<referenceId>1696458950</referenceId>\n<requestDate>2016-12-01</requestDate>\n<salutation>Mr.</salutation>\n<firstName>Nick</firstName>\n<lastName>James</lastName>\n<fsTask>\n<referenceId>1375071536</referenceId>\n<assignBy>FranConnect Administrator</assignBy>\n<subject>Application Task</subject>\n<priority>Medium</priority>\n<date>2016-12-01 07:30 AM</date>\n<duration>2016-12-01 08:30 AM</duration>\n<status>Not Started</status>\n<taskType>Default</taskType>\n<reminderTime>2016-12-01 12:00 AM</reminderTime>\n<comments>Hello! This is my first task.</comments>\n<assignTo>FranConnect Administrator</assignTo>\n</fsTask>\n</fsLead>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4480,7 +4480,7 @@
       "CMRetrieveMailResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>SUCCESS</responseStatus>\n<responseId>589658425</responseId>\n<responseData>\n<cmContact>\n<referenceId>329773998</referenceId>\n<contactType>Contacts</contactType>\n<contactAddDate>2016-05-12</contactAddDate>\n<franchiseeNo/>\n<contactOwnerID>FranConnect Administrator</contactOwnerID>\n<contactAddedBy>FranConnect Administrator</contactAddedBy>\n<contactFirstName>Matt</contactFirstName>\n<contactLastName>Dwyer</contactLastName>\n<franchiseeReferenceId>\n<accountDetails>\n<referenceId/>\n<accountName/>\n<accountType/>\n<emailIds/>\n<companyAddDate/>\n</accountDetails>\n<cmMail>\n<referenceId>218671952</referenceId>\n<fromID>FranConnect Administrator</fromID>\n<subject>Reminder mail</subject>\n<mailText> Hey! I am here to remind you about your bills. </mailText>\n<date>2016-05-12</date>\n</cmMail>\n</cmContact>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>SUCCESS</responseStatus>\n<responseId>589658425</responseId>\n<responseData>\n<cmContact>\n<referenceId>329773998</referenceId>\n<contactType>Contacts</contactType>\n<contactAddDate>2016-05-12</contactAddDate>\n<franchiseeNo/>\n<contactOwnerID>FranConnect Administrator</contactOwnerID>\n<contactAddedBy>FranConnect Administrator</contactAddedBy>\n<contactFirstName>Nick</contactFirstName>\n<contactLastName>Larson</contactLastName>\n<franchiseeReferenceId>\n<accountDetails>\n<referenceId/>\n<accountName></accountName>\n<accountType></accountType>\n<emailIds/>\n<companyAddDate/>\n</accountDetails>\n<cmMail>\n<referenceId>218671952</referenceId>\n<fromID>FranConnect Administrator</fromID>\n<subject>Reminder mail</subject>\n<mailText> Hey! I am reminding you about your bills. </mailText>\n<date>2016-05-12</date>\n</cmMail>\n</cmContact>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4496,7 +4496,7 @@
       "CMRetrieveSMSResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1715977357</responseId>\n<responseData>\n<cmContact>\n<referenceId>742374233</referenceId>\n<contactType>Contacts</contactType>\n<contactAddDate>2017-10-05T10:34Z</contactAddDate>\n<franchiseeNo/>\n<contactOwnerID>vk corp user</contactOwnerID>\n<contactAddedBy>Web Service</contactAddedBy>\n<contactFirstName>C</contactFirstName>\n<contactLastName>T2</contactLastName>\n<franchiseeReferenceId/>\n<accountDetails>\n<referenceId/>\n<accountName/>\n<accountType/>\n<emailIds/>\n<companyAddDate/>\n</accountDetails>\n<cmContactSMS>\n<referenceId>17</referenceId>\n<smsSent>2017-10-05</smsSent>\n<sentBy>FranConnect Administrator</sentBy>\n<smsText>Hello, i'm SMS for contact sent by workflow</smsText>\n<smsType>Outbound</smsType>\n<smsStatus/>\n</cmContactSMS>\n</cmContact>\n<cmContact>\n<referenceId>419799026</referenceId>\n<contactType>Contacts</contactType>\n<contactAddDate>2017-10-05T10:33Z</contactAddDate>\n<franchiseeNo/>\n<contactOwnerID>vk corp user</contactOwnerID>\n<contactAddedBy>WebService</contactAddedBy>\n<contactFirstName>C</contactFirstName>\n<contactLastName>T1</contactLastName>\n<franchiseeReferenceId/>\n<accountDetails>\n<referenceId/>\n<accountName/>\n<accountType/>\n<emailIds/>\n<companyAddDate/>\n</accountDetails>\n<cmContactSMS>\n<referenceId>16</referenceId>\n<smsSent>2017-10-05</smsSent>\n<sentBy>FranConnect Administrator</sentBy>\n<smsText>Hello, i m sms (contact modified)</smsText>\n<smsType>Outbound</smsType>\n<smsStatus/>\n</cmContactSMS>\n</cmContact>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>1715977357</responseId>\n<responseData>\n<cmContact>\n<referenceId>742374233</referenceId>\n<contactType>Contacts</contactType>\n<contactAddDate>2017-10-05T10:34Z</contactAddDate>\n<franchiseeNo/>\n<contactOwnerID>Nick</contactOwnerID>\n<contactAddedBy>Web Service</contactAddedBy>\n<contactFirstName>C</contactFirstName>\n<contactLastName>T2</contactLastName>\n<franchiseeReferenceId/>\n<accountDetails>\n<referenceId/>\n<accountName/>\n<accountType/>\n<emailIds/>\n<companyAddDate/>\n</accountDetails>\n<cmContactSMS>\n<referenceId>17</referenceId>\n<smsSent>2017-10-05</smsSent>\n<sentBy>FranConnect Administrator</sentBy>\n<smsText>Hello, i'm SMS for contact sent by workflow</smsText>\n<smsType>Outbound</smsType>\n<smsStatus/>\n</cmContactSMS>\n</cmContact>\n<cmContact>\n<referenceId>419799026</referenceId>\n<contactType>Contacts</contactType>\n<contactAddDate>2017-10-05T10:33Z</contactAddDate>\n<franchiseeNo/>\n<contactOwnerID>Nick</contactOwnerID>\n<contactAddedBy>WebService</contactAddedBy>\n<contactFirstName>C</contactFirstName>\n<contactLastName>T1</contactLastName>\n<franchiseeReferenceId/>\n<accountDetails>\n<referenceId/>\n<accountName/>\n<accountType/>\n<emailIds/>\n<companyAddDate/>\n</accountDetails>\n<cmContactSMS>\n<referenceId>98</referenceId>\n<smsSent>2017-11-05</smsSent>\n<sentBy>FranConnect Administrator</sentBy>\n<smsText>Let's have a Discussion</smsText>\n<smsType>Outbound</smsType>\n<smsStatus/>\n</cmContactSMS>\n</cmContact>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4504,7 +4504,7 @@
       "CMRetrieveCampaignEmailResp": {
         "content": {
           "application/xml": {
-            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n    <responseStatus>Success</responseStatus>\n<responseId>1377941630</responseId>\n<responseData>\n<cmContact>\n<referenceId>1970068020</referenceId>\n<contactType>Contacts</contactType>\n<contactAddDate>2020-02-28T09:38Z</contactAddDate>\n<franchiseeNo></franchiseeNo>\n<contactOwnerID>FranConnect Administrator</contactOwnerID>\n<contactAddedBy>Web Service</contactAddedBy>\n<contactFirstName>Amanda</contactFirstName>\n<contactLastName>Jacques</contactLastName>\n  <franchiseeReferenceId></franchiseeReferenceId>\n<contactOwnerReferenceId>1</contactOwnerReferenceId>\n    <contactAddedByReferenceId>2</contactAddedByReferenceId>\n           <accountDetails>\n<referenceId></referenceId>\n<accountName></accountName>\n<accountType></accountType>\n<emailIds></emailIds>\n<companyAddDate></companyAddDate>\n</accountDetails>\n<cmCampaignEmail>\n<referenceId></referenceId>\n<mailRead></mailRead>\n<mailSent></mailSent>\n<cmTemplates>\n<referenceId></referenceId>\n<mailSubject></mailSubject>\n</cmTemplates>\n</cmCampaignEmail>\n</cmContact>\n</responseData>\n</fcResponse>"
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n    <responseStatus>Success</responseStatus>\n<responseId>1377941630</responseId>\n<responseData>\n<cmContact>\n<referenceId>1970068020</referenceId>\n<contactType>Contacts</contactType>\n<contactAddDate>2020-02-28T09:38Z</contactAddDate>\n<franchiseeNo></franchiseeNo>\n<contactOwnerID>FranConnect Administrator</contactOwnerID>\n<contactAddedBy>Web Service</contactAddedBy>\n<contactFirstName>Amanda</contactFirstName>\n<contactLastName>Jacques</contactLastName>\n  <franchiseeReferenceId></franchiseeReferenceId>\n<contactOwnerReferenceId>1131168966</contactOwnerReferenceId>\n    <contactAddedByReferenceId>2</contactAddedByReferenceId>\n           <accountDetails>\n<referenceId></referenceId>\n<accountName></accountName>\n<accountType></accountType>\n<emailIds></emailIds>\n<companyAddDate></companyAddDate>\n</accountDetails>\n<cmCampaignEmail>\n<referenceId></referenceId>\n<mailRead></mailRead>\n<mailSent></mailSent>\n<cmTemplates>\n<referenceId></referenceId>\n<mailSubject></mailSubject>\n</cmTemplates>\n</cmCampaignEmail>\n</cmContact>\n</responseData>\n</fcResponse>"
           }
         },
         "description": "Successful"
@@ -4664,12 +4664,12 @@
                             }
                           ]
                         },
-                        "450294864": {
-                          "name": "Non-Fin Integer Categ2",
+                        "450299664": {
+                          "name": "Non-Fin Category",
                           "calculationType": "(+)",
                           "data": [
                             {
-                              "amount": "Enter the amount of earning in Non-Fin Integer Categ2"
+                              "amount": "Enter the amount of earning in Non-Fin Category"
                             }
                           ]
                         }
@@ -4693,7 +4693,7 @@
                   {
                     "finAddnlItems": [
                       {
-                        "450294861": {
+                        "450294451": {
                           "name": "Additional Invoice Item Categ",
                           "calculationType": "(+)",
                           "data": [
@@ -4779,9 +4779,9 @@
               "response": {
                 "data": [
                   {
-                    "1758518040": {
+                    "1758848040": {
                       "reportNo": "56",
-                      "salesReportID": "1758518040",
+                      "salesReportID": "1758848040",
                       "franchiseeNo": "907680077",
                       "reportPeriodStart": "2019-01-01",
                       "reportPeriodEnd": "2019-01-31",
@@ -4790,7 +4790,7 @@
                       "totalSales": "10000.0",
                       "reportStatus": "I",
                       "reportType": "M",
-                      "franchiseRoyaltyID": "1842527881",
+                      "franchiseRoyaltyID": "1842529681",
                       "versionID": "Flat percent 2015",
                       "totalQuantity": "0.0",
                       "financialItems": [
@@ -5043,7 +5043,7 @@
                 "data": [
                   {
                     "1042018448": {
-                      "franchiseRoyaltyID": "1042018448",
+                      "franchiseRoyaltyID": "1048618448",
                       "parentID": "1042018448",
                       "invoiceNO": "274",
                       "franchiseeNo": "1812536030",
@@ -5089,7 +5089,7 @@
                       "versionID": "Category Sales Based Version"
                     },
                     "1319427657": {
-                      "franchiseRoyaltyID": "1319427657",
+                      "franchiseRoyaltyID": "1319427497",
                       "parentID": "1319427657",
                       "invoiceNO": "263",
                       "franchiseeNo": "1812536030",
@@ -5202,13 +5202,13 @@
                   {
                     "298031988": {
                       "paymentMappingId": "298031988",
-                      "paymentID": "1708095951",
-                      "franchiseRoyaltyId": "1928694199",
+                      "paymentID": "1648095951",
+                      "franchiseRoyaltyId": "1928354899",
                       "invoiceNo": "6",
                       "paymentNo": "1",
                       "amountApplied": "35.00",
                       "dateApplied": "2019-06-26 08:32:12",
-                      "franchiseeNo": "403951414",
+                      "franchiseeNo": "403968414",
                       "parentId": null,
                       "royaltyType": "All",
                       "dateReceived": "2019-06-26",
@@ -5220,13 +5220,13 @@
                     },
                     "497802296": {
                       "paymentMappingId": "497802296",
-                      "paymentID": "1708095951",
-                      "franchiseRoyaltyId": "1928694199",
+                      "paymentID": "1648095951",
+                      "franchiseRoyaltyId": "1928686199",
                       "invoiceNo": "6",
                       "paymentNo": "1",
                       "amountApplied": "350.00",
                       "dateApplied": "2019-06-26 08:32:11",
-                      "franchiseeNo": "403951414",
+                      "franchiseeNo": "403968414",
                       "parentId": null,
                       "royaltyType": "All",
                       "dateReceived": "2019-06-26",
@@ -5238,13 +5238,13 @@
                     },
                     "732473447": {
                       "paymentMappingId": "732473447",
-                      "paymentID": "1708095951",
+                      "paymentID": "1648095951",
                       "franchiseRoyaltyId": "1928694199",
                       "invoiceNo": "6",
                       "paymentNo": "1",
                       "amountApplied": "215.0",
                       "dateApplied": "2019-06-26 08:32:12",
-                      "franchiseeNo": "403951414",
+                      "franchiseeNo": "403968414",
                       "parentId": null,
                       "royaltyType": "All",
                       "dateReceived": "2019-06-26",
@@ -5328,7 +5328,7 @@
                             }
                           ]
                         },
-                        "1495583145": {
+                        "4": {
                           "name": "P&L Addition Type Categ",
                           "calculationType": "(+)",
                           "data": [
@@ -5375,7 +5375,7 @@
                   {
                     "1": {
                       "plrepId": "1",
-                      "franchiseeNo": "403951414",
+                      "franchiseeNo": "403968414",
                       "submissionDate": "2019-06-26 00:00:00",
                       "addedOn": "2019-06-26 07:21:29",
                       "statementPeriod": "Jun - 2019",
@@ -5409,7 +5409,7 @@
                               }
                             ]
                           },
-                          "1495583145": {
+                          "4": {
                             "name": "P&L Addition Type Categ",
                             "calculationType": "(+)",
                             "data": [
@@ -5423,7 +5423,7 @@
                     },
                     "246516745": {
                       "plrepId": "246516745",
-                      "franchiseeNo": "403951414",
+                      "franchiseeNo": "403968414",
                       "submissionDate": "2019-06-26 03:41:26",
                       "addedOn": "2019-06-26 03:40:53",
                       "statementPeriod": "May - 2019",
@@ -5457,7 +5457,7 @@
                               }
                             ]
                           },
-                          "1495583145": {
+                          "4": {
                             "name": "P&L Addition Type Categ",
                             "calculationType": "(+)",
                             "data": [

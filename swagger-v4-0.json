@@ -115,6 +115,10 @@
       "description": "This API endpoint supports the Finance Payment based operations."
     },
     {
+      "name": "Adjustments",
+      "description": "This API endpoint supports the Finance Adjustment based operations."
+    },
+    {
       "name": "Profit and Loss Statements",
       "description": "This API endpoint supports the Finance Profit and Loss based operations."
     },
@@ -167,6 +171,7 @@
         "Sales Reports",
         "Royalties",
         "Payments",
+        "Adjustments",
         "Profit and Loss Statements",
         "FAQ"
       ]
@@ -1789,7 +1794,7 @@
           "Sales Reports"
         ],
         "summary": "Retrieve Sales Report Periods",
-        "description": "<p class=\"western\">The report period in Finance > Sales refers to that time duration for which sales is to be reported by the franchisees. The report period for each location is defined in the financial agreement that is associated with that location.</p><p class=\"western\">You must make a GET request to the request URL, along with other required details, to retrieve the report periods. This would provide a list of all the report periods for which sales is to be reported by the franchisees.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/sales/periods/franchiseeNo/{id}</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td> https://skyapi.franconnectuat.net/manage-finance/sales/periods/franchiseeNo/{id}</td></tr></table>To retrieve the report periods for which sales data has not been entered for a particular franchisee location, you must make a GET request on the request URL. The request URL comprises of the context path followed by the API endpoint mentioned above. <p>The following items must be included in the header of the request:</p><ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>Content-Type as the key and its value in the format “application/json”.</p></li><li><p>“X-TenantId” as the key and its value based on your FranConnect system’s URL. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on identifying the “X-TenantId”.</p></li></ol><p>The following items must be used as path parameters:</p><li>Franchisee number as the internal unique reference number of the location. Click <u><a href=\"#tag/Retrieve-Franchisee-Number\">here</a></u> for details on retrieving the franchisee number.</li><p class=\"western\">Performing the above mentioned steps would return all the report periods for which sales has not been reported by that location.</p><img src=\"images/Retrieve_Sales_Reports_Period.png\">",
+        "description": "<p class=\"western\">The report period in Finance > Sales refers to that time duration for which sales is to be reported by the franchisees. The report period for each location is defined in the financial agreement that is associated with that location.</p><p class=\"western\">You must make a GET request to the request URL, along with other required details, to retrieve the report periods. This would provide a list of all the report periods for which sales is to be reported by the franchisees.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/sales/periods/franchiseeNo/{id}</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td> https://skyapi.franconnectuat.net/manage-finance/sales/periods/franchiseeNo/{id}</td></tr></table>To retrieve the report periods for which sales data has not been entered for a particular franchisee location, you must make a GET request on the request URL. <p>The following items must be included in the header of the request:</p><ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>Content-Type as the key and its value in the format “application/json”.</p></li><li><p>“X-TenantId” as the key and its value based on your FranConnect system’s URL. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on identifying the “X-TenantId”.</p></li></ol><p>The following items must be used as path parameters:</p><li>Franchisee number as the internal unique reference number of the location. Click <u><a href=\"#tag/Retrieve-Franchisee-Number\">here</a></u> for details on retrieving the franchisee number.</li><p class=\"western\">Performing the above mentioned steps would return all the report periods for which sales has not been reported by that location.</p><img src=\"images/Retrieve_Sales_Reports_Period.png\">",
         "operationId": "Retrieve_Sales_Reports_Periods",
         "produces": [
           "application/json"
@@ -1798,7 +1803,7 @@
           {
             "name": "franchiseeNo",
             "in": "path",
-            "description": "ParameterType:Integer",
+            "description": "Integer",
             "required": false,
             "type": "integer",
             "format": "int32",
@@ -1832,7 +1837,7 @@
           "Sales Reports"
         ],
         "summary": "Retrieve Finance Categories",
-        "description": "<p class=\"western\">Finance categories are an important part of the sales report. These represent the categories that are used to report Sales data. To retrieve all the finance categories, you must use the report period as input parameter for the GET request. Click <u><a href=\"#tag/Sales-Reports\">here</a></u> for details on retrieving these report periods.</p><p>Then, use this report period, and perform a GET request to retrieve a list of financial categories that are available to report the sales for the given report period. </p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/sales/categories/finance-categories/franchiseeNo/{franchisee_number}/reportPeriod/{reportPeriod}</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/sales/categories/finance-categories/franchiseeNo/{franchisee_number}/reportPeriod/{reportPeriod}</td></tr></table><img src=\"images/Retrieve_Finance_Categories.png\">",
+        "description": "<p class=\"western\">Finance categories are an important part of the sales report. These represent the categories that are used to report Sales data. To retrieve all the finance categories, you must use the report period as input parameter for the GET request. Click <u><a href=\"#tag/Sales-Reports\">here</a></u> for details on retrieving these report periods.</p><p>Then, use this report period, and perform a GET request to retrieve a list of financial categories that are available to report the sales for the given report period. </p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/sales/categories/finance-categories/franchiseeNo/{franchisee_number}/reportPeriod/{reportPeriod}</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/sales/categories/finance-categories/franchiseeNo/{franchisee_number}/reportPeriod/{reportPeriod}</td></tr></table><p>The following items must be included in the header of the GET request:</p><ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>Content-Type as the key and its value in the format “application/json”.</p></li><li><p>“X-TenantId” as the key and its value based on your FranConnect system’s URL. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on identifying the “X-TenantId”.</p></li></ol><p><img src=\"images/Retrieve_Finance_Categories.png\">",
         "operationId": "Retrieve_Finance_Categories",
         "produces": [
           "application/json"
@@ -1841,7 +1846,7 @@
           {
             "name": "franchiseeNo",
             "in": "path",
-            "description": "ParameterType:Integer",
+            "description": "Integer",
             "required": false,
             "type": "integer",
             "format": "int32",
@@ -1852,7 +1857,7 @@
           {
             "name": "reportPeriod",
             "in": "path",
-            "description": "ParameterType:String",
+            "description": "String",
             "required": false,
             "type": "string",
             "enum": [
@@ -1882,7 +1887,7 @@
           "Sales Reports"
         ],
         "summary": "Retrieve Non Finance Categories",
-        "description": "<p class=\"western\">Non-Finance categories represent the categories that are not financial in nature but are still tracked as a part of sales reports (such as customer count and loyalty program enrollments). Every sales report has at least one non-finance category in it. To retrieve all the non-finance/Key Performance Indicator (KPI) categories that are used in sales report, you must use a report period and its corresponding finance categories as input parameters for the GET request. Click <u><a href=\"#tag/Sales-Reports\">Report Periods</a></u> for details on retrieving these report periods and click <u><a href=\"#tag/Sales-Reports\">Finance Categories</a></u> for details on retrieving these finance categories.</p><p>Then, using these parameters, perform a GET request to retrieve a list of non finance categories that are available to report the sales for the given report period.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/sales/categories/kpi-categories/franchiseeNo/{franchisee_number}/reportPeriod/{reportPeriod}</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/sales/categories/kpi-categories/franchiseeNo/{franchisee_number}/reportPeriod/{reportPeriod}</td></tr></table><p><strong>Note:</strong> Sometimes, you may not have non-finance categories set up in your sales report. If this is the case, you need not retrieve the non-finance categories.</p><img src=\"images/Retrieve_Non_Finance_Categories.png\">",
+        "description": "<p class=\"western\">Non-Finance categories represent the categories that are not financial in nature but are still tracked as a part of sales reports (such as customer count and loyalty program enrollments). Every sales report has at least one non-finance category in it. To retrieve all the non-finance/Key Performance Indicator (KPI) categories that are used in sales report, you must use a report period and its corresponding finance categories as input parameters for the GET request. Click <u><a href=\"#tag/Sales-Reports\">Report Periods</a></u> for details on retrieving these report periods and click <u><a href=\"#tag/Sales-Reports\">Finance Categories</a></u> for details on retrieving these finance categories.</p><p>Then, using these parameters, perform a GET request to retrieve a list of non finance categories that are available to report the sales for the given report period.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/sales/categories/kpi-categories/franchiseeNo/{franchisee_number}/reportPeriod/{reportPeriod}</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/sales/categories/kpi-categories/franchiseeNo/{franchisee_number}/reportPeriod/{reportPeriod}</td></tr></table>The following items must be included in the header of the GET request:</p><ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>Content-Type as the key and its value in the format “application/json”.</p></li><li><p>“X-TenantId” as the key and its value based on your FranConnect system’s URL. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on identifying the “X-TenantId”.</p></li></ol><p><p><strong>Note:</strong> Sometimes, you may not have non-finance categories set up in your sales report. If this is the case, you need not retrieve the non-finance categories.</p><img src=\"images/Retrieve_Non_Finance_Categories.png\">",
         "operationId": "Retrieve_Non-Finance_Categories",
         "produces": [
           "application/json"
@@ -1891,7 +1896,7 @@
           {
             "name": "franchiseeNo",
             "in": "path",
-            "description": "ParameterType:Integer",
+            "description": "Integer",
             "required": false,
             "type": "integer",
             "format": "int32",
@@ -1902,7 +1907,7 @@
           {
             "name": "reportPeriod",
             "in": "path",
-            "description": "ParameterType:String",
+            "description": "String",
             "required": false,
             "type": "string",
             "enum": [
@@ -1932,7 +1937,7 @@
           "Sales Reports"
         ],
         "summary": "Retrieve Additional Invoice Items",
-        "description": "<p class=\"western\">There are some additional invoice items that can be included in the sales report apart from the finance and non-finance categories. To retrieve these additional invoice items, you must use a report period as input parameter for the GET request. Click <u><a href=\"#tag/Sales-Reports\">Report Periods</a></u> for details on retrieving these report periods.</p><p>Then, use this report period, and perform a GET operation to retrieve a list of additional invoice items that are available to report the sales for the given report period.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/sales/categories/addtional-line-items/franchiseeNo/{franchisee_number}/reportPeriod/{reportPeriod}</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/sales/categories/addtional-line-items/franchiseeNo/{franchisee_number}/reportPeriod/{reportPeriod}</td></tr></table><p><strong>Note:</strong> Configuring the additional invoice items is optional. In case you have not configured these as part of your sales report and still if you try retrieving them using the above mentioned endpoint, an empty data set is retrieved.</p><img src=\"images/Retrieve_Additional_Invoice_Items.png\">",
+        "description": "<p class=\"western\">There are some additional invoice items that can be included in the sales report apart from the finance and non-finance categories. To retrieve these additional invoice items, you must use a report period as input parameter for the GET request. Click <u><a href=\"#tag/Sales-Reports\">Report Periods</a></u> for details on retrieving these report periods.</p><p>Then, use this report period, and perform a GET operation to retrieve a list of additional invoice items that are available to report the sales for the given report period.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/sales/categories/addtional-line-items/franchiseeNo/{franchisee_number}/reportPeriod/{reportPeriod}</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/sales/categories/addtional-line-items/franchiseeNo/{franchisee_number}/reportPeriod/{reportPeriod}</td></tr></table><p>The following items must be included in the header of the GET request:</p><ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>Content-Type as the key and its value in the format “application/json”.</p></li><li><p>“X-TenantId” as the key and its value based on your FranConnect system’s URL. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on identifying the “X-TenantId”.</p></li></ol><p><strong>Note:</strong> Configuring the additional invoice items is optional. In case you have not configured these as part of your sales report and still if you try retrieving them using the above mentioned endpoint, an empty data set is retrieved.</p><img src=\"images/Retrieve_Additional_Invoice_Items.png\">",
         "operationId": "Retrieve_Additional_Invoice_Items",
         "produces": [
           "application/json"
@@ -1941,7 +1946,7 @@
           {
             "name": "franchiseeNo",
             "in": "path",
-            "description": "ParameterType:Integer",
+            "description": "Integer",
             "required": false,
             "type": "integer",
             "format": "int32",
@@ -1952,7 +1957,7 @@
           {
             "name": "reportPeriod",
             "in": "path",
-            "description": "ParameterType:String",
+            "description": "String",
             "required": false,
             "type": "string",
             "enum": [
@@ -1982,7 +1987,7 @@
           "Sales Reports"
         ],
         "summary": "Retrieve Sales Report Status",
-        "description": "<p class=\"western\">Following table lists the various status that can be attributed to sales reports and can therefore be used as a search constraint in retrieve operations.</p><p class=\"western\">&nbsp;</p><center><table width=\"762\" cellspacing=\"0\" cellpadding=\"6\"><colgroup><col width=\"144\"/> <col width=\"592\"/> </colgroup><tbody><tr valign=\"top\"><td style=\"background: #5b9bd5;\" bgcolor=\"#5b9bd5\" width=\"144\"><p class=\"western\"><strong>Key</strong></p></td><td style=\"background: #5b9bd5;\" bgcolor=\"#5b9bd5\" width=\"592\"><p class=\"western\"><strong>Name</strong></p></td></tr><tr valign=\"top\"><td style=\"background: #deeaf6;\" bgcolor=\"#deeaf6\" width=\"144\"><p class=\"western\"><strong>P</strong></p></td><td style=\"background: #deeaf6;\" bgcolor=\"#deeaf6\" width=\"592\"><p class=\"western\">Waiting for approval</p></td></tr><tr valign=\"top\"><td style=\"background: #ffffff;\" bgcolor=\"#ffffff\" width=\"144\"><p class=\"western\"><strong>A</strong></p></td><td style=\"background: #ffffff;\" bgcolor=\"#ffffff\" width=\"592\"><p class=\"western\">Approved</p></td></tr><tr valign=\"top\"><td style=\"background: #deeaf6;\" bgcolor=\"#deeaf6\" width=\"144\"><p class=\"western\"><strong>R</strong></p></td><td style=\"background: #deeaf6;\" bgcolor=\"#deeaf6\" width=\"592\"><p class=\"western\">Rejected</p></td></tr><tr valign=\"top\"><td style=\"background: #ffffff;\" bgcolor=\"#ffffff\" width=\"144\"><p class=\"western\"><strong>I</strong></p></td><td style=\"background: #ffffff;\" bgcolor=\"#ffffff\" width=\"592\"><p class=\"western\">Invoiced</p></td></tr><tr valign=\"top\"><td style=\"background: #deeaf6;\" bgcolor=\"#deeaf6\" width=\"144\"><p class=\"western\"><strong>K</strong></p></td><td style=\"background: #deeaf6;\" bgcolor=\"#deeaf6\" width=\"592\"><p class=\"western\">Waiting for Acknowledgement</p></td></tr></tbody></table></center><p class=\"western\">&nbsp;</p><p class=\"western\">You must make a GET request to the API endpoint, along with other required details, to retrieve the report status and their corresponding keys.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/sales/status</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/sales/status</td></tr></table><p><strong>Note:</strong> Configuring the additional invoice items is optional. In case you have not configured these as part of your sales report and still if you try retrieving them using the above mentioned endpoint, an empty data set is retrieved.</p><img src=\"images/Retrieve_Sales_Report.png\">",
+        "description": "<p class=\"western\">&nbsp;</p><p class=\"western\">You must make a GET request to the API endpoint, along with other required details, to retrieve the report status and their corresponding keys.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/sales/status</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/sales/status</td></tr></table>The following items must be included in the header of the GET request:</p><ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>Content-Type as the key and its value in the format “application/json”.</p></li><li><p>“X-TenantId” as the key and its value based on your FranConnect system’s URL. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on identifying the “X-TenantId”.</p></li></ol><p><p class=\"western\">Following table lists the various status that can be attributed to sales reports and can therefore be used as a search constraint in retrieve operations.<center><table width=\"762\" cellspacing=\"0\" cellpadding=\"6\"><colgroup><col width=\"144\"/> <col width=\"592\"/> </colgroup><tbody><tr valign=\"top\"><td style=\"background: #5b9bd5;\" bgcolor=\"#5b9bd5\" width=\"144\"><p class=\"western\"><strong>Key</strong></p></td><td style=\"background: #5b9bd5;\" bgcolor=\"#5b9bd5\" width=\"592\"><p class=\"western\"><strong>Name</strong></p></td></tr><tr valign=\"top\"><td style=\"background: #deeaf6;\" bgcolor=\"#deeaf6\" width=\"144\"><p class=\"western\"><strong>P</strong></p></td><td style=\"background: #deeaf6;\" bgcolor=\"#deeaf6\" width=\"592\"><p class=\"western\">Waiting for approval</p></td></tr><tr valign=\"top\"><td style=\"background: #ffffff;\" bgcolor=\"#ffffff\" width=\"144\"><p class=\"western\"><strong>A</strong></p></td><td style=\"background: #ffffff;\" bgcolor=\"#ffffff\" width=\"592\"><p class=\"western\">Approved</p></td></tr><tr valign=\"top\"><td style=\"background: #deeaf6;\" bgcolor=\"#deeaf6\" width=\"144\"><p class=\"western\"><strong>R</strong></p></td><td style=\"background: #deeaf6;\" bgcolor=\"#deeaf6\" width=\"592\"><p class=\"western\">Rejected</p></td></tr><tr valign=\"top\"><td style=\"background: #ffffff;\" bgcolor=\"#ffffff\" width=\"144\"><p class=\"western\"><strong>I</strong></p></td><td style=\"background: #ffffff;\" bgcolor=\"#ffffff\" width=\"592\"><p class=\"western\">Invoiced</p></td></tr><tr valign=\"top\"><td style=\"background: #deeaf6;\" bgcolor=\"#deeaf6\" width=\"144\"><p class=\"western\"><strong>K</strong></p></td><td style=\"background: #deeaf6;\" bgcolor=\"#deeaf6\" width=\"592\"><p class=\"western\">Waiting for Acknowledgement</p></td></tr></tbody></table></center><p><strong>Note:</strong> Configuring the additional invoice items is optional. In case you have not configured these as part of your sales report and still if you try retrieving them using the above mentioned endpoint, an empty data set is retrieved.</p><img src=\"images/Retrieve_Sales_Report.png\">",
         "operationId": "Retrieve_Sales_Report_Status",
         "produces": [
           "application/json"
@@ -2478,7 +2483,7 @@
           "Payments"
         ],
         "summary": "Create Payments",
-        "description": "<p class=\"western\">You can create payments for a royalty by making a POST request to the Payments endpoint.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/payments</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/payments</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p>Using the FranConnect API, you can create payments by using the following types of royalties: Royalty,  Advertisement, Promissory Notes, Late Fees, Additional Fees,  Tax, and All. <p class=\"western\">&nbsp;</p><img src=\"images/Create_Payments.png\">",
+        "description": "<p class=\"western\">You can create payments for a royalty by making a POST request to the Payments endpoint.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/payments</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/payments</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p>The franchiseeNo, dateReceived and royaltyType must be included in the body of the request. If the Create operation is successful, performing the above mentioned steps would return a response containing the paymentNo and paymentID.</p><p>Using the FranConnect API, you can create payments by using the following types of royalties: Royalty,  Advertisement, Promissory Notes, Late Fees, Additional Fees,  Tax, and All. <p class=\"western\">&nbsp;</p><img src=\"images/Create_Payments.png\">",
         "operationId": "Create_Payments",
         "consumes": [
           "application/json"
@@ -2543,6 +2548,603 @@
           },
           "201": {
             "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/manage-finance/adjustments": {
+      "post": {
+        "tags": [
+          "Adjustments"
+        ],
+        "summary": "Create Adjustment",
+        "description": "<p class=\"western\">You can create adjustments for a sales report by making a POST request to the Adjustments endpoint.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/adjustments</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/adjustments</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p>SalesReportID, franchiseeNo and dateReceived must be included in the body of the request. </p><p class=\"western\">Performing the above mentioned steps would create a new sales report with Adjustments. The response received from the API contains the “reportNo” and “salesReportID”. While the “reportNo” represents the \"Report ID\" of the report and can be seen in Finance > Sales > Sales Summary, the “salesReportID” represents the unique reference ID for that sales report.</p><img src=\"images/Create_Adjustments.png\">",
+        "operationId": "Create_Adjustments",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "salesFilter",
+            "description": "ParameterType:PaymentFilter",
+            "required": false,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "salesReportID": {
+                    "type": "string"
+                  },
+                  "franchiseeNo": {
+                    "type": "string"
+                  },
+                  "dateReceived": {
+                    "type": "date"
+                  }
+                },
+                "example": [
+                  [
+                    {
+                      "data": [
+                        {
+                          "salesReportID": "1476675187",
+                          "franchiseeNo": "501957516",
+                          "dateReceived": "2020-02-24",
+                          "financialItems": [
+                            {
+                              "1": {
+                                "name": "Service",
+                                "calculationType": "(+)",
+                                "data": [
+                                  {
+                                    "amount": "500",
+                                    "quantity": "10"
+                                  }
+                                ]
+                              },
+                              "162961615": {
+                                "name": "Testing category",
+                                "calculationType": "(+)",
+                                "data": [
+                                  {
+                                    "amount": "0",
+                                    "quantity": "0"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "nonFinancialItems": [
+                            {
+                              "100": {
+                                "name": "Non Financial Category",
+                                "calculationType": "(+)",
+                                "data": [
+                                  {
+                                    "amount": "0"
+                                  }
+                                ]
+                              },
+                              "2004859949": {
+                                "name": "Non-Financial 2",
+                                "calculationType": "(+)",
+                                "data": [
+                                  {
+                                    "amount": "0"
+                                  }
+                                ]
+                              },
+                              "2004859951": {
+                                "name": "Non-Financial 3",
+                                "calculationType": "(+)",
+                                "data": [
+                                  {
+                                    "amount": "0"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "finAddnlItems": [
+                            {
+                              "818066578": {
+                                "name": "Test 1900",
+                                "calculationType": "(+)",
+                                "data": [
+                                  {
+                                    "amount": "0"
+                                  }
+                                ]
+                              },
+                              "1956795379": {
+                                "name": "Additional  Invoice 5",
+                                "calculationType": "(+)",
+                                "data": [
+                                  {
+                                    "amount": "0"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/CreateAdjustmentResp"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/manage-finance/adjustments/{id}": {
+      "put": {
+        "tags": [
+          "Adjustments"
+        ],
+        "summary": "Update Adjustment",
+        "description": "<p class=\"western\">You can update adjustments for a sales report by making a PUT request to the Adjustments endpoint.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>PUT</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/adjustments/{id}</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/adjustments/{id}</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p>The following items must be used as path parameters:</p><p>“salesReportID” which refers to the internal unique ID for the sales report. You can fetch this information by retrieving the sales report details on the basis of report number or any other constraint.</p></li></p><img src=\"images/Update_Adjustments.png\">",
+        "operationId": "Update_Adjustments",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "datalist",
+            "description": "ParameterType:ArrayList<Entity>",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          {
+            "name": "salesReportID",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "example": [
+                  [
+                    {
+                      "data": [
+                        {
+                          "salesReportID": "1476675187",
+                          "franchiseeNo": "501957516",
+                          "dateReceived": "2020-02-24",
+                          "financialItems": [
+                            {
+                              "1": {
+                                "name": "Service",
+                                "calculationType": "(+)",
+                                "data": [
+                                  {
+                                    "amount": "500",
+                                    "quantity": "10"
+                                  }
+                                ]
+                              },
+                              "162961615": {
+                                "name": "Testing category",
+                                "calculationType": "(+)",
+                                "data": [
+                                  {
+                                    "amount": "0",
+                                    "quantity": "0"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "nonFinancialItems": [
+                            {
+                              "100": {
+                                "name": "Non Financial Category",
+                                "calculationType": "(+)",
+                                "data": [
+                                  {
+                                    "amount": "0"
+                                  }
+                                ]
+                              },
+                              "2004859949": {
+                                "name": "Non-Financial 2",
+                                "calculationType": "(+)",
+                                "data": [
+                                  {
+                                    "amount": "0"
+                                  }
+                                ]
+                              },
+                              "2004859951": {
+                                "name": "Non-Financial 3",
+                                "calculationType": "(+)",
+                                "data": [
+                                  {
+                                    "amount": "0"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "finAddnlItems": [
+                            {
+                              "818066578": {
+                                "name": "Test 1900",
+                                "calculationType": "(+)",
+                                "data": [
+                                  {
+                                    "amount": "0"
+                                  }
+                                ]
+                              },
+                              "1956795379": {
+                                "name": "Additional  Invoice 5",
+                                "calculationType": "(+)",
+                                "data": [
+                                  {
+                                    "amount": "0"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/UpdateAdjustmentResp"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/manage-finance/adjustments/filter": {
+      "post": {
+        "tags": [
+          "Adjustments"
+        ],
+        "summary": "Retrieve Adjustments",
+        "description": "<p class=\"western\">You can retrieve adjustments for a sales report by making a POST request to the Adjustments endpoint.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/adjustments/filter</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/adjustments/filter</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p class=\"western\">The constraints that would be used to filter out the adjustments must be included in the body of the request. In the example that is included, the “franchiseeNo” has been used as a ‘constraints’ criterion. </p><img src=\"images/Retrieve_Adjustments.png\">",
+        "operationId": "Retrieve_Adjustments",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "salesFilter",
+            "description": "ParameterType:PaymentFilter",
+            "required": false,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "franchiseeRoyaltyID": {
+                    "type": "string"
+                  },
+                  "royaltyType": {
+                    "type": "string"
+                  },
+                  "franchiseeNo": {
+                    "type": "string"
+                  },
+                  "dateReceived": {
+                    "type": "date"
+                  }
+                },
+                "example": [
+                  {
+                    "constraints": {
+                      "franchiseeNo": {
+                        "clause": "EQUAL",
+                        "values": [
+                          "1951953135"
+                        ]
+                      }
+                    },
+                    "page": {
+                      "pageId": "1",
+                      "pageSize": "100"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/RetrieveAdjustmentResp"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/manage-finance/adjustments/type": {
+      "get": {
+        "tags": [
+          "Adjustments"
+        ],
+        "summary": "Retrieve Adjustment Types",
+        "description": "<p class=\"western\">You can retrieve different adjustment types for a sales report by making a GET request to the Adjustments endpoint.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/adjustments/type</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/adjustments/type</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p class=\"western\">Performing the above mentioned steps would return a list of Adjustment Types that are available in the system.</p><img src=\"images/Adjustment_Types.png\">",
+        "operationId": "Adjustment_Types",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/AdjustmentTypesResp"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+        "/manage-finance/adjustments/status": {
+      "get": {
+        "tags": [
+          "Adjustments"
+        ],
+        "summary": "Retrieve Adjustment Status",
+        "description": "<p class=\"western\">You can retrieve the adjustment status for a sales report by making a GET request to the Adjustments endpoint.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/adjustments/status</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/adjustments/status</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p class=\"western\">Performing the above mentioned steps would return a list of adjustment status that are available in the system along with their corresponding keys. The following table lists the different adjustment status along with their corresponding keys:</p><center><table width=\"762\" cellspacing=\"0\" cellpadding=\"7\"><colgroup><col width=\"228\"/> <col width=\"505\"/> </colgroup><tbody><tr valign=\"top\"><td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"228\"><p class=\"western\"><span style=\"color: #ffffff;\"><strong>Key</strong></span></p></td><td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"505\"><p class=\"western\"><span style=\"color: #ffffff;\"><strong>Adjustment Status</strong></span></p></td></tr><tr valign=\"top\"><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"228\"><p class=\"western\"><strong>P</strong></p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"505\"><p class=\"western\">Waiting for Approval</p></td></tr><tr valign=\"top\"><td width=\"228\"><p class=\"western\"><strong>A</strong></p></td><td width=\"505\"><p class=\"western\">Approved</p></td></tr><tr valign=\"top\"><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"228\"><p class=\"western\"><strong>R</strong></p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"505\"><p class=\"western\">Rejected</p><tr valign=\"top\"><td width=\"228\"><p class=\"western\"><strong>I</strong></p></td><td width=\"505\"><p class=\"western\">Invoiced</p></td></tr><tr valign=\"top\"><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"228\"><p class=\"western\"><strong>K</strong></p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"505\"><p class=\"western\">Waiting for Acknowledgement</p></tbody></table></center></p><img src=\"images/Adjustment_Status.png\">",
+        "operationId": "Adjustment_Status",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/AdjustmentStatusResp"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/manage-finance/adjustments/categories/finance-categories/franchisees/{franchiseeID}/sales/{salesReportID}": {
+      "get": {
+        "tags": [
+          "Adjustments"
+        ],
+        "summary": "Retrieve Finance Categories",
+        "description": "<p class=\"western\">Finance categories are an important part of the sales report. These represent the categories that are used to report Sales data. To retrieve all the finance categories of Sales Report for which adjustment has to be filled, you must use the franchisee ID and the Sales Report ID as input parameters for the GET request. </p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/adjustments/categories/finance-categories/franchisees/{franchiseeID}/sales/{salesReportID}</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/adjustments/categories/finance-categories/franchisees/{franchiseeID}/sales/{salesReportID}</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p>Performing the above mentioned steps would return a list of all the finance categories of Sales Report for which adjustment has been filled.</p><img src=\"images/Adj_Finance_Categories.png\">",
+        "operationId": "Retrieve_Adj_Finance_Categories",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "franchiseeNo",
+            "in": "path",
+            "description": "Integer",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              "Integer"
+            ]
+          },
+          {
+            "name": "salesReportID",
+            "in": "path",
+            "description": "Integer",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              "Integer"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/AdjRetrieveFinanceCategoriesResp"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/manage-finance/adjustments/categories/kpi-categories/franchisees/{franchiseeID}/sales/{salesReportID}": {
+      "get": {
+        "tags": [
+          "Adjustments"
+        ],
+        "summary": "Retrieve Non Finance Categories",
+        "description": "<p class=\"western\">Non-Finance categories represent the categories that are not financial in nature but are still tracked as a part of sales reports (such as customer count and loyalty program enrollments). Every sales report has at least one non-finance category in it. To retrieve all the non-finance/Key Performance Indicator (KPI) categories that are used in sales report for which adjustment has to be filled, you must use the franchisee ID and the Sales Report ID as input parameters for the GET request. </p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/adjustments/categories/kpi-categories/franchisees/{franchiseeID}/sales/{salesReportID} </td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/adjustments/categories/kpi-categories/franchisees/{franchiseeID}/sales/{salesReportID} </td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p>Performing the above mentioned steps would return a list of all the non-finance categories of Sales Report for which adjustment has been filled.</p><img src=\"images/Adj_Kpi_Categories.png\">",
+        "operationId": "Retrieve_Adj_NonFinance_Categories",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "franchiseeNo",
+            "in": "path",
+            "description": "Integer",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              "Integer"
+            ]
+          },
+          {
+            "name": "salesReportID",
+            "in": "path",
+            "description": "Integer",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              "Integer"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/AdjRetrieveKpiCategoriesResp"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/manage-finance/sales/categories/addtional-line-items/franchisees/{franchiseeID}/sales/{salesReportID}": {
+      "get": {
+        "tags": [
+          "Adjustments"
+        ],
+        "summary": "Retrieve Additional Line Items",
+        "description": "<p class=\"western\">There are some additional invoice items that can be included in the sales report apart from the finance and non-finance categories. To retrieve all the additional invoice items that are used in sales report for which adjustment has to be filled, you must use the franchisee ID and the Sales Report ID as input parameters for the GET request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/adjustments/categories/addtional-line-items/franchisees/{franchiseeID}/sales/{salesReportID} </td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/adjustments/categories/addtional-line-items/franchisees/{franchiseeID}/sales/{salesReportID} </td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p>Performing the above mentioned steps would return a list of all the Additional Line Items in the Sales Report for which adjustment has been filled.</p><img src=\"images/Adj_Retrieve_Add_Line_Items.png\">",
+        "operationId": "Retrieve_Adj_AddLineItems",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "franchiseeNo",
+            "in": "path",
+            "description": "Integer",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              "Integer"
+            ]
+          },
+          {
+            "name": "reportPeriod",
+            "in": "path",
+            "description": "Integer",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              "Integer"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/AdjRetrieveLineItemsResp"
           },
           "401": {
             "description": "Unauthorized"
@@ -2653,7 +3255,7 @@
           {
             "name": "franchiseeNo",
             "in": "path",
-            "description": "ParameterType:Integer",
+            "description": "Integer",
             "required": false,
             "type": "integer",
             "format": "int32",
@@ -5184,6 +5786,399 @@
                   {
                     "paymentNo": "45",
                     "paymentID": "822049897"
+                  }
+                ],
+                "page": null
+              }
+            }
+          }
+        },
+        "description": "Successful"
+      },
+      "CreateAdjustmentResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "data": [
+                  {
+                    "reportNo": "1234",
+                    "salesReportID": "1476675187",
+                    "response": "Success"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "description": "Successful"
+      },
+        "UpdateAdjustmentResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "data": [
+                  {
+                    "response": "Success"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "description": "Successful"
+      },
+      "RetrieveAdjustmentResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "data": [
+                  {
+                    "1199821203": {
+                      "reportNo": "241",
+                      "salesReportID": "1199821203",
+                      "franchiseeNo": "1951953135",
+                      "reportPeriodStart": "2020-01-01",
+                      "reportPeriodEnd": "2020-01-31",
+                      "reportSubmitDate": "2020-03-06 00:12:34",
+                      "dateReceived": "2020-03-06",
+                      "totalSales": "500.0",
+                      "reportStatus": "I",
+                      "reportType": "X",
+                      "franchiseRoyaltyID": "424620139",
+                      "versionID": "Flat percent 2015",
+                      "totalQuantity": "100.0",
+                      "financialItems": [
+                        {
+                          "1": {
+                            "name": "Service 1",
+                            "calculationType": "(+)",
+                            "data": [
+                              {
+                                "amount": 500,
+                                "quantity": 100
+                              }
+                            ]
+                          },
+                          "110353610": {
+                            "name": "Product 1",
+                            "calculationType": "(+)",
+                            "data": [
+                              {
+                                "amount": 0,
+                                "quantity": 0
+                              }
+                            ]
+                          },
+                          "172558286": {
+                            "name": "Product 2",
+                            "calculationType": "(+)",
+                            "data": [
+                              {
+                                "amount": 0,
+                                "quantity": 0
+                              }
+                            ]
+                          },
+                          "489950611": {
+                            "name": "Adjustments",
+                            "calculationType": "(-)",
+                            "data": [
+                              {
+                                "amount": 0,
+                                "quantity": 0
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "nonFinancialItems": [
+                        {
+                          "100": {
+                            "name": "Non Financial Category",
+                            "calculationType": "(+)",
+                            "data": [
+                              {
+                                "amount": 0
+                              }
+                            ]
+                          },
+                          "1925589933": {
+                            "name": "Average Transaction Value",
+                            "calculationType": "(+)",
+                            "data": [
+                              {
+                                "amount": 0
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "finAddnlItems": [
+                        {
+                          "91768934": {
+                            "name": "Printing",
+                            "calculationType": "(+)",
+                            "data": [
+                              {
+                                "amount": 300
+                              }
+                            ]
+                          },
+                          "1659664436": {
+                            "name": "Co-op Fee",
+                            "calculationType": "(+)",
+                            "data": [
+                              {
+                                "amount": 400
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "actionLogs": {
+                        "2144131743": {
+                          "salestasklogId": 2144131743,
+                          "userComments": "Approved",
+                          "userName": "FranConnect Administrator",
+                          "finSalestasklogsdate": "2020-03-06T09:43:54.000+0000",
+                          "finSalesTaskId": "Approved"
+                        }
+                      }
+                    },
+                    "response": "Success"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "description": "Successful"
+      },
+      "AdjustmentTypesResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "data": [
+                  {
+                    "X": {
+                      "key": "X",
+                      "name": "Adjustment Report",
+                      "description": ""
+                    },
+                    "M": {
+                      "key": "M",
+                      "name": "Royalty Report",
+                      "description": ""
+                    }
+                  }
+                ],
+                "page": null
+              }
+            }
+          }
+        },
+        "description": "Successful"
+      },
+      "AdjustmentStatusResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "data": [
+                  {
+                    "P": {
+                      "key": "P",
+                      "name": "Waiting for Approval",
+                      "description": ""
+                    },
+                    "A": {
+                      "key": "A",
+                      "name": "Approved",
+                      "description": ""
+                    },
+                    "R": {
+                      "key": "R",
+                      "name": "Rejected",
+                      "description": ""
+                    },
+                    "I": {
+                      "key": "I",
+                      "name": "Invoiced",
+                      "description": ""
+                    },
+                    "K": {
+                      "key": "K",
+                      "name": "Waiting for Acknowledgement",
+                      "description": ""
+                    }
+                  }
+                ],
+                "page": null
+              }
+            }
+          }
+        },
+        "description": "Successful"
+      },
+      "AdjRetrieveFinanceCategoriesResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "data": [
+                  {
+                    "financialItems": [
+                      {
+                        "1": {
+                          "name": "Service 1",
+                          "calculationType": "(+)",
+                          "data": [
+                            {
+                              "amount": "Enter the amount of earning in Service 1",
+                              "quantity": "Enter the quantity of the products in Service 1"
+                            }
+                          ]
+                        },
+                        "110353610": {
+                          "name": "Product 1",
+                          "calculationType": "(+)",
+                          "data": [
+                            {
+                              "amount": "Enter the amount of earning in Product 1",
+                              "quantity": "Enter the quantity of the products in Product 1"
+                            }
+                          ]
+                        },
+                        "489950611": {
+                          "name": "Adjustments",
+                          "calculationType": "(-)",
+                          "data": [
+                            {
+                              "amount": "Enter the amount of earning in Adjustments",
+                              "quantity": "Enter the quantity of the products in Adjustments"
+                            }
+                          ]
+                        },
+                        "1925589920": {
+                          "name": "Service 2",
+                          "calculationType": "(+)",
+                          "data": [
+                            {
+                              "amount": "Enter the amount of earning in Service 2",
+                              "quantity": "Enter the quantity of the products in Service 2"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "page": null
+              }
+            }
+          }
+        },
+        "description": "Successful"
+      },
+      "AdjRetrieveKpiCategoriesResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "data": [
+                  {
+                    "nonFinancialItems": [
+                      {
+                        "100": {
+                          "name": "Non Financial Category",
+                          "calculationType": "(+)",
+                          "data": [
+                            {
+                              "amount": "Enter the amount of earning in Non Financial Category"
+                            }
+                          ]
+                        },
+                        "1925589937": {
+                          "name": "Loyalty Program Enrollments",
+                          "calculationType": "(+)",
+                          "data": [
+                            {
+                              "amount": "Enter the amount of earning in Loyalty Program Enrollments"
+                            }
+                          ]
+                        },
+                        "1925589939": {
+                          "name": "Total Marketing Campaigns",
+                          "calculationType": "(+)",
+                          "data": [
+                            {
+                              "amount": "Enter the amount of earning in Total Marketing Campaigns"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "page": null
+              }
+            }
+          }
+        },
+        "description": "Successful"
+      },
+      "AdjRetrieveLineItemsResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "data": [
+                  {
+                    "finAddnlItems": [
+                      {
+                        "91768934": {
+                          "name": "Printing",
+                          "calculationType": "(+)",
+                          "amountType": "Fixed (This value will remain fixed even if the value is changed)",
+                          "data": [
+                            {
+                              "amount": "300.0"
+                            }
+                          ]
+                        },
+                        "425629981": {
+                          "name": "Training Fee",
+                          "calculationType": "(+)",
+                          "data": [
+                            {
+                              "amount": "Enter the amount of earning in Training Fee"
+                            }
+                          ]
+                        },
+                        "602785080": {
+                          "name": "Tech Fee",
+                          "calculationType": "(+)",
+                          "data": [
+                            {
+                              "amount": "Enter the amount of earning in Tech Fee"
+                            }
+                          ]
+                        },
+                        "714608200": {
+                          "name": "Marketing Fee",
+                          "calculationType": "(+)",
+                          "data": [
+                            {
+                              "amount": "Enter the amount of earning in Marketing Fee"
+                            }
+                          ]
+                        }
+                      }
+                    ]
                   }
                 ],
                 "page": null

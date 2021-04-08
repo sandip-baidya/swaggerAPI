@@ -3632,6 +3632,49 @@
           }
         }
       }
+    },
+    "/sandip/pokemon/{id}": {
+      "get": {
+        "tags": [
+          "Sandip API"
+        ],
+        "summary": "Retrieve a Pokemon by ID",
+        "description": "<p class=\"western\">You can retrieve a speicifc pokemon by passing its ID.</p><img src=\"images/Retrieve_Sales_Reports_Period.png\">",
+        "operationId": "List_of_Pokemons",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "pokemonID",
+            "in": "path",
+            "description": "Integer",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              "Integer"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/ListOfPokemonsResp"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -5224,6 +5267,22 @@
                   ]
                 ],
                 "page": null
+              }
+            }
+          }
+        },
+        "description": "Successful"
+      },
+      "ListOfPokemonsResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "message": "You have successfully managed to retrieve a pokemon.",
+                "data":[
+                  "Charizard"
+                ],
+                "success": "True"
               }
             }
           }

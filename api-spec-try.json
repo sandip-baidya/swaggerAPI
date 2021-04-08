@@ -45,7 +45,7 @@
       "description": "<p>FranConnect uses various error codes in the API response to indicate that the request was not processed. In general, response codes in the <code>2xx&nbsp;</code>range indicate success while codes in the <code>4xx&nbsp;</code>and <code>5xx&nbsp;</code>range indicate an error in processing the request (such as a required parameter was invalid, incorrect XML format, and so on).</p><p>Following are the common error codes and their meaning for the FranConnect API:</p><ul><li><p>400<strong> Invalid : &lt;parameter&gt;</strong> - Returned when the input parameter name is invalid</p></li><li><p>400<strong> Invalid XML format: {error}</strong> - Returned when the xmlString entered in the payload is invalid</p></li><li><p>400 <strong>Request to {operation}{subModule} is not supported</strong> - Returned when some operation is restricted for a specific sub-module</p></li> <li> <p>400 <strong>Invalid mandatory field : {field}</strong> - Returned when the value provided in xmlString is invalid for a mandatory field</p> </li><li><p>400 <strong>Invalid mandatory field : {custom_error}</strong> - Returned when the xmlString entered in the payload is invalid. For example, the end date is before the start date or the userID contains space(s)</p></li><li><p>401 <strong>Missing : &lt;parameter&gt; </strong> - Returned when a mandatory parameter is missing</p></li><li> <p>401 <strong>mandatory field : {field}</strong> - Returned when a mandatory field is missing in the xmlString.</p></li> <li><p>409 <strong>{subModule}already exists</strong> - Returned when you try to perform create operation for a sub-module again and only one time submission is allowed for that sub-module</p></li><li><p>411 <strong>Duplicate mandatory field : {field}</strong> - Returned when you try to input duplicate data</p></li><li><p>438 <strong>Invalid tag &lt;tagName&gt;</strong> - Returned when the &lt;tagName&gt; is invalid for the specified module and sub-module</p></li><li><p>500 <strong>Database error</strong> - Returned when there is a database mapping issue</p></li><li><p>503 <strong>Service Unavailable</strong> - Returned when the system is undergoing maintenance</p></li></ul><p></p><p></p>"
     },
     {
-      "name": "Sandip's API",
+      "name": "Sandip API",
       "description": "<p>This is an attempt at figuring out how to restructure or update this json file to reflect changes in the documentation</p> <p>To retrieve a list of Sandip's favourite pokemons, make a GET request with \"responseType\" parameter appended in the URL.</p>",
       "operationId": "List_of_Pokemons"
       
@@ -185,7 +185,7 @@
         "Adjustments",
         "Profit and Loss Statements",
         "Event and Webhook",
-        "Sandip's API"
+        "Sandip API"
       ]
     }
   ],

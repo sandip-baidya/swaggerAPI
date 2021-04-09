@@ -3677,6 +3677,40 @@
       }
     }
   },
+
+  "/sandip/pokemon/": {
+    "post": {
+      "tags": [
+        "Sandip API"
+      ],
+      "summary": "Create a new Pokemon",
+      "description": "<p class=\"western\">You can create a new instance of a pokemon by passing several parameters.</p><img src=\"images/Retrieve_Sales_Reports_Period.png\">",
+      "operationId": "List_of_Pokemons",
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "$ref": "#/components/responses/CreateNewPokemonResp"
+        },
+        "201": {
+          "description": "Created"
+        },
+        "401": {
+          "description": "Unauthorized"
+        },
+        "403": {
+          "description": "Forbidden"
+        },
+        "404": {
+          "description": "Not Found"
+        }
+      },
+      "requestBody": {
+        "$ref": "#/components/requestBodies/CreateNewPokemon"
+      }
+    }
+  },
   "components": {
     "schemas": {
       "Module": {
@@ -3690,6 +3724,15 @@
           "name": "Module"
         }
       },
+      "CreateNewPokemon":{
+        "type":"object",
+        "properties":{
+          "xmlString":{
+            "type": "string"
+          }
+        }
+      },
+
       "AdminSubModule": {
         "type": "object",
         "properties": {
@@ -4121,6 +4164,25 @@
               },
               "xml": {
                 "name": "fcRequest",
+                "wrapped": true
+              }
+            }
+          }
+        },
+        "description": "Admin User Deletion object",
+        "required": true
+      },
+      "CreateNewPokemon": {
+        "content": {
+          "application/json": {
+            "example": "This is supposed to be an example.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/CreateNewPokemon"
+              },
+              "xml": {
+                "name": "PokemonRequest",
                 "wrapped": true
               }
             }

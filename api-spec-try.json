@@ -3705,9 +3705,6 @@
         "404": {
           "description": "Not Found"
         }
-      },
-      "requestBody": {
-        "$ref": "#/components/requestBodies/CreateNewPokemon"
       }
     }
   },

@@ -4820,6 +4820,17 @@
       }
     },
     "responses": {
+      "CreateNewPokemonResp":{
+        "content": {
+          "application/json":{
+            "example": {
+              "response":{
+                "message":"You have successfully managed to create a new pokemon."
+              }
+            }
+          }
+        }
+      },
       "ModuleResp": {
         "content": {
           "application/xml": {

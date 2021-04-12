@@ -21,7 +21,7 @@
     {
       "name": "XYZ",
       "tags": [
-        "FranConnect API"
+        "API Trial"
       ]
     }
   ],
@@ -29,7 +29,7 @@
     "/pokemon/": {
       "get": {
         "tags": [
-          "FranConnect API"
+          "API Trial"
         ],
         "summary": "Retrieve a list of pokemons",
         "description": "<table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"28%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/common/franchisee</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/common/franchisee</td></tr></table><h4>To retrieve the Franchisee Number, you must provide the following items in the header of the GET request: </h4><ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>Specify &ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>Specify &ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p class=\"western\">Performing the above mentioned steps will provide the franchisee number and the franchisee names of all the locations.</p><img src=\"images/Retrieve_Franchise_Number_All.png\">",

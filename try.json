@@ -4740,18 +4740,13 @@
       }
     },
     "responses": {
-      "RetrievePokemonResp":{
-        "content":{
-          "application/json": {
-            "example":{
-              "response":{
-                "data": "Charizard",
-                "message": "successful"
-              }
-            }
+      "RetrievePokemonResp": {
+        "content": {
+          "application/xml": {
+            "example": "<?xml version='1.0' encoding='utf-8'?>\n<fcResponse>\n<responseStatus>Success</responseStatus>\n<responseId>41141160</responseId>\n<responseData>\n<fcRequest>\n<cm>CRM</cm>\n<fim>Info Mgr</fim>\n<fs>Sales</fs>\n</fcRequest>\n</responseData>\n</fcResponse>"
           }
         },
-        "description": "successful"
+        "description": "Successful"
       },
       "ModuleResp": {
         "content": {

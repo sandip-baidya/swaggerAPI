@@ -198,7 +198,7 @@
         "produces":["application/json"],
         "responses":{
           "200":{
-            "$ref": "#components/responses/RetrievePokemonResp"
+            "$ref": "#/components/responses/SalesReportPeriodResp"
           },
           "201": {
             "description": "Created"

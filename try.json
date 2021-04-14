@@ -4745,10 +4745,9 @@
           "application/json": {
             "example":{
               "response":{
-                "data": ["Charizard", "Bulbasaur", "Mankey"],
+                "data": "Charizard",
                 "message": "successful"
               }
-              
             }
           }
         },

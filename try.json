@@ -6418,7 +6418,11 @@
           "application/json": {
             "example": {
               "response": {
-                "message": "Add response JSON after testing"
+                "data":[
+                  {
+                  "message": "Add response JSON after testing"
+                  }
+                ]
               }
             }
           }

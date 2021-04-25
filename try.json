@@ -3659,7 +3659,7 @@
         ],
         "responses": {
           "200": {
-            "$ref": "#/components/responses/RetrieveAllSegmentsResp"
+            "description": "Should be successful"
           },
           "401": {
             "description": "Unauthorized"

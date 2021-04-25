@@ -181,12 +181,12 @@
         "Email Campaigns",
         "SMS Campaigns",
         "Finance",
-        "Operations",
         "Sales Reports",
         "Royalties",
         "Payments",
         "Adjustments",
         "Profit and Loss Statements",
+        "Operations",
         "Segments",
         "Event and Webhook"
       ]
@@ -3659,7 +3659,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Should be successful"
+            "$ref": "#/components/responses/RetrieveAllSegmentsResp"
           },
           "401": {
             "description": "Unauthorized"
@@ -6418,11 +6418,13 @@
           "application/json": {
             "example": {
               "response": {
-                "data":[
+                "data": [
                   {
-                  "message": "Add response JSON after testing"
+                    "response": "Success",
+                    "plrepId": "1"
                   }
-                ]
+                ],
+                "page": null
               }
             }
           }

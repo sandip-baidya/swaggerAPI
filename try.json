@@ -103,10 +103,6 @@
       "description": "<p>The Finance module supports integration with other third party systems for reporting on sales, royalties, profit and loss, and payments. The FranConnect API allows you to automate the transfer of data between the Finance module and your Finance/POS systems.</p>"
     },
     {
-      "name": "Operations",
-      "description": "<p>The Operations module allows optimization. [AND other things, enlist after review]</p>"
-    },
-    {
       "name": "Franchisee Number",
       "description": "<p class=\"western\">Franchisee number is the unique reference number that indicates a particular location. It is used while performing CRUD operations in the API. Using the FranConnect API, you can retrieve a list of franchisee numbers for all the locations or for a single location.</p><p><strong>Note:</strong> For the Info Manager sub-module, the Franchisee number refers to the unique Reference ID for that franchisee location and can be used for the Update, Retrieve and the Delete operations.</p>"
     },
@@ -129,6 +125,10 @@
     {
       "name": "Profit and Loss Statements",
       "description": "This API endpoint supports the Finance Profit and Loss based operations."
+    },
+    {
+      "name": "Operations",
+      "description": "<p>The Operations module allows optimization. [AND other things, enlist after review]</p>"
     },
     {
       "name": "Segments",

@@ -6413,7 +6413,7 @@
         },
         "description": "Successful"
       },
-      "RetrieveAllSegments": {
+      "RetrieveAllSegmentsResp": {
         "content": {
           "application/json": {
             "example": {

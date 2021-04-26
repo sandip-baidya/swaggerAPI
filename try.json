@@ -3808,7 +3808,47 @@
                   "segment_type": {
                     "type": "string"
                   }
-                }
+                },
+                "example": [
+                  {
+                    "user_segment_id": "2222",
+                    "name": "Test Segment Sherlock",
+                    "categories": {
+                      "categoryId": 1203028130,
+                      "categoryName": "21apP1"
+                    },
+                    "accessibility": "Public",
+                    "description": "A test Segment for Sherlock",
+                    "discussion": true,
+                    "type": false,
+                    "segments": [
+                      {
+                        "name": "21apseg2C1",
+                        "segmentCategory": "21apC1",
+                        "userSegmentId": "21apseg2C1",
+                        "segment_id": "1638609706"
+                      }
+                    ],
+                    "owners": [
+                      {
+                        "user_no": "763154979",
+                        "user_name": "Barton Koss"
+                      },
+                      {
+                        "user_no": "758187042",
+                        "user_name": "Dariana Wehner"
+                      }
+                    ],
+                    "playbooks": {
+                      "name": "12 Jan Segment Nitin PBI",
+                      "playbook_id": "36828099",
+                      "record_type": "segment"
+                    },
+                    "status": "2",
+                    "thread_flag": "0",
+                    "segment_type": "SEGMENTS"
+                  }
+                ]
               }
             }
           }
@@ -6749,7 +6789,8 @@
               }
             }
           }
-        }
+        },
+        "description": "Successful"
       },
       "RetrieveSegmentByIdResp": {
         "content": {

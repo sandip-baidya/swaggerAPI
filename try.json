@@ -3763,6 +3763,9 @@
                   "discussion": {
                     "type": "boolean"
                   },
+                  "type": {
+                    "type": "boolean"
+                  },
                   "segments": {
                     "type": "array",
                     "items": {
@@ -3808,6 +3811,20 @@
                 }
               }
             }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/CreateNewSegmentResp"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -6664,6 +6681,75 @@
           }
         },
         "description": "Successful"
+      },
+      "CreateNewSegmentResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "data": {
+                  "id": 431628371,
+                  "entity_name": "segments",
+                  "values": {
+                    "segment_id": "1403531379",
+                    "name": "Test Segment Sherlock",
+                    "description": "A test Segment for Sherlock",
+                    "user_segment_id": "2222",
+                    "category_id": "1203028130",
+                    "segment_type": "SEGMENTS",
+                    "parent_association_count": "0",
+                    "type": "Static",
+                    "status": "2",
+                    "accessibility": "Public",
+                    "peer_review": "No",
+                    "discussion": "Yes",
+                    "module_id": "32",
+                    "is_deleted": "N",
+                    "created_on": "2021-04-26 11:46:54",
+                    "created_by": "FranConnect Administrator",
+                    "thread_flag": "0",
+                    "showOverview": "true",
+                    "showOwners": "true",
+                    "showPlaybooks": "true",
+                    "showActivity": "true",
+                    "owners": [
+                      {
+                        "user_no": "763154979",
+                        "user_name": "Barton Koss",
+                        "user_level": "0",
+                        "sub_divisions_id": null,
+                        "hierarchyLabel": "Corporate Users",
+                        "owner_id": "763154979",
+                        "owner_mapping_id": "109250804",
+                        "owner_segment_id": "1403531379"
+                      },
+                      {
+                        "user_no": "758187042",
+                        "user_name": "Dariana Wehner",
+                        "user_level": "0",
+                        "sub_divisions_id": null,
+                        "hierarchyLabel": "Corporate Users",
+                        "owner_id": "758187042",
+                        "owner_mapping_id": "771155050",
+                        "owner_segment_id": "1403531379"
+                      }
+                    ],
+                    "units": [],
+                    "playbooks": [
+                      {
+                        "name": "12 Jan Segment Nitin PBI",
+                        "playbook_id": "36828099",
+                        "record_type": "segment"
+                      }
+                    ],
+                    "created_by_no": "1"
+                  }
+                },
+                "page": null
+              }
+            }
+          }
+        }
       },
       "RetrieveSegmentByIdResp": {
         "content": {

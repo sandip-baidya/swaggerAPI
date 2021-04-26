@@ -3765,9 +3765,6 @@
                   "discussion": {
                     "type": "boolean"
                   },
-                  "type": {
-                    "type": "boolean"
-                  },
                   "segments": {
                     "type": "array",
                     "items": {

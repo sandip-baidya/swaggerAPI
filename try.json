@@ -3773,7 +3773,6 @@
           }
         }
       }
-    }
     },
     "manage-segment/segments/{id}": {
       "get": {

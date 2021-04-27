@@ -4119,9 +4119,6 @@
           "200": {
             "$ref": "#/components/responses/RetrieveSegmentsFilterResp"
           },
-          "201": {
-            "description": "Created"
-          },
           "401": {
             "description": "Unauthorized"
           },
@@ -7350,7 +7347,8 @@
               }
             }
           }
-        }
+        },
+        "description": "Successful"
       },
       "RetrieveFieldsInfoResp": {
         "content": {

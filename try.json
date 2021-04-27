@@ -3872,12 +3872,73 @@
         }
       }
     },
+    "manage-segment/segments/filter": {
+      "post": {
+        "tags": [
+          "Segments"
+        ],
+        "summary": "Retrieve All Segments Based on Filter Criteria",
+        "description": "<p class=\"western\">Make a POST request to the specified endpoint to retrieve all segments according to your custom filter criteria. Refer to the request body down below to understand what data you need to send in the body to perform this request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Fields_Info.PNG\">",
+        "operationId": "Retrieve_Segments_Filter",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "page": {
+                    "type": "object",
+                    "properties": {
+                      "pageSize": {
+                        "type": "integer"
+                      },
+                      "pageId": {
+                        "type": "integer"
+                      },
+                      "viewAll": {
+                        "type": "boolean"
+                      },
+                      "sort": {
+                        "type": "object",
+                        "properties": {
+                          "direction": {
+                            "type": "string"
+                          },
+                          "columns": {
+                            "type": "array"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "type": "array"
+                  },
+                  "saveView": {
+                    "type": "boolean"
+                  },
+                  "moduleId": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "manage-segment/segments/fieldsInfo": {
       "post": {
         "tags": [
           "Segments"
         ],
-        "summary": "Get all options associated with a field(s)",
+        "summary": "Get options of a field(s)",
         "description": "<p class=\"western\">Make a POST request to the specified endpoint to fetch all options associated with a field(s) along with details like Combo/Radio/Checkboxes. Refer to the request body down below to understand what data you need to send in the body to perform this request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Fields_Info.PNG\">",
         "operationId": "Retrieve_Fields_Info",
         "consumes": [
@@ -3945,58 +4006,6 @@
           },
           "404": {
             "description": "Not Found"
-          }
-        }
-      }
-    },
-    "/manage-segment/segments/filter": {
-      "post": {
-        "tags": [
-          "Segments"
-        ],
-        "summary": "Retrieve All Segments Based on Filter Criteria",
-        "description": "<p class=\"western\">Make a POST request to the specified endpoint to retrieve all segments according to your custom filter criteria. Refer to the request body down below to understand what data you need to send in the body to perform this request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Fields_Info.PNG\">",
-        "operationId": "Retrieve_Segments_Filter",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "page": {
-                    "type": "object",
-                    "properties": {
-                      "pageSize" :{
-                        "type": "integer",
-                        "minimum": 1
-                      },
-                      "pageId": {
-                        "type": "integer"
-                      },
-                      "viewAll": {
-                        "type": "boolean"
-                      },
-                      "sort": {
-                        "type": "object",
-                        "properties": {
-                          "direction": {
-                            "type": "string"
-                          },
-                          "columns": {
-                            "type": "array"
-                          }
-                        }
-                    }
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -6994,62 +7003,62 @@
           "application/json": {
             "example": {
               "response": {
-                  "data": [
+                "data": [
+                  {
+                    "fieldName": "fimRrBankruptcy",
+                    "options": [
                       {
-                          "fieldName": "fimRrBankruptcy",
-                          "options": [
-                              {
-                                  "key": "1",
-                                  "displayName": "Yes",
-                                  "value": "Yes",
-                                  "checked": ""
-                              },
-                              {
-                                  "key": "2",
-                                  "displayName": "No",
-                                  "value": "No",
-                                  "checked": ""
-                              }
-                          ]
+                        "key": "1",
+                        "displayName": "Yes",
+                        "value": "Yes",
+                        "checked": ""
                       },
                       {
-                          "fieldName": "fimRrRepresentative",
-                          "options": [
-                              {
-                                  "key": "1",
-                                  "displayName": "Yes",
-                                  "value": "Yes",
-                                  "checked": ""
-                              },
-                              {
-                                  "key": "2",
-                                  "displayName": "No",
-                                  "value": "No",
-                                  "checked": ""
-                              }
-                          ]
-                      },
-                      {
-                          "fieldName": "fimRrRepresentative",
-                          "options": [
-                              {
-                                  "key": "1",
-                                  "displayName": "Yes",
-                                  "value": "Yes",
-                                  "checked": ""
-                              },
-                              {
-                                  "key": "2",
-                                  "displayName": "No",
-                                  "value": "No",
-                                  "checked": ""
-                              }
-                          ]
+                        "key": "2",
+                        "displayName": "No",
+                        "value": "No",
+                        "checked": ""
                       }
-                  ],
-                  "page": null
+                    ]
+                  },
+                  {
+                    "fieldName": "fimRrRepresentative",
+                    "options": [
+                      {
+                        "key": "1",
+                        "displayName": "Yes",
+                        "value": "Yes",
+                        "checked": ""
+                      },
+                      {
+                        "key": "2",
+                        "displayName": "No",
+                        "value": "No",
+                        "checked": ""
+                      }
+                    ]
+                  },
+                  {
+                    "fieldName": "fimRrRepresentative",
+                    "options": [
+                      {
+                        "key": "1",
+                        "displayName": "Yes",
+                        "value": "Yes",
+                        "checked": ""
+                      },
+                      {
+                        "key": "2",
+                        "displayName": "No",
+                        "value": "No",
+                        "checked": ""
+                      }
+                    ]
+                  }
+                ],
+                "page": null
               }
-          }
+            }
           }
         },
         "description": "Successful"

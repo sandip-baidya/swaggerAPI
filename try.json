@@ -3926,9 +3926,80 @@
                   "moduleId": {
                     "type": "integer"
                   }
+                },
+                "example": {
+                  "page": {
+                    "pageSize": 20,
+                    "pageId": 0,
+                    "viewAll": false,
+                    "sort": {
+                        "direction": "DESC",
+                        "columns": [
+                            "created_on"
+                        ]
+                    }
+                },
+                "constraints": {
+                    "user_segment_id": {
+                        "clause": "ILIKE",
+                        "values": [
+                            "2"
+                        ],
+                        "type": "text"
+                    },
+                    "name": {
+                        "clause": "ILIKE",
+                        "values": [
+                            "Test"
+                        ],
+                        "type": "text"
+                    },
+                    "category_id": {
+                        "clause": "IN",
+                        "values": [
+                            1203028130
+                        ],
+                        "type": "multiselect"
+                    },
+                    "created_by": {
+                        "clause": "NOT_IN",
+                        "values": [
+                            "705537899"
+                        ],
+                        "type": "multiselect"
+                    },
+                    "created_on": {
+                        "clause": "AFTER",
+                        "values": [
+                            "2021-04-24"
+                        ],
+                        "type": "date"
+                    }
+            
+                },
+                "fields": [],
+                "saveView": false,
+                "moduleId": "32"
                 }
               }
             }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/RetrieveSegmentsFilterResp"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -3938,7 +4009,7 @@
         "tags": [
           "Segments"
         ],
-        "summary": "Get options of a field(s)",
+        "summary": "Get options associated with a field(s)",
         "description": "<p class=\"western\">Make a POST request to the specified endpoint to fetch all options associated with a field(s) along with details like Combo/Radio/Checkboxes. Refer to the request body down below to understand what data you need to send in the body to perform this request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Fields_Info.PNG\">",
         "operationId": "Retrieve_Fields_Info",
         "consumes": [
@@ -6997,6 +7068,159 @@
           }
         },
         "description": "Successful"
+      },
+      "RetrieveSegmentsFilterResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "data": [
+                    {
+                        "id": 224102935,
+                        "owner_count": 2,
+                        "created_on": "2021-04-27 11:24:06",
+                        "name": "Test Segment Sher",
+                        "type": "Static",
+                        "status": "Active",
+                        "module_id": "32",
+                        "created_by": "FranConnect Administrator",
+                        "discussion": "Yes",
+                        "is_deleted": "N",
+                        "segment_id": "9780495",
+                        "showOwners": "true",
+                        "category_id": "21apP1",
+                        "description": "A test Segment for Sherlock",
+                        "peer_review": "No",
+                        "thread_flag": "0",
+                        "segment_type": "SEGMENTS",
+                        "showActivity": "true",
+                        "showOverview": "true",
+                        "accessibility": "Public",
+                        "showPlaybooks": "true",
+                        "user_segment_id": "0921",
+                        "parent_association_count": "0",
+                        "actions": [
+                            {
+                                "displayName": "Edit",
+                                "key": "modify"
+                            },
+                            {
+                                "displayName": "Inactive",
+                                "key": "Inactive"
+                            },
+                            {
+                                "displayName": "Archive",
+                                "key": "archive"
+                            },
+                            {
+                                "displayName": "Delete",
+                                "key": "Delete"
+                            }
+                        ],
+                        "unit_count": 0,
+                        "units": []
+                    },
+                    {
+                        "id": 1338848708,
+                        "owner_count": 2,
+                        "created_on": "2021-04-26 18:41:56",
+                        "name": "Test Segment Sherlockk",
+                        "type": "Static",
+                        "status": "Active",
+                        "module_id": "32",
+                        "created_by": "FranConnect Administrator",
+                        "discussion": "Yes",
+                        "is_deleted": "N",
+                        "segment_id": "1484044351",
+                        "showOwners": "true",
+                        "category_id": "21apP1",
+                        "description": "A test Segment for Sherlock",
+                        "peer_review": "No",
+                        "thread_flag": "0",
+                        "segment_type": "SEGMENTS",
+                        "showActivity": "true",
+                        "showOverview": "true",
+                        "accessibility": "Public",
+                        "showPlaybooks": "true",
+                        "user_segment_id": "22221",
+                        "parent_association_count": "0",
+                        "actions": [
+                            {
+                                "displayName": "Edit",
+                                "key": "modify"
+                            },
+                            {
+                                "displayName": "Inactive",
+                                "key": "Inactive"
+                            },
+                            {
+                                "displayName": "Archive",
+                                "key": "archive"
+                            },
+                            {
+                                "displayName": "Delete",
+                                "key": "Delete"
+                            }
+                        ],
+                        "unit_count": 0,
+                        "units": []
+                    },
+                    {
+                        "id": 431628371,
+                        "owner_count": 2,
+                        "created_on": "2021-04-26 17:16:54",
+                        "name": "Test Segment Sherlock",
+                        "type": "Static",
+                        "status": "Active",
+                        "module_id": "32",
+                        "created_by": "FranConnect Administrator",
+                        "discussion": "Yes",
+                        "is_deleted": "N",
+                        "segment_id": "1403531379",
+                        "showOwners": "true",
+                        "category_id": "21apP1",
+                        "description": "A test Segment for Sherlock",
+                        "peer_review": "No",
+                        "thread_flag": "0",
+                        "segment_type": "SEGMENTS",
+                        "showActivity": "true",
+                        "showOverview": "true",
+                        "accessibility": "Public",
+                        "showPlaybooks": "true",
+                        "user_segment_id": "2222",
+                        "parent_association_count": "0",
+                        "actions": [
+                            {
+                                "displayName": "Edit",
+                                "key": "modify"
+                            },
+                            {
+                                "displayName": "Inactive",
+                                "key": "Inactive"
+                            },
+                            {
+                                "displayName": "Archive",
+                                "key": "archive"
+                            },
+                            {
+                                "displayName": "Delete",
+                                "key": "Delete"
+                            }
+                        ],
+                        "unit_count": 0,
+                        "units": []
+                    }
+                ],
+                "page": {
+                    "size": 20,
+                    "totalRecords": 3,
+                    "totalPages": 1,
+                    "pageId": 0
+                }
+            }
+            }
+          }
+        }
       },
       "RetrieveFieldsInfoResp": {
         "content": {

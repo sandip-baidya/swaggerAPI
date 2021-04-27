@@ -3919,9 +3919,9 @@
                   },
                   "constraints": {
                     "type": "object",
-                    "properties" :{
-                      "anyOf": [
-                        {
+                    "anyOf": [
+                      {
+                        "properties": {
                           "user_segment_id": {
                             "type": "object",
                             "properties": {
@@ -3936,8 +3936,10 @@
                               }
                             }
                           }
-                        },
-                        {
+                        }
+                      },
+                      {
+                        "properties": {
                           "name": {
                             "type": "object",
                             "properties": {
@@ -3953,8 +3955,8 @@
                             }
                           }
                         }
-                      ]
-                    }
+                      }
+                    ]
                   },
                   "fields": {
                     "type": "array"
@@ -3972,53 +3974,52 @@
                     "pageId": 0,
                     "viewAll": false,
                     "sort": {
-                        "direction": "DESC",
-                        "columns": [
-                            "created_on"
-                        ]
+                      "direction": "DESC",
+                      "columns": [
+                        "created_on"
+                      ]
                     }
-                },
-                "constraints": {
+                  },
+                  "constraints": {
                     "user_segment_id": {
-                        "clause": "ILIKE",
-                        "values": [
-                            "2"
-                        ],
-                        "type": "text"
+                      "clause": "ILIKE",
+                      "values": [
+                        "2"
+                      ],
+                      "type": "text"
                     },
                     "name": {
-                        "clause": "ILIKE",
-                        "values": [
-                            "Test"
-                        ],
-                        "type": "text"
+                      "clause": "ILIKE",
+                      "values": [
+                        "Test"
+                      ],
+                      "type": "text"
                     },
                     "category_id": {
-                        "clause": "IN",
-                        "values": [
-                            1203028130
-                        ],
-                        "type": "multiselect"
+                      "clause": "IN",
+                      "values": [
+                        1203028130
+                      ],
+                      "type": "multiselect"
                     },
                     "created_by": {
-                        "clause": "NOT_IN",
-                        "values": [
-                            "705537899"
-                        ],
-                        "type": "multiselect"
+                      "clause": "NOT_IN",
+                      "values": [
+                        "705537899"
+                      ],
+                      "type": "multiselect"
                     },
                     "created_on": {
-                        "clause": "AFTER",
-                        "values": [
-                            "2021-04-24"
-                        ],
-                        "type": "date"
+                      "clause": "AFTER",
+                      "values": [
+                        "2021-04-24"
+                      ],
+                      "type": "date"
                     }
-            
-                },
-                "fields": [],
-                "saveView": false,
-                "moduleId": "32"
+                  },
+                  "fields": [],
+                  "saveView": false,
+                  "moduleId": "32"
                 }
               }
             }
@@ -7114,149 +7115,149 @@
             "example": {
               "response": {
                 "data": [
-                    {
-                        "id": 224102935,
-                        "owner_count": 2,
-                        "created_on": "2021-04-27 11:24:06",
-                        "name": "Test Segment Sher",
-                        "type": "Static",
-                        "status": "Active",
-                        "module_id": "32",
-                        "created_by": "FranConnect Administrator",
-                        "discussion": "Yes",
-                        "is_deleted": "N",
-                        "segment_id": "9780495",
-                        "showOwners": "true",
-                        "category_id": "21apP1",
-                        "description": "A test Segment for Sherlock",
-                        "peer_review": "No",
-                        "thread_flag": "0",
-                        "segment_type": "SEGMENTS",
-                        "showActivity": "true",
-                        "showOverview": "true",
-                        "accessibility": "Public",
-                        "showPlaybooks": "true",
-                        "user_segment_id": "0921",
-                        "parent_association_count": "0",
-                        "actions": [
-                            {
-                                "displayName": "Edit",
-                                "key": "modify"
-                            },
-                            {
-                                "displayName": "Inactive",
-                                "key": "Inactive"
-                            },
-                            {
-                                "displayName": "Archive",
-                                "key": "archive"
-                            },
-                            {
-                                "displayName": "Delete",
-                                "key": "Delete"
-                            }
-                        ],
-                        "unit_count": 0,
-                        "units": []
-                    },
-                    {
-                        "id": 1338848708,
-                        "owner_count": 2,
-                        "created_on": "2021-04-26 18:41:56",
-                        "name": "Test Segment Sherlockk",
-                        "type": "Static",
-                        "status": "Active",
-                        "module_id": "32",
-                        "created_by": "FranConnect Administrator",
-                        "discussion": "Yes",
-                        "is_deleted": "N",
-                        "segment_id": "1484044351",
-                        "showOwners": "true",
-                        "category_id": "21apP1",
-                        "description": "A test Segment for Sherlock",
-                        "peer_review": "No",
-                        "thread_flag": "0",
-                        "segment_type": "SEGMENTS",
-                        "showActivity": "true",
-                        "showOverview": "true",
-                        "accessibility": "Public",
-                        "showPlaybooks": "true",
-                        "user_segment_id": "22221",
-                        "parent_association_count": "0",
-                        "actions": [
-                            {
-                                "displayName": "Edit",
-                                "key": "modify"
-                            },
-                            {
-                                "displayName": "Inactive",
-                                "key": "Inactive"
-                            },
-                            {
-                                "displayName": "Archive",
-                                "key": "archive"
-                            },
-                            {
-                                "displayName": "Delete",
-                                "key": "Delete"
-                            }
-                        ],
-                        "unit_count": 0,
-                        "units": []
-                    },
-                    {
-                        "id": 431628371,
-                        "owner_count": 2,
-                        "created_on": "2021-04-26 17:16:54",
-                        "name": "Test Segment Sherlock",
-                        "type": "Static",
-                        "status": "Active",
-                        "module_id": "32",
-                        "created_by": "FranConnect Administrator",
-                        "discussion": "Yes",
-                        "is_deleted": "N",
-                        "segment_id": "1403531379",
-                        "showOwners": "true",
-                        "category_id": "21apP1",
-                        "description": "A test Segment for Sherlock",
-                        "peer_review": "No",
-                        "thread_flag": "0",
-                        "segment_type": "SEGMENTS",
-                        "showActivity": "true",
-                        "showOverview": "true",
-                        "accessibility": "Public",
-                        "showPlaybooks": "true",
-                        "user_segment_id": "2222",
-                        "parent_association_count": "0",
-                        "actions": [
-                            {
-                                "displayName": "Edit",
-                                "key": "modify"
-                            },
-                            {
-                                "displayName": "Inactive",
-                                "key": "Inactive"
-                            },
-                            {
-                                "displayName": "Archive",
-                                "key": "archive"
-                            },
-                            {
-                                "displayName": "Delete",
-                                "key": "Delete"
-                            }
-                        ],
-                        "unit_count": 0,
-                        "units": []
-                    }
+                  {
+                    "id": 224102935,
+                    "owner_count": 2,
+                    "created_on": "2021-04-27 11:24:06",
+                    "name": "Test Segment Sher",
+                    "type": "Static",
+                    "status": "Active",
+                    "module_id": "32",
+                    "created_by": "FranConnect Administrator",
+                    "discussion": "Yes",
+                    "is_deleted": "N",
+                    "segment_id": "9780495",
+                    "showOwners": "true",
+                    "category_id": "21apP1",
+                    "description": "A test Segment for Sherlock",
+                    "peer_review": "No",
+                    "thread_flag": "0",
+                    "segment_type": "SEGMENTS",
+                    "showActivity": "true",
+                    "showOverview": "true",
+                    "accessibility": "Public",
+                    "showPlaybooks": "true",
+                    "user_segment_id": "0921",
+                    "parent_association_count": "0",
+                    "actions": [
+                      {
+                        "displayName": "Edit",
+                        "key": "modify"
+                      },
+                      {
+                        "displayName": "Inactive",
+                        "key": "Inactive"
+                      },
+                      {
+                        "displayName": "Archive",
+                        "key": "archive"
+                      },
+                      {
+                        "displayName": "Delete",
+                        "key": "Delete"
+                      }
+                    ],
+                    "unit_count": 0,
+                    "units": []
+                  },
+                  {
+                    "id": 1338848708,
+                    "owner_count": 2,
+                    "created_on": "2021-04-26 18:41:56",
+                    "name": "Test Segment Sherlockk",
+                    "type": "Static",
+                    "status": "Active",
+                    "module_id": "32",
+                    "created_by": "FranConnect Administrator",
+                    "discussion": "Yes",
+                    "is_deleted": "N",
+                    "segment_id": "1484044351",
+                    "showOwners": "true",
+                    "category_id": "21apP1",
+                    "description": "A test Segment for Sherlock",
+                    "peer_review": "No",
+                    "thread_flag": "0",
+                    "segment_type": "SEGMENTS",
+                    "showActivity": "true",
+                    "showOverview": "true",
+                    "accessibility": "Public",
+                    "showPlaybooks": "true",
+                    "user_segment_id": "22221",
+                    "parent_association_count": "0",
+                    "actions": [
+                      {
+                        "displayName": "Edit",
+                        "key": "modify"
+                      },
+                      {
+                        "displayName": "Inactive",
+                        "key": "Inactive"
+                      },
+                      {
+                        "displayName": "Archive",
+                        "key": "archive"
+                      },
+                      {
+                        "displayName": "Delete",
+                        "key": "Delete"
+                      }
+                    ],
+                    "unit_count": 0,
+                    "units": []
+                  },
+                  {
+                    "id": 431628371,
+                    "owner_count": 2,
+                    "created_on": "2021-04-26 17:16:54",
+                    "name": "Test Segment Sherlock",
+                    "type": "Static",
+                    "status": "Active",
+                    "module_id": "32",
+                    "created_by": "FranConnect Administrator",
+                    "discussion": "Yes",
+                    "is_deleted": "N",
+                    "segment_id": "1403531379",
+                    "showOwners": "true",
+                    "category_id": "21apP1",
+                    "description": "A test Segment for Sherlock",
+                    "peer_review": "No",
+                    "thread_flag": "0",
+                    "segment_type": "SEGMENTS",
+                    "showActivity": "true",
+                    "showOverview": "true",
+                    "accessibility": "Public",
+                    "showPlaybooks": "true",
+                    "user_segment_id": "2222",
+                    "parent_association_count": "0",
+                    "actions": [
+                      {
+                        "displayName": "Edit",
+                        "key": "modify"
+                      },
+                      {
+                        "displayName": "Inactive",
+                        "key": "Inactive"
+                      },
+                      {
+                        "displayName": "Archive",
+                        "key": "archive"
+                      },
+                      {
+                        "displayName": "Delete",
+                        "key": "Delete"
+                      }
+                    ],
+                    "unit_count": 0,
+                    "units": []
+                  }
                 ],
                 "page": {
-                    "size": 20,
-                    "totalRecords": 3,
-                    "totalPages": 1,
-                    "pageId": 0
+                  "size": 20,
+                  "totalRecords": 3,
+                  "totalPages": 1,
+                  "pageId": 0
                 }
-            }
+              }
             }
           }
         }

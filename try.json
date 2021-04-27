@@ -3992,46 +3992,7 @@
                             "type": "array"
                           }
                         }
-                      }
-                  }
-                },
-                "constraints": {
-                  "type": "object",
-                  "properties" :{
-                    "anyOf": [
-                      {
-                        "user_segment_id": {
-                          "type": "object",
-                          "properties": {
-                            "clause": {
-                              "type": "string"
-                            },
-                            "values": {
-                              "type": "array"
-                            },
-                            "type": {
-                              "type": "string"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "name": {
-                          "type": "object",
-                          "properties": {
-                            "clause": {
-                              "type": "string"
-                            },
-                            "values": {
-                              "type": "array"
-                            },
-                            "type": {
-                              "type": "string"
-                            }
-                          }
-                        }
-                      }
-                    ]
+                    }
                   }
                 }
               }

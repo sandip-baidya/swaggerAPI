@@ -3955,6 +3955,96 @@
                             }
                           }
                         }
+                      },
+                      {
+                        "properties": {
+                          "category_id": {
+                            "type": "object",
+                            "properties": {
+                              "clause": {
+                                "type": "string"
+                              },
+                              "values": {
+                                "type": "array"
+                              },
+                              "type": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "properties": {
+                          "created_by": {
+                            "type": "object",
+                            "properties": {
+                              "clause": {
+                                "type": "string"
+                              },
+                              "values": {
+                                "type": "array"
+                              },
+                              "type": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "properties": {
+                          "created_on": {
+                            "type": "object",
+                            "properties": {
+                              "clause": {
+                                "type": "string"
+                              },
+                              "values": {
+                                "type": "array"
+                              },
+                              "type": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "updated_on": {
+                          "category_id": {
+                            "type": "object",
+                            "properties": {
+                              "clause": {
+                                "type": "string"
+                              },
+                              "values": {
+                                "type": "array"
+                              },
+                              "type": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "properties": {
+                          "assignto": {
+                            "type": "object",
+                            "properties": {
+                              "clause": {
+                                "type": "string"
+                              },
+                              "values": {
+                                "type": "array"
+                              },
+                              "type": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
                       }
                     ]
                   },

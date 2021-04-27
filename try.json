@@ -3726,7 +3726,7 @@
           "Segments"
         ],
         "summary": "Create A New Segment",
-        "description": "<p class=\"western\">You can create a new segment by making a POST request to the specified endpoint. Refer the request body down below to understand what data you need to make a POST request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Create_New_Segment.PNG\">",
+        "description": "<p class=\"western\">You can create a new segment by making a POST request to the specified endpoint. Refer to the request body down below to understand what data you need to make a POST request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Create_New_Segment.PNG\">",
         "operationId": "Create_New_Segment",
         "consumes": [
           "application/json"
@@ -3738,75 +3738,78 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {
-                  "user_segment_id": {
-                    "type": "integer"
-                  },
-                  "name": {
-                    "type": "integer"
-                  },
-                  "categories": {
-                    "type": "object",
-                    "properties": {
-                      "categoryName": {
-                        "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "user_segment_id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "categories": {
+                      "type": "object",
+                      "properties": {
+                        "categoryName": {
+                          "type": "string"
+                        }
                       }
-                    }
-                  },
-                  "accessibility": {
-                    "type": "string"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "discussion": {
-                    "type": "boolean"
-                  },
-                  "type": {
-                    "type": "boolean"
-                  },
-                  "segments": {
-                    "type": "array",
-                    "items": {
+                    },
+                    "accessibility": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "discussion": {
+                      "type": "boolean"
+                    },
+                    "type": {
+                      "type": "boolean"
+                    },
+                    "segments": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "segmentCategory": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "owners": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "user_no": {
+                            "type": "integer"
+                          },
+                          "user_name": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "playbooks": {
                       "type": "object",
                       "properties": {
                         "name": {
                           "type": "string"
                         },
-                        "segmentCategory": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  },
-                  "owners": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "user_no": {
+                        "playbook_id": {
                           "type": "integer"
-                        },
-                        "user_name": {
-                          "type": "string"
                         }
                       }
+                    },
+                    "segment_type": {
+                      "type": "string"
                     }
-                  },
-                  "playbooks": {
-                    "type": "object",
-                    "properties": {
-                      "name": {
-                        "type": "string"
-                      },
-                      "playbook_id": {
-                        "type": "integer"
-                      }
-                    }
-                  },
-                  "segment_type": {
-                    "type": "string"
                   }
                 },
                 "example": [
@@ -3856,6 +3859,83 @@
         "responses": {
           "200": {
             "$ref": "#/components/responses/CreateNewSegmentResp"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "manage-segment/segments/fieldsInfo": {
+      "post": {
+        "tags": [
+          "Segments"
+        ],
+        "summary": "Get all fields options along with details like Combo/Radio/Checkboxes",
+        "description": "<p class=\"western\">Make a POST request to the specified endpoint to fetch all options associated with a field(s) along with details like Combo/Radio/Checkboxes. Refer to the request body down below to understand what data you need to send in body to perform this request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Create_New_Segment.PNG\">",
+        "operationId": "Retrieve_Fields_Info",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "fields": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "fieldName": {
+                          "type": "string"
+                        },
+                        "tableAnchor": {
+                          "type": "string"
+                        },
+                        "customMethod": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "fields": [
+                    {
+                      "fieldName": "fimRrBankruptcy",
+                      "tableAnchor": "fimTermination",
+                      "customMethod": "getSearchMdRadio"
+                    },
+                    {
+                      "fieldName": "fimRrRepresentative",
+                      "tableAnchor": "fimTermination",
+                      "customMethod": "getSearchMdRadio"
+                    },
+                    {
+                      "fieldName": "fimRrRepresentative",
+                      "tableAnchor": "fimTermination",
+                      "customMethod": "getSearchMdRadio"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/RetrieveFieldsInfoResp"
           },
           "401": {
             "description": "Unauthorized"
@@ -6853,6 +6933,71 @@
               ],
               "page": null
             }
+          }
+        },
+        "description": "Successful"
+      },
+      "RetrieveFieldsInfoResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                  "data": [
+                      {
+                          "fieldName": "fimRrBankruptcy",
+                          "options": [
+                              {
+                                  "key": "1",
+                                  "displayName": "Yes",
+                                  "value": "Yes",
+                                  "checked": ""
+                              },
+                              {
+                                  "key": "2",
+                                  "displayName": "No",
+                                  "value": "No",
+                                  "checked": ""
+                              }
+                          ]
+                      },
+                      {
+                          "fieldName": "fimRrRepresentative",
+                          "options": [
+                              {
+                                  "key": "1",
+                                  "displayName": "Yes",
+                                  "value": "Yes",
+                                  "checked": ""
+                              },
+                              {
+                                  "key": "2",
+                                  "displayName": "No",
+                                  "value": "No",
+                                  "checked": ""
+                              }
+                          ]
+                      },
+                      {
+                          "fieldName": "fimRrRepresentative",
+                          "options": [
+                              {
+                                  "key": "1",
+                                  "displayName": "Yes",
+                                  "value": "Yes",
+                                  "checked": ""
+                              },
+                              {
+                                  "key": "2",
+                                  "displayName": "No",
+                                  "value": "No",
+                                  "checked": ""
+                              }
+                          ]
+                      }
+                  ],
+                  "page": null
+              }
+          }
           }
         },
         "description": "Successful"

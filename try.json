@@ -4289,6 +4289,97 @@
           }
         }
       }
+    },
+    "/manage-segment/segments/export-excel": {
+      "post": {
+        "tags": [
+          "Segments"
+        ],
+        "summary": "Export Segments As Excel",
+        "description": "<p class=\"western\">You can make a post request to the specified endpoint to export an excel sheet containing information about segments. Before you export the excel, you can use a custom filter to filter out the segments you specificially require.You can use <i>constraints<i/> key in your request body to achieve filtering. You can refer to this <u><a href=\"#operation/Retrieve_Segments_Filter\">endpoint</a></u> to understand how filter constraints work. Moreover, the request body schema, along with the example on the right panel will help you understand what is required to make a valid request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Assign_Owners_To_Segment.png\">",
+        "operationId": "Export_Segments_Excel",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "page": {
+                    "type": "object",
+                    "properties": {
+                      "pageSize": {
+                        "type": "integer",
+                      },
+                      "pageId": {
+                        "type": "integer"
+                      },
+                      "viewAll": {
+                        "type": "boolean"
+                      },
+                      "sort": {
+                        "type": "object",
+                        "properties": {
+                          "direction": {
+                            "type": "string"
+                          },
+                          "columns": {
+                            "type": "array"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "constraints": {
+                    "type": "object"
+                  },
+                  "moduleId": {
+                    "type": "integer"
+                  },
+                  "filterApplied": {
+                    "type": "boolean"
+                  }
+                },
+                "example": {
+                  "page": {
+                    "pageSize": "20",
+                    "pageId": 0,
+                    "viewAll": false,
+                    "sort": {
+                      "direction": "DESC",
+                      "columns": [
+                        "created_on"
+                      ]
+                    }
+                  },
+                  "constraints": {},
+                  "moduleId": "32",
+                  "filterApplied": true
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/ExportSegmentsExcelResp"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -7519,6 +7610,20 @@
           }
         },
         "description": "Successful"
+      },
+      "ExportSegmentsExcelResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "data": {
+                  "s3Url": "https://qamaster.s3.amazonaws.com/builddocs/qamsa6/segment/excelReport/segmentSummary_1.xlsx?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAwaCXVzLWVhc3QtMSJHMEUCIEMKkYsyrB0Fki%2FEY9OG8usnNdE1JP9zcD9e95IWCILcAiEAnAjVbGcPSA0uSS7GbgZmli0U2bU5lVzJlZnSbWV5qLYqvQMIhf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARACGgwxNTUwODY5OTkyOTgiDE0UtEFqTXafnrgUuyqRA1wa9pGimWnPkqee1dIe4U%2BolQ3CkcClKL9dcErCLo0UbfgOB3R7RhQz0Z4qFLOCkI2Eaz3TVfpN0pAAmAu0pklLP7bufq%2BjsaW4kVPt3vrpV97Q08XZ3dPwq%2Fmr0nwA9Hb2mCZqKH9EOHwcg9jnFS%2FtPh5ruBQ2BZmHYN49pwwKN431SkuJqyytdugJnjUorYlz5VuXFdY%2FEzU9xshMILCeRecWlR1zeniigctwMVUQ%2Br4UMZQRSeUG%2B6lRcDMd7ccL1AYWuVojXzE6f9GzLiCV7RH%2Bv2d3iZgB1%2BUNE24PF40gcERKml0YvrwrbeU6MKjZDp%2B57m4T54lIhzVdUdwo3OanCzgyUtdoiJ5t%2BPGdp9mTIca8A5IBKMDxz0q%2BqBxf6Fhevj9r%2BBT664ijuDEnKyzwD%2BcQaz37B8keSk0WVm6KbjwfSrqWSW7kRnmDdPiemYKX9yGzuePVQrvZZGwS38G%2BBQ%2BD8tR2%2B1f2dY5%2FjNYGgB4fHj9BtwBoJEg0ZranAYIRcEVHuboUq4nFzyj3MKeCroQGOusBJP1nreFjraIz%2FN%2FRKpL0bS7l9Akzt7Yaop85OLoW4UQBDz7bmpfszyzLQgy93HmAACM4w9IOX0VaQmxhQ5eayXt6zWJwQvmbipW3ssDvoFQifTksbS4jmeSDXGwGWprW8cZJOd6CyUIXMrE6CuUc5XWv62wVUYQu8yj5ZwJ8jCtMd2Gsxx1DnU3%2B4iR%2B15k0eza%2FMhX5FX8sJWniG%2BAf275PUBE8D86f%2FR8WkFV3cDrRZ7pmkoKMqPxgSna5%2Fw9ED1hmyIT5HYlcDtHDfrbqWbs7xWVGgMZ3%2BqyRaRhgm%2BLKNQlyg6NnwBmuDA%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20210430T044527Z&X-Amz-SignedHeaders=host&X-Amz-Expires=604799&X-Amz-Credential=ASIASIG7HZ4BCB6A5EHK%2F20210430%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=e112bddfbf8cab844263bac4b5895c32ba76be7f5bb21f148830460e52cd91a3"
+                },
+                "page": null
+              }
+            }
+          }
+        }
       },
       "RetrieveProfitLossStatementResp": {
         "content": {

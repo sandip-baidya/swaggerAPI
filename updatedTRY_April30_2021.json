@@ -3636,14 +3636,250 @@
         }
       }
     },
+    "manage-segment/segments/{id}": {
+      "get": {
+        "tags": [
+          "Segments"
+        ],
+        "summary": "Retrieve A Segment By Id",
+        "description": "<p class=\"western\">You can retrieve a specific segment enlisted in your franchise system, by its ID. The ID here refers to the <i>segment_id</i> of a segment. You can find the <i>segment_id</i> inside the response body when you retrieve a segment through custom filters using this <u><a href=\"#operation/Retrieve_Segments_Filter\">request</a></u>. Please note that the \"id\" key is different from \"segment_id\".</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Segment_By_Id.png\">",
+        "operationId": "Retrieve_Segment_By_Id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Id of the segment",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/RetrieveSegmentByIdResp"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/manage-segment/segments": {
+      "get": {
+        "tags": [
+          "Segments"
+        ],
+        "summary": "Retrieve All Segments",
+        "description": "<p class=\"western\">You can retrieve all the segments enlisted in your franchise system along with each of their information.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_All_Segments.png\">",
+        "operationId": "Retrieve_All_Segments",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "pageSize",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "description": "Number of segments to get",
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "pageId",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "description": "To get segments per page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/RetrieveAllSegmentsResp"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Segments"
+        ],
+        "summary": "Create A New Segment",
+        "description": "<p class=\"western\">You can create a new segment by making a POST request to the specified endpoint. Refer to the request body down below to understand what data you need to make a POST request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Create_New_Segment.PNG\">",
+        "operationId": "Create_New_Segment",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "user_segment_id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "categories": {
+                      "type": "object",
+                      "properties": {
+                        "categoryName": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "accessibility": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "discussion": {
+                      "type": "boolean"
+                    },
+                    "type": {
+                      "type": "boolean"
+                    },
+                    "segments": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "segmentCategory": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "owners": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "user_no": {
+                            "type": "integer"
+                          },
+                          "user_name": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "playbooks": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "playbook_id": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    "segment_type": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": [
+                  {
+                    "user_segment_id": "2222",
+                    "name": "Test Segment Sherlock",
+                    "categories": {
+                      "categoryId": 1203028130,
+                      "categoryName": "21apP1"
+                    },
+                    "accessibility": "Public",
+                    "description": "A test Segment for Sherlock",
+                    "discussion": true,
+                    "type": false,
+                    "segments": [
+                      {
+                        "name": "21apseg2C1",
+                        "segmentCategory": "21apC1",
+                        "userSegmentId": "21apseg2C1",
+                        "segment_id": "1638609706"
+                      }
+                    ],
+                    "owners": [
+                      {
+                        "user_no": "763154979",
+                        "user_name": "Barton Koss"
+                      },
+                      {
+                        "user_no": "758187042",
+                        "user_name": "Dariana Wehner"
+                      }
+                    ],
+                    "playbooks": {
+                      "name": "12 Jan Segment Nitin PBI",
+                      "playbook_id": "36828099",
+                      "record_type": "segment"
+                    },
+                    "status": "2",
+                    "thread_flag": "0",
+                    "segment_type": "SEGMENTS"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/CreateNewSegmentResp"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
     "manage-segment/segments/filter": {
       "post": {
         "tags": [
           "Segments"
         ],
-        "summary": "Retrieve Segments",
-        "description": "<p class=\"western\">Make a POST request to the specified endpoint to retrieve all segments according to your custom filter criteria. Refer to the request body down below to understand what data you need to send in the body to perform this request. You can customize your filter by adding more fields to the <i>constraints</i> key.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Segments.PNG\">",
-        "operationId": "Retrieve_Segments",
+        "summary": "Retrieve All Segments Based on Filter Criteria",
+        "description": "<p class=\"western\">Make a POST request to the specified endpoint to retrieve all segments according to your custom filter criteria. Refer to the request body down below to understand what data you need to send in the body to perform this request. You can customize your filter by adding more fields to the <i>constraints</i> key.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Segments_Filter.PNG\">",
+        "operationId": "Retrieve_Segments_Filter",
         "consumes": [
           "application/json"
         ],
@@ -3881,7 +4117,7 @@
         },
         "responses": {
           "200": {
-            "$ref": "#/components/responses/RetrieveSegmentsResp"
+            "$ref": "#/components/responses/RetrieveSegmentsFilterResp"
           },
           "401": {
             "description": "Unauthorized"
@@ -3895,14 +4131,14 @@
         }
       }
     },
-    "manage-segment/segments": {
+    "manage-segment/segments/fieldsInfo": {
       "post": {
         "tags": [
           "Segments"
         ],
-        "summary": "Create Segment",
-        "description": "<p class=\"western\">You can create a new segment by making a POST request to the specified endpoint. Refer to the request body down below to understand what data you need to make a POST request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Create_Segment.PNG\">",
-        "operationId": "Create_Segment",
+        "summary": "Get options associated with a field(s)",
+        "description": "<p class=\"western\">Make a POST request to the specified endpoint to fetch all options associated with a field(s) along with details like Combo/Radio/Checkboxes. Refer to the request body down below to understand what data you need to send in the body to perform this request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Fields_Info.PNG\">",
+        "operationId": "Retrieve_Fields_Info",
         "consumes": [
           "application/json"
         ],
@@ -3913,127 +4149,52 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "user_segment_id": {
-                      "type": "integer"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "categories": {
+                "type": "object",
+                "properties": {
+                  "fields": {
+                    "type": "array",
+                    "items": {
                       "type": "object",
                       "properties": {
-                        "categoryName": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "accessibility": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "discussion": {
-                      "type": "boolean"
-                    },
-                    "type": {
-                      "type": "boolean"
-                    },
-                    "segments": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "name": {
-                            "type": "string"
-                          },
-                          "segmentCategory": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "owners": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "user_no": {
-                            "type": "integer"
-                          },
-                          "user_name": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "playbooks": {
-                      "type": "object",
-                      "properties": {
-                        "name": {
+                        "fieldName": {
                           "type": "string"
                         },
-                        "playbook_id": {
-                          "type": "integer"
+                        "tableAnchor": {
+                          "type": "string"
+                        },
+                        "customMethod": {
+                          "type": "string"
                         }
                       }
-                    },
-                    "segment_type": {
-                      "type": "string"
                     }
                   }
                 },
-                "example": [
-                  {
-                    "user_segment_id": "2222",
-                    "name": "Test Segment Sherlock",
-                    "categories": {
-                      "categoryId": 1203028130,
-                      "categoryName": "21apP1"
+                "example": {
+                  "fields": [
+                    {
+                      "fieldName": "fimRrBankruptcy",
+                      "tableAnchor": "fimTermination",
+                      "customMethod": "getSearchMdRadio"
                     },
-                    "accessibility": "Public",
-                    "description": "A test Segment for Sherlock",
-                    "discussion": true,
-                    "type": false,
-                    "segments": [
-                      {
-                        "name": "21apseg2C1",
-                        "segmentCategory": "21apC1",
-                        "userSegmentId": "21apseg2C1",
-                        "segment_id": "1638609706"
-                      }
-                    ],
-                    "owners": [
-                      {
-                        "user_no": "763154979",
-                        "user_name": "Barton Koss"
-                      },
-                      {
-                        "user_no": "758187042",
-                        "user_name": "Dariana Wehner"
-                      }
-                    ],
-                    "playbooks": {
-                      "name": "12 Jan Segment Nitin PBI",
-                      "playbook_id": "36828099",
-                      "record_type": "segment"
+                    {
+                      "fieldName": "fimRrRepresentative",
+                      "tableAnchor": "fimTermination",
+                      "customMethod": "getSearchMdRadio"
                     },
-                    "status": "2",
-                    "thread_flag": "0",
-                    "segment_type": "SEGMENTS"
-                  }
-                ]
+                    {
+                      "fieldName": "fimRrRepresentative",
+                      "tableAnchor": "fimTermination",
+                      "customMethod": "getSearchMdRadio"
+                    }
+                  ]
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "$ref": "#/components/responses/CreateNewSegmentResp"
+            "$ref": "#/components/responses/RetrieveFieldsInfoResp"
           },
           "401": {
             "description": "Unauthorized"
@@ -4047,14 +4208,17 @@
         }
       }
     },
-    "manage-segment/segments/{segment_id}": {
-      "get": {
+    "/manage-segment/segments/{segmentId}/owners": {
+      "post": {
         "tags": [
           "Segments"
         ],
-        "summary": "Retrieve Segment By Id",
-        "description": "<p class=\"western\">You can retrieve a specific segment enlisted in your franchise system, by its ID. The ID here refers to the <i>segment_id</i> of a segment. You can find the <i>segment_id</i> inside the response body when you retrieve a segment through custom filters using this <u><a href=\"#operation/Retrieve_Segments\">request</a></u>.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Segment_By_Id.png\">",
-        "operationId": "Retrieve_Segment_By_Id",
+        "summary": "Assign Owner(s) To Segment",
+        "description": "<p class=\"western\">You can assign a list of owners to a specific segment by making a POST request to the specified endpoint. The endpoint accepts a valid <i>segment_id</i> as a path parameter. Refer to the request body schema to understand what data is needed to make a successful request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Assign_Owners_To_Segment.png\">",
+        "operationId": "Assign_Owners_To_Segment",
+        "consumes": [
+          "application/json"
+        ],
         "produces": [
           "application/json"
         ],
@@ -4068,42 +4232,6 @@
             "required": true
           }
         ],
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/RetrieveSegmentByIdResp"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Segments"
-        ],
-        "summary": "Update Segment",
-        "description": "<p class=\"western\">Make a PUT request to the specified endpoint to modify a segment. You must provide a valid segment_id in order to make a successful request. Refer to the request body down below and the payload example on the right panel to understand what data you require to successfully make a request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Update_Segment.png\">",
-        "operationId": "Update_Segment",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": {
-          "in": "path",
-          "name": "segment_id",
-          "schema": {
-            "type": "integer"
-          },
-          "required": true
-        },
         "requestBody": {
           "content": {
             "application/json": {
@@ -4112,58 +4240,8 @@
                 "items": {
                   "type": "object",
                   "properties": {
-                    "user_segment_id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "categories": {
-                      "type": "object",
-                      "categoryId": {
-                        "type": "string"
-                      },
-                      "categoryName": {
-                        "type": "string"
-                      },
-                      "segmentCreated": {
-                        "type": "boolean"
-                      }
-                    },
-                    "accessibility": {
-                      "type": "array"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "discussion": {
-                      "type": "boolean"
-                    },
-                    "units": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "country": {
-                            "type": "string"
-                          },
-                          "address": {
-                            "type": "string"
-                          },
-                          "name": {
-                            "type": "string"
-                          },
-                          "franchisee_no": {
-                            "type": "integer"
-                          },
-                          "state": {
-                            "type": "string"
-                          },
-                          "unit_id": {
-                            "type": "integer"
-                          }
-                        }
-                      }
+                    "segment_id": {
+                      "type": "integer"
                     },
                     "owners": {
                       "type": "array",
@@ -4171,97 +4249,25 @@
                         "type": "object",
                         "properties": {
                           "user_no": {
-                            "type": "integer"
+                            "type": "integer",
                           },
                           "user_name": {
                             "type": "string"
                           }
                         }
                       }
-                    },
-                    "playbooks": {
-                      "type": "object",
-                      "properties": {
-                        "name": {
-                          "type": "string"
-                        },
-                        "playbook_id": {
-                          "type": "integer"
-                        },
-                        "record_type": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "action": {
-                      "type": "string"
-                    },
-                    "type": {
-                      "type": "boolean"
-                    },
-                    "segment_type": {
-                      "type": "string"
                     }
                   }
                 },
                 "example": [
                   {
-                    "user_segment_id": "102",
-                    "name": "SouthZone segment updated",
-                    "categories": {
-                      "categoryId": 1057282259,
-                      "categoryName": "newc",
-                      "segmentCreated": false
-                    },
-                    "accessibility": [
-                      "Public"
-                    ],
-                    "description": "-This is an updated description of this segment",
-                    "discussion": true,
-                    "units": [
-                      {
-                        "country": "USA",
-                        "address": "355 Cypress Gardens Blvd",
-                        "name": "0192",
-                        "franchisee_no": "15029716",
-                        "state": "Florida",
-                        "unit_id": "15029716"
-                      },
-                      {
-                        "country": "USA",
-                        "address": "2955 Market Street",
-                        "name": "0242",
-                        "franchisee_no": "15133242",
-                        "state": "Pennsylvania",
-                        "unit_id": "15133242"
-                      }
-                    ],
+                    "segment_id": "395217427",
                     "owners": [
                       {
-                        "user_no": "1065505744",
-                        "user_name": "Burdette Barrows"
-                      },
-                      {
-                        "user_no": "1047783596",
-                        "user_name": "Dave Bee"
-                      },
-                      {
-                        "user_no": "1997742485",
-                        "user_name": "Eula Gerhold"
+                        "user_no": "758187042",
+                        "user_name": "Dariana Wehner"
                       }
-                    ],
-                    "playbooks": {
-                      "name": "25022021-1-PBI",
-                      "playbook_id": "1445246109",
-                      "record_type": "unit"
-                    },
-                    "status": "2",
-                    "action": "modify",
-                    "type": false,
-                    "segment_type": "UNITS"
+                    ]
                   }
                 ]
               }
@@ -4270,7 +4276,7 @@
         },
         "responses": {
           "200": {
-            "$ref": "#/components/responses/UpdateSegmentResp"
+            "$ref": "#/components/responses/AssignOwnersToSegmentResp"
           },
           "401": {
             "description": "Unauthorized"
@@ -4282,6 +4288,132 @@
             "description": "Not Found"
           }
         }
+      }
+    },
+    "/manage-segment/segments/export-excel": {
+      "post": {
+        "tags": [
+          "Segments"
+        ],
+        "summary": "Export Segments As Excel",
+        "description": "<p class=\"western\">You can make a post request to the specified endpoint to export an excel sheet containing information about segments. Before you export the excel, you can use a custom filter to filter out the segments you specificially require. You will have to use <i>constraints</i> key in your request body to achieve filtering. You can refer to this <u><a href=\"#operation/Retrieve_Segments_Filter\">endpoint</a></u> to understand how filter constraints work. Moreover, the request body schema, along with the example on the right panel will help you understand what is required to make a valid request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Export_Segments_Excel.png\">",
+        "operationId": "Export_Segments_Excel",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "page": {
+                    "type": "object",
+                    "properties": {
+                      "pageSize": {
+                        "type": "integer",
+                      },
+                      "pageId": {
+                        "type": "integer"
+                      },
+                      "viewAll": {
+                        "type": "boolean"
+                      },
+                      "sort": {
+                        "type": "object",
+                        "properties": {
+                          "direction": {
+                            "type": "string"
+                          },
+                          "columns": {
+                            "type": "array"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "constraints": {
+                    "type": "object"
+                  },
+                  "moduleId": {
+                    "type": "integer"
+                  },
+                  "filterApplied": {
+                    "type": "boolean"
+                  }
+                },
+                "example": {
+                  "page": {
+                    "pageSize": "20",
+                    "pageId": 0,
+                    "viewAll": false,
+                    "sort": {
+                      "direction": "DESC",
+                      "columns": [
+                        "created_on"
+                      ]
+                    }
+                  },
+                  "constraints": {},
+                  "moduleId": "32",
+                  "filterApplied": true
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/ExportSegmentsExcelResp"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/manage-segment/units/column-meta": {
+      "get": {
+        "tags": [
+          "Segments"
+        ],
+        "summary": "Retrieve Column Details Of Units",
+        "description": "<p class=\"western\">Make a GET request to the specified endpoint to retrieve information regarding all the columns associated with Units.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Unit_Column_Meta.png\">",
+        "operationId": "Retrieve_Unit_Column_Meta",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/RetrieveUnitColumnMetaResp"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "manage-segment/segments/{segment_id}/units": {
+      "post": {
+        "tags": [
+          "Segments"
+        ],
+        "summary": 
       }
     }
   },
@@ -7024,6 +7156,119 @@
         },
         "description": "Successful"
       },
+      "RetrieveAllSegmentsResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "data": [
+                  {
+                    "id": 887416871,
+                    "owner_count": 1,
+                    "created_on": "2021-04-23 13:54:47",
+                    "name": "23seg2C1C1000000000000000000000000",
+                    "type": "Static",
+                    "status": "Active",
+                    "module_id": "32",
+                    "created_by": "20novcorpuser 20novcorpuser",
+                    "discussion": "Yes",
+                    "is_deleted": "N",
+                    "segment_id": "1769940589",
+                    "showOwners": "true",
+                    "updated_by": "FranConnect Administrator",
+                    "updated_on": "2021-04-23 11:05:55",
+                    "category_id": "23C1C1000000000000000000000000000000000000000000000000",
+                    "peer_review": "No",
+                    "thread_flag": "0",
+                    "segment_type": "SEGMENTS",
+                    "showActivity": "true",
+                    "showOverview": "true",
+                    "accessibility": "Public",
+                    "showPlaybooks": "true",
+                    "character_code": "73765555555555555555555555555555555555555555555555555555555555555",
+                    "user_segment_id": "23seg2C1C10000000000000000000000000000",
+                    "parent_association_count": "1",
+                    "actions": [
+                      {
+                        "displayName": "Edit",
+                        "key": "modify"
+                      },
+                      {
+                        "displayName": "Inactive",
+                        "key": "Inactive"
+                      },
+                      {
+                        "displayName": "Archive",
+                        "key": "archive"
+                      },
+                      {
+                        "displayName": "Delete",
+                        "key": "Delete"
+                      }
+                    ],
+                    "unit_count": 0,
+                    "units": []
+                  },
+                  {
+                    "id": 1674299766,
+                    "owner_count": 1,
+                    "created_on": "2021-04-23 13:53:22",
+                    "name": "23seg2C1C1C1",
+                    "type": "Static",
+                    "status": "Active",
+                    "module_id": "32",
+                    "created_by": "20novcorpuser 20novcorpuser",
+                    "discussion": "Yes",
+                    "is_deleted": "N",
+                    "segment_id": "2144283570",
+                    "showOwners": "true",
+                    "category_id": "23C1C1C1",
+                    "peer_review": "No",
+                    "thread_flag": "0",
+                    "segment_type": "UNITS",
+                    "showActivity": "true",
+                    "showOverview": "true",
+                    "accessibility": "Public",
+                    "showPlaybooks": "true",
+                    "user_segment_id": "23seg2C1C1C1",
+                    "parent_association_count": "1",
+                    "actions": [
+                      {
+                        "displayName": "Edit",
+                        "key": "modify"
+                      },
+                      {
+                        "displayName": "Inactive",
+                        "key": "Inactive"
+                      },
+                      {
+                        "displayName": "Archive",
+                        "key": "archive"
+                      },
+                      {
+                        "displayName": "Delete",
+                        "key": "Delete"
+                      }
+                    ],
+                    "unit_count": 2,
+                    "units": [
+                      "15050101",
+                      "15133242"
+                    ]
+                  }
+                ],
+                "page": {
+                  "size": 2,
+                  "totalRecords": 31,
+                  "totalPages": 16,
+                  "pageId": 0
+                }
+              }
+            }
+          }
+        },
+        "description": "Successful"
+      },
       "CreateNewSegmentResp": {
         "content": {
           "application/json": {
@@ -7159,7 +7404,7 @@
         },
         "description": "Successful"
       },
-      "RetrieveSegmentsResp": {
+      "RetrieveSegmentsFilterResp": {
         "content": {
           "application/json": {
             "example": {
@@ -7313,120 +7558,101 @@
         },
         "description": "Successful"
       },
-      "UpdateSegmentResp": {
+      "RetrieveFieldsInfoResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "data": [
+                  {
+                    "fieldName": "fimRrBankruptcy",
+                    "options": [
+                      {
+                        "key": "1",
+                        "displayName": "Yes",
+                        "value": "Yes",
+                        "checked": ""
+                      },
+                      {
+                        "key": "2",
+                        "displayName": "No",
+                        "value": "No",
+                        "checked": ""
+                      }
+                    ]
+                  },
+                  {
+                    "fieldName": "fimRrRepresentative",
+                    "options": [
+                      {
+                        "key": "1",
+                        "displayName": "Yes",
+                        "value": "Yes",
+                        "checked": ""
+                      },
+                      {
+                        "key": "2",
+                        "displayName": "No",
+                        "value": "No",
+                        "checked": ""
+                      }
+                    ]
+                  },
+                  {
+                    "fieldName": "fimRrRepresentative",
+                    "options": [
+                      {
+                        "key": "1",
+                        "displayName": "Yes",
+                        "value": "Yes",
+                        "checked": ""
+                      },
+                      {
+                        "key": "2",
+                        "displayName": "No",
+                        "value": "No",
+                        "checked": ""
+                      }
+                    ]
+                  }
+                ],
+                "page": null
+              }
+            }
+          }
+        },
+        "description": "Successful"
+      },
+      "AssignOwnersToSegmentResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "data": [
+                  {
+                    "id": 1675489315,
+                    "entity_name": "segment_owner_mapping",
+                    "values": {
+                      "owner_mapping_id": "1925160135",
+                      "owner_segment_id": "395217427",
+                      "owner_id": "758187042"
+                    }
+                  }
+                ],
+                "page": null
+              }
+            }
+          }
+        },
+        "description": "Successful"
+      },
+      "ExportSegmentsExcelResp": {
         "content": {
           "application/json": {
             "example": {
               "response": {
                 "data": {
-                  "id": 380987698,
-                  "entity_name": "segments",
-                  "values": {
-                    "segment_id": "1377030390",
-                    "name": "SouthZone segment updated",
-                    "description": "+This is an updated description of this segment",
-                    "user_segment_id": "102",
-                    "category_id": "1057282259",
-                    "segment_type": "UNITS",
-                    "parent_association_count": "0",
-                    "type": "Static",
-                    "status": "2",
-                    "accessibility": "Public",
-                    "peer_review": "No",
-                    "discussion": "Yes",
-                    "module_id": "32",
-                    "segment_rules": [
-                      {
-                        "id": "0",
-                        "fields": []
-                      }
-                    ],
-                    "is_deleted": "N",
-                    "created_on": "2021-04-29 11:32:27",
-                    "created_by": "FranConnect Administrator",
-                    "updated_on": "2021-04-30 11:57:46",
-                    "updated_by": "FranConnect Administrator",
-                    "thread_flag": "0",
-                    "showOverview": "true",
-                    "showOwners": "true",
-                    "showPlaybooks": "true",
-                    "showActivity": "true",
-                    "owners": [
-                      {
-                        "user_no": "1065505744",
-                        "user_name": "Burdette Barrows",
-                        "user_level": "0",
-                        "sub_divisions_id": null,
-                        "hierarchyLabel": "Corporate Users",
-                        "owner_id": "1065505744",
-                        "owner_mapping_id": "1119120283",
-                        "owner_segment_id": "1377030390"
-                      },
-                      {
-                        "user_no": "1047783596",
-                        "user_name": "Dave Bee",
-                        "user_level": "0",
-                        "sub_divisions_id": null,
-                        "hierarchyLabel": "Corporate Users",
-                        "owner_id": "1047783596",
-                        "owner_mapping_id": "627445968",
-                        "owner_segment_id": "1377030390"
-                      },
-                      {
-                        "user_no": "1997742485",
-                        "user_name": "Eula Gerhold",
-                        "user_level": "0",
-                        "sub_divisions_id": null,
-                        "hierarchyLabel": "Corporate Users",
-                        "owner_id": "1997742485",
-                        "owner_mapping_id": "1321384447",
-                        "owner_segment_id": "1377030390"
-                      }
-                    ],
-                    "units": [
-                      {
-                        "country": "USA",
-                        "address": "355 Cypress Gardens Blvd",
-                        "name": "0192",
-                        "franchisee_no": "15029716",
-                        "state": "Florida",
-                        "unit_id": "15029716",
-                        "unit_mapping_id": "1116616793",
-                        "unit_segment_id": "1377030390"
-                      },
-                      {
-                        "country": "USA",
-                        "address": "2955 Market Street",
-                        "name": "0242",
-                        "franchisee_no": "15133242",
-                        "state": "Pennsylvania",
-                        "unit_id": "15133242",
-                        "unit_mapping_id": "1981154752",
-                        "unit_segment_id": "1377030390"
-                      },
-                      {
-                        "country": "USA",
-                        "address": "14 W 125th st",
-                        "name": "0250",
-                        "franchisee_no": "15050101",
-                        "state": "New York",
-                        "unit_id": "15050101",
-                        "unit_mapping_id": "2064336011",
-                        "unit_segment_id": "1377030390"
-                      }
-                    ],
-                    "playbooks": {
-                      "name": "25022021-1-PBI",
-                      "playbook_id": "1445246109",
-                      "record_type": "unit",
-                      "units": [
-                        "15029716",
-                        "15133242",
-                        "15050101"
-                      ]
-                    },
-                    "created_by_no": "1"
-                  }
+                  "s3Url": "https://qamaster.s3.amazonaws.com/builddocs/qamsa6/segment/excelReport/segmentSummary_1.xlsx?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAwaCXVzLWVhc3QtMSJHMEUCIEMKkYsyrB0Fki%2FEY9OG8usnNdE1JP9zcD9e95IWCILcAiEAnAjVbGcPSA0uSS7GbgZmli0U2bU5lVzJlZnSbWV5qLYqvQMIhf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARACGgwxNTUwODY5OTkyOTgiDE0UtEFqTXafnrgUuyqRA1wa9pGimWnPkqee1dIe4U%2BolQ3CkcClKL9dcErCLo0UbfgOB3R7RhQz0Z4qFLOCkI2Eaz3TVfpN0pAAmAu0pklLP7bufq%2BjsaW4kVPt3vrpV97Q08XZ3dPwq%2Fmr0nwA9Hb2mCZqKH9EOHwcg9jnFS%2FtPh5ruBQ2BZmHYN49pwwKN431SkuJqyytdugJnjUorYlz5VuXFdY%2FEzU9xshMILCeRecWlR1zeniigctwMVUQ%2Br4UMZQRSeUG%2B6lRcDMd7ccL1AYWuVojXzE6f9GzLiCV7RH%2Bv2d3iZgB1%2BUNE24PF40gcERKml0YvrwrbeU6MKjZDp%2B57m4T54lIhzVdUdwo3OanCzgyUtdoiJ5t%2BPGdp9mTIca8A5IBKMDxz0q%2BqBxf6Fhevj9r%2BBT664ijuDEnKyzwD%2BcQaz37B8keSk0WVm6KbjwfSrqWSW7kRnmDdPiemYKX9yGzuePVQrvZZGwS38G%2BBQ%2BD8tR2%2B1f2dY5%2FjNYGgB4fHj9BtwBoJEg0ZranAYIRcEVHuboUq4nFzyj3MKeCroQGOusBJP1nreFjraIz%2FN%2FRKpL0bS7l9Akzt7Yaop85OLoW4UQBDz7bmpfszyzLQgy93HmAACM4w9IOX0VaQmxhQ5eayXt6zWJwQvmbipW3ssDvoFQifTksbS4jmeSDXGwGWprW8cZJOd6CyUIXMrE6CuUc5XWv62wVUYQu8yj5ZwJ8jCtMd2Gsxx1DnU3%2B4iR%2B15k0eza%2FMhX5FX8sJWniG%2BAf275PUBE8D86f%2FR8WkFV3cDrRZ7pmkoKMqPxgSna5%2Fw9ED1hmyIT5HYlcDtHDfrbqWbs7xWVGgMZ3%2BqyRaRhgm%2BLKNQlyg6NnwBmuDA%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20210430T044527Z&X-Amz-SignedHeaders=host&X-Amz-Expires=604799&X-Amz-Credential=ASIASIG7HZ4BCB6A5EHK%2F20210430%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=e112bddfbf8cab844263bac4b5895c32ba76be7f5bb21f148830460e52cd91a3"
                 },
                 "page": null
               }

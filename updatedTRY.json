@@ -4211,7 +4211,7 @@
                     "accessibility": [
                       "Public"
                     ],
-                    "description": "-This is an updated description of this segment",
+                    "description": "+This is an updated description of this segment",
                     "discussion": true,
                     "units": [
                       {
@@ -7336,7 +7336,7 @@
                     "is_deleted": "N",
                     "created_on": "2021-04-29 11:32:27",
                     "created_by": "FranConnect Administrator",
-                    "updated_on": "2021-04-30 11:57:46",
+                    "updated_on": "2021-05-03 04:10:18",
                     "updated_by": "FranConnect Administrator",
                     "thread_flag": "0",
                     "showOverview": "true",
@@ -7347,31 +7347,22 @@
                       {
                         "user_no": "1065505744",
                         "user_name": "Burdette Barrows",
-                        "user_level": "0",
-                        "sub_divisions_id": null,
-                        "hierarchyLabel": "Corporate Users",
                         "owner_id": "1065505744",
-                        "owner_mapping_id": "1119120283",
+                        "owner_mapping_id": "690665323",
                         "owner_segment_id": "1377030390"
                       },
                       {
                         "user_no": "1047783596",
                         "user_name": "Dave Bee",
-                        "user_level": "0",
-                        "sub_divisions_id": null,
-                        "hierarchyLabel": "Corporate Users",
                         "owner_id": "1047783596",
-                        "owner_mapping_id": "627445968",
+                        "owner_mapping_id": "1746189397",
                         "owner_segment_id": "1377030390"
                       },
                       {
                         "user_no": "1997742485",
                         "user_name": "Eula Gerhold",
-                        "user_level": "0",
-                        "sub_divisions_id": null,
-                        "hierarchyLabel": "Corporate Users",
                         "owner_id": "1997742485",
-                        "owner_mapping_id": "1321384447",
+                        "owner_mapping_id": "1078967703",
                         "owner_segment_id": "1377030390"
                       }
                     ],
@@ -7383,7 +7374,7 @@
                         "franchisee_no": "15029716",
                         "state": "Florida",
                         "unit_id": "15029716",
-                        "unit_mapping_id": "1116616793",
+                        "unit_mapping_id": "2070615126",
                         "unit_segment_id": "1377030390"
                       },
                       {
@@ -7393,17 +7384,7 @@
                         "franchisee_no": "15133242",
                         "state": "Pennsylvania",
                         "unit_id": "15133242",
-                        "unit_mapping_id": "1981154752",
-                        "unit_segment_id": "1377030390"
-                      },
-                      {
-                        "country": "USA",
-                        "address": "14 W 125th st",
-                        "name": "0250",
-                        "franchisee_no": "15050101",
-                        "state": "New York",
-                        "unit_id": "15050101",
-                        "unit_mapping_id": "2064336011",
+                        "unit_mapping_id": "1884778184",
                         "unit_segment_id": "1377030390"
                       }
                     ],
@@ -7413,8 +7394,7 @@
                       "record_type": "unit",
                       "units": [
                         "15029716",
-                        "15133242",
-                        "15050101"
+                        "15133242"
                       ]
                     },
                     "created_by_no": "1"

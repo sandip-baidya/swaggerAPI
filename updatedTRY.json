@@ -4282,6 +4282,85 @@
           }
         }
       }
+    },
+    "manage-segment/segments/{segment_Id}": {
+      "put": {
+        "tags": [
+          "Segments"
+        ],
+        "summary": "Delete Segment",
+        "description": "<p class=\"western\">Make a PUT request to the specified endpoint to delete a segment. You must provide a valid segment_id in order to make a successful request. Refer to the request body down below and the payload example on the right panel to understand what data you require to successfully make this request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>PUT</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Delete_Segment.png\">",
+        "operationId": "Delete_Segment",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "segment_id",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "segment_id": {
+                      "type": "integer"
+                    },
+                    "action": {
+                      "type": "string",
+                      "enum": [
+                        "Delete"
+                      ]
+                    }
+                  }
+                },
+                "example": [
+                  {
+                    "segment_id": "1377030390",
+                    "action": "Delete"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "response": {
+                    "data": {
+                      "message": "Segment is successfully deleted.",
+                      "success": true
+                    },
+                    "page": null
+                  }
+                }
+              }
+            },
+            "description": "Successful"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
     }
   },
   "components": {

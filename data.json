@@ -219,6 +219,16 @@
       "displayName": "Profit Loss",
       "name": "Profit and Loss Statements",
       "url": "tag/Profit-and-Loss-Statements"
+    },
+    {
+      "displayName": "Operations API",
+      "name": "Operations",
+      "url": "tag/Operations"
+    },
+    {
+      "displayName": "Segment",
+      "name": "Segments",
+      "url": "tag/Segments"
     }
   ],
   "components": {}

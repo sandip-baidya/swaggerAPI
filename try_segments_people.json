@@ -4569,7 +4569,44 @@
                       "type": "string"
                     }
                   }
-                }
+                },
+                "example": [
+                  {
+                    "user_team_id": "krish-team",
+                    "name": "K-01",
+                    "description": "krish Team 1 - an updated description",
+                    "accessibility": "Public",
+                    "discussion": "Yes",
+                    "people": [
+                      {
+                        "user_no": "1816771777",
+                        "user_name": "Ken Durling"
+                      },
+                      {
+                        "user_no": "657774469",
+                        "user_name": "Kim Mraz"
+                      }
+                    ],
+                    "owners": [
+                      {
+                        "user_no": "1090459335",
+                        "user_name": "Andrew Wenger"
+                      },
+                      {
+                        "user_no": "245538916",
+                        "user_name": "Johnny Kris"
+                      }
+                    ],
+                    "playbooks": [
+                      {
+                        "playbook_id": "1237234047",
+                        "name": "Launch With 3 Tasks",
+                        "record_type": "team"
+                      }
+                    ],
+                    "type": "Static"
+                  }
+                ]
               }
             }
           }
@@ -7793,79 +7830,79 @@
           "application/json": {
             "example": {
               "response": {
-                  "data": {
-                      "team_id": "1188145631",
-                      "user_team_id": "krish-team",
-                      "name": "K-01",
-                      "description": "krish Team 1 - an updated description",
-                      "type": "Static",
-                      "status": "2",
-                      "accessibility": "Public",
-                      "peer_review": "No",
-                      "discussion": "Yes",
-                      "module_id": "32",
-                      "team_rules": {
-                          "queryMeta": {},
-                          "filterResponse": [
-                              {
-                                  "id": "1",
-                                  "fields": []
-                              }
-                          ]
-                      },
-                      "team_query": "select distinct u.values->>'user_no' as user_no , concat(u.values->>'user_first_name', ' ', u.values->>'user_last_name') as user_name , u.values->>'user_level' as user_level, u.values->>'sub_divisions_id' as sub_divisions_id  from entity_attribute_values_admin u left join entity_attribute_values_admin f on cast(u.values->>'franchisee_no' as int) = cast(f.values->>'franchisee_no' as bigint)  and f.entity_name = 'franchisee' left join entity_attribute_values_admin au on cast(u.values->>'user_no' as bigint) = cast(au.values->>'user_no' as int)  and au.entity_name = 'area_users' left join entity_attribute_values_admin udm on cast(u.values->>'user_no' as bigint) = cast(udm.values->>'user_no' as bigint)  and udm.entity_name = 'users_divisions_mapping' where u.entity_name = 'users' and cast(u.values->>'user_no' as bigint) not in (2, 1000) and cast(u.values->>'user_level' as int) in (0, 2, 6)  and u.values->>'user_first_name' ~* 'k'  union select distinct u.values->>'user_no' as user_no , concat(u.values->>'user_first_name', ' ', u.values->>'user_last_name') as user_name , u.values->>'user_level' as user_level, u.values->>'sub_divisions_id' as sub_divisions_id  from entity_attribute_values_admin u left join entity_attribute_values_admin fu on cast(u.values->>'user_identity_no' as int) = cast(fu.values->>'franchisee_user_no' as bigint) and fu.entity_name = 'franchisee_users'  left join entity_attribute_values_admin fiu on cast(fu.values->>'franchisee_user_no' as bigint) = cast(fiu.values->>'franchisee_user_no' as bigint) and fiu.entity_name = 'fim_users'  left join entity_attribute_values_admin f on  cast(fiu.values->>'franchisee_no' as int) = cast(f.values->>'franchisee_no' as bigint)  and f.entity_name = 'franchisee'  left join entity_attribute_values_admin ldm on  cast(ldm.values->>'franchisee_no' as bigint) = cast(fiu.values->>'franchisee_no' as int)  and ldm.entity_name = 'location_divisions_mapping'  where u.entity_name = 'users' and  cast(u.values->>'user_level' as int) = 1  and cast(u.values->>'user_no' as bigint) not in (2, 1000)  and u.values->>'user_first_name' ~* 'k'  order by user_name ",
-                      "is_deleted": "N",
-                      "created_on": "2021-02-19 09:46:26",
-                      "created_by": "FranConnect Administrator",
-                      "updated_on": "2021-05-04 08:08:52",
-                      "updated_by": "FranConnect Administrator",
-                      "thread_flag": "0",
-                      "people": [
-                          {
-                              "user_no": "1816771777",
-                              "user_name": "Ken Durling",
-                              "people_id": "1816771777",
-                              "people_mapping_id": "121516894",
-                              "people_team_id": "1188145631"
-                          },
-                          {
-                              "user_no": "657774469",
-                              "user_name": "Kim Mraz",
-                              "people_id": "657774469",
-                              "people_mapping_id": "984981982",
-                              "people_team_id": "1188145631"
-                          }
-                      ],
-                      "playbooks": [
-                          {
-                              "playbook_id": "1237234047",
-                              "name": "Launch With 3 Tasks",
-                              "record_type": "team",
-                              "team_playbook_id": "1237234047",
-                              "team_mapping_id": "1130311880",
-                              "team_id": "1188145631"
-                          }
-                      ],
-                      "owners": [
-                          {
-                              "user_no": "1090459335",
-                              "user_name": "Andrew Wenger",
-                              "owner_id": "1090459335",
-                              "owner_mapping_id": "1559801486",
-                              "owner_team_id": "1188145631"
-                          },
-                          {
-                              "user_no": "245538916",
-                              "user_name": "Johnny Kris",
-                              "owner_id": "245538916",
-                              "owner_mapping_id": "380521370",
-                              "owner_team_id": "1188145631"
-                          }
-                      ]
+                "data": {
+                  "team_id": "1188145631",
+                  "user_team_id": "krish-team",
+                  "name": "K-01",
+                  "description": "krish Team 1 - an updated description",
+                  "type": "Static",
+                  "status": "2",
+                  "accessibility": "Public",
+                  "peer_review": "No",
+                  "discussion": "Yes",
+                  "module_id": "32",
+                  "team_rules": {
+                    "queryMeta": {},
+                    "filterResponse": [
+                      {
+                        "id": "1",
+                        "fields": []
+                      }
+                    ]
                   },
-                  "page": null
+                  "team_query": "select distinct u.values->>'user_no' as user_no , concat(u.values->>'user_first_name', ' ', u.values->>'user_last_name') as user_name , u.values->>'user_level' as user_level, u.values->>'sub_divisions_id' as sub_divisions_id  from entity_attribute_values_admin u left join entity_attribute_values_admin f on cast(u.values->>'franchisee_no' as int) = cast(f.values->>'franchisee_no' as bigint)  and f.entity_name = 'franchisee' left join entity_attribute_values_admin au on cast(u.values->>'user_no' as bigint) = cast(au.values->>'user_no' as int)  and au.entity_name = 'area_users' left join entity_attribute_values_admin udm on cast(u.values->>'user_no' as bigint) = cast(udm.values->>'user_no' as bigint)  and udm.entity_name = 'users_divisions_mapping' where u.entity_name = 'users' and cast(u.values->>'user_no' as bigint) not in (2, 1000) and cast(u.values->>'user_level' as int) in (0, 2, 6)  and u.values->>'user_first_name' ~* 'k'  union select distinct u.values->>'user_no' as user_no , concat(u.values->>'user_first_name', ' ', u.values->>'user_last_name') as user_name , u.values->>'user_level' as user_level, u.values->>'sub_divisions_id' as sub_divisions_id  from entity_attribute_values_admin u left join entity_attribute_values_admin fu on cast(u.values->>'user_identity_no' as int) = cast(fu.values->>'franchisee_user_no' as bigint) and fu.entity_name = 'franchisee_users'  left join entity_attribute_values_admin fiu on cast(fu.values->>'franchisee_user_no' as bigint) = cast(fiu.values->>'franchisee_user_no' as bigint) and fiu.entity_name = 'fim_users'  left join entity_attribute_values_admin f on  cast(fiu.values->>'franchisee_no' as int) = cast(f.values->>'franchisee_no' as bigint)  and f.entity_name = 'franchisee'  left join entity_attribute_values_admin ldm on  cast(ldm.values->>'franchisee_no' as bigint) = cast(fiu.values->>'franchisee_no' as int)  and ldm.entity_name = 'location_divisions_mapping'  where u.entity_name = 'users' and  cast(u.values->>'user_level' as int) = 1  and cast(u.values->>'user_no' as bigint) not in (2, 1000)  and u.values->>'user_first_name' ~* 'k'  order by user_name ",
+                  "is_deleted": "N",
+                  "created_on": "2021-02-19 09:46:26",
+                  "created_by": "FranConnect Administrator",
+                  "updated_on": "2021-05-04 08:08:52",
+                  "updated_by": "FranConnect Administrator",
+                  "thread_flag": "0",
+                  "people": [
+                    {
+                      "user_no": "1816771777",
+                      "user_name": "Ken Durling",
+                      "people_id": "1816771777",
+                      "people_mapping_id": "121516894",
+                      "people_team_id": "1188145631"
+                    },
+                    {
+                      "user_no": "657774469",
+                      "user_name": "Kim Mraz",
+                      "people_id": "657774469",
+                      "people_mapping_id": "984981982",
+                      "people_team_id": "1188145631"
+                    }
+                  ],
+                  "playbooks": [
+                    {
+                      "playbook_id": "1237234047",
+                      "name": "Launch With 3 Tasks",
+                      "record_type": "team",
+                      "team_playbook_id": "1237234047",
+                      "team_mapping_id": "1130311880",
+                      "team_id": "1188145631"
+                    }
+                  ],
+                  "owners": [
+                    {
+                      "user_no": "1090459335",
+                      "user_name": "Andrew Wenger",
+                      "owner_id": "1090459335",
+                      "owner_mapping_id": "1559801486",
+                      "owner_team_id": "1188145631"
+                    },
+                    {
+                      "user_no": "245538916",
+                      "user_name": "Johnny Kris",
+                      "owner_id": "245538916",
+                      "owner_mapping_id": "380521370",
+                      "owner_team_id": "1188145631"
+                    }
+                  ]
+                },
+                "page": null
               }
-          }
+            }
           }
         },
         "description": "Successful"

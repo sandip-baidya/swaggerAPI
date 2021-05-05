@@ -7875,7 +7875,8 @@
               "page": null
             }
           }
-        }
+        },
+        "description": "Successful"
       },
       "RetrieveProfitLossStatementResp": {
         "content": {

@@ -4431,7 +4431,7 @@
           "Segments"
         ],
         "summary": "Retrieve Parent Segments",
-        "description": "<p class=\"western\">Make a POST request to the specified endpoint to retrieve all parent segments. You can add a custom filter to retrieve a list of specific parent segments by using the <i>constraints</i> filed in your payload. Refer to this <u><a href=\"#operation/Retrieve_Segments\">request</a></u> to understand more about using constraints in a filter. Moreover, refer to the request body down below and the example on the right panel to understand what you need to make this request successfully.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Parent_Segments.png\">",
+        "description": "<p class=\"western\">Make a POST request to the specified endpoint to retrieve all parent segments. You can add a custom filter to retrieve a list of specific parent segments by using the <i>constraints</i> filed in your payload. Refer to this <u><a href=\"#operation/Retrieve_Segments\">request</a></u> to understand more about using constraints in a filter. Moreover, refer to the request body down below and the example on the right panel to understand what you need to make this request successfully.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Parent_Segments.png\">",
         "operationId": "Retrieve_Parent_Segments",
         "consumes": [
           "application/json"
@@ -4445,45 +4445,42 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "type": "object",
-                  "properties": {
-                    "page": {
-                      "type": "object",
-                      "properties": {
-                        "pageSize": {
-                          "type": "integer"
-                        },
-                        "pageId": {
-                          "type": "integer"
-                        },
-                        "viewAll": {
-                          "type": "boolean"
-                        },
-                        "sort": {
-                          "type": "object",
-                          "properties": {
-                            "direction": {
-                              "type": "string"
-                            },
-                            "columns": {
-                              "type": "array"
-                            }
+                  "page": {
+                    "type": "object",
+                    "properties": {
+                      "pageSize": {
+                        "type": "integer"
+                      },
+                      "pageId": {
+                        "type": "integer"
+                      },
+                      "viewAll": {
+                        "type": "boolean"
+                      },
+                      "sort": {
+                        "type": "object",
+                        "properties": {
+                          "direction": {
+                            "type": "string"
+                          },
+                          "columns": {
+                            "type": "array"
                           }
                         }
                       }
-                    },
-                    "constraints": {
-                      "type": "object"
-                    },
-                    "saveView": {
-                      "type": "boolean"
-                    },
-                    "moduleId": {
-                      "type": "integer"
-                    },
-                    "pageObjectRequired": {
-                      "type": "boolean"
                     }
+                  },
+                  "constraints": {
+                    "type": "object"
+                  },
+                  "saveView": {
+                    "type": "boolean"
+                  },
+                  "moduleId": {
+                    "type": "integer"
+                  },
+                  "pageObjectRequired": {
+                    "type": "boolean"
                   }
                 },
                 "example": {

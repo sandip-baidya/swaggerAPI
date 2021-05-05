@@ -4151,7 +4151,7 @@
           "Segments"
         ],
         "summary": "Update Segment",
-        "description": "<p class=\"western\">Make a PUT request to the specified endpoint to modify a segment. You must provide a valid segment_id in order to make a successful request. Refer to the request body down below and the payload example on the right panel to understand what data you require to successfully make a request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>PUT</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Update_Segment.png\">",
+        "description": "<p class=\"western\">Make a PUT request to the specified endpoint to modify a segment. You must provide a valid segment_id in order to make a successful request. Refer to the request body down below and the payload example on the right panel to understand what data you require to successfully make this request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>PUT</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Update_Segment.png\">",
         "operationId": "Update_Segment",
         "consumes": [
           "application/json"
@@ -4431,7 +4431,7 @@
           "Segments"
         ],
         "summary": "Retrieve Parent Segments",
-        "description": "<p class=\"western\">Make a POST request to the specified endpoint to retrieve all parent segments. You can add a custom filter to retrieve a list of specific parent segments by using the <i>constraints</i> filed in your payload. Refer to this <u><a href=\"#operation/Retrieve_Segments\">request</a></u> to understand more about using constraints in a filter. Moreover, refer to the request body down below and the example on the right panel to understand what you need to make this request successfully.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Parent_Segments.png\">",
+        "description": "<p class=\"western\">Make a POST request to the specified endpoint to retrieve all parent segments. You can add a custom filter to retrieve a list of specific parent segments by using the <i>constraints</i> field in your payload. Refer to this <u><a href=\"#operation/Retrieve_Segments\">request</a></u> to understand more about using constraints in a filter. Moreover, refer to the request body down below and the example on the right panel to understand what you need to make this request successfully.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Parent_Segments.png\">",
         "operationId": "Retrieve_Parent_Segments",
         "consumes": [
           "application/json"
@@ -4507,6 +4507,43 @@
         "responses": {
           "200": {
             "$ref": "#/components/responses/RetrieveParentSegmentsResp"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/manage-segment/v1/segments/hierarchies/{segment_id}": {
+      "get": {
+        "tags": [
+          "Segments"
+        ],
+        "summary": "Retrieve Children Segments",
+        "description": "<p class=\"western\">Make a GET request to the specified endpoint to retrieve all children segments associated with a parent segment. You must provide a valid segment_id to make a successful request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Children_Segments.png\">",
+        "operationId": "Retrieve_Children_Segments",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "segment_id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/RetrieveChildrenSegmentsResp"
           },
           "401": {
             "description": "Unauthorized"
@@ -7770,6 +7807,75 @@
           }
         },
         "description": "Successful"
+      },
+      "RetrieveChildrenSegmentsResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "errors": null,
+              "data": [
+                {
+                  "accessibility": "Public",
+                  "name": "Mgr-segment",
+                  "status": "Active",
+                  "type": "Static",
+                  "actions": [
+                    {
+                      "displayName": "Edit",
+                      "key": "modify"
+                    },
+                    {
+                      "displayName": "Inactive",
+                      "key": "Inactive"
+                    },
+                    {
+                      "displayName": "Archive",
+                      "key": "archive"
+                    }
+                  ],
+                  "hasChildren": true,
+                  "children": [
+                    {
+                      "id": 1311260050,
+                      "entity_name": "segments",
+                      "owners": "1448558113",
+                      "units": "15029716,15050101",
+                      "segment_type": "UNITS",
+                      "name": "Dev-segment",
+                      "type": "Static",
+                      "status": "2",
+                      "module_id": "32",
+                      "created_by": "1",
+                      "created_on": "2021-05-05 10:21:54",
+                      "discussion": "Yes",
+                      "is_deleted": "N",
+                      "segment_id": "1480610367",
+                      "showOwners": "true",
+                      "category_id": "964663276",
+                      "peer_review": "No",
+                      "thread_flag": "0",
+                      "showActivity": "true",
+                      "showOverview": "true",
+                      "accessibility": "Public",
+                      "showPlaybooks": "true",
+                      "user_segment_id": "131231",
+                      "parent_association_count": "1"
+                    }
+                  ],
+                  "category_id": "Mgr",
+                  "character_code": null,
+                  "created_on": "2021-05-05 15:52:38",
+                  "created_by": "FranConnect Administrator",
+                  "module_id": "32",
+                  "segment_id": "1151281887",
+                  "segment_type": "SEGMENTS",
+                  "user_segment_id": "313123"
+                }
+              ],
+              "page": null
+            }
+          }
+        }
       },
       "RetrieveProfitLossStatementResp": {
         "content": {

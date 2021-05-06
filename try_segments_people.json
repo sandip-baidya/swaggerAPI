@@ -4430,7 +4430,163 @@
         }
       }
     },
-    "manage-people/teams/{team_id}": {
+    "/manage-people/teams": {
+      "post": {
+        "tags": [
+          "People"
+        ],
+        "summary": "Create Team",
+        "description": "<p class=\"western\">Make a POST request to the specified endpoint to create a new team. Refer the request body down below along with the example on the right panel to understand what kind of data you need to make this request, successfully. Please note that the <i>team_rules</i> field is sent as an empty object. This field finds its usage in the UI to filter out specific people that you require to form a team. It is of no use in an API call but it must be included in the request body to make a successful request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Create_Team.png\">",
+        "operationId": "Create_Team",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "user_team_id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "accessibility": {
+                      "type": "string",
+                      "enum": [
+                        "Public",
+                        "Private"
+                      ]
+                    },
+                    "discussion": {
+                      "type": "string",
+                      "enum": [
+                        "Yes",
+                        "No"
+                      ]
+                    },
+                    "static": {
+                      "type": "string"
+                    },
+                    "team_rules": {
+                      "type": "object"
+                    },
+                    "people": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "user_no": {
+                            "type": "integer"
+                          },
+                          "user_name": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    },
+                    "owners": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "user_no": {
+                            "type": "integer"
+                          },
+                          "user_name": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    },
+                    "playbooks": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "playbook_id": {
+                            "type": "integer"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "record_type": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": [
+                  {
+                    "user_team_id": "13144434",
+                    "name": "Team Grasso",
+                    "description": "A second new test team to handle the Grasso unit",
+                    "accessibility": "Public",
+                    "discussion": "Yes",
+                    "type": "Static",
+                    "team_rules": {},
+                    "people": [
+                      {
+                        "user_no": "344562882",
+                        "user_name": "Ashley Catalano"
+                      },
+                      {
+                        "user_no": "232134583",
+                        "user_name": "Autumn Feeney"
+                      },
+                      {
+                        "user_no": "763154979",
+                        "user_name": "Barton Koss"
+                      }
+                    ],
+                    "owners": [
+                      {
+                        "user_no": "194201272",
+                        "user_name": "Robb Bartell"
+                      }
+                    ],
+                    "playbooks": [
+                      {
+                        "playbook_id": "1698370857",
+                        "name": "LaunchTeam",
+                        "record_type": "team"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/CreateTeamResp"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/manage-people/teams/{team_id}": {
       "get": {
         "tags": [
           "People"
@@ -4627,7 +4783,7 @@
         }
       }
     },
-    "manage-people/teams/{team_Id}": {
+    "/manage-people/teams/{team_Id}": {
       "put": {
         "tags": [
           "People"
@@ -7843,6 +7999,76 @@
           }
         },
         "description": "Successful"
+      },
+      "CreateTeamResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "data": {
+                  "team_id": "358969900",
+                  "user_team_id": "13144434",
+                  "name": "Pix Grasso",
+                  "description": "A second new test team to handle the Grasso unit",
+                  "type": "Static",
+                  "status": "3",
+                  "accessibility": "Public",
+                  "peer_review": "No",
+                  "discussion": "Yes",
+                  "module_id": "32",
+                  "team_rules": {},
+                  "is_deleted": "N",
+                  "created_on": "2021-05-06 12:40:42",
+                  "created_by": "FranConnect Administrator",
+                  "thread_flag": "0",
+                  "people": [
+                    {
+                      "user_no": "344562882",
+                      "user_name": "Ashley Catalano",
+                      "people_id": "344562882",
+                      "people_mapping_id": "1286638001",
+                      "people_team_id": "358969900"
+                    },
+                    {
+                      "user_no": "232134583",
+                      "user_name": "Autumn Feeney",
+                      "people_id": "232134583",
+                      "people_mapping_id": "895655050",
+                      "people_team_id": "358969900"
+                    },
+                    {
+                      "user_no": "763154979",
+                      "user_name": "Barton Koss",
+                      "people_id": "763154979",
+                      "people_mapping_id": "1836267697",
+                      "people_team_id": "358969900"
+                    }
+                  ],
+                  "playbooks": [
+                    {
+                      "playbook_id": "1698370857",
+                      "name": "LaunchTeam",
+                      "record_type": "team",
+                      "team_playbook_id": "1698370857",
+                      "team_mapping_id": "1529203111",
+                      "team_id": "358969900"
+                    }
+                  ],
+                  "owners": [
+                    {
+                      "user_no": "194201272",
+                      "user_name": "Robb Bartell",
+                      "owner_id": "194201272",
+                      "owner_mapping_id": "557621796",
+                      "owner_team_id": "358969900"
+                    }
+                  ]
+                },
+                "page": null
+              }
+            }
+          }
+        }
       },
       "RetrieveTeamByIdResp": {
         "content": {

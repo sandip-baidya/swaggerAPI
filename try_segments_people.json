@@ -4471,7 +4471,7 @@
           "People"
         ],
         "summary": "Update Team",
-        "description": "[Write something later]",
+        "description": "<p class=\"western\">Make a PUT request to the specified endpoint to update a team. You must provide the endpoint with a valid team_id as a path parameter. Refer the request body down below, along with the example on the right panel to understand what data you'll need to make this request, successfully.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>PUT</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Update_Team.png\">",
         "operationId": "Update_Team",
         "consumes": [
           "application/json"
@@ -4615,8 +4615,91 @@
           "200": {
             "$ref": "#/components/responses/UpdateTeamResp"
           },
-          "201": {
-            "description": "Created"
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "manage-people/teams/{team_Id}": {
+      "put": {
+        "tags": [
+          "People"
+        ],
+        "summary": "Delete Team",
+        "description": "<p class=\"western\">Make a PUT request to the specified endpoint to delete a team. You must provide the endpoint with a valid team_id as a path parameter to successfully delete a team. Please note that you won't be able to delete a team which is associated with one or more active playbooks.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>PUT</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Delete_Team.png\">",
+        "operationId": "Delete_Team",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "team_id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "": {
+                    "type": "object",
+                    "properties": {
+                      "team_id": {
+                        "type": "integer"
+                      },
+                      "action": {
+                        "type": "string",
+                        "enum": ["delete"]
+                      },
+                      "moduleKey": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                },
+                "example": [
+                  {
+                      "team_id": "1254610768",
+                      "action": "delete",
+                      "moduleKey": "32"
+                  }
+              ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "response": {
+                      "data": {
+                          "message": "Team is successfully deleted.",
+                          "success": true
+                      },
+                      "page": null
+                  }
+              }
+              }
+            },
+            "description": "Successful"
           },
           "401": {
             "description": "Unauthorized"

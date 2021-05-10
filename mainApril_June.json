@@ -8458,7 +8458,8 @@
               }
             }
           }
-        }
+        },
+        "description": "Successful"
       },
       "UpdateTeamResp": {
         "content": {

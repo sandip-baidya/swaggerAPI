@@ -128,7 +128,7 @@
     },
     {
       "name": "Operations",
-      "description": "<p>The purpose of the Operations module is to optimize the workings of your franchise system. The FranConnect API allows you to work with segments, playbooks, people and tasks.</p>"
+      "description": "<p>The purpose of the Operations module is improve operational performance from the brand to the unit level. The FranConnect API allows you to work with segments, people, [Note: Add more as they come].</p>"
     },
     {
       "name": "Segments",

@@ -7977,61 +7977,63 @@
             "example": {
               "errors": null,
               "data": [
-                {
-                  "id": 887416871,
-                  "owners": [
-                    {
-                      "name": "11sepcorpuser 11sepcorpuser",
-                      "owner_id": "1448558113",
-                      "user_no": "1448558113"
-                    }
-                  ],
-                  "units": [],
-                  "segment_type": "SEGMENTS",
-                  "name": "23seg2C1C1000000000000000000000000",
-                  "type": "Static",
-                  "status": "Active",
-                  "module_id": "32",
-                  "created_by": "20novcorpuser 20novcorpuser",
-                  "created_on": "2021-04-23 13:54:47",
-                  "discussion": "Yes",
-                  "is_deleted": "N",
-                  "segment_id": "1769940589",
-                  "showOwners": "true",
-                  "updated_by": "FranConnect Administrator",
-                  "updated_on": "2021-04-23 11:05:55",
-                  "category_id": "1739761842",
-                  "peer_review": "No",
-                  "thread_flag": "0",
-                  "showActivity": "true",
-                  "showOverview": "true",
-                  "accessibility": [
-                    "Public"
-                  ],
-                  "showPlaybooks": "true",
-                  "character_code": "73765555555555555555555555555555555555555555555555555555555555555",
-                  "user_segment_id": "23seg2C1C10000000000000000000000000000",
-                  "parent_association_count": "1",
-                  "playbooks": [],
-                  "segments": [
-                    "2144283570",
-                    "1946233305"
-                  ],
-                  "isModifiable": true,
-                  "categories": {
-                    "categoryId": 1739761842,
-                    "categoryName": "23C1C1000000000000000000000000000000000000000000000000",
-                    "parentCategoryName": null,
-                    "createdBy": 190287255,
-                    "createdOn": "2021-04-23 08:03:38",
-                    "modifiedBy": 1,
-                    "modifiedOn": "2021-04-23 11:58:20"
-                  },
-                  "created_by_no": "190287255"
-                }
+                  {
+                      "id": 373455224,
+                      "owners": [
+                          {
+                              "name": "Alessandra Nader",
+                              "owner_id": "809980778",
+                              "user_no": "809980778"
+                          }
+                      ],
+                      "units": [
+                          "15050101",
+                          "15133242",
+                          "24645694",
+                          "28540123"
+                      ],
+                      "segment_type": "UNITS",
+                      "name": "Segment 01 404",
+                      "type": "Static",
+                      "status": "Active",
+                      "module_id": "32",
+                      "created_by": "FranConnect Administrator",
+                      "created_on": "2021-05-17 12:34:28",
+                      "discussion": "Yes",
+                      "is_deleted": "N",
+                      "segment_id": "1565579257",
+                      "showOwners": "true",
+                      "category_id": "524118689281212419",
+                      "description": "This is a sub child segment",
+                      "peer_review": "No",
+                      "thread_flag": "0",
+                      "showActivity": "true",
+                      "showOverview": "true",
+                      "accessibility": [
+                          "Public"
+                      ],
+                      "showPlaybooks": "true",
+                      "user_segment_id": "01404",
+                      "parent_association_count": "1",
+                      "playbooks": [],
+                      "isModifiable": true,
+                      "categories": {
+                          "categoryId": "524118689281212419",
+                          "categoryName": "Sub Child Segment 404",
+                          "parentCategoryId": "524118480383901699",
+                          "parentCategoryName": null,
+                          "createdBy": null,
+                          "createdOn": "2021-05-17 07:00:33",
+                          "modifiedBy": null,
+                          "modifiedOn": null,
+                          "actions": null,
+                          "segmentCreated": false
+                      },
+                      "created_by_no": "1"
+                  }
               ],
               "page": null
-            }
+          }
           }
         },
         "description": "Successful"

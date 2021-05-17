@@ -3816,25 +3816,27 @@
                         }
                       },
                       {
-                        "updated_on": {
-                          "category_id": {
-                            "type": "object",
-                            "properties": {
-                              "clause": {
-                                "type": "string",
-                                "enum": [
-                                  "ON",
-                                  "BEFORE",
-                                  "AFTER",
-                                  "IN_BETWEEN",
-                                  "LAST_YEAR",
-                                  "CURRENT_YEAR",
-                                  "LAST_MONTH",
-                                  "THIS_MONTH"
-                                ]
-                              },
-                              "values": {
-                                "type": "array"
+                        "properties": {
+                          "updated_on": {
+                            "category_id": {
+                              "type": "object",
+                              "properties": {
+                                "clause": {
+                                  "type": "string",
+                                  "enum": [
+                                    "ON",
+                                    "BEFORE",
+                                    "AFTER",
+                                    "IN_BETWEEN",
+                                    "LAST_YEAR",
+                                    "CURRENT_YEAR",
+                                    "LAST_MONTH",
+                                    "THIS_MONTH"
+                                  ]
+                                },
+                                "values": {
+                                  "type": "array"
+                                }
                               }
                             }
                           }
@@ -4101,7 +4103,7 @@
           "Segments"
         ],
         "summary": "Retrieve Children Segments",
-        "description": "<p class=\"western\">Make a GET request to the specified endpoint to retrieve all children segments associated with a parent segment. You must provide a valid segment_id to make a successful request.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Children_Segments.PNG\">",
+        "description": "<p class=\"western\">Make a GET request to the specified endpoint to retrieve all children segments associated with a parent segment. You must provide a valid segment_id to make a successful request. In order to procure a valid segment_id of a parent segment containing children segments, refer to this <u><a href=\"#operation/Retrieve_Parent_Segments\">request</a></u></p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Children_Segments.PNG\">",
         "operationId": "Retrieve_Children_Segments",
         "produces": [
           "application/json"
@@ -8144,7 +8146,7 @@
               "data": [
                 {
                   "accessibility": "Public",
-                  "name": "Test Grasso",
+                  "name": "Segment 03 404",
                   "status": "Active",
                   "type": "Static",
                   "actions": [
@@ -8165,20 +8167,48 @@
                       "key": "Delete"
                     }
                   ],
-                  "hasChildren": false,
-                  "children": [],
-                  "category_id": "12child2",
+                  "hasChildren": true,
+                  "children": [
+                    {
+                      "id": 112893333,
+                      "entity_name": "segments",
+                      "owners": "1503836007",
+                      "units": null,
+                      "segment_type": "SEGMENTS",
+                      "name": "Segment 02 404",
+                      "type": "Static",
+                      "status": "2",
+                      "module_id": "32",
+                      "created_by": "1",
+                      "created_on": "2021-05-17 07:06:29",
+                      "discussion": "Yes",
+                      "is_deleted": "N",
+                      "segment_id": "1362055206",
+                      "showOwners": "true",
+                      "category_id": "524118480383901699",
+                      "description": "Child Segment description",
+                      "peer_review": "No",
+                      "thread_flag": "0",
+                      "showActivity": "true",
+                      "showOverview": "true",
+                      "accessibility": "Public",
+                      "showPlaybooks": "true",
+                      "user_segment_id": "02404",
+                      "parent_association_count": "1"
+                    }
+                  ],
+                  "category_id": "Parent Segment 404",
                   "character_code": null,
-                  "created_on": "2021-05-05 12:51:12",
+                  "created_on": "2021-05-17 12:37:40",
                   "created_by": "FranConnect Administrator",
                   "module_id": "32",
-                  "segment_id": "592056139",
-                  "segment_type": "UNITS",
-                  "user_segment_id": "123Grasso"
+                  "segment_id": "1629484544",
+                  "segment_type": "SEGMENTS",
+                  "user_segment_id": "03404"
                 },
                 {
                   "accessibility": "Public",
-                  "name": "segment Name 186090294",
+                  "name": "Test PPP segment",
                   "status": "Active",
                   "type": "Static",
                   "actions": [
@@ -8199,57 +8229,50 @@
                       "key": "Delete"
                     }
                   ],
-                  "hasChildren": false,
-                  "children": [],
-                  "category_id": "CCCCC",
-                  "character_code": "Random Char 186090294",
-                  "created_on": "2021-05-05 11:26:46",
-                  "created_by": "FranConnect Administrator",
-                  "module_id": "32",
-                  "segment_id": "2103723845",
-                  "segment_type": "UNITS",
-                  "user_segment_id": "SegID-186090294"
-                },
-                {
-                  "accessibility": "Public",
-                  "name": "segment Name 1788160672",
-                  "status": "Active",
-                  "type": "Static",
-                  "actions": [
+                  "hasChildren": true,
+                  "children": [
                     {
-                      "displayName": "Edit",
-                      "key": "modify"
-                    },
-                    {
-                      "displayName": "Inactive",
-                      "key": "Inactive"
-                    },
-                    {
-                      "displayName": "Archive",
-                      "key": "archive"
-                    },
-                    {
-                      "displayName": "Delete",
-                      "key": "Delete"
+                      "id": 664882998,
+                      "entity_name": "segments",
+                      "owners": "1192965008",
+                      "units": "15029716,3756110",
+                      "segment_type": "UNITS",
+                      "name": "Test child segm ",
+                      "type": "Static",
+                      "status": "2",
+                      "module_id": "32",
+                      "created_by": "1",
+                      "created_on": "2021-05-13 12:47:08",
+                      "discussion": "Yes",
+                      "is_deleted": "N",
+                      "segment_id": "1971877159",
+                      "showOwners": "true",
+                      "category_id": "522755770878525443",
+                      "peer_review": "No",
+                      "thread_flag": "0",
+                      "showActivity": "true",
+                      "showOverview": "true",
+                      "accessibility": "Public",
+                      "showPlaybooks": "true",
+                      "user_segment_id": "798798329872328",
+                      "parent_association_count": "1"
                     }
                   ],
-                  "hasChildren": false,
-                  "children": [],
-                  "category_id": "CCCCC",
-                  "character_code": "Random Char 1788160672",
-                  "created_on": "2021-05-05 11:26:46",
+                  "category_id": "Test PPP",
+                  "character_code": null,
+                  "created_on": "2021-05-13 18:17:55",
                   "created_by": "FranConnect Administrator",
                   "module_id": "32",
-                  "segment_id": "1408130478",
-                  "segment_type": "UNITS",
-                  "user_segment_id": "SegID-1788160672"
+                  "segment_id": "1204625333",
+                  "segment_type": "SEGMENTS",
+                  "user_segment_id": "876868899"
                 }
               ],
               "page": {
                 "pageId": 0,
-                "size": 3,
-                "totalRecords": 10011,
-                "totalPages": 3337
+                "size": 2,
+                "totalRecords": 10074,
+                "totalPages": 5037
               }
             }
           }
@@ -8264,7 +8287,7 @@
               "data": [
                 {
                   "accessibility": "Public",
-                  "name": "Mgr-segment",
+                  "name": "Segment 02 404",
                   "status": "Active",
                   "type": "Static",
                   "actions": [
@@ -8284,40 +8307,41 @@
                   "hasChildren": true,
                   "children": [
                     {
-                      "id": 1311260050,
+                      "id": 373455224,
                       "entity_name": "segments",
-                      "owners": "1448558113",
-                      "units": "15029716,15050101",
+                      "owners": "809980778",
+                      "units": "15050101,15133242,24645694,28540123",
                       "segment_type": "UNITS",
-                      "name": "Dev-segment",
+                      "name": "Segment 01 404",
                       "type": "Static",
                       "status": "2",
                       "module_id": "32",
                       "created_by": "1",
-                      "created_on": "2021-05-05 10:21:54",
+                      "created_on": "2021-05-17 07:04:28",
                       "discussion": "Yes",
                       "is_deleted": "N",
-                      "segment_id": "1480610367",
+                      "segment_id": "1565579257",
                       "showOwners": "true",
-                      "category_id": "964663276",
+                      "category_id": "524118689281212419",
+                      "description": "This is a sub child segment",
                       "peer_review": "No",
                       "thread_flag": "0",
                       "showActivity": "true",
                       "showOverview": "true",
                       "accessibility": "Public",
                       "showPlaybooks": "true",
-                      "user_segment_id": "131231",
+                      "user_segment_id": "01404",
                       "parent_association_count": "1"
                     }
                   ],
-                  "category_id": "Mgr",
+                  "category_id": "Child Segment 1 404",
                   "character_code": null,
-                  "created_on": "2021-05-05 15:52:38",
+                  "created_on": "2021-05-17 12:36:29",
                   "created_by": "FranConnect Administrator",
                   "module_id": "32",
-                  "segment_id": "1151281887",
+                  "segment_id": "1362055206",
                   "segment_type": "SEGMENTS",
-                  "user_segment_id": "313123"
+                  "user_segment_id": "02404"
                 }
               ],
               "page": null

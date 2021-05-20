@@ -4982,6 +4982,28 @@
           }
         }
       }
+    },
+    "/userauth/oauth/token": {
+      "post": {
+        "tags": [
+          "Refresh Token"
+        ],
+        "operationId": "Refresh_Token",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/RefreshTokenResp"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -8574,6 +8596,22 @@
           }
         },
         "description": "Successful"
+      },
+      "RefreshTokenResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUtZGF0ZSI6IjIwMjEtMDUtMjFUMDA6NDY6MTQuMTQyWiIsIlgtVGVuYW50SUQiOiJxYW1zYTYuZnJhbmNvbm5lY3RxYS5uZXQiLCJ1c2VyX25hbWUiOiJhZG0iLCJzY29wZSI6WyJvcGVuaWQiLCJhbGwiXSwiZXhwIjoxNjIxNTU3OTc0LCJhdXRob3JpdGllcyI6WyJST0xFXzMiLCJST0xFX0lTX0RFTEVURURfTiIsIlJPTEVfMSIsIlJPTEVfSVNfQklMTEFCTEVfTiIsIlJPTEVfSVNfQVVESVRPUl9ZIiwiUk9MRV8xMDAyIiwiUk9MRV9JU19TQ0hFRFVMRVJfVVNFUl9ZIiwiUk9MRV9JU19GU19VU0VSXzEiXSwianRpIjoieUxrYWwtX05rdUF0bHBUcndKYjZoRVRqcDJnIiwiY2xpZW50X2lkIjoicWFtc2E2In0.Te9NPu1J4p1gGHpORmpnuPOngfAFXa8vmn4jg3CVifQ6VClz39adYWbaB6465YVNhZkiOUcQeyqA5yoOkYcsUakUP-KBmiA3vYrLFNyNs-eNWaZHSwvKgrp8mmwxhPq0iKXueChs2LHzIa2Z5HS8kw8qHo42qGNGXl-KsL4SqhywiboMTMu8T06U77xvey6BfS8HoVEED6E0rW5vFghO9RlpULcNm7qhw08foTSIs1MqEh0qpD0QtWnJYKbjcRVHkk1uVgRwvFbnCwdmv5AHS-HXuwdz-2yKQyiCEZTF6_VqWbxUbazT70MrIeFko28bumxsokcbnqPrJeh4zkj1VQ",
+              "token_type": "bearer",
+              "refresh_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUtZGF0ZSI6IjIwMjEtMDUtMjFUMDA6NDY6MTQuMTQyWiIsIlgtVGVuYW50SUQiOiJxYW1zYTYuZnJhbmNvbm5lY3RxYS5uZXQiLCJ1c2VyX25hbWUiOiJhZG0iLCJzY29wZSI6WyJvcGVuaWQiLCJhbGwiXSwiYXRpIjoieUxrYWwtX05rdUF0bHBUcndKYjZoRVRqcDJnIiwiZXhwIjoxNjI0MTA2Nzc0LCJhdXRob3JpdGllcyI6WyJST0xFXzMiLCJST0xFX0lTX0RFTEVURURfTiIsIlJPTEVfMSIsIlJPTEVfSVNfQklMTEFCTEVfTiIsIlJPTEVfSVNfQVVESVRPUl9ZIiwiUk9MRV8xMDAyIiwiUk9MRV9JU19TQ0hFRFVMRVJfVVNFUl9ZIiwiUk9MRV9JU19GU19VU0VSXzEiXSwianRpIjoiLUxQcWZVcEdFcVBQREhRLU5abWx2MnUzclZBIiwiY2xpZW50X2lkIjoicWFtc2E2In0.KObRPwTEsS0T7yl-vCE8-j8DAyiG-66-pQwTtaNcbOZEWwwcjSu-ZyO48Tj9S9NzpnhhPJgnX62rVnPrTtv-i20Be6kqtqpD3fx1ooDFpFTrY4sEbnnuLkECVraQ2EaUzFeJ_dHRNy8EYb5pxnkNhQM4yuOhaxX6U_FmRTEgLG4-KbODGa_x0I_iGpKTopzYx5WHu622j6XnSdbgYMjv-3emoZ7NtQPP8VG-rQB4UrsTNnHock25Mp3juEDlYu3OBVKK0iPGZNCZrHxQUORrDCRDrkuiiyYeMqoSiab3T6we8fklveouWmEFnMLaIDNPbpICL707QL6pV3CshAe5eA",
+              "expires_in": 43199,
+              "scope": "openid all",
+              "expire-date": "2021-05-21T00:46:14.142Z",
+              "X-TenantID": "qamsa6.franconnectqa.net",
+              "jti": "yLkal-_NkuAtlpTrwJb6hETjp2g"
+          }
+          }
+        }
       },
       "RetrieveProfitLossStatementResp": {
         "content": {

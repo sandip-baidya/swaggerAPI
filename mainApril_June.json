@@ -41,6 +41,10 @@
       "description": "<p><img src=\"images/Access_Token_Client_Cred.png\"><br>For using the grant type as <strong>Client Credentials</strong>, enter the details in the <strong>Get New Access Token&nbsp;</strong>dialog as explained in the following steps:<ol><li style=\"margin-left: 1px;\">Enter a name for your Access Token (Optional).</li><li style=\"margin-left: 1px;\">Select the <strong>Grant Type</strong> as <strong>Client Credentials</strong>.</li><li style=\"margin-left: 1px;\">Enter the endpoint for the authentication server in the <strong>Access Token URL&nbsp;</strong>field. This is used to exchange the authorization code for an access token.<br>Example: Access Token URL can be https://auth.franconnectuat.net/userauth/oauth/token?X-TenantID=developers.franconnectdemo.net<p><strong>Note:</strong> If the login URL for your FranConnect system is https://developers.franconnectdemo.net/fc, then the X-TenantID will be developers.franconnectdemo.net</li><li style=\"margin-left: 1px;\">Enter the Client ID provided to you by FranConnect in the <strong>Client ID</strong> field. <br>Example: Client ID can be FRANC0NN3CT_API</li><li style=\"margin-left: 1px;\">Enter the Client Secret provided to you by FranConnect in the <strong>Client Secret</strong> field.<br>Example: Client Secret can be DDEEMVOE2L0O1P9E<br>Contact <a href=\"mailto:helpdesk@franconnect.com\">helpdesk@franconnect.com</a> to get your Client ID and Client Secret</li><li style=\"margin-left: 1px;\">Select the option <strong>Send as Basic Auth header</strong> for the <strong>Client Authentication&nbsp;</strong>field.</li></ol></li></ol></p><p>Enter all these details, and click <strong>Request Token</strong> to request for a token.</p><p>The FranConnect API validates all the details and generates an access token that can be used for the API calls.</p><p><strong>Note:</strong> The access token is valid for 12 hours, after which a new access token is to be generated using the refresh token. This refresh token is valid for 30 days. Refresh tokens that were generated more than 30 days back cannot be used to generate a new access token.</p>"
     },
     {
+      "name": "Refresh Token",
+      "description": "<p>The access token that is generated using the grants enlisted above, remains valid only for 12 hours. Along with an access token, you'll also be given a <strong>refresh token</strong>. You can use this refresh token to generate a new access token. The lifespan of a refresh token is 30 days and once you've used up a refresh token, it can not be used to generate more access tokens. <br>following steps explain how to use a refresh token to generate a new access token:-<ol><li style=\"margin-left: 1px;\">Use any of the above four <u><a href=\"#tag/Authentication\">grant types</a></u> to generate an access token. From the response body, copy refresh_token.</li><li style=\"margin-left: 1px;\">If you're using Postman, make a new request. Select POST as the request method and enter the required endpoint in the url field. For e.g. https://auth.franconnectuat.net/userauth/oauth/token.</li><li style=\"margin-left: 1px;\">You'll need to pass two query parameters to this request. Click on params tab and fill in the following key-value pairs:-</li><ul><li style=\"margin-left: 1px;\"><strong>Key</strong>: grant_type | <strong>Value</strong>: refresh_token</li><li style=\"margin-left: 1px;\"><strong>Key</strong>: refresh_token | <strong>Value</strong>: [paste the copied refresh_token here]></li></ul><li style=\"margin-left: 1px;\">Click on Authorization tab and for the type field, choose Basic Auth. Fill in the username field with your Client ID, for e.g. FRANC0NN3CT_API. Fill in the password filed with your Client Secret, for e.g. DDEEMVOE2L0O1P9E.</li><li style=\"margin-left: 1px;\">Click on Headers tab and fill in the following key-value pair:-</li><ul><li style=\"margin-left: 1px;\"><strong>Key</strong>: X-TenantID | <strong>Value</strong>: a valid X-TenantID, for e.g. developers.franconnectdemo.net</li></ul><li style=\"margin-left: 1px;\">Click Send to get your new access token</li></ol></p>"
+    },
+    {
       "name": "Error Codes",
       "description": "<p>FranConnect uses various error codes in the API response to indicate that the request was not processed. In general, response codes in the <code>2xx&nbsp;</code>range indicate success while codes in the <code>4xx&nbsp;</code>and <code>5xx&nbsp;</code>range indicate an error in processing the request (such as a required parameter was invalid, incorrect XML format, and so on).</p><p>Following are the common error codes and their meaning for the FranConnect API:</p><ul><li><p>400<strong> Invalid : &lt;parameter&gt;</strong> - Returned when the input parameter name is invalid</p></li><li><p>400<strong> Invalid XML format: {error}</strong> - Returned when the xmlString entered in the payload is invalid</p></li><li><p>400 <strong>Request to {operation}{subModule} is not supported</strong> - Returned when some operation is restricted for a specific sub-module</p></li> <li> <p>400 <strong>Invalid mandatory field : {field}</strong> - Returned when the value provided in xmlString is invalid for a mandatory field</p> </li><li><p>400 <strong>Invalid mandatory field : {custom_error}</strong> - Returned when the xmlString entered in the payload is invalid. For example, the end date is before the start date or the userID contains space(s)</p></li><li><p>401 <strong>Missing : &lt;parameter&gt; </strong> - Returned when a mandatory parameter is missing</p></li><li> <p>401 <strong>mandatory field : {field}</strong> - Returned when a mandatory field is missing in the xmlString.</p></li> <li><p>409 <strong>{subModule}already exists</strong> - Returned when you try to perform create operation for a sub-module again and only one time submission is allowed for that sub-module</p></li><li><p>411 <strong>Duplicate mandatory field : {field}</strong> - Returned when you try to input duplicate data</p></li><li><p>438 <strong>Invalid tag &lt;tagName&gt;</strong> - Returned when the &lt;tagName&gt; is invalid for the specified module and sub-module</p></li><li><p>500 <strong>Database error</strong> - Returned when there is a database mapping issue</p></li><li><p>503 <strong>Service Unavailable</strong> - Returned when the system is undergoing maintenance</p></li></ul><p></p><p></p>"
     },
@@ -154,6 +158,7 @@
         "Implicit",
         "Password Credentials",
         "Client Credentials",
+        "Refresh Token",
         "Franchisee Number",
         "Retrieve Franchisee Number",
         "Error Codes",
@@ -3905,40 +3910,11 @@
                     }
                   },
                   "constraints": {
-                    "user_segment_id": {
-                      "clause": "ILIKE",
-                      "values": [
-                        "2"
-                      ],
-                      "type": "text"
-                    },
-                    "name": {
-                      "clause": "ILIKE",
-                      "values": [
-                        "Test"
-                      ],
-                      "type": "text"
-                    },
-                    "category_id": {
-                      "clause": "IN",
-                      "values": [
-                        1203028130
-                      ],
-                      "type": "multiselect"
-                    },
-                    "created_by": {
-                      "clause": "NOT_IN",
-                      "values": [
-                        "705537899"
-                      ],
-                      "type": "multiselect"
-                    },
                     "created_on": {
-                      "clause": "AFTER",
+                      "clause": "ON",
                       "values": [
-                        "2021-04-24"
-                      ],
-                      "type": "date"
+                        "2021-05-20"
+                      ]
                     }
                   },
                   "fields": [],
@@ -4062,7 +4038,7 @@
                 },
                 "example": {
                   "page": {
-                    "pageSize": 3,
+                    "pageSize": 2,
                     "pageId": 0,
                     "viewAll": false,
                     "sort": {
@@ -7754,20 +7730,20 @@
               "response": {
                 "data": [
                   {
-                    "id": 224102935,
+                    "id": 1449965413,
                     "owner_count": 2,
-                    "created_on": "2021-04-27 11:24:06",
-                    "name": "Test Segment Sher",
+                    "created_on": "2021-05-20 13:03:31",
+                    "name": "WES",
                     "type": "Static",
                     "status": "Active",
                     "module_id": "32",
                     "created_by": "FranConnect Administrator",
                     "discussion": "Yes",
                     "is_deleted": "N",
-                    "segment_id": "9780495",
+                    "segment_id": "1397642070",
                     "showOwners": "true",
-                    "category_id": "21apP1",
-                    "description": "A test Segment for Sherlock",
+                    "category_id": "Region",
+                    "description": "Western Region",
                     "peer_review": "No",
                     "thread_flag": "0",
                     "segment_type": "SEGMENTS",
@@ -7775,7 +7751,7 @@
                     "showOverview": "true",
                     "accessibility": "Public",
                     "showPlaybooks": "true",
-                    "user_segment_id": "0921",
+                    "user_segment_id": "10025",
                     "parent_association_count": "0",
                     "actions": [
                       {
@@ -7799,20 +7775,20 @@
                     "units": []
                   },
                   {
-                    "id": 1338848708,
-                    "owner_count": 2,
-                    "created_on": "2021-04-26 18:41:56",
-                    "name": "Test Segment Sherlockk",
+                    "id": 1982032038,
+                    "owner_count": 1,
+                    "created_on": "2021-05-20 13:00:44",
+                    "name": "50",
                     "type": "Static",
                     "status": "Active",
                     "module_id": "32",
                     "created_by": "FranConnect Administrator",
                     "discussion": "Yes",
                     "is_deleted": "N",
-                    "segment_id": "1484044351",
+                    "segment_id": "1023770854",
                     "showOwners": "true",
-                    "category_id": "21apP1",
-                    "description": "A test Segment for Sherlock",
+                    "category_id": "Zone",
+                    "description": "North East Zone",
                     "peer_review": "No",
                     "thread_flag": "0",
                     "segment_type": "SEGMENTS",
@@ -7820,8 +7796,8 @@
                     "showOverview": "true",
                     "accessibility": "Public",
                     "showPlaybooks": "true",
-                    "user_segment_id": "22221",
-                    "parent_association_count": "0",
+                    "user_segment_id": "10052",
+                    "parent_association_count": "1",
                     "actions": [
                       {
                         "displayName": "Edit",
@@ -7834,30 +7810,26 @@
                       {
                         "displayName": "Archive",
                         "key": "archive"
-                      },
-                      {
-                        "displayName": "Delete",
-                        "key": "Delete"
                       }
                     ],
                     "unit_count": 0,
                     "units": []
                   },
                   {
-                    "id": 431628371,
-                    "owner_count": 2,
-                    "created_on": "2021-04-26 17:16:54",
-                    "name": "Test Segment Sherlock",
+                    "id": 2143032116,
+                    "owner_count": 1,
+                    "created_on": "2021-05-20 12:52:51",
+                    "name": "TXA",
                     "type": "Static",
                     "status": "Active",
                     "module_id": "32",
                     "created_by": "FranConnect Administrator",
                     "discussion": "Yes",
                     "is_deleted": "N",
-                    "segment_id": "1403531379",
+                    "segment_id": "1490750697",
                     "showOwners": "true",
-                    "category_id": "21apP1",
-                    "description": "A test Segment for Sherlock",
+                    "category_id": "DMA",
+                    "description": "Austin TX",
                     "peer_review": "No",
                     "thread_flag": "0",
                     "segment_type": "SEGMENTS",
@@ -7865,8 +7837,8 @@
                     "showOverview": "true",
                     "accessibility": "Public",
                     "showPlaybooks": "true",
-                    "user_segment_id": "2222",
-                    "parent_association_count": "0",
+                    "user_segment_id": "10073",
+                    "parent_association_count": "1",
                     "actions": [
                       {
                         "displayName": "Edit",
@@ -7879,19 +7851,65 @@
                       {
                         "displayName": "Archive",
                         "key": "archive"
-                      },
-                      {
-                        "displayName": "Delete",
-                        "key": "Delete"
                       }
                     ],
                     "unit_count": 0,
                     "units": []
+                  },
+                  {
+                    "id": 1904504331,
+                    "owner_count": 2,
+                    "created_on": "2021-05-20 12:51:13",
+                    "name": "48055A",
+                    "type": "Static",
+                    "status": "Active",
+                    "module_id": "32",
+                    "created_by": "FranConnect Administrator",
+                    "discussion": "Yes",
+                    "is_deleted": "N",
+                    "segment_id": "1790909233",
+                    "showOwners": "true",
+                    "category_id": "County",
+                    "description": "Caldwell",
+                    "peer_review": "No",
+                    "thread_flag": "0",
+                    "segment_type": "UNITS",
+                    "showActivity": "true",
+                    "showOverview": "true",
+                    "accessibility": "Public",
+                    "segment_rules": [
+                      {
+                        "id": "0",
+                        "fields": []
+                      }
+                    ],
+                    "showPlaybooks": "true",
+                    "user_segment_id": "10089",
+                    "parent_association_count": "1",
+                    "actions": [
+                      {
+                        "displayName": "Edit",
+                        "key": "modify"
+                      },
+                      {
+                        "displayName": "Inactive",
+                        "key": "Inactive"
+                      },
+                      {
+                        "displayName": "Archive",
+                        "key": "archive"
+                      }
+                    ],
+                    "unit_count": 2,
+                    "units": [
+                      "15029716",
+                      "15050101"
+                    ]
                   }
                 ],
                 "page": {
                   "size": 20,
-                  "totalRecords": 3,
+                  "totalRecords": 4,
                   "totalPages": 1,
                   "pageId": 0
                 }
@@ -7977,63 +7995,72 @@
             "example": {
               "errors": null,
               "data": [
-                  {
-                      "id": 373455224,
-                      "owners": [
-                          {
-                              "name": "Alessandra Nader",
-                              "owner_id": "809980778",
-                              "user_no": "809980778"
-                          }
-                      ],
-                      "units": [
-                          "15050101",
-                          "15133242",
-                          "24645694",
-                          "28540123"
-                      ],
-                      "segment_type": "UNITS",
-                      "name": "Segment 01 404",
-                      "type": "Static",
-                      "status": "Active",
-                      "module_id": "32",
-                      "created_by": "FranConnect Administrator",
-                      "created_on": "2021-05-17 12:34:28",
-                      "discussion": "Yes",
-                      "is_deleted": "N",
-                      "segment_id": "1565579257",
-                      "showOwners": "true",
-                      "category_id": "524118689281212419",
-                      "description": "This is a sub child segment",
-                      "peer_review": "No",
-                      "thread_flag": "0",
-                      "showActivity": "true",
-                      "showOverview": "true",
-                      "accessibility": [
-                          "Public"
-                      ],
-                      "showPlaybooks": "true",
-                      "user_segment_id": "01404",
-                      "parent_association_count": "1",
-                      "playbooks": [],
-                      "isModifiable": true,
-                      "categories": {
-                          "categoryId": "524118689281212419",
-                          "categoryName": "Sub Child Segment 404",
-                          "parentCategoryId": "524118480383901699",
-                          "parentCategoryName": null,
-                          "createdBy": null,
-                          "createdOn": "2021-05-17 07:00:33",
-                          "modifiedBy": null,
-                          "modifiedOn": null,
-                          "actions": null,
-                          "segmentCreated": false
-                      },
-                      "created_by_no": "1"
-                  }
+                {
+                  "id": 1904504331,
+                  "owners": [
+                    {
+                      "name": "Anjali Collier",
+                      "owner_id": "1355939455",
+                      "user_no": "1355939455"
+                    },
+                    {
+                      "name": "Annalise Gerlach",
+                      "owner_id": "2018456945",
+                      "user_no": "2018456945"
+                    }
+                  ],
+                  "units": [
+                    "15029716",
+                    "15050101"
+                  ],
+                  "segment_type": "UNITS",
+                  "name": "48055A",
+                  "type": "Static",
+                  "status": "Active",
+                  "module_id": "32",
+                  "created_by": "FranConnect Administrator",
+                  "created_on": "2021-05-20 12:51:13",
+                  "discussion": "Yes",
+                  "is_deleted": "N",
+                  "segment_id": "1790909233",
+                  "showOwners": "true",
+                  "category_id": "525210193429004291",
+                  "description": "Caldwell",
+                  "peer_review": "No",
+                  "thread_flag": "0",
+                  "showActivity": "true",
+                  "showOverview": "true",
+                  "accessibility": [
+                    "Public"
+                  ],
+                  "segment_rules": [
+                    {
+                      "id": "0",
+                      "fields": []
+                    }
+                  ],
+                  "showPlaybooks": "true",
+                  "user_segment_id": "10089",
+                  "parent_association_count": "1",
+                  "playbooks": [],
+                  "isModifiable": true,
+                  "categories": {
+                    "categoryId": "525210193429004291",
+                    "categoryName": "County",
+                    "parentCategoryId": "525210138450067459",
+                    "parentCategoryName": null,
+                    "createdBy": null,
+                    "createdOn": "2021-05-20 07:17:48",
+                    "modifiedBy": null,
+                    "modifiedOn": null,
+                    "actions": null,
+                    "segmentCreated": false
+                  },
+                  "created_by_no": "1"
+                }
               ],
               "page": null
-          }
+            }
           }
         },
         "description": "Successful"
@@ -8148,7 +8175,7 @@
               "data": [
                 {
                   "accessibility": "Public",
-                  "name": "Segment 03 404",
+                  "name": "WES",
                   "status": "Active",
                   "type": "Static",
                   "actions": [
@@ -8172,45 +8199,45 @@
                   "hasChildren": true,
                   "children": [
                     {
-                      "id": 112893333,
+                      "id": 1982032038,
                       "entity_name": "segments",
-                      "owners": "1503836007",
+                      "owners": "434405630",
                       "units": null,
                       "segment_type": "SEGMENTS",
-                      "name": "Segment 02 404",
+                      "name": "50",
                       "type": "Static",
                       "status": "2",
                       "module_id": "32",
                       "created_by": "1",
-                      "created_on": "2021-05-17 07:06:29",
+                      "created_on": "2021-05-20 07:30:44",
                       "discussion": "Yes",
                       "is_deleted": "N",
-                      "segment_id": "1362055206",
+                      "segment_id": "1023770854",
                       "showOwners": "true",
-                      "category_id": "524118480383901699",
-                      "description": "Child Segment description",
+                      "category_id": "525210080312819714",
+                      "description": "North East Zone",
                       "peer_review": "No",
                       "thread_flag": "0",
                       "showActivity": "true",
                       "showOverview": "true",
                       "accessibility": "Public",
                       "showPlaybooks": "true",
-                      "user_segment_id": "02404",
+                      "user_segment_id": "10052",
                       "parent_association_count": "1"
                     }
                   ],
-                  "category_id": "Parent Segment 404",
+                  "category_id": "Region",
                   "character_code": null,
-                  "created_on": "2021-05-17 12:37:40",
+                  "created_on": "2021-05-20 13:03:31",
                   "created_by": "FranConnect Administrator",
                   "module_id": "32",
-                  "segment_id": "1629484544",
+                  "segment_id": "1397642070",
                   "segment_type": "SEGMENTS",
-                  "user_segment_id": "03404"
+                  "user_segment_id": "10025"
                 },
                 {
                   "accessibility": "Public",
-                  "name": "Test PPP segment",
+                  "name": "Locations that are opened in 2021",
                   "status": "Active",
                   "type": "Static",
                   "actions": [
@@ -8231,50 +8258,23 @@
                       "key": "Delete"
                     }
                   ],
-                  "hasChildren": true,
-                  "children": [
-                    {
-                      "id": 664882998,
-                      "entity_name": "segments",
-                      "owners": "1192965008",
-                      "units": "15029716,3756110",
-                      "segment_type": "UNITS",
-                      "name": "Test child segm ",
-                      "type": "Static",
-                      "status": "2",
-                      "module_id": "32",
-                      "created_by": "1",
-                      "created_on": "2021-05-13 12:47:08",
-                      "discussion": "Yes",
-                      "is_deleted": "N",
-                      "segment_id": "1971877159",
-                      "showOwners": "true",
-                      "category_id": "522755770878525443",
-                      "peer_review": "No",
-                      "thread_flag": "0",
-                      "showActivity": "true",
-                      "showOverview": "true",
-                      "accessibility": "Public",
-                      "showPlaybooks": "true",
-                      "user_segment_id": "798798329872328",
-                      "parent_association_count": "1"
-                    }
-                  ],
-                  "category_id": "Test PPP",
+                  "hasChildren": false,
+                  "children": [],
+                  "category_id": null,
                   "character_code": null,
-                  "created_on": "2021-05-13 18:17:55",
+                  "created_on": "2021-05-19 15:40:19",
                   "created_by": "FranConnect Administrator",
                   "module_id": "32",
-                  "segment_id": "1204625333",
-                  "segment_type": "SEGMENTS",
-                  "user_segment_id": "876868899"
+                  "segment_id": "1149840628",
+                  "segment_type": "UNITS",
+                  "user_segment_id": "1002"
                 }
               ],
               "page": {
                 "pageId": 0,
                 "size": 2,
-                "totalRecords": 10074,
-                "totalPages": 5037
+                "totalRecords": 10056,
+                "totalPages": 5028
               }
             }
           }
@@ -8289,7 +8289,7 @@
               "data": [
                 {
                   "accessibility": "Public",
-                  "name": "Segment 02 404",
+                  "name": "TXA",
                   "status": "Active",
                   "type": "Static",
                   "actions": [
@@ -8309,41 +8309,47 @@
                   "hasChildren": true,
                   "children": [
                     {
-                      "id": 373455224,
+                      "id": 1904504331,
                       "entity_name": "segments",
-                      "owners": "809980778",
-                      "units": "15050101,15133242,24645694,28540123",
+                      "owners": "1355939455,2018456945",
+                      "units": "15029716,15050101",
                       "segment_type": "UNITS",
-                      "name": "Segment 01 404",
+                      "name": "48055A",
                       "type": "Static",
                       "status": "2",
                       "module_id": "32",
                       "created_by": "1",
-                      "created_on": "2021-05-17 07:04:28",
+                      "created_on": "2021-05-20 07:21:13",
                       "discussion": "Yes",
                       "is_deleted": "N",
-                      "segment_id": "1565579257",
+                      "segment_id": "1790909233",
                       "showOwners": "true",
-                      "category_id": "524118689281212419",
-                      "description": "This is a sub child segment",
+                      "category_id": "525210193429004291",
+                      "description": "Caldwell",
                       "peer_review": "No",
                       "thread_flag": "0",
                       "showActivity": "true",
                       "showOverview": "true",
                       "accessibility": "Public",
+                      "segment_rules": [
+                        {
+                          "id": "0",
+                          "fields": []
+                        }
+                      ],
                       "showPlaybooks": "true",
-                      "user_segment_id": "01404",
+                      "user_segment_id": "10089",
                       "parent_association_count": "1"
                     }
                   ],
-                  "category_id": "Child Segment 1 404",
+                  "category_id": "DMA",
                   "character_code": null,
-                  "created_on": "2021-05-17 12:36:29",
+                  "created_on": "2021-05-20 12:52:51",
                   "created_by": "FranConnect Administrator",
                   "module_id": "32",
-                  "segment_id": "1362055206",
+                  "segment_id": "1490750697",
                   "segment_type": "SEGMENTS",
-                  "user_segment_id": "02404"
+                  "user_segment_id": "10073"
                 }
               ],
               "page": null

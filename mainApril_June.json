@@ -4988,7 +4988,7 @@
         "tags": [
           "Refresh Token"
         ],
-        "operationId": "Refresh_Token",
+        "summary": "Refresh Token Usage",
         "responses": {
           "200": {
             "$ref": "#/components/responses/RefreshTokenResp"
@@ -8611,7 +8611,8 @@
               "jti": "yLkal-_NkuAtlpTrwJb6hETjp2g"
           }
           }
-        }
+        },
+        "description": "Successful"
       },
       "RetrieveProfitLossStatementResp": {
         "content": {

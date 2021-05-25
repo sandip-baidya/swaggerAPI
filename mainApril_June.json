@@ -4159,32 +4159,22 @@
                     "type": {
                       "type": "boolean"
                     },
-                    "anyOf": [
-                      {
-                        "properties": {
-                          "units": {
-                            "type": "array",
-                            "items": {
-                              "franchisee_no": {
-                                "type": "integer"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "properties": {
-                          "segments": {
-                            "type": "array",
-                            "items": {
-                              "segment_id": {
-                                "type": "integer"
-                              }
-                            }
-                          }
+                    "units": {
+                      "type": "array",
+                      "items": {
+                        "franchisee_no": {
+                          "type": "integer"
                         }
                       }
-                    ],
+                    },
+                    "segments": {
+                      "type": "array",
+                      "items": {
+                        "segment_id": {
+                          "type": "integer"
+                        }
+                      }
+                    },
                     "owners": {
                       "type": "array",
                       "items": {
@@ -4198,7 +4188,10 @@
                     },
                     "segment_type": {
                       "type": "string",
-                      "enum": ["UNITS", "SEGMENTS"]
+                      "enum": [
+                        "UNITS",
+                        "SEGMENTS"
+                      ]
                     }
                   }
                 }

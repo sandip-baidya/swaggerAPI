@@ -4162,16 +4162,22 @@
                     "units": {
                       "type": "array",
                       "items": {
-                        "franchisee_no": {
-                          "type": "integer"
+                        "type": "object",
+                        "properties": {
+                          "franchisee_no": {
+                            "type": "integer"
+                          }
                         }
                       }
                     },
                     "segments": {
                       "type": "array",
                       "items": {
-                        "segment_id": {
-                          "type": "integer"
+                        "type": "object",
+                        "properties": {
+                          "segment_id": {
+                            "type": "integer"
+                          }
                         }
                       }
                     },

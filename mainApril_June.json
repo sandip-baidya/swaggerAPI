@@ -239,6 +239,7 @@
         ],
         "summary": "Retrieve for a Specific Location",
         "description": "<table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"28%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/common/franchisee/filter</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/common/franchisee/filter</td></tr></table><h4>To retrieve the Franchisee Number for a specific location, you must provide the following items in the header of the POST request: </h4><ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>Specify &ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>Specify &ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p class=\"western\">You can specify any of the following as the filter criteria in the body of the request: areas, countries, divisions, entities, fields, and franchisee numbers. Performing the above mentioned steps will provide the franchisee number and the franchisee name for the required location.<p class=\"western\">In the example that is included, the “franchisee_name” has been used as a ‘constraints’ criterion. Other acceptable values of constraints, that can be used to filter and retrieve franchisee number for a specific location, are explained in the following table:</p><center><table width=\"623\" cellspacing=\"0\" cellpadding=\"7\"><colgroup><col width=\"157\"/> <col width=\"135\"/> <col width=\"223\"/> <col width=\"51\"/> </colgroup><tbody><tr valign=\"top\"><td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"157\"><p class=\"western\" align=\"center\"><strong><span style=\"color: #00000a;\">Field</span></strong></p><p class=\"western\" align=\"center\">&nbsp;</p></td><td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"135\"><p class=\"western\" align=\"center\"><strong><span style=\"color: #00000a;\">Field Description</span></strong></p></td><td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"223\"><p class=\"western\" align=\"center\"><strong><span style=\"color: #00000a;\">Applied Clause</span></strong></p><p class=\"western\" align=\"center\">&nbsp;</p></td><td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"51\"><p class=\"western\" align=\"center\"><strong><span style=\"color: #00000a;\">Format</span></strong></p></td></tr><tr valign=\"top\"><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"157\"><p class=\"western\" align=\"center\"><strong>franchisee_name</strong></p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"135\"><p class=\"western\" align=\"center\">Franchisee Name as seen in UI</p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"223\"><p class=\"western\" align=\"center\">EQUAL, IN</p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"51\"><p class=\"western\" align=\"center\">String</p></td></tr><tr valign=\"top\"><td width=\"157\"><p class=\"western\" align=\"center\"><strong>franchisee_no</strong></p></td><td width=\"135\"><p class=\"western\" align=\"center\">Internal Unique Reference Number of the location</p></td><td width=\"223\"><p class=\"western\" align=\"center\">EQUAL, IN</p></td><td width=\"51\"><p class=\"western\" align=\"center\">String</p></td></tr><tr valign=\"top\"><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"157\"><p class=\"western\" align=\"center\"><strong>area_id</strong></p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"135\"><p class=\"western\" align=\"center\">Internal Unique Reference Number of the area</p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"223\"><p class=\"western\" align=\"center\">EQUAL, IN</p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"51\"><p class=\"western\" align=\"center\">String</p></td></tr><tr valign=\"top\"><td  width=\"157\"><p class=\"western\" align=\"center\"><strong>is_store_archive</strong></p></td><td  width=\"135\"><p class=\"western\" align=\"center\">Flag of archived Store in Opener</p></td><td  width=\"223\"><p class=\"western\" align=\"center\">EQUAL, IN</p></td><td  width=\"51\"><p class=\"western\" align=\"center\">String</p></td></tr><tr valign=\"top\"><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"157\"><p class=\"western\" align=\"center\"><strong>is_store</strong></p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"135\"><p class=\"western\" align=\"center\">Flag Store in Opener</p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"223\"><p class=\"western\" align=\"center\">EQUAL, IN</p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"51\"><p class=\"western\" align=\"center\">String</p></td></tr><tr valign=\"top\"><td  width=\"157\"><p class=\"western\" align=\"center\"><strong>is_franchisee</strong></p></td><td  width=\"135\"><p class=\"western\" align=\"center\">Flag of franchisee in Opener</p></td><td  width=\"223\"><p class=\"western\" align=\"center\">EQUAL, IN</p></td><td  width=\"51\"><p class=\"western\" align=\"center\">String</p></td></tr><tr valign=\"top\"><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"157\"><p class=\"western\" align=\"center\"><strong>divisions</strong></p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"135\"><p class=\"western\" align=\"center\">Internal Unique Reference Number of the division</p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"223\"><p class=\"western\" align=\"center\">EQUAL, IN</p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"51\"><p class=\"western\" align=\"center\">String</p></td></tr><tr valign=\"top\"><td  width=\"157\"><p class=\"western\" align=\"center\"><strong>country</strong></p></td><td  width=\"135\"><p class=\"western\" align=\"center\">Internal Unique Reference Number of the country</p></td><td  width=\"223\"><p class=\"western\" align=\"center\">EQUAL, IN</p></td><td  width=\"51\"><p class=\"western\" align=\"center\">String</p></td></tr><tr valign=\"top\"><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"157\"><p class=\"western\" align=\"center\"><strong>franchise_owner_id</strong></p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"135\"><p class=\"western\" align=\"center\">Internal Unique Reference Number of the owner</p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"223\"><p class=\"western\" align=\"center\">EQUAL, IN</p></td><td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"51\"><p class=\"western\" align=\"center\">String</p></td></tr><tr valign=\"top\"><td  width=\"157\"><p class=\"western\" align=\"center\"><strong>fim_entity_id</strong></p></td><td  width=\"135\"><p class=\"western\" align=\"center\">Internal Unique Reference Number of the entity</p></td><td  width=\"223\"><p class=\"western\" align=\"center\">EQUAL, IN</p></td><td  width=\"51\"><p class=\"western\" align=\"center\">String</p></td></tr></tbody></table></center><p class=\"western\">&nbsp;</p><p class=\"western\">&nbsp;</p></p><img src=\"images/Retrieve_Franchise_Number_Specific.png\">",
+        "operationId": "Retrieve_Franchise_Number_Specific",
         "consumes": [
           "application/json"
         ],
@@ -4116,7 +4117,7 @@
           "Segments"
         ],
         "summary": "Create Segment",
-        "description": "<p class=\"western\">You can create a new segment by making a POST request to the specified endpoint.</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>POST</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]]</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p> <p><img src=\"images/Create_Segment.PNG\"></p></ol><p class=\"western\"> There are two types of segments that you can make. One is made up of UNITS while the other one is made of child SEGMENTS. If the category_id of your segment belongs to the lowest level of category hierarchy, your segment will only accept valid UNITS. If your category_id does not belong to the lowest level of category hierarchy, your segment will accept valid child SEGMENTS.</p><p class=\"western\"> The following steps describe the process of obtaining data associated with different fields to create a segment of UNITS: <ul> <li> category_id can be obtained using <u>this</u> request. Ensure that this category_id belongs to the lowest level in your hierarchy of categories. </li> <li> Units are identified by unique franchisee_no, which can be obtained for specific locations using <u><a href=\"#operation/Retrieve_Franchise_Number_Specific\">this</a></u> request. </li> <li> Users or Owners are uniquely identified by user_no, which can be obtained by using <u>this</u> request. </li> </ul></p><p class=\"western\"> The following steps describe the process of obtaining data associated with different fields to create a segment of child SEGMENTS: <ul> <li> category_id can be obtained using <u>this</u> request. Ensure that this category_id belongs to the lowest level in your hierarchy of categories. </li> <li> Segments are uniquely identified by segment_id. To retrieve a list of segments along with their segment_id that belong to a particular child category, you must apply a filter on category_id while making <u><a href=\"#operation/Retrieve_Franchise_Number_Specific\">this</a></u> request. </li> <li> Users or Owners are uniquely identified by user_no, which can be obtained by using <u>this</u> request. </li> </ul></p><p class=\"western\"> The right panel displays request body and response samples associated with segment creation using both UNITS and SEGMENTS. Refer to these examples to better understand how to successfully make these requests.</p>",
+        "description": "<p class=\"western\">You can create a new segment by making a POST request to the specified endpoint.</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>POST</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]]</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p> <p><img src=\"images/Create_Segment.PNG\"></p></ol><p class=\"western\"> There are two types of segments that you can make. One is made up of UNITS while the other one is made of child SEGMENTS. If the category_id of your segment belongs to the lowest level of category hierarchy, your segment will only accept valid UNITS. If your category_id does not belong to the lowest level of category hierarchy, your segment will accept valid child SEGMENTS.</p><p class=\"western\"> The following steps describe the process of obtaining data associated with different fields to create a segment of UNITS: <ul> <li> category_id can be obtained using <u>this</u> request. Ensure that this category_id belongs to the lowest level in your hierarchy of categories. </li> <li> Units are identified by unique franchisee_no, which can be obtained for specific locations using <u><a href=\"#operation/Retrieve_Franchise_Number_Specific\">this</a></u> request. </li> <li> Users or Owners are uniquely identified by user_no, which can be obtained by using <u>this</u> request. </li> </ul></p><p class=\"western\"> The following steps describe the process of obtaining data associated with different fields to create a segment of child SEGMENTS: <ul> <li> category_id can be obtained using <u>this</u> request. Ensure that this category_id belongs to the lowest level in your hierarchy of categories. </li> <li> Segments are uniquely identified by segment_id. To retrieve a list of segments along with their segment_id that belong to a particular child category, you must apply a filter on category_id while making <u><a href=\"#operation/Retrieve_Segments\">this</a></u> request. </li> <li> Users or Owners are uniquely identified by user_no, which can be obtained by using <u>this</u> request. </li> </ul></p><p class=\"western\"> The right panel displays request body and response samples associated with segment creation using both UNITS and SEGMENTS. Refer to these examples to better understand how to successfully make these requests.</p>",
         "operationId": "Create_Segment",
         "consumes": [
           "application/json"
@@ -4141,8 +4142,8 @@
                     "categories": {
                       "type": "object",
                       "properties": {
-                        "categoryName": {
-                          "type": "string"
+                        "categoryId": {
+                          "type": "integer"
                         }
                       }
                     },
@@ -4158,20 +4159,32 @@
                     "type": {
                       "type": "boolean"
                     },
-                    "segments": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
+                    "anyOf": [
+                      {
                         "properties": {
-                          "name": {
-                            "type": "string"
-                          },
-                          "segmentCategory": {
-                            "type": "string"
+                          "units": {
+                            "type": "array",
+                            "items": {
+                              "franchisee_no": {
+                                "type": "integer"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "properties": {
+                          "segments": {
+                            "type": "array",
+                            "items": {
+                              "segment_id": {
+                                "type": "integer"
+                              }
+                            }
                           }
                         }
                       }
-                    },
+                    ],
                     "owners": {
                       "type": "array",
                       "items": {
@@ -4179,19 +4192,13 @@
                         "properties": {
                           "user_no": {
                             "type": "integer"
-                          },
-                          "user_name": {
-                            "type": "string",
-                            "enum": [
-                              "UNITS",
-                              "SEGMENTS"
-                            ]
                           }
                         }
                       }
                     },
                     "segment_type": {
-                      "type": "string"
+                      "type": "string",
+                      "enum": ["UNITS", "SEGMENTS"]
                     }
                   }
                 }

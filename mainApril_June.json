@@ -4116,7 +4116,7 @@
           "Segments"
         ],
         "summary": "Create Segment",
-        "description": "<p class=\"western\">You can create a new segment by making a POST request to the specified endpoint.</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>POST</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]]</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p> <p><img src=\"images/Create_Segment.PNG\"></p><p> There are two types of segments that you can make. One is made up of UNITS while the other one is made of child SEGMENTS. If the category_id of your segment belongs to the lowest level of category hierarchy, your segment will only accept valid UNITS. If your category_id does not belong to the lowest level of category hierarchy, your segment will accept valid child SEGMENTS.</p><p> The following steps describe the process of obtaining data associated with different fields to create a segment of UNITS: <ul> <li> category_id can be obtained using <u>this</u> request. Ensure that this category_id belongs to the lowest level in your hierarchy of categories. </li> <li> Units are identified by unique franchisee_no, which can be obtained for specific locations using <u><a href=\"#operation/Retrieve_Franchise_Number_Specific\">this</a></u> request. </li> <li> Users or Owners are uniquely identified by user_no, which can be obtained by using <u>this</u> request. </li> </ul></p><p> The following steps describe the process of obtaining data associated with different fields to create a segment of child SEGMENTS: <ul> <li> category_id can be obtained using <u>this</u> request. Ensure that this category_id belongs to the lowest level in your hierarchy of categories. </li> <li> Segments are uniquely identified by segment_id. To retrieve a list of segments along with their segment_id that belong to a particular child category, you must apply a filter on category_id while making <u><a href=\"#operation/Retrieve_Segments\">this</a></u> request. </li> <li> Users or Owners are uniquely identified by user_no, which can be obtained by using <u>this</u> request. </li> </ul></p><p> The right panel displays request body and response samples associated with segment creation using both UNITS and SEGMENTS. Refer to these examples to better understand how to successfully make this request.</p>",
+        "description": "<p class=\"western\">You can create a new segment by making a POST request to the specified endpoint.</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>POST</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]]</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p> <p><img src=\"images/Create_Segment.PNG\"></p><p class=\"western\"> There are two types of segments that you can make. One is made up of UNITS while the other one is made of child SEGMENTS. If the category_id of your segment belongs to the lowest level of category hierarchy, your segment will only accept valid UNITS. If your category_id does not belong to the lowest level of category hierarchy, your segment will accept valid child SEGMENTS.</p><p class=\"western\"> The following steps describe the process of obtaining data associated with different fields to create a segment of UNITS: <ul> <li> category_id can be obtained using <u>this</u> request. Ensure that this category_id belongs to the lowest level in your hierarchy of categories. </li> <li> Units are identified by unique franchisee_no, which can be obtained for specific locations using <u><a href=\"#operation/Retrieve_Franchise_Number_Specific\">this</a></u> request. </li> <li> Users or Owners are uniquely identified by user_no, which can be obtained by using <u>this</u> request. </li> </ul></p><p class=\"western\"> The following steps describe the process of obtaining data associated with different fields to create a segment of child SEGMENTS: <ul> <li> category_id can be obtained using <u>this</u> request. Ensure that this category_id belongs to the lowest level in your hierarchy of categories. </li> <li> Segments are uniquely identified by segment_id. To retrieve a list of segments along with their segment_id that belong to a particular child category, you must apply a filter on category_id while making <u><a href=\"#operation/Retrieve_Franchise_Number_Specific\">this</a></u> request. </li> <li> Users or Owners are uniquely identified by user_no, which can be obtained by using <u>this</u> request. </li> </ul></p><p class=\"western\"> The right panel displays request body and response samples associated with segment creation using both UNITS and SEGMENTS. Refer to these examples to better understand how to successfully make these requests.</p>",
         "operationId": "Create_Segment",
         "consumes": [
           "application/json"
@@ -4194,75 +4194,75 @@
                       "type": "string"
                     }
                   }
+                }
+              },
+              "examples": {
+                "units": {
+                  "summary": "Request body sample of segment creation using UNITS",
+                  "value": [
+                    {
+                      "user_segment_id": "33855",
+                      "name": "SEGMENT OF UNITS",
+                      "categories": {
+                        "categoryId": "525210193429004291"
+                      },
+                      "accessibility": "Public",
+                      "description": "A Segment of stores from a particular area.",
+                      "discussion": true,
+                      "type": false,
+                      "units": [
+                        {
+                          "franchisee_no": "188114377"
+                        }
+                      ],
+                      "owners": [
+                        {
+                          "user_no": "809583823"
+                        }
+                      ],
+                      "status": "2",
+                      "thread_flag": "0",
+                      "segment_type": "UNITS"
+                    }
+                  ]
                 },
-                "examples": {
-                  "units": {
-                    "summary": "Request body sample of segment creation using UNITS",
-                    "value": [
-                      {
-                        "user_segment_id": "33855",
-                        "name": "SEGMENT OF UNITS",
-                        "categories": {
-                          "categoryId": "525210193429004291"
+                "segments": {
+                  "summary": "Request body sample of segment creation using child SEGMENTS",
+                  "value": [
+                    {
+                      "user_segment_id": "884411",
+                      "name": "SEGMENT OF CHILD SEGMENTS",
+                      "categories": {
+                        "categoryId": "525210138450067459"
+                      },
+                      "accessibility": "Public",
+                      "description": "A segment of child SEGMENTS containing segments that are made up of units.",
+                      "discussion": true,
+                      "type": false,
+                      "segments": [
+                        {
+                          "segment_id": "104519572"
                         },
-                        "accessibility": "Public",
-                        "description": "A Segment of stores from a particular area.",
-                        "discussion": true,
-                        "type": false,
-                        "units": [
-                          {
-                            "franchisee_no": "188114377"
-                          }
-                        ],
-                        "owners": [
-                          {
-                            "user_no": "809583823"
-                          }
-                        ],
-                        "status": "2",
-                        "thread_flag": "0",
-                        "segment_type": "UNITS"
-                      }
-                    ]
-                  },
-                  "segments": {
-                    "summary": "Request body sample of segment creation using child SEGMENTS",
-                    "value": [
-                      {
-                        "user_segment_id": "884411",
-                        "name": "SEGMENT OF CHILD SEGMENTS",
-                        "categories": {
-                          "categoryId": "525210138450067459"
+                        {
+                          "segment_id": "1588386912"
                         },
-                        "accessibility": "Public",
-                        "description": "A segment of child SEGMENTS containing segments that are made up of units.",
-                        "discussion": true,
-                        "type": false,
-                        "segments": [
-                          {
-                            "segment_id": "104519572"
-                          },
-                          {
-                            "segment_id": "1588386912"
-                          },
-                          {
-                            "segment_id": "1952825001"
-                          },
-                          {
-                            "segment_id": "1455648261"
-                          }
-                        ],
-                        "owners": [
-                          {
-                            "user_no": "409646230"
-                          }
-                        ],
-                        "status": "2",
-                        "thread_flag": "0",
-                        "segment_type": "SEGMENTS"
-                      }
-                    ]
-                  }
+                        {
+                          "segment_id": "1952825001"
+                        },
+                        {
+                          "segment_id": "1455648261"
+                        }
+                      ],
+                      "owners": [
+                        {
+                          "user_no": "409646230"
+                        }
+                      ],
+                      "status": "2",
+                      "thread_flag": "0",
+                      "segment_type": "SEGMENTS"
+                    }
+                  ]
                 }
               }
             }

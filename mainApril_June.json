@@ -131,6 +131,10 @@
       "description": "This API endpoint supports the Finance Profit and Loss based operations."
     },
     {
+      "name": "Memos",
+      "description": "This API endpoint supports the Finance Memo based operations."
+    },
+    {
       "name": "Operations",
       "description": "<p>The purpose of the Operations module is improve operational performance from the brand to the unit level. The FranConnect API allows you to work with segments, people, [Note: Add more as they come].</p>"
     },
@@ -195,6 +199,7 @@
         "Payments",
         "Adjustments",
         "Profit and Loss Statements",
+        "Memos",
         "Operations",
         "Segments",
         "People",
@@ -2231,7 +2236,7 @@
                     }
                   },
                   "page": {
-                    "pageId": "1",
+                    "pageId": "0",
                     "pageSize": "100"
                   }
                 }
@@ -2449,7 +2454,7 @@
                     }
                   },
                   "page": {
-                    "pageId": "1",
+                    "pageId": "0",
                     "pageSize": "100"
                   }
                 }
@@ -2949,7 +2954,7 @@
                       }
                     },
                     "page": {
-                      "pageId": "1",
+                      "pageId": "0",
                       "pageSize": "100"
                     }
                   }
@@ -3239,7 +3244,7 @@
                     }
                   },
                   "page": {
-                    "pageId": "1",
+                    "pageId": "0",
                     "pageSize": "100"
                   }
                 }
@@ -3501,7 +3506,7 @@
                     }
                   },
                   "page": {
-                    "pageId": "1",
+                    "pageId": "0",
                     "pageSize": "100"
                   }
                 }
@@ -3529,12 +3534,12 @@
       }
     },
     "/manage-finance/profit-loss/{id}": {
-      "post": {
+      "put": {
         "tags": [
           "Profit and Loss Statements"
         ],
         "summary": "Update Existing Profit/Loss Statement",
-        "description": "<p class=\"western\">You can update an existing profit and loss report by making a POST request to the specified endpoint.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>POST</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/profit-loss/{plrepId}</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/profit-loss/{plrepId}</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p>The profit and loss categories must be included in the body of the request. Click <u><a href=\"#operation/Retrieve_ProfitLoss_Categories\">here</a></u> for details on retrieving the profit and loss categories.</p></p><img src=\"images/Update_Existing_ProfitLoss_Statement.png\">",
+        "description": "<p class=\"western\">You can update an existing profit and loss report by making a POST request to the specified endpoint.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>PUT</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnect.net/manage-finance/profit-loss/{plrepId}</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/profit-loss/{plrepId}</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p></li></ol><p>The profit and loss categories must be included in the body of the request. Click <u><a href=\"#operation/Retrieve_ProfitLoss_Categories\">here</a></u> for details on retrieving the profit and loss categories.</p></p><img src=\"images/Update_Existing_ProfitLoss_Statement.png\">",
         "operationId": "Update_Existing_ProfitLoss_Statement",
         "consumes": [
           "application/json"
@@ -3631,6 +3636,79 @@
         "responses": {
           "200": {
             "$ref": "#/components/responses/CreateProfitLossStatementResp"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/manage-finance/memos/filter": {
+      "post": {
+        "tags": [
+          "Memos"
+        ],
+        "summary": "Retrieve Memos",
+        "description": "<p class=\"western\">You can retrieve an existing memo by making a POST type request to the specified endpoint.</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>POST</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">https://skyapi.franconnect.net/manage-finance/memos/filter</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/memos/filter</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p> </li></ol><p class=\"western\">The constraints that would be used to filter out the memos must be included in the body of the request. In the example that is included, the “franchiseeNo” has been used as a ‘constraints’ criterion. Other acceptable values of constraints, that can be used to filter and retrieve memos, are explained in the following table:</p><center> <table width=\"623\" cellspacing=\"0\" cellpadding=\"7\"> <colgroup> <col width=\"157\" /> <col width=\"135\" /> <col width=\"223\" /> <col width=\"51\" /> </colgroup> <tbody> <tr valign=\"top\"> <td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"157\"> <p class=\"western\" align=\"center\"><strong><span style=\"color: #00000a;\">Field</span></strong> </p> <p class=\"western\" align=\"center\">&nbsp;</p> </td> <td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"135\"> <p class=\"western\" align=\"center\"><strong><span style=\"color: #00000a;\">Field Description</span></strong></p> </td> <td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"223\"> <p class=\"western\" align=\"center\"><strong><span style=\"color: #00000a;\">Applied Clause</span></strong></p> <p class=\"western\" align=\"center\">&nbsp;</p> </td> <td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"51\"> <p class=\"western\" align=\"center\"><strong><span style=\"color: #00000a;\">Format</span></strong> </p> </td> </tr> <tr valign=\"top\"> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"157\"> <p class=\"western\" align=\"center\"><strong>memoID</strong></p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"135\"> <p class=\"western\" align=\"center\">Internal Unique Reference Number of the Memo</p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"223\"> <p class=\"western\" align=\"center\">EQUAL, IN</p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"51\"> <p class=\"western\" align=\"center\">String</p> </td> </tr> <tr valign=\"top\"> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"157\"> <p class=\"western\" align=\"center\"><strong>franchiseeNo</strong></p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"135\"> <p class=\"western\" align=\"center\">Internal Unique Reference Number of the location</p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"223\"> <p class=\"western\" align=\"center\">EQUAL, IN</p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"51\"> <p class=\"western\" align=\"center\">String</p> </td> </tr> <tr valign=\"top\"> <td width=\"157\"> <p class=\"western\" align=\"center\"><strong>memoType</strong></p> </td> <td width=\"135\"> <p class=\"western\" align=\"center\">Type of memo. Can either be Credit or Debit</p> </td> <td width=\"223\"> <p class=\"western\" align=\"center\">EQUAL, IN</p> </td> <td width=\"51\"> <p class=\"western\" align=\"center\">String</p> </td> </tr> <tr valign=\"top\"> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"157\"> <p class=\"western\" align=\"center\"><strong>memoDate</strong></p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"135\"> <p class=\"western\" align=\"center\">Memo Date in YYYY-MM-DD format</p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"223\"> <p class=\"western\" align=\"center\">EQUAL, GREATER_THAN,</p> <p class=\"western\" align=\"center\">LESS_THAN, GREATER_THAN_OR_EQUAL,</p> <p class=\"western\" align=\"center\">LESS_THAN_OR_EQUAL, BETWEEN</p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"51\"> <p class=\"western\" align=\"center\">Date</p> </td> </tr> <tr valign=\"top\"> <td width=\"157\"> <p class=\"western\" align=\"center\"><strong>openBalance</strong></p> </td> <td width=\"135\"> <p class=\"western\" align=\"center\">Open Balance Amount of memo as seen in UI</p> </td> <td width=\"223\"> <p class=\"western\" align=\"center\">EQUAL, GREATER_THAN,</p> <p class=\"western\" align=\"center\">LESS_THAN, GREATER_THAN_OR_EQUAL,</p> <p class=\"western\" align=\"center\">LESS_THAN_OR_EQUAL, BETWEEN</p> </td> <td width=\"51\"> <p class=\"western\" align=\"center\">Double</p> </td> </tr> </tbody> </table></center><p class=\"western\">&nbsp;</p><img src=\"images/Retrieve_Memos.PNG\">",
+        "operationId": "Retrieve_Memos",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "memoID": {
+                    "type": "string"
+                  },
+                  "franchiseeNo": {
+                    "type": "string"
+                  },
+                  "memoType": {
+                    "type": "string"
+                  },
+                  "memoDate": {
+                    "type": "date"
+                  },
+                  "openBalance": {
+                    "type": "double"
+                  }
+                },
+                "example": {
+                  "constraints": {
+                    "franchiseeNo": {
+                      "clause": "EQUAL",
+                      "values": [
+                        "2019500882"
+                      ]
+                    }
+                  },
+                  "page": {
+                    "pageId": "0",
+                    "pageSize": "100"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/RetrieveMemosResp"
           },
           "201": {
             "description": "Created"
@@ -7013,7 +7091,12 @@
                     "response": "Success"
                   }
                 ],
-                "page": null
+                "page": {
+                  "size": 100,
+                  "totalRecords": 1,
+                  "totalPages": 1,
+                  "pageId": 0
+                }
               }
             }
           }
@@ -7139,7 +7222,12 @@
                     "response": "Success"
                   }
                 ],
-                "page": null
+                "page": {
+                  "size": 100,
+                  "totalRecords": 2,
+                  "totalPages": 1,
+                  "pageId": 0
+                }
               }
             }
           }
@@ -7350,7 +7438,13 @@
                     },
                     "response": "Success"
                   }
-                ]
+                ],
+                "page": {
+                  "size": 100,
+                  "totalRecords": 1,
+                  "totalPages": 1,
+                  "pageId": 0
+                }
               }
             }
           }
@@ -7652,7 +7746,12 @@
                     "response": "Success"
                   }
                 ],
-                "page": null
+                "page": {
+                  "size": 100,
+                  "totalRecords": 3,
+                  "totalPages": 1,
+                  "pageId": 0
+                }
               }
             }
           }
@@ -8649,6 +8748,116 @@
         },
         "description": "Successful"
       },
+      "RetrieveMemosResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "data": [
+                  {
+                    "1037703664": {
+                      "memoID": "1037703664",
+                      "franchiseeNo": "2019500882",
+                      "amount": "1000.0",
+                      "memoType": "Credit",
+                      "memoDate": "2021-05-18",
+                      "openBalance": "350.0",
+                      "memo": "Comments",
+                      "memoNo": "3",
+                      "lastModifiedDate": "2021-05-20 06:50:26"
+                    },
+                    "1390673813": {
+                      "memoID": "1390673813",
+                      "franchiseeNo": "2019500882",
+                      "amount": "200.0",
+                      "memoType": "Debit",
+                      "memoDate": "2021-05-16",
+                      "openBalance": "200.0",
+                      "memo": "Debit memo added by NS",
+                      "memoNo": "7",
+                      "lastModifiedDate": "2021-05-18 09:39:09"
+                    },
+                    "1416567582": {
+                      "memoID": "1416567582",
+                      "franchiseeNo": "2019500882",
+                      "amount": "1000.0",
+                      "memoType": "Credit",
+                      "memoDate": "2021-05-18",
+                      "openBalance": "30.0",
+                      "memo": "Comments",
+                      "memoNo": "8",
+                      "lastModifiedDate": "2021-05-21 09:59:42"
+                    },
+                    "115798496": {
+                      "memoID": "115798496",
+                      "franchiseeNo": "2019500882",
+                      "amount": "100.0",
+                      "memoType": "Credit",
+                      "memoDate": "2021-05-18",
+                      "openBalance": "100.0",
+                      "memo": "Comments",
+                      "memoNo": "6",
+                      "lastModifiedDate": "2021-05-18 09:36:52"
+                    },
+                    "843734972": {
+                      "memoID": "843734972",
+                      "franchiseeNo": "2019500882",
+                      "amount": "100.0",
+                      "memoType": "Debit",
+                      "memoDate": "2021-05-18",
+                      "openBalance": "100.0",
+                      "memo": "Comments",
+                      "memoNo": "5",
+                      "lastModifiedDate": "2021-05-18 09:34:46"
+                    },
+                    "1106080230": {
+                      "memoID": "1106080230",
+                      "franchiseeNo": "2019500882",
+                      "amount": "800.0",
+                      "memoType": "Debit",
+                      "memoDate": "2021-05-18",
+                      "openBalance": "800.0",
+                      "memo": "Comments",
+                      "memoNo": "4",
+                      "lastModifiedDate": "2021-05-18 09:25:28"
+                    },
+                    "800047640": {
+                      "memoID": "800047640",
+                      "franchiseeNo": "2019500882",
+                      "amount": "500.0",
+                      "memoType": "Credit",
+                      "memoDate": "2021-05-03",
+                      "openBalance": "0.0",
+                      "memo": "test comment",
+                      "memoNo": "1",
+                      "lastModifiedDate": "2021-05-16 23:44:31"
+                    },
+                    "42235612": {
+                      "memoID": "42235612",
+                      "franchiseeNo": "2019500882",
+                      "amount": "123.0",
+                      "memoType": "Credit",
+                      "memoDate": "2017-09-30",
+                      "openBalance": "123.0",
+                      "memo": null,
+                      "memoNo": "9",
+                      "lastModifiedDate": "2021-05-24 09:54:42"
+                    },
+                    "response": "Success"
+                  }
+                ],
+                "page": {
+                  "size": 100,
+                  "totalRecords": 8,
+                  "totalPages": 1,
+                  "pageId": 0
+                }
+              }
+            }
+          }
+        },
+        "description": "Successful"
+      },
       "RetrieveProfitLossStatementResp": {
         "content": {
           "application/json": {
@@ -8755,7 +8964,12 @@
                     "response": "Success"
                   }
                 ],
-                "page": null
+                "page": {
+                  "size": 100,
+                  "totalRecords": 2,
+                  "totalPages": 1,
+                  "pageId": 0
+                }
               }
             }
           }

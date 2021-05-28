@@ -2547,12 +2547,12 @@
                     "type": "string"
                   },
                   "franchiseeRoyaltyID": {
-                    "type": "array",
-                    "item": {
-                      "type": "string"
-                    }
+                    "type": "array"
                   },
                   "debitMemos": {
+                    "type": "array"
+                  },
+                  "creditMemos": {
                     "type": "array"
                   },
                   "collectionMethod": {

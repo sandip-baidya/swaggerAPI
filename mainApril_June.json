@@ -2611,7 +2611,7 @@
                   }
                 },
                 "required": [
-                  "franchisee_no", "dateReceived", "royaltyType", "franchiseeRoyaltyID", "collectionMethod"
+                  "franchiseeNo", "dateReceived", "royaltyType", "franchiseeRoyaltyID", "collectionMethod"
                 ],
                 "example": [
                   {
@@ -8898,8 +8898,7 @@
                       "memoDate": "2021-05-18",
                       "openBalance": "350.0",
                       "memo": "Comments",
-                      "memoNo": "3",
-                      "lastModifiedDate": "2021-05-20 06:50:26"
+                      "memoNo": "3"
                     },
                     "1390673813": {
                       "memoID": "1390673813",
@@ -8909,8 +8908,7 @@
                       "memoDate": "2021-05-16",
                       "openBalance": "200.0",
                       "memo": "Debit memo added by NS",
-                      "memoNo": "7",
-                      "lastModifiedDate": "2021-05-18 09:39:09"
+                      "memoNo": "7"
                     },
                     "1416567582": {
                       "memoID": "1416567582",
@@ -8920,8 +8918,7 @@
                       "memoDate": "2021-05-18",
                       "openBalance": "30.0",
                       "memo": "Comments",
-                      "memoNo": "8",
-                      "lastModifiedDate": "2021-05-21 09:59:42"
+                      "memoNo": "8"
                     },
                     "115798496": {
                       "memoID": "115798496",
@@ -8931,8 +8928,7 @@
                       "memoDate": "2021-05-18",
                       "openBalance": "100.0",
                       "memo": "Comments",
-                      "memoNo": "6",
-                      "lastModifiedDate": "2021-05-18 09:36:52"
+                      "memoNo": "6"
                     },
                     "843734972": {
                       "memoID": "843734972",
@@ -8942,8 +8938,7 @@
                       "memoDate": "2021-05-18",
                       "openBalance": "100.0",
                       "memo": "Comments",
-                      "memoNo": "5",
-                      "lastModifiedDate": "2021-05-18 09:34:46"
+                      "memoNo": "5"
                     },
                     "1106080230": {
                       "memoID": "1106080230",
@@ -8953,8 +8948,7 @@
                       "memoDate": "2021-05-18",
                       "openBalance": "800.0",
                       "memo": "Comments",
-                      "memoNo": "4",
-                      "lastModifiedDate": "2021-05-18 09:25:28"
+                      "memoNo": "4"
                     },
                     "800047640": {
                       "memoID": "800047640",
@@ -8964,8 +8958,7 @@
                       "memoDate": "2021-05-03",
                       "openBalance": "0.0",
                       "memo": "test comment",
-                      "memoNo": "1",
-                      "lastModifiedDate": "2021-05-16 23:44:31"
+                      "memoNo": "1"
                     },
                     "42235612": {
                       "memoID": "42235612",
@@ -8975,8 +8968,7 @@
                       "memoDate": "2017-09-30",
                       "openBalance": "123.0",
                       "memo": null,
-                      "memoNo": "9",
-                      "lastModifiedDate": "2021-05-24 09:54:42"
+                      "memoNo": "9"
                     },
                     "response": "Success"
                   }

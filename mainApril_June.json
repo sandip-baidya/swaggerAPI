@@ -3658,7 +3658,7 @@
           "Memos"
         ],
         "summary": "Retrieve Memos",
-        "description": "<p class=\"western\">You can retrieve an existing memo by making a POST type request to the specified endpoint.</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>POST</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">https://skyapi.franconnect.net/manage-finance/memos/filter</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/memos/filter</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p> </li></ol><p class=\"western\">The constraints that would be used to filter out the memos must be included in the body of the request. In the example that is included, the “franchiseeNo” has been used as a ‘constraints’ criterion. Other acceptable values of constraints, that can be used to filter and retrieve memos, are explained in the following table:</p> <center> <table width=\"735\" cellspacing=\"0\" cellpadding=\"7\"> <colgroup> <col width=\"134\" /> <col width=\"253\" /> <col width=\"223\" /> <col width=\"66\" /> </colgroup> <tbody> <tr valign=\"top\"> <td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"134\" height=\"30\"> <p class=\"western\"><span style=\"color: #ffffff;\"><strong>Field</strong></span></p> </td> <td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"253\"> <p class=\"western\"><span style=\"color: #ffffff;\"><strong>Field Display Name</strong></span></p> </td> <td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"223\"> <p class=\"western\"><span style=\"color: #ffffff;\"><strong>Applicable Clauses</strong></span></p> </td> <td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"66\"> <p class=\"western\"><span style=\"color: #ffffff;\"><strong>Format</strong></span></p> </td> </tr> <tr valign=\"top\"> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"134\"> <p class=\"western\"><strong>memoID</strong></p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"253\"> <p class=\"western\">Internal Unique Reference Number of the Memo</p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"223\"> <p class=\"western\">EQUAL, IN</p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"66\"> <p class=\"western\">String</p> </td> </tr> <tr valign=\"top\"> <td width=\"134\" height=\"9\"> <p class=\"western\"><strong>franchiseeNo</strong></p> </td> <td width=\"253\"> <p class=\"western\">Internal Unique Reference Number of the location</p> </td> <td width=\"223\"> <p class=\"western\">EQUAL, IN</p> </td> <td width=\"66\"> <p class=\"western\">String</p> </td> </tr> <tr valign=\"top\"> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"134\"> <p class=\"western\"><strong>memoType</strong></p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"253\"> <p class=\"western\">Type of memo. Can either be Credit or Debit</p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"223\"> <p class=\"western\">EQUAL, IN</p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"66\"> <p class=\"western\">String</p> </td> </tr> <tr valign=\"top\"> <td width=\"134\" height=\"85\"> <p class=\"western\"><strong>memoDate</strong></p> </td> <td width=\"253\"> <p class=\"western\">Memo Date in YYYY-MM-DD format</p> </td> <td width=\"223\"> <p class=\"western\">EQUAL, GREATER_THAN,</p> <p class=\"western\">LESS_THAN, GREATER_THAN_OR_EQUAL,</p> <p class=\"western\">LESS_THAN_OR_EQUAL, BETWEEN</p> </td> <td width=\"66\"> <p class=\"western\">Date</p> </td> </tr> <tr valign=\"top\"> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"134\"> <p class=\"western\"><strong>openBalance</strong></p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"253\"> <p class=\"western\">Open Balance Amount of memo as seen in UI</p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"223\"> <p class=\"western\">EQUAL, GREATER_THAN</p> <p class=\"western\">LESS_THAN, GREATER_THAN_OR_EQUAL,</p> <p class=\"western\">LESS_THAN_OR_EQUAL, BETWEEN</p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"66\"> <p class=\"western\">Double</p> </td> </tr> </tbody> </table> </center><p class=\"western\">&nbsp;</p><img src=\"images/Retrieve_Memos.PNG\">",
+        "description": "<p class=\"western\">You can retrieve an existing memo by making a POST request to the specified endpoint.</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>POST</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">https://skyapi.franconnect.net/manage-finance/memos/filter</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/memos/filter</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p> </li></ol><p class=\"western\">The constraints that would be used to filter out the memos must be included in the body of the request. In the example that is included, the “franchiseeNo” has been used as a ‘constraints’ criterion. Other acceptable values of constraints, that can be used to filter and retrieve memos, are explained in the following table:</p> <center> <table width=\"735\" cellspacing=\"0\" cellpadding=\"7\"> <colgroup> <col width=\"134\" /> <col width=\"253\" /> <col width=\"223\" /> <col width=\"66\" /> </colgroup> <tbody> <tr valign=\"top\"> <td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"134\" height=\"30\"> <p class=\"western\"><span style=\"color: #ffffff;\"><strong>Field</strong></span></p> </td> <td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"253\"> <p class=\"western\"><span style=\"color: #ffffff;\"><strong>Field Display Name</strong></span></p> </td> <td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"223\"> <p class=\"western\"><span style=\"color: #ffffff;\"><strong>Applicable Clauses</strong></span></p> </td> <td style=\"background: #4472c4;\" bgcolor=\"#4472c4\" width=\"66\"> <p class=\"western\"><span style=\"color: #ffffff;\"><strong>Format</strong></span></p> </td> </tr> <tr valign=\"top\"> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"134\"> <p class=\"western\"><strong>memoID</strong></p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"253\"> <p class=\"western\">Internal Unique Reference Number of the Memo</p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"223\"> <p class=\"western\">EQUAL, IN</p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"66\"> <p class=\"western\">String</p> </td> </tr> <tr valign=\"top\"> <td width=\"134\" height=\"9\"> <p class=\"western\"><strong>franchiseeNo</strong></p> </td> <td width=\"253\"> <p class=\"western\">Internal Unique Reference Number of the location</p> </td> <td width=\"223\"> <p class=\"western\">EQUAL, IN</p> </td> <td width=\"66\"> <p class=\"western\">String</p> </td> </tr> <tr valign=\"top\"> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"134\"> <p class=\"western\"><strong>memoType</strong></p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"253\"> <p class=\"western\">Type of memo. Can either be Credit or Debit</p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"223\"> <p class=\"western\">EQUAL, IN</p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"66\"> <p class=\"western\">String</p> </td> </tr> <tr valign=\"top\"> <td width=\"134\" height=\"85\"> <p class=\"western\"><strong>memoDate</strong></p> </td> <td width=\"253\"> <p class=\"western\">Memo Date in YYYY-MM-DD format</p> </td> <td width=\"223\"> <p class=\"western\">EQUAL, GREATER_THAN,</p> <p class=\"western\">LESS_THAN, GREATER_THAN_OR_EQUAL,</p> <p class=\"western\">LESS_THAN_OR_EQUAL, BETWEEN</p> </td> <td width=\"66\"> <p class=\"western\">Date</p> </td> </tr> <tr valign=\"top\"> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"134\"> <p class=\"western\"><strong>openBalance</strong></p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"253\"> <p class=\"western\">Open Balance Amount of memo as seen in UI</p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"223\"> <p class=\"western\">EQUAL, GREATER_THAN</p> <p class=\"western\">LESS_THAN, GREATER_THAN_OR_EQUAL,</p> <p class=\"western\">LESS_THAN_OR_EQUAL, BETWEEN</p> </td> <td style=\"background: #d9e2f3;\" bgcolor=\"#d9e2f3\" width=\"66\"> <p class=\"western\">Double</p> </td> </tr> </tbody> </table> </center><p class=\"western\">&nbsp;</p><img src=\"images/Retrieve_Memos.PNG\">",
         "operationId": "Retrieve_Memos",
         "consumes": [
           "application/json"
@@ -3709,6 +3709,78 @@
         "responses": {
           "200": {
             "$ref": "#/components/responses/RetrieveMemosResp"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/manage-finance/memos": {
+      "post": {
+        "tags": [
+          "Memos"
+        ],
+        "summary": "Create Memo",
+        "description": "<p class=\"western\">You can create a new memo by making a post request to the specified endpoint.</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>POST</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">https://skyapi.franconnect.net/manage-finance/memos</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">https://skyapi.franconnectuat.net/manage-finance/memos</td> </tr></table>The following items must be included in the body of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p> </li></ol><p class=\"western\">A memo can be of two types, either Credit or Debit. Use the memoType field to specify what kind of memo you want to create. All the fields in the request body are mandatory including the memoDate as well.</p><img src=\"images/Create_Memo.PNG\">",
+        "operationId": "Create_Memo",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "franchiseeNo": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "type": "double"
+                  },
+                  "memoType": {
+                    "type": "string",
+                    "enum": [
+                      "Credit",
+                      "Debit"
+                    ]
+                  },
+                  "memoDate": {
+                    "type": "date"
+                  }
+                },
+                "example": [
+                  {
+                    "data": [
+                      {
+                        "franchiseeNo": "1241371345",
+                        "amount": "5000",
+                        "memoType": "Credit",
+                        "memoDate": "2017-09-30"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/CreateMemoResp"
           },
           "201": {
             "description": "Created"
@@ -8857,6 +8929,23 @@
           }
         },
         "description": "Successful"
+      },
+      "CreateMemoResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "response": {
+                "data": [
+                  {
+                    "memoID": "42235612",
+                    "memoNo": "9"
+                  }
+                ],
+                "page": null
+              }
+            }
+          }
+        }
       },
       "RetrieveProfitLossStatementResp": {
         "content": {

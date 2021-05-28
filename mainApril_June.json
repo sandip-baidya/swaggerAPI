@@ -2547,14 +2547,14 @@
                     "type": "string"
                   },
                   "franchiseeRoyaltyID": {
-                    "type": "string"
+                    "type": "array"
                   },
                   "debitMemos": {
                     "type": "array"
                   },
                   "collectionMethod": {
                     "required": true,
-                    "anyOf": [
+                    "oneOf": [
                       {
                         "properties": {
                           "mode": {

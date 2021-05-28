@@ -2538,24 +2538,19 @@
                 "type": "object",
                 "properties": {
                   "franchiseeNo": {
-                    "type": "string",
-                    "required": true
+                    "type": "string"
                   },
                   "dateReceived": {
-                    "type": "date",
-                    "required": true
+                    "type": "date"
                   },
                   "royaltyType": {
-                    "type": "string",
-                    "required": true
+                    "type": "string"
                   },
                   "franchiseeRoyaltyID": {
-                    "type": "string",
-                    "required": true
+                    "type": "string"
                   },
                   "debitMemos": {
-                    "type": "array",
-                    "required": false
+                    "type": "array"
                   },
                   "collectionMethod": {
                     "required": true,
@@ -2615,6 +2610,9 @@
                     ]
                   }
                 },
+                "required": [
+                  "franchisee_no", "dateReceived", "royaltyType", "franchiseeRoyaltyID", "collectionMethod"
+                ],
                 "example": [
                   {
                     "data": [

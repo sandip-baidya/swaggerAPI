@@ -8945,7 +8945,8 @@
               }
             }
           }
-        }
+        },
+        "description": "Successful"
       },
       "RetrieveProfitLossStatementResp": {
         "content": {

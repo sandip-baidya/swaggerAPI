@@ -3757,9 +3757,6 @@
             "200": {
               "$ref": "#/components/responses/RetrieveMemosResp"
             },
-            "201": {
-              "description": "Created"
-            },
             "401": {
               "description": "Unauthorized"
             },

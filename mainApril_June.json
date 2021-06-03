@@ -143,6 +143,10 @@
       "description": "These API endpoints support operations associated with Segments."
     },
     {
+      "name": "Segment Categories",
+      "description": "These API endpoints support operations associated with Segment Categories."
+    },
+    {
       "name": "People",
       "description": "These API endpoints support operations associated with People."
     },
@@ -202,6 +206,7 @@
         "Memos",
         "Operations",
         "Segments",
+        "Segment Categories",
         "People",
         "Event and Webhook"
       ]
@@ -4799,7 +4804,7 @@
     "/manage-segment/v1/segments/categories/hierarchies": {
       "post": {
         "tags": [
-          "Segments"
+          "Segment Categories"
         ],
         "summary": "Retrieve Parent Segment Categories",
         "description": "<p class=\"western\">Make a POST request to the specified endpoint to retrieve existing segment categories present in your FranConnect system. This endpoint allows you to retrieve parent or orphan categories along with their immediate child categories, if they exist. </p> <p>[ <strong>Note for Team:</strong> The filter criteria option is still in progress. So, it is yet to be added]</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>POST</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]]</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p>Task: <strong>Insert Image</strong></p></ol>",
@@ -4882,7 +4887,7 @@
     "/manage-segment/v1/segments/categories/{parentCategoryId}/child-categories": {
       "get": {
         "tags": [
-          "Segments"
+          "Segment Categories"
         ],
         "summary": "Retrieve Child Segment Categories",
         "description": "<p class=\"western\">Make a GET request to the specified endpoint to retrieve all the child categories for a specific parent category. You must pass a valid <i>parentCategoryId</i> as a path parameter to make a successful request. Refer to <u><a href=\"#operation/Retrieve_Parent_Segment_Categories\">this</a></u> request to retrieve valid parent categories.</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>GET</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]]</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p>Task: <strong>Insert Image</strong></p></ol>",
@@ -4903,6 +4908,58 @@
         "responses": {
           "200": {
             "$ref": "#/components/responses/RetrieveChildSegmentCategoriesResp"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/manage-segment/v1/segments/categories/": {
+      "post": {
+        "tags": [
+          "Segment Categories"
+        ],
+        "summary": "Create Segment Category",
+        "description": "<p class=\"western\">Make a POST request to the specified endpoint to create a new segment category. Following are the three types of categories that can exist in a FranConnect system:</p><ol> <li><strong>Orphan Category:</strong> A category with no child categories. You only need to send categoryName in the payload to create an orphan category.</li> <li><strong>Parent Category:</strong> A category with child categories. You only need to send categoryName in the payload to create a parent category. Afterwards, you can create child categories and associate them with a particular parent category.</li> <li><strong>child Category:</strong> A category that is associated with an existing parent category. You must send both categoryName and parentCategoryId in the payload to create a child category. To get a valid parentCategoryId, refer to <u><a href=\"#operation/Retrieve_Parent_Segment_Categories\">this</a></u> request.</li></ol><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>POST</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]]</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p>Task: <strong>Insert Image</strong></p></ol>",
+        "operationId": "Create_Segment_Category",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "categoryName": {
+                    "type": "string"
+                  },
+                  "parentCategoryId": {
+                    "type": "string"
+                  }
+                },
+                "required": ["categoryName"],
+                "example": {
+                  "categoryName": "XZone",
+                  "parentCategoryId": "530294965578760196"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/CreateSegmentCategoryResp"
           },
           "401": {
             "description": "Unauthorized"
@@ -8914,6 +8971,31 @@
               ],
               "page": null
             }
+          }
+        },
+        "description": "Successful"
+      },
+      "CreateSegmentCategoryResp": {
+        "content": {
+          "application/json": {
+            "example": {
+              "errors": null,
+              "data": [
+                  {
+                      "categoryId": "530311473977622531",
+                      "categoryName": "XZone",
+                      "parentCategoryId": "530294965578760196",
+                      "parentCategoryName": null,
+                      "createdBy": "1",
+                      "createdOn": "2021-06-03 09:08:28",
+                      "modifiedBy": null,
+                      "modifiedOn": null,
+                      "actions": null,
+                      "segmentCreated": false
+                  }
+              ],
+              "page": null
+          }
           }
         },
         "description": "Successful"

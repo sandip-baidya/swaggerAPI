@@ -2229,6 +2229,9 @@
                   },
                   "reportType": {
                     "type": "string"
+                  },
+                  "lastModifiedDate": {
+                    "type": "date"
                   }
                 },
                 "example": {
@@ -2447,6 +2450,9 @@
                   },
                   "paymentStatus": {
                     "type": "string"
+                  },
+                  "lastModifiedDate": {
+                    "type": "date"
                   }
                 },
                 "example": {
@@ -3571,6 +3577,9 @@
                   },
                   "submissionDate": {
                     "type": "date"
+                  },
+                  "lastModifiedDate": {
+                    "type": "date"
                   }
                 },
                 "example": {
@@ -3767,6 +3776,9 @@
                   },
                   "openBalance": {
                     "type": "double"
+                  },
+                  "lastModifiedDate": {
+                    "type": "date"
                   }
                 },
                 "example": {

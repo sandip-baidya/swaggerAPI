@@ -231,7 +231,7 @@
               ],
               "responses": {
                 "200": {
-                  "description": "Successful"
+                  "$ref": "#/components/responses/AmitResp"
                 },
                 "401": {
                     "description": "Unauthorized"
@@ -7036,17 +7036,31 @@
         "description": "Successful"
       },
       "AmitResp": {
-          "content": {
-              "application/json": {
-                  "example": {
-                    "response": {
-                        "name": "Amit",
-                        "likes": [
-                            "badminton", "Ice-cream"
-                        ]
+        "content": {
+            "application/json": {
+              "example": {
+                "response": {
+                  "data": [
+                    {
+                      "ForAmit": [
+                        {
+                          "1": {
+                            "name": "Amit",
+                            "calculationType": "(+)",
+                            "data": [
+                              {
+                                "amount": 5000
+                              }
+                            ]
+                          }
+                        }
+                      ]
                     }
-                  }
+                  ],
+                  "page": null
+                }
               }
+            }
           },
           "description": "Test Successful"
       },

@@ -218,6 +218,28 @@
     }
   ],
   "paths": {
+      "/for-amit/sample_path": {
+          "get": {
+              "tags": [
+                  "Test Section"
+              ],
+              "summary": "Retrieves likes of Amit",
+              "description": "A test description.",
+              "operationId": "Retrieves_Likes_Of_Amit",
+              "produces": [
+                  "application/json"
+              ],
+              "responses": {
+                "200": {
+                  "$ref": "#/components/responses/AmitResp"
+                },
+                "5043043843048": {
+                  "description": "Test Error Code"
+                }
+              }
+
+          }
+      },
     "/common/franchisee": {
       "get": {
         "tags": [
@@ -7006,6 +7028,29 @@
           }
         },
         "description": "Successful"
+      },
+      "AmitResp": {
+          "content": {
+              "application/json": {
+                  "example": {
+                    "response": {
+                        "name": "Amit",
+                        "likes": [
+                            "badminton", "Ice-cream"
+                        ],
+                        "sample_object": {
+                            "one": {
+                                "number": 1
+                            },
+                            "two": {
+                                "number": 2
+                            }
+                        }
+                    }
+                  }
+              }
+          },
+          "description": "Test Successful"
       },
       "SalesReportPeriodResp": {
         "content": {

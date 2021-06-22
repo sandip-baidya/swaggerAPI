@@ -233,7 +233,7 @@
                 "200": {
                   "$ref": "#/components/responses/AmitResp"
                 },
-                "5043043843048": {
+                "404": {
                   "description": "Test Error Code"
                 }
               }

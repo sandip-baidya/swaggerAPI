@@ -246,6 +246,34 @@
 
           }
       },
+      "/for_amit/sample_path/{id}": {
+        "get": {
+            "tags": [
+                "Test Section"
+            ],
+            "summary": "Retrieves likes of Amit #2",
+            "description": "A test description #2.",
+            "operationId": "Retrieves_Likes_Of_Amit",
+            "produces": [
+                "application/json"
+            ],
+            "responses": {
+              "200": {
+                "$ref": "#/components/responses/AmitResp"
+              },
+              "401": {
+                  "description": "Unauthorized"
+                },
+                "403": {
+                  "description": "Forbidden"
+                },
+                "404": {
+                  "description": "Not Found"
+                }
+            }
+
+        }
+    },
     "/common/franchisee": {
       "get": {
         "tags": [

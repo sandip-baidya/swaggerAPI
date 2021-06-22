@@ -231,7 +231,7 @@
               ],
               "responses": {
                 "200": {
-                  "$ref": "#/components/responses/AmitResp"
+                  "description": "Successful"
                 },
                 "401": {
                     "description": "Unauthorized"

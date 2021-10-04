@@ -4167,6 +4167,43 @@
           }
         }
       },
+      "/manage-segment/v2/segments/{segmentId}": {
+        "get": {
+          "tags": [
+            "Segments"
+          ],
+          "summary": "Retrieve Segment By Id",
+          "description": "<p class=\"western\">You can retrieve a specific segment enlisted in your franchise system, by its segmentId. You can find the <i>segmentId</i> of a segment inside the response body when you retrieve segment(s) through custom filters using this <u><a href=\"#operation/Retrieve_Segments\">request</a></u>.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Segment_By_Id.PNG\"></ol>",
+          "operationId": "Retrieve_Segment_By_Id",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "segmentId",
+              "schema": {
+                "type": "integer"
+              },
+              "required": true
+            }
+          ],
+          "responses": {
+            "200": {
+              "$ref": "#/components/responses/RetrieveSegmentByIdResp"
+            },
+            "401": {
+              "description": "Unauthorized"
+            },
+            "403": {
+              "description": "Forbidden"
+            },
+            "404": {
+              "description": "Not Found"
+            }
+          }
+        }
+      },
       "/Events and Webhooks/Customer_Webhook URL": {
         "post": {
           "tags": [
@@ -7483,7 +7520,7 @@
                     "page": {
                         "pageId": 0,
                         "pageSize": 20,
-                        "totalRecords": 4,
+                        "totalRecords": 2,
                         "sort": {
                             "direction": "DESC",
                             "columns": [
@@ -7552,6 +7589,49 @@
                         }
                     ]
                 }
+                }
+              }
+            },
+            "description": "Successful"
+        },      
+        "RetrieveSegmentByIdResp": {
+            "content": {
+              "application/json": {
+                "example": {
+                    "tenantContext": {
+                        "tenantId": "qamsa6.franconnectqa.net",
+                        "userId": "adm"
+                    },
+                    "data": [
+                        {
+                            "segmentId": "463912633",
+                            "name": "PPF, LLC",
+                            "associationType": "units",
+                            "category": {
+                                "categoryId": "574932050520309762",
+                                "categoryName": "STORE-C"
+                            },
+                            "customSegmentId": "SB001",
+                            "createdOn": "2021-10-04T12:40:41Z",
+                            "status": "active",
+                            "createdBy": "FranConnect Administrator",
+                            "segmentType": "static",
+                            "accessibility": "public",
+                            "owners": [
+                                {
+                                    "id": "241910148",
+                                    "name": "Sarthak Bansal"
+                                }
+                            ],
+                            "links": [
+                                {
+                                    "rel": "self",
+                                    "action": "get",
+                                    "href": "https://api.franconnectqa.net/manage-segment/v2/segments/463912633"
+                                }
+                            ]
+                        }
+                    ]
                 }
               }
             },

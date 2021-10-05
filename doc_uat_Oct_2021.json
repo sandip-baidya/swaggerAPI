@@ -4173,7 +4173,7 @@
             "Segments"
           ],
           "summary": "Retrieve Segment By Id",
-          "description": "<p class=\"western\">You can retrieve a specific segment enlisted in your franchise system, by its segmentId. You can find the <i>segmentId</i> of a segment inside the response body when you retrieve segment(s) through custom filters using this <u><a href=\"#operation/Retrieve_Segments\">request</a></u>.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Segment_By_Id.PNG\"></ol>",
+          "description": "<p class=\"western\">You can retrieve a specific segment enlisted in your franchise system, by its segmentId. You can find the <b>segmentId</b> of a segment inside the response body when you retrieve segment(s) through custom filters using this <u><a href=\"#operation/Retrieve_Segments\">request</a></u>.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Segment_By_Id.PNG\"></ol>",
           "operationId": "Retrieve_Segment_By_Id",
           "produces": [
             "application/json"
@@ -4191,6 +4191,43 @@
           "responses": {
             "200": {
               "$ref": "#/components/responses/RetrieveSegmentByIdResp"
+            },
+            "401": {
+              "description": "Unauthorized"
+            },
+            "403": {
+              "description": "Forbidden"
+            },
+            "404": {
+              "description": "Not Found"
+            }
+          }
+        }
+      },
+      "/manage-segment/v2/segments/{segmentId}/hierarchies": {
+        "get": {
+          "tags": [
+            "Segments"
+          ],
+          "summary": "Retrieve Child Segments",
+          "description": "<p class=\"western\">Make a GET request to the specified endpoint to retrieve all child segments associated with a parent segment. You must provide a valid <b>segmentId</b> to make a successful request. Please note that this endpoint retrieves the whole hierarchy that is associated with a parent segment.</p><table width=\"100%\" class=\"endpoint-table\"><tr><td width=\"25%\"><strong>Operation Name</strong></td><td width=\"1%\" >:</td><td>GET</td></tr><tr><td><strong>Production API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]]</td></tr><tr><td><strong>UAT API Endpoint</strong></td><td>:</td><td valign=\"top\">[url needs reviewing]</td></tr></table>The following items must be included in the header of the request:<ol><li><p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p></li><li><p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p></li><li><p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Children_Segments.PNG\"></ol>",
+          "operationId": "Retrieve_Child_Segments",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "in": "body",
+              "name": "segmentId",
+              "schema": {
+                "type": "integer"
+              },
+              "required": true
+            }
+          ],
+          "responses": {
+            "200": {
+              "$ref": "#/components/responses/RetrieveChildSegmentsResp"
             },
             "401": {
               "description": "Unauthorized"
@@ -7636,7 +7673,257 @@
               }
             },
             "description": "Successful"
-          }
+        },
+        "RetrieveChildSegmentsResp": {
+          "content": {
+            "application/json": {
+              "example": {
+                "tenantContext": {
+                    "tenantId": "qamsa6.franconnectqa.net",
+                    "userId": "adm"
+                },
+                "data": [
+                    {
+                        "segmentId": "311175725",
+                        "childSegments": [
+                            {
+                                "segmentId": "269248798",
+                                "name": "TEST-NI3-24-SEPT CHILD  11TH STREET",
+                                "associationType": "segments",
+                                "category": {
+                                    "categoryId": "570522678952198148",
+                                    "categoryName": "Child Company category 1"
+                                },
+                                "customSegmentId": "876786688",
+                                "characterCode": "UTF-8",
+                                "createdOn": "2021-09-24T04:23:37Z",
+                                "status": "active",
+                                "createdBy": "FranConnect Administrator",
+                                "segmentType": "static",
+                                "accessibility": "public",
+                                "owners": [
+                                    {
+                                        "id": "317935743",
+                                        "name": "12corp1 12corp1"
+                                    }
+                                ],
+                                "links": []
+                            },
+                            {
+                                "segmentId": "974628277",
+                                "name": "11th Street Pretzel Factory, Inc2",
+                                "associationType": "segments",
+                                "category": {
+                                    "categoryId": "567680123688452099",
+                                    "categoryName": "International"
+                                },
+                                "customSegmentId": "23seg",
+                                "createdOn": "2021-09-23T11:28:10Z",
+                                "status": "active",
+                                "createdBy": "FranConnect Administrator",
+                                "segmentType": "static",
+                                "accessibility": "public",
+                                "owners": [
+                                    {
+                                        "id": "39698192",
+                                        "name": "\"First Name 2\" Last Name1"
+                                    }
+                                ],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "segmentId": "1900195585",
+                        "childSegments": [
+                            {
+                                "segmentId": "3760996",
+                                "name": "Family Pretzels, LLC",
+                                "associationType": "units",
+                                "category": {
+                                    "categoryId": "567680764276113411",
+                                    "categoryName": "Store"
+                                },
+                                "customSegmentId": "25342",
+                                "createdOn": "2021-09-23T11:02:40Z",
+                                "status": "active",
+                                "createdBy": "Sarthak Bansal",
+                                "segmentType": "static",
+                                "accessibility": "public",
+                                "owners": [
+                                    {
+                                        "id": "2012739873",
+                                        "name": "Sarthak Regional"
+                                    }
+                                ],
+                                "links": []
+                            },
+                            {
+                                "segmentId": "176582280",
+                                "name": "CompSegCompany",
+                                "associationType": "units",
+                                "category": {
+                                    "categoryId": "567680764276113411",
+                                    "categoryName": "Store"
+                                },
+                                "customSegmentId": "123232",
+                                "createdOn": "2021-09-17T08:41:15Z",
+                                "status": "active",
+                                "createdBy": "FranConnect Administrator",
+                                "segmentType": "static",
+                                "accessibility": "public",
+                                "owners": [
+                                    {
+                                        "id": "1658706748",
+                                        "name": "sarthak region test one"
+                                    }
+                                ],
+                                "links": []
+                            },
+                            {
+                                "segmentId": "176880484",
+                                "name": "unit store 2",
+                                "associationType": "units",
+                                "category": {
+                                    "categoryId": "567680764276113411",
+                                    "categoryName": "Store"
+                                },
+                                "customSegmentId": "0102",
+                                "createdOn": "2021-09-14T12:13:24Z",
+                                "status": "active",
+                                "createdBy": "FranConnect Administrator",
+                                "segmentType": "static",
+                                "accessibility": "public",
+                                "owners": [
+                                    {
+                                        "id": "705537899",
+                                        "name": "Alexa Bradtke"
+                                    },
+                                    {
+                                        "id": "809980778",
+                                        "name": "Alessandra Nader"
+                                    }
+                                ],
+                                "links": []
+                            },
+                            {
+                                "segmentId": "1822544228",
+                                "name": "unit store 1",
+                                "associationType": "units",
+                                "category": {
+                                    "categoryId": "567680764276113411",
+                                    "categoryName": "Store"
+                                },
+                                "customSegmentId": "0101",
+                                "createdOn": "2021-09-14T12:09:49Z",
+                                "status": "active",
+                                "createdBy": "FranConnect Administrator",
+                                "segmentType": "static",
+                                "accessibility": "public",
+                                "owners": [
+                                    {
+                                        "id": "241910148",
+                                        "name": "Sarthak Bansal"
+                                    }
+                                ],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "segmentId": "269248798",
+                        "childSegments": [
+                            {
+                                "segmentId": "465307109",
+                                "name": "TEST-NI3-24-SEPT GRAND CHILD",
+                                "description": "TEST Description",
+                                "associationType": "units",
+                                "category": {
+                                    "categoryId": "571187103145132034",
+                                    "categoryName": "Grand Child Category"
+                                },
+                                "customSegmentId": "3535354354",
+                                "characterCode": "UTF-8",
+                                "createdOn": "2021-09-24T04:15:24Z",
+                                "status": "active",
+                                "createdBy": "FranConnect Administrator",
+                                "segmentType": "static",
+                                "accessibility": "public",
+                                "owners": [
+                                    {
+                                        "id": "196312889",
+                                        "name": "June Smith"
+                                    }
+                                ],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "segmentId": "1022196200",
+                        "childSegments": [
+                            {
+                                "segmentId": "1900195585",
+                                "name": "Scott Pretzels, LLC",
+                                "associationType": "segments",
+                                "category": {
+                                    "categoryId": "567680617202843651",
+                                    "categoryName": "State"
+                                },
+                                "customSegmentId": "32562",
+                                "createdOn": "2021-09-23T11:07:16Z",
+                                "status": "active",
+                                "createdBy": "Sarthak Bansal",
+                                "segmentType": "static",
+                                "accessibility": "public",
+                                "owners": [
+                                    {
+                                        "id": "2012739873",
+                                        "name": "Sarthak Regional"
+                                    }
+                                ],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "segmentId": "974628277",
+                        "childSegments": [
+                            {
+                                "segmentId": "1022196200",
+                                "name": "JRJ Dough, Inc",
+                                "associationType": "segments",
+                                "category": {
+                                    "categoryId": "567680430438875138",
+                                    "categoryName": "National"
+                                },
+                                "customSegmentId": "424",
+                                "createdOn": "2021-09-23T11:09:54Z",
+                                "status": "active",
+                                "createdBy": "Sarthak Bansal",
+                                "segmentType": "static",
+                                "accessibility": "public",
+                                "owners": [
+                                    {
+                                        "id": "241910148",
+                                        "name": "Sarthak Bansal"
+                                    }
+                                ],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    }
+                ]
+            }
+            }
+          },
+          "description": "Successful"
+        }
       }
     }
   }

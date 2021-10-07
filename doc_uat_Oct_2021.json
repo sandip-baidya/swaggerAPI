@@ -4241,7 +4241,7 @@
         ],
         "responses": {
           "200": {
-            "$ref": "#/components/responses/RetrieveSegmentByIdResp"
+            "$ref": "#/components/responses/RetrieveSegmentBySegmentIdResp"
           },
           "401": {
             "description": "Unauthorized"

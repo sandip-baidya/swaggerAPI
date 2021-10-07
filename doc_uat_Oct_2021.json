@@ -8224,7 +8224,7 @@
       "CreateSegmentResp": {
         "content": {
           "application/json": {
-            "example": {
+            "examples": {
               "units": {
                 "summary": "Response sample of segment creation using UNITS",
                 "value": {

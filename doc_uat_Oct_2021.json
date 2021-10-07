@@ -4321,7 +4321,6 @@
                 "accessibility": "Public",
                 "characterCode": "UTF-8",
                 "description": "The description of this segment is updated"
-              
               }
             }
           }
@@ -4547,276 +4546,6 @@
         }
       }
     },
-    "manage-segment/v2/segments/{segmentId}/owners": {
-      "patch": {
-        "tags": [
-          "Edit Segments"
-        ],
-        "summary": "Add Units To Segment",
-        "description": "<p class=\"western\">Make a PATCH request to the specified endpoint to add a list of owners to a segment. Refer to the request body down below and the payload example on the right panel to understand what data you require to successfully make this request.</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>PUT</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]]</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Update_Segment.PNG\"></ol>",
-        "operationId": "Add_Units_In_Segment",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "segmentId",
-            "schema": {
-              "type": "integer"
-            },
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "units": {
-                    "type": "array"
-                  }
-                }
-              },
-              "example": {
-                "owners": [
-                    "1448558113",
-                    "450307910"
-                ]
-            }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "example": {
-                  "tenantContext": {
-                      "tenantId": "qamsa6.franconnectqa.net",
-                      "userId": "adm"
-                  },
-                  "data": [
-                      {
-                          "segmentId": "618220048",
-                          "message": "Provided owner list is successfully added in segment.",
-                          "owners": [
-                              "1448558113",
-                              "450307910"
-                          ],
-                          "links": [
-                              {
-                                  "rel": "self",
-                                  "action": "get",
-                                  "href": "https://api.franconnectqa.net/manage-segment/v2/segments/618220048"
-                              }
-                          ]
-                      }
-                  ]
-              }
-              }
-            },
-            "description": "Successful"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Edit Segments"
-        ],
-        "summary": "Delete Units from Segment",
-        "description": "<p class=\"western\">Make a DELETE request to the specified endpoint to delete a list of owners from a segment. Refer to the request body down below and the payload example on the right panel to understand what data you require to successfully make this request.</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>PUT</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]]</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Update_Segment.PNG\"></ol>",
-        "operationId": "Delete_Units_In_Segment",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "segmentId",
-            "schema": {
-              "type": "integer"
-            },
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "units": {
-                    "type": "array"
-                  }
-                }
-              },
-              "example":{
-                "owners": [
-                    "450307910"
-                ]
-            }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "example": {
-                  "tenantContext": {
-                      "tenantId": "qamsa6.franconnectqa.net",
-                      "userId": "adm"
-                  },
-                  "data": [
-                      {
-                          "segmentId": "618220048",
-                          "message": "Provided owner list is successfully deleted from segment.",
-                          "owners": [
-                              "450307910"
-                          ],
-                          "links": [
-                              {
-                                  "rel": "self",
-                                  "action": "get",
-                                  "href": "https://api.franconnectqa.net/manage-segment/v2/segments/618220048"
-                              }
-                          ]
-                      }
-                  ]
-              }
-              }
-            },
-            "description": "Successful"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Edit Segments"
-        ],
-        "summary": "Replace Units in Segment",
-        "description": "<p class=\"western\">Make a PUT request to the specified endpoint to replace existing owners from a segment with a new list of owners. Refer to the request body down below and the payload example on the right panel to understand what data you require to successfully make this request.</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>PUT</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]]</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Update_Segment.PNG\"></ol>",
-        "operationId": "Delete_Units_In_Segment",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "segmentId",
-            "schema": {
-              "type": "integer"
-            },
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "units": {
-                    "type": "array"
-                  }
-                }
-              },
-              "example": {
-                "owners": [
-                    "450307550"
-                ]
-            }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "example": {
-                  "tenantContext": {
-                      "tenantId": "qamsa6.franconnectqa.net",
-                      "userId": "adm"
-                  },
-                  "data": [
-                      {
-                          "segmentId": "618220048",
-                          "message": "Provided owner list is successfully updated in segment.",
-                          "owners": [
-                              "450307910"
-                          ],
-                          "links": [
-                              {
-                                  "rel": "self",
-                                  "action": "get",
-                                  "href": "https://api.franconnectqa.net/manage-segment/v2/segments/618220048"
-                              }
-                          ]
-                      }
-                  ]
-              }
-              }
-            },
-              "data": [
-                  {
-                      "segmentId": "618220048",
-                      "message": "Provided owner list is successfully updated in segment.",
-                      "owners": [
-                          "450307910"
-                      ],
-                      "links": [
-                          {
-                              "rel": "self",
-                              "action": "get",
-                              "href": "https://api.franconnectqa.net/manage-segment/v2/segments/618220048"
-                          }
-                      ]
-                  }
-              ]
-          },
-            "description": "Successful"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      }
-    },
     "manage-segment/v2/segments/{segmentId}/units": {
       "patch": {
         "tags": [
@@ -4951,26 +4680,26 @@
               "application/json": {
                 "example": {
                   "tenantContext": {
-                      "tenantId": "qamsa6.franconnectqa.net",
-                      "userId": "adm"
+                    "tenantId": "qamsa6.franconnectqa.net",
+                    "userId": "adm"
                   },
                   "data": [
-                      {
-                          "segmentId": "618220048",
-                          "message": "Provided unit list is successfully deleted from segment.",
-                          "units": [
-                              "15050101"
-                          ],
-                          "links": [
-                              {
-                                  "rel": "self",
-                                  "action": "get",
-                                  "href": "Temp Link"
-                              }
-                          ]
-                      }
+                    {
+                      "segmentId": "618220048",
+                      "message": "Provided unit list is successfully deleted from segment.",
+                      "units": [
+                        "15050101"
+                      ],
+                      "links": [
+                        {
+                          "rel": "self",
+                          "action": "get",
+                          "href": "Temp Link"
+                        }
+                      ]
+                    }
                   ]
-              }
+                }
               }
             },
             "description": "Successful"
@@ -5034,26 +4763,26 @@
               "application/json": {
                 "example": {
                   "tenantContext": {
-                      "tenantId": "qamsa6.franconnectqa.net",
-                      "userId": "adm"
+                    "tenantId": "qamsa6.franconnectqa.net",
+                    "userId": "adm"
                   },
                   "data": [
-                      {
-                          "segmentId": "618220048",
-                          "message": "Provided unit list is successfully updated in segment.",
-                          "units": [
-                              "2"
-                          ],
-                          "links": [
-                              {
-                                  "rel": "self",
-                                  "action": "get",
-                                  "href": "Temp Link"
-                              }
-                          ]
-                      }
+                    {
+                      "segmentId": "618220048",
+                      "message": "Provided unit list is successfully updated in segment.",
+                      "units": [
+                        "2"
+                      ],
+                      "links": [
+                        {
+                          "rel": "self",
+                          "action": "get",
+                          "href": "Temp Link"
+                        }
+                      ]
+                    }
                   ]
-              }
+                }
               }
             },
             "description": "Successful"
@@ -5069,107 +4798,369 @@
           }
         }
       },
-    "/Events and Webhooks/Customer_Webhook URL": {
-      "post": {
+      "/Events and Webhooks/Customer_Webhook URL": {
+        "post": {
+          "tags": [
+            "Sales Webhook"
+          ],
+          "summary": "LEAD",
+          "description": "<p>To enable the Webhook feature, you can send an email to helpdesk@franconnect.com and share the webhook URL where the updates can be pushed in the JSON format. Once the feature is enabled, the Webhook URL must be configured for receiving Webhook notifications. Please read the following steps to configure your Webhook URL:<ol><li>Enter Workflow Name and select Workflow Type in the Sales > Workflows.</li><li>Select when to Trigger the Workflow accordingly.</li><li>Choose Workflow condition “Which Leads do you want to execute this workflow on?” – All Leads or Leads matching required condition(s). If selecting “All Leads”, then as the name suggests, the Workflow condition would apply to all the Leads. But, if selecting “Leads matching required condition(s)”, then select Fields to filter Leads from the drop-down list.</li><li>Choose Action from the drop-down list, and select “Configure Webhook URL”.<p><img src=\"images/Create_Workflow.png\"></li><li>A pop-up “Configure Webhook URL” would display. Enter the valid Webhook URL, and click “Associate & Save”.</li><p><img src=\"images/Configure_Webhook_URL.png\"></ol></p><br><p><b>Receiving Webhook Notifications</b></p><p>FranConnect Sky System would send Webhook notifications via HTTP POST requests in the JSON Format to the URL endpoints that you defined to Retrieve Primary Info of a Lead in the Sales Module along with the Tenant ID. Tenant ID would be the name of the Tenant. An example of the dataset format is given on the right panel.</p>",
+          "operationId": "LEAD",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "example": {
+                    "fcResponse": {
+                      "responseData": {
+                        "fsLead": {
+                          "locationId1b": "",
+                          "country": "USA",
+                          "leadKilledReasonComment": "",
+                          "dateOfOpen": "",
+                          "investTimeframe": "",
+                          "stateID": "Pennsylvania",
+                          "companyName": "",
+                          "bestTimeToContact": "",
+                          "marketingCodeId": "",
+                          "_bestContactTime344129770": "",
+                          "preferredCity2": "",
+                          "preferredCity1": "",
+                          "primaryPhoneToCall": "",
+                          "statusChangeDate": "",
+                          "division": "",
+                          "unsubscribe": "Opted-In",
+                          "sourceOfFunding": "",
+                          "fax": "",
+                          "zip": "17254",
+                          "forecastClosureDate": "",
+                          "leadOwnerID": "Gragg Salzano",
+                          "leadOwnerReferenceId": "4344056308",
+                          "lastAttended": "2019-12-03T09:56Z",
+                          "bounceEmailStatus": "No",
+                          "leadStatusID": "Contacted",
+                          "probability": "0",
+                          "coApplicantRelationshipID": "",
+                          "homePhone": "",
+                          "webSiteLead": "No",
+                          "ipAddress": "",
+                          "liquidCapitalMax": "More Than $100,000",
+                          "liquidCapitalMin": "",
+                          "firstName": "Cristian",
+                          "phone": "(717) 917-1111",
+                          "forecastRating": "",
+                          "countyID": "",
+                          "background": "",
+                          "lastUpdate": "2021-07-16T12:52Z",
+                          "nextCallDate": "",
+                          "salutation": "Mr.",
+                          "smartSchedulerAppointmentDate": "",
+                          "leadSource2ID": "Internet",
+                          "preferredStateId2": "",
+                          "preferredStateId1": "",
+                          "preferredCountry1": "",
+                          "lastName": "Hernandez",
+                          "preferredCountry2": "",
+                          "city": "SCOTLAND",
+                          "spamEmailStatus": "No",
+                          "referenceId": "319496793",
+                          "browserType": "",
+                          "noOfFieldSold": "",
+                          "franchiseAwarded": "",
+                          "otherLeadSourceDetail": "You Have a New Lead from VeteransOpportunities.com",
+                          "requestDate": "2019-12-03T08:56Z",
+                          "tenantID": "developers",
+                          "bounceReason": "",
+                          "phoneExt": "",
+                          "address": "#43, Palmum Street",
+                          "comments": "",
+                          "address2": "",
+                          "_nickname743760937": "",
+                          "mobile": "",
+                          "unsubscribeReason": "",
+                          "locationId2": "",
+                          "emailID": "sample@domain.com",
+                          "locationId1": "",
+                          "_iAgreeToReceiveTheFranchiseBrochureAndF886597519": "Yes",
+                          "leadKilledReason": "",
+                          "leadRatingID": "",
+                          "homePhoneExt": "",
+                          "noOfUnitReq": "",
+                          "forecastRevenue": "",
+                          "unsubscribeReasonDetail": "",
+                          "divisionReferenceId": "",
+                          "serviceID": "Product/Service Update,Newsletters,Announcements,Webinars and Events,Offers,Others,Email Communications",
+                          "leadSource3ID": "Others"
+                        }
+                      },
+                      "responseStatus": "Success",
+                      "responseId": "717320366"
+                    }
+                  }
+                }
+              },
+              "description": "Successful"
+            },
+            "401": {
+              "description": "Unauthorized"
+            },
+            "403": {
+              "description": "Forbidden"
+            },
+            "404": {
+              "description": "Not Found"
+            }
+          }
+        }
+      },
+      "/Customer Webhook URL": {
+        "post": {
+          "tags": [
+            "INFO MANAGER WEBHOOK"
+          ],
+          "summary": "FRANCHISE",
+          "description": "<p>To enable this feature, you can send an email to helpdesk@franconnect.com and share the webhook URL(an endpoint that can receive the array of JSON) where the updates can be pushed in the JSON format. Once the feature is enabled, if new data is added, updated, or deleted in any of the tabs (System and Custom), the event is captured. In just 5 minutes the information is pushed to the endpoint provided by you.</p><br><p>Furthermore, if multiple modifications are made within the given 5 minutes period across the franchise(s), you will receive the array of JSON. For example, a Guarantor is added, and an Employee is deleted in an ABC Franchise. An update is also performed on the Center Info details of the XYZ franchise in the same 5 minutes session. Then, all these events will get captured. The dataset format that you will receive for this example is given on the right-hand side<p>",
+          "operationId": "FRANCHISE",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "example": [
+                    {
+                      "tabName": "Guarantors",
+                      "subModule": "fimGuarantor",
+                      "changeEvent": "add",
+                      "referenceId": "1201817558",
+                      "eventDateTime": "2021-07-09T02:52:28.398456Z",
+                      "franchiseeName": "ABC",
+                      "parentReferenceId": "1831705924"
+                    },
+                    {
+                      "tabName": "Employees",
+                      "subModule": "fimEmployeesMapping",
+                      "changeEvent": "delete",
+                      "referenceId": "1194156640",
+                      "eventDateTime": "2021-07-09T02:51:44.151463Z",
+                      "franchiseeName": "ABC",
+                      "parentReferenceId": "1831705924"
+                    },
+                    {
+                      "tabName": "Center Info",
+                      "subModule": "franchisees",
+                      "changeEvent": "update",
+                      "referenceId": "1631650236",
+                      "eventDateTime": "2021-07-09T02:52:10.067197Z",
+                      "franchiseeName": "XYZ",
+                      "parentReferenceId": "1973910563"
+                    }
+                  ]
+                }
+              },
+              "description": "Successful"
+            },
+            "401": {
+              "description": "Unauthorized"
+            },
+            "403": {
+              "description": "Forbidden"
+            },
+            "404": {
+              "description": "Not Found"
+            }
+          }
+        }
+      },
+      "/Customer Webhook_URL": {
+        "post": {
+          "tags": [
+            "CRM Webhook"
+          ],
+          "summary": "LEAD/CONTACT",
+          "description": "<p>To enable the Webhook feature, you can send an email to helpdesk@franconnect.com and share the webhook URL where the updates can be pushed in the JSON format. Once the feature is enabled, the Webhook URL must be configured for receiving Webhook notifications. Please read the following steps to configure your Webhook URL:<ol><li>Enter Workflow Name and select Workflow Type along with Record Type in the CRM > Workflows. For this instance, we have selected Lead as the Record Type.</li><li>Select when to Trigger the Workflow accordingly.</li><li>Choose Workflow condition “Which Leads do you want to execute this workflow on?” – All Leads or Leads matching required condition(s). If selecting “All Leads”, then as the name suggests, the Workflow condition would apply to all the Leads. But, if selecting “Leads matching required condition(s)”, then select Fields to filter Leads from the drop-down list.</li><li>Choose Action from the drop-down list, and select “Configure Webhook URL”.<p><img src=\"images/Create_CRM_Workflow.png\"></li><li>A pop-up “Configure Webhook URL” would display. Enter the valid Webhook URL, and click “Associate & Save”.</li><p><img src=\"images/Configure_CRM_Webhook_URL.png\"></ol></p><br><p><b>Receiving Webhook Notifications</b></p><p>FranConnect Sky System would send Webhook notifications via HTTP POST requests in the JSON Format to the URL endpoints that you defined to Retrieve Primary Info of a Lead or Contact in the CRM Module along with the Tenant ID. Tenant ID would be the name of the Tenant. An example of the dataset format is given on the right panel.</p>",
+          "operationId": "LEAD/CONTACT",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "example": {
+                    "fcResponse": {
+                      "responseData": {
+                        "cmLead": {
+                          "ownerType": "Corporate",
+                          "country": "USA",
+                          "birthdate": "",
+                          "anniversarydate": "",
+                          "companyName": "",
+                          "bestTimeToContact": "",
+                          "suffix": "",
+                          "cmLeadTypeID": "",
+                          "areaID": "",
+                          "unsubscribe": "Opt-In Request not Sent",
+                          "cmLeadStatusID": "New",
+                          "state": "District of Columbia",
+                          "emailIds": "sample@domain.com",
+                          "leadOwnerID": "Martha Hustle",
+                          "leadOwnerReferenceId": "850485234",
+                          "leadAddedByReferenceId": "1",
+                          "areaReferenceId": "",
+                          "bounceEmailStatus": "No",
+                          "cmSource3ID": "",
+                          "referralContact": "",
+                          "leadLastName": "Fernandez",
+                          "cmSource1ID": "",
+                          "zipcode": "20001",
+                          "smsUnsubscribeDate": "",
+                          "franchiseeReferenceId": "",
+                          "lastContactedField": "",
+                          "divisionID": "",
+                          "position": "",
+                          "primaryContactMethod": "Email",
+                          "extn": "",
+                          "city": "ohio",
+                          "title": "",
+                          "spamEmailStatus": "No",
+                          "referenceId": "1976134029",
+                          "leadFirstName": "Christian",
+                          "phoneNumbers": "(717) 999-1111",
+                          "faxNumbers": "",
+                          "referralAccount": "",
+                          "cmRatingID": "",
+                          "tenantID": "developers",
+                          "leadAddedBy": "FranConnect Administrator",
+                          "bounceReason": "",
+                          "smsUnsubscribe": "Opt-In Request not Sent",
+                          "unsubscribeDate": "",
+                          "leadAddDate": "2021-07-18T15:45Z",
+                          "franchiseeNo": "",
+                          "alternateEmail": "",
+                          "leadModifyDate": "2021-07-18T15:52Z",
+                          "convertedBy": "",
+                          "address": "",
+                          "comments": "",
+                          "mobileNumbers": "",
+                          "cmSource2ID": "",
+                          "unsubscribeReason": "",
+                          "contactDetails": {
+                            "contactFirstName": "",
+                            "contactLastName": "",
+                            "referenceId": ""
+                          },
+                          "unsubscribeReasonDetail": "",
+                          "convertedOn": "",
+                          "divisionReferenceId": "",
+                          "serviceID": "Product/Service Update, Newsletters, Announcements, Webinars and Events, Offers, Others, Send Email, Email Communications, Information Email"
+                        }
+                      },
+                      "responseStatus": "Success",
+                      "responseId": "1729301091"
+                    }
+                  }
+                }
+              },
+              "description": "Successful"
+            },
+            "401": {
+              "description": "Unauthorized"
+            },
+            "403": {
+              "description": "Forbidden"
+            },
+            "404": {
+              "description": "Not Found"
+            }
+          }
+        }
+      },
+      "/userauth/oauth/token": {
+        "post": {
+          "tags": [
+            "Refresh Token"
+          ],
+          "summary": "Refresh Token Authentication",
+          "description": "<p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>POST</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">https://auth.franconnect.net/userauth/oauth/token</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">https://auth.franconnectuat.net/userauth/oauth/token</td> </tr></table><br>Perform the following steps to generate a new access token using a refresh token:<ol> <li style=\"margin-left: 1px;\">Using the Postman GUI, select POST as the API method and enter https://auth.franconnectuat.net/userauth/oauth/token as the request url.<p><img src=\"images/Refresh_Token_2.PNG\"></p> </li> <li style=\"margin-left: 1px;\">Enter the following items as query parameters: <ul> <li> <p>&ldquo;grant_type&rdquo; as the key and its value as &ldquo;refresh_token&rdquo;.</p> </li> <li style=\"margin-left: 1px;\"> <p>&ldquo;refresh_token&rdquo; as the key and its value will be the complete refresh token value that you have received from authentication.</p> </li> </ul> <p><img src=\"images/Refresh_Token_3.PNG\"></p> </li> <li style=\"margin-left: 1px;\">Click on Authorization tab and choose Basic Auth for the type field. Enter the Client ID provided to you by FranConnect in the username field, for e.g. FRANC0NN3CT_API. Enter the Client Secret provided to you by FranConnect in the password field, for e.g. DDEEMVOE2L0O1P9E. <p>Contact <a href=\"mailto:helpdesk@franconnect.com\">helpdesk@franconnect.com</a> to get your Client ID and Client Secret.</p> <p><img src=\"images/Refresh_Token_4.PNG\"></p> </li> <li style=\"margin-left: 1px;\">Include the following item in the header of the request: <ul> <li style=\"margin-left: 1px;\"> <p>&ldquo;X-TenantID&rdquo; as the key and its value based on your FranConnect system's URL. If the login URL for your FranConnect system is https://developers.franconnectdemo.net/fc, then the X-TenantID will be developers.franconnectdemo.net. </li> </ul> <p><img src=\"images/Refresh_Token_5.PNG\"></p> </li> <li style=\"margin-left: 1px;\">Click Send to get a new access token along with a new refresh token.</li></ol></p>",
+          "operationId": "Refresh_Token_Auth"
+        }
+      }
+    },
+    "manage-segment/v2/segments/{segmentId}/owners": {
+      "patch": {
         "tags": [
-          "Sales Webhook"
+          "Edit Segments"
         ],
-        "summary": "LEAD",
-        "description": "<p>To enable the Webhook feature, you can send an email to helpdesk@franconnect.com and share the webhook URL where the updates can be pushed in the JSON format. Once the feature is enabled, the Webhook URL must be configured for receiving Webhook notifications. Please read the following steps to configure your Webhook URL:<ol><li>Enter Workflow Name and select Workflow Type in the Sales > Workflows.</li><li>Select when to Trigger the Workflow accordingly.</li><li>Choose Workflow condition “Which Leads do you want to execute this workflow on?” – All Leads or Leads matching required condition(s). If selecting “All Leads”, then as the name suggests, the Workflow condition would apply to all the Leads. But, if selecting “Leads matching required condition(s)”, then select Fields to filter Leads from the drop-down list.</li><li>Choose Action from the drop-down list, and select “Configure Webhook URL”.<p><img src=\"images/Create_Workflow.png\"></li><li>A pop-up “Configure Webhook URL” would display. Enter the valid Webhook URL, and click “Associate & Save”.</li><p><img src=\"images/Configure_Webhook_URL.png\"></ol></p><br><p><b>Receiving Webhook Notifications</b></p><p>FranConnect Sky System would send Webhook notifications via HTTP POST requests in the JSON Format to the URL endpoints that you defined to Retrieve Primary Info of a Lead in the Sales Module along with the Tenant ID. Tenant ID would be the name of the Tenant. An example of the dataset format is given on the right panel.</p>",
-        "operationId": "LEAD",
+        "summary": "Add Units To Segment",
+        "description": "<p class=\"western\">Make a PATCH request to the specified endpoint to add a list of owners to a segment. Refer to the request body down below and the payload example on the right panel to understand what data you require to successfully make this request.</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>PUT</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]]</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Update_Segment.PNG\"></ol>",
+        "operationId": "Add_Units_In_Segment",
+        "consumes": [
+          "application/json"
+        ],
         "produces": [
           "application/json"
         ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "segmentId",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "units": {
+                    "type": "array"
+                  }
+                }
+              },
+              "example": {
+                "owners": [
+                  "1448558113",
+                  "450307910"
+                ]
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "content": {
               "application/json": {
                 "example": {
-                  "fcResponse": {
-                    "responseData": {
-                      "fsLead": {
-                        "locationId1b": "",
-                        "country": "USA",
-                        "leadKilledReasonComment": "",
-                        "dateOfOpen": "",
-                        "investTimeframe": "",
-                        "stateID": "Pennsylvania",
-                        "companyName": "",
-                        "bestTimeToContact": "",
-                        "marketingCodeId": "",
-                        "_bestContactTime344129770": "",
-                        "preferredCity2": "",
-                        "preferredCity1": "",
-                        "primaryPhoneToCall": "",
-                        "statusChangeDate": "",
-                        "division": "",
-                        "unsubscribe": "Opted-In",
-                        "sourceOfFunding": "",
-                        "fax": "",
-                        "zip": "17254",
-                        "forecastClosureDate": "",
-                        "leadOwnerID": "Gragg Salzano",
-                        "leadOwnerReferenceId": "4344056308",
-                        "lastAttended": "2019-12-03T09:56Z",
-                        "bounceEmailStatus": "No",
-                        "leadStatusID": "Contacted",
-                        "probability": "0",
-                        "coApplicantRelationshipID": "",
-                        "homePhone": "",
-                        "webSiteLead": "No",
-                        "ipAddress": "",
-                        "liquidCapitalMax": "More Than $100,000",
-                        "liquidCapitalMin": "",
-                        "firstName": "Cristian",
-                        "phone": "(717) 917-1111",
-                        "forecastRating": "",
-                        "countyID": "",
-                        "background": "",
-                        "lastUpdate": "2021-07-16T12:52Z",
-                        "nextCallDate": "",
-                        "salutation": "Mr.",
-                        "smartSchedulerAppointmentDate": "",
-                        "leadSource2ID": "Internet",
-                        "preferredStateId2": "",
-                        "preferredStateId1": "",
-                        "preferredCountry1": "",
-                        "lastName": "Hernandez",
-                        "preferredCountry2": "",
-                        "city": "SCOTLAND",
-                        "spamEmailStatus": "No",
-                        "referenceId": "319496793",
-                        "browserType": "",
-                        "noOfFieldSold": "",
-                        "franchiseAwarded": "",
-                        "otherLeadSourceDetail": "You Have a New Lead from VeteransOpportunities.com",
-                        "requestDate": "2019-12-03T08:56Z",
-                        "tenantID": "developers",
-                        "bounceReason": "",
-                        "phoneExt": "",
-                        "address": "#43, Palmum Street",
-                        "comments": "",
-                        "address2": "",
-                        "_nickname743760937": "",
-                        "mobile": "",
-                        "unsubscribeReason": "",
-                        "locationId2": "",
-                        "emailID": "sample@domain.com",
-                        "locationId1": "",
-                        "_iAgreeToReceiveTheFranchiseBrochureAndF886597519": "Yes",
-                        "leadKilledReason": "",
-                        "leadRatingID": "",
-                        "homePhoneExt": "",
-                        "noOfUnitReq": "",
-                        "forecastRevenue": "",
-                        "unsubscribeReasonDetail": "",
-                        "divisionReferenceId": "",
-                        "serviceID": "Product/Service Update,Newsletters,Announcements,Webinars and Events,Offers,Others,Email Communications",
-                        "leadSource3ID": "Others"
-                      }
-                    },
-                    "responseStatus": "Success",
-                    "responseId": "717320366"
-                  }
+                  "tenantContext": {
+                    "tenantId": "qamsa6.franconnectqa.net",
+                    "userId": "adm"
+                  },
+                  "data": [
+                    {
+                      "segmentId": "618220048",
+                      "message": "Provided owner list is successfully added in segment.",
+                      "owners": [
+                        "1448558113",
+                        "450307910"
+                      ],
+                      "links": [
+                        {
+                          "rel": "self",
+                          "action": "get",
+                          "href": "https://api.franconnectqa.net/manage-segment/v2/segments/618220048"
+                        }
+                      ]
+                    }
+                  ]
                 }
               }
             },
@@ -5185,180 +5176,188 @@
             "description": "Not Found"
           }
         }
-      }
-    },
-    "/Customer Webhook URL": {
-      "post": {
+      },
+      "delete": {
         "tags": [
-          "INFO MANAGER WEBHOOK"
+          "Edit Segments"
         ],
-        "summary": "FRANCHISE",
-        "description": "<p>To enable this feature, you can send an email to helpdesk@franconnect.com and share the webhook URL(an endpoint that can receive the array of JSON) where the updates can be pushed in the JSON format. Once the feature is enabled, if new data is added, updated, or deleted in any of the tabs (System and Custom), the event is captured. In just 5 minutes the information is pushed to the endpoint provided by you.</p><br><p>Furthermore, if multiple modifications are made within the given 5 minutes period across the franchise(s), you will receive the array of JSON. For example, a Guarantor is added, and an Employee is deleted in an ABC Franchise. An update is also performed on the Center Info details of the XYZ franchise in the same 5 minutes session. Then, all these events will get captured. The dataset format that you will receive for this example is given on the right-hand side<p>",
-        "operationId": "FRANCHISE",
+        "summary": "Delete Units from Segment",
+        "description": "<p class=\"western\">Make a DELETE request to the specified endpoint to delete a list of owners from a segment. Refer to the request body down below and the payload example on the right panel to understand what data you require to successfully make this request.</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>PUT</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]]</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Update_Segment.PNG\"></ol>",
+        "operationId": "Delete_Units_In_Segment",
+        "consumes": [
+          "application/json"
+        ],
         "produces": [
           "application/json"
         ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "segmentId",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "units": {
+                    "type": "array"
+                  }
+                }
+              },
+              "example": {
+                "owners": [
+                  "450307910"
+                ]
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "content": {
               "application/json": {
-                "example": [
-                  {
-                    "tabName": "Guarantors",
-                    "subModule": "fimGuarantor",
-                    "changeEvent": "add",
-                    "referenceId": "1201817558",
-                    "eventDateTime": "2021-07-09T02:52:28.398456Z",
-                    "franchiseeName": "ABC",
-                    "parentReferenceId": "1831705924"
+                "example": {
+                  "tenantContext": {
+                    "tenantId": "qamsa6.franconnectqa.net",
+                    "userId": "adm"
                   },
-                  {
-                    "tabName": "Employees",
-                    "subModule": "fimEmployeesMapping",
-                    "changeEvent": "delete",
-                    "referenceId": "1194156640",
-                    "eventDateTime": "2021-07-09T02:51:44.151463Z",
-                    "franchiseeName": "ABC",
-                    "parentReferenceId": "1831705924"
+                  "data": [
+                    {
+                      "segmentId": "618220048",
+                      "message": "Provided owner list is successfully deleted from segment.",
+                      "owners": [
+                        "450307910"
+                      ],
+                      "links": [
+                        {
+                          "rel": "self",
+                          "action": "get",
+                          "href": "https://api.franconnectqa.net/manage-segment/v2/segments/618220048"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "Successful"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Edit Segments"
+        ],
+        "summary": "Replace Units in Segment",
+        "description": "<p class=\"western\">Make a PUT request to the specified endpoint to replace existing owners from a segment with a new list of owners. Refer to the request body down below and the payload example on the right panel to understand what data you require to successfully make this request.</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>PUT</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]]</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Update_Segment.PNG\"></ol>",
+        "operationId": "Delete_Units_In_Segment",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "segmentId",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "units": {
+                    "type": "array"
+                  }
+                }
+              },
+              "example": {
+                "owners": [
+                  "450307550"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "tenantContext": {
+                    "tenantId": "qamsa6.franconnectqa.net",
+                    "userId": "adm"
                   },
+                  "data": [
+                    {
+                      "segmentId": "618220048",
+                      "message": "Provided owner list is successfully updated in segment.",
+                      "owners": [
+                        "450307910"
+                      ],
+                      "links": [
+                        {
+                          "rel": "self",
+                          "action": "get",
+                          "href": "https://api.franconnectqa.net/manage-segment/v2/segments/618220048"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "data": [
+              {
+                "segmentId": "618220048",
+                "message": "Provided owner list is successfully updated in segment.",
+                "owners": [
+                  "450307910"
+                ],
+                "links": [
                   {
-                    "tabName": "Center Info",
-                    "subModule": "franchisees",
-                    "changeEvent": "update",
-                    "referenceId": "1631650236",
-                    "eventDateTime": "2021-07-09T02:52:10.067197Z",
-                    "franchiseeName": "XYZ",
-                    "parentReferenceId": "1973910563"
+                    "rel": "self",
+                    "action": "get",
+                    "href": "https://api.franconnectqa.net/manage-segment/v2/segments/618220048"
                   }
                 ]
               }
-            },
-            "description": "Successful"
+            ]
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
+          "description": "Successful"
+        },
+        "401": {
+          "description": "Unauthorized"
+        },
+        "403": {
+          "description": "Forbidden"
+        },
+        "404": {
+          "description": "Not Found"
         }
-      }
-    },
-    "/Customer Webhook_URL": {
-      "post": {
-        "tags": [
-          "CRM Webhook"
-        ],
-        "summary": "LEAD/CONTACT",
-        "description": "<p>To enable the Webhook feature, you can send an email to helpdesk@franconnect.com and share the webhook URL where the updates can be pushed in the JSON format. Once the feature is enabled, the Webhook URL must be configured for receiving Webhook notifications. Please read the following steps to configure your Webhook URL:<ol><li>Enter Workflow Name and select Workflow Type along with Record Type in the CRM > Workflows. For this instance, we have selected Lead as the Record Type.</li><li>Select when to Trigger the Workflow accordingly.</li><li>Choose Workflow condition “Which Leads do you want to execute this workflow on?” – All Leads or Leads matching required condition(s). If selecting “All Leads”, then as the name suggests, the Workflow condition would apply to all the Leads. But, if selecting “Leads matching required condition(s)”, then select Fields to filter Leads from the drop-down list.</li><li>Choose Action from the drop-down list, and select “Configure Webhook URL”.<p><img src=\"images/Create_CRM_Workflow.png\"></li><li>A pop-up “Configure Webhook URL” would display. Enter the valid Webhook URL, and click “Associate & Save”.</li><p><img src=\"images/Configure_CRM_Webhook_URL.png\"></ol></p><br><p><b>Receiving Webhook Notifications</b></p><p>FranConnect Sky System would send Webhook notifications via HTTP POST requests in the JSON Format to the URL endpoints that you defined to Retrieve Primary Info of a Lead or Contact in the CRM Module along with the Tenant ID. Tenant ID would be the name of the Tenant. An example of the dataset format is given on the right panel.</p>",
-        "operationId": "LEAD/CONTACT",
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "example": {
-                  "fcResponse": {
-                    "responseData": {
-                      "cmLead": {
-                        "ownerType": "Corporate",
-                        "country": "USA",
-                        "birthdate": "",
-                        "anniversarydate": "",
-                        "companyName": "",
-                        "bestTimeToContact": "",
-                        "suffix": "",
-                        "cmLeadTypeID": "",
-                        "areaID": "",
-                        "unsubscribe": "Opt-In Request not Sent",
-                        "cmLeadStatusID": "New",
-                        "state": "District of Columbia",
-                        "emailIds": "sample@domain.com",
-                        "leadOwnerID": "Martha Hustle",
-                        "leadOwnerReferenceId": "850485234",
-                        "leadAddedByReferenceId": "1",
-                        "areaReferenceId": "",
-                        "bounceEmailStatus": "No",
-                        "cmSource3ID": "",
-                        "referralContact": "",
-                        "leadLastName": "Fernandez",
-                        "cmSource1ID": "",
-                        "zipcode": "20001",
-                        "smsUnsubscribeDate": "",
-                        "franchiseeReferenceId": "",
-                        "lastContactedField": "",
-                        "divisionID": "",
-                        "position": "",
-                        "primaryContactMethod": "Email",
-                        "extn": "",
-                        "city": "ohio",
-                        "title": "",
-                        "spamEmailStatus": "No",
-                        "referenceId": "1976134029",
-                        "leadFirstName": "Christian",
-                        "phoneNumbers": "(717) 999-1111",
-                        "faxNumbers": "",
-                        "referralAccount": "",
-                        "cmRatingID": "",
-                        "tenantID": "developers",
-                        "leadAddedBy": "FranConnect Administrator",
-                        "bounceReason": "",
-                        "smsUnsubscribe": "Opt-In Request not Sent",
-                        "unsubscribeDate": "",
-                        "leadAddDate": "2021-07-18T15:45Z",
-                        "franchiseeNo": "",
-                        "alternateEmail": "",
-                        "leadModifyDate": "2021-07-18T15:52Z",
-                        "convertedBy": "",
-                        "address": "",
-                        "comments": "",
-                        "mobileNumbers": "",
-                        "cmSource2ID": "",
-                        "unsubscribeReason": "",
-                        "contactDetails": {
-                          "contactFirstName": "",
-                          "contactLastName": "",
-                          "referenceId": ""
-                        },
-                        "unsubscribeReasonDetail": "",
-                        "convertedOn": "",
-                        "divisionReferenceId": "",
-                        "serviceID": "Product/Service Update, Newsletters, Announcements, Webinars and Events, Offers, Others, Send Email, Email Communications, Information Email"
-                      }
-                    },
-                    "responseStatus": "Success",
-                    "responseId": "1729301091"
-                  }
-                }
-              }
-            },
-            "description": "Successful"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      }
-    },
-    "/userauth/oauth/token": {
-      "post": {
-        "tags": [
-          "Refresh Token"
-        ],
-        "summary": "Refresh Token Authentication",
-        "description": "<p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>POST</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">https://auth.franconnect.net/userauth/oauth/token</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">https://auth.franconnectuat.net/userauth/oauth/token</td> </tr></table><br>Perform the following steps to generate a new access token using a refresh token:<ol> <li style=\"margin-left: 1px;\">Using the Postman GUI, select POST as the API method and enter https://auth.franconnectuat.net/userauth/oauth/token as the request url.<p><img src=\"images/Refresh_Token_2.PNG\"></p> </li> <li style=\"margin-left: 1px;\">Enter the following items as query parameters: <ul> <li> <p>&ldquo;grant_type&rdquo; as the key and its value as &ldquo;refresh_token&rdquo;.</p> </li> <li style=\"margin-left: 1px;\"> <p>&ldquo;refresh_token&rdquo; as the key and its value will be the complete refresh token value that you have received from authentication.</p> </li> </ul> <p><img src=\"images/Refresh_Token_3.PNG\"></p> </li> <li style=\"margin-left: 1px;\">Click on Authorization tab and choose Basic Auth for the type field. Enter the Client ID provided to you by FranConnect in the username field, for e.g. FRANC0NN3CT_API. Enter the Client Secret provided to you by FranConnect in the password field, for e.g. DDEEMVOE2L0O1P9E. <p>Contact <a href=\"mailto:helpdesk@franconnect.com\">helpdesk@franconnect.com</a> to get your Client ID and Client Secret.</p> <p><img src=\"images/Refresh_Token_4.PNG\"></p> </li> <li style=\"margin-left: 1px;\">Include the following item in the header of the request: <ul> <li style=\"margin-left: 1px;\"> <p>&ldquo;X-TenantID&rdquo; as the key and its value based on your FranConnect system's URL. If the login URL for your FranConnect system is https://developers.franconnectdemo.net/fc, then the X-TenantID will be developers.franconnectdemo.net. </li> </ul> <p><img src=\"images/Refresh_Token_5.PNG\"></p> </li> <li style=\"margin-left: 1px;\">Click Send to get a new access token along with a new refresh token.</li></ol></p>",
-        "operationId": "Refresh_Token_Auth"
       }
     }
   },
@@ -8891,26 +8890,26 @@
           "application/json": {
             "example": {
               "tenantContext": {
-                  "tenantId": "qamsa6.franconnectqa.net",
-                  "userId": "adm"
+                "tenantId": "qamsa6.franconnectqa.net",
+                "userId": "adm"
               },
               "data": [
-                  {
-                      "segmentId": "2131847900",
-                      "customSegmentId": "Custom-880",
-                      "name": "Segment name updated",
-                      "accessibility": "public",
-                      "description": "The description of this segment is updated",
-                      "links": [
-                          {
-                              "rel": "self",
-                              "action": "get",
-                              "href": "https://api.franconnectqa.net/manage-segment/v2/segments/2131847900"
-                          }
-                      ]
-                  }
+                {
+                  "segmentId": "2131847900",
+                  "customSegmentId": "Custom-880",
+                  "name": "Segment name updated",
+                  "accessibility": "public",
+                  "description": "The description of this segment is updated",
+                  "links": [
+                    {
+                      "rel": "self",
+                      "action": "get",
+                      "href": "https://api.franconnectqa.net/manage-segment/v2/segments/2131847900"
+                    }
+                  ]
+                }
               ]
-          }
+            }
           }
         },
         "description": "Successful"

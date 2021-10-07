@@ -139,6 +139,10 @@
           "description": "The purpose of the Operations module is improve operational performance from the brand to the unit level. The FranConnect API allows you create Segment Hierarchies. [note: improve]"
       },
       {
+        "name": "Segment Categories",
+        "description": "These API endpoints support operations associated with Segment Categories."
+      },
+      {
           "name": "Segments",
           "description": "These API endpoints support operations associated with Segments."
       },
@@ -210,6 +214,7 @@
           "Profit and Loss Statements",
           "Memos",
           "Operations",
+          "Segment Categories",
           "Segments",
           "Events and Webhooks",
           "Sales Webhook",
@@ -3873,6 +3878,41 @@
               "description": "Not Found"
             }
           }
+        }
+      },
+      "/v2/categories?associationType=units/segments": {
+        "get":{
+          "tags": [
+            "Segment Categories"
+          ],
+          "summary": "Retrieve Type-Specific Categories",
+          "description": "<p class=\"western\">Make a GET request to the specified endpoint to retrieve type-specific segment categories from your system. Segment categories are of two types: units and segments. The query parameter <b>associationType</b> accepts either \"units\" or \"segments\" as value.</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>POST</td> </tr> <tr> <td><strong>Production API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]]</td> </tr> <tr> <td><strong>UAT API Endpoint</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;. <p><img src=\"images/Retrieve_Segments.PNG\"> <p class=\"western\"></ol></p>",
+          "operationId": "Retrieve_Type-Specific_Categories",
+          "parameters": [
+            {
+              "in": "query",
+              "name": "associationType",
+              "schema": {
+                "type": "string",
+                "enum": ["units", "segments"]
+              },
+              "required": "true"
+            } 
+          ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/RetrieveTypeSpecificCategoriesResp"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
         }
       },
       "/manage-segment/v2/segments/filter": {
@@ -7549,6 +7589,51 @@
           },
           "description": "Successful"
         },
+        "RetrieveTypeSpecificCategoriesResp":{
+          "content": {
+            "application/json": {
+              "example": {
+                    "tenantContext": {
+                        "tenantId": "qamsa6.franconnectqa.net",
+                        "userId": "adm"
+                    },
+                    "data": [
+                        {
+                            "categoryId": "567680764276113411",
+                            "name": "Store",
+                            "parents": [
+                                {
+                                    "categoryId": "567680617202843651"
+                                }
+                            ],
+                            "links": []
+                        },
+                        {
+                            "categoryId": "568671693363478532",
+                            "name": "Storeg",
+                            "parents": [
+                                {
+                                    "categoryId": "568671593954279427"
+                                }
+                            ],
+                            "links": []
+                        },
+                        {
+                            "categoryId": "574932050520309762",
+                            "name": "STORE-C",
+                            "parents": [
+                                {
+                                    "categoryId": "574931346409914371"
+                                }
+                            ],
+                            "links": []
+                        }
+                      ]
+                }
+              }
+            },
+            "description": "Successful"
+      },
         "RetrieveSegmentsResp": {
             "content": {
               "application/json": {

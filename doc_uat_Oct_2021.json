@@ -4332,13 +4332,13 @@
         }
       }
     },
-    "/manage-segment/v2/segments?associationType={units/segments}" :{
+    "/manage-segment/v2/segments?associationType={units/segments}": {
       "post": {
         "tags": [
           "Segments"
         ],
         "summary": "Create Segment",
-        "description": "<p class=\"western\">Make a POST request to the specified endpoint to create a segment.</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>POST</td> </tr> <tr> <td><strong>Production API Endpoint (segment of units)</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]]</td> </tr> <tr> <td><strong>Production API Endpoint (segment of segments)</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]]</td> </tr> <tr> <td><strong>UAT API Endpoint (segment of units)</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]</td> </tr> <tr> <td><strong>UAT API Endpoint (segment of segments)</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p> <p><img src=\"images/Create_Segment.PNG\"></p></ol><p class=\"western\"> You can create two kinds of segments in your system. One is made up of \"units\" (also known as franchises) while the other one is made up of child \"segments\". If the categoryId of your segment belongs to the lowest level of category hierarchy, your segment will only accept valid \"units\". If your categoryId does not belong to the lowest level of category hierarchy, your segment will accept valid child \"segments\". The type of segment will depend on the value passed into the \"associationType\" query parameter.</p><p class=\"western\"> The following steps describe the process of obtaining data associated with different fields to create a segment of units:<ul> <li> A valid categoryId can be obtained from <u>this</u> request by setting query parameter \"associationType\" as units. in your hierarchy of categories. </li> <li> Units are uniquely identified by franchisee_no, which can be obtained for specific locations using <u><a href=\"#operation/Retrieve_Franchise_Number_Specific\">this</a></u> request. </li> <li> [<b>doubt</b>]Users or Owners are uniquely identified by user_no, which can be obtained by using <u>this</u> request. </li></ul></p><p class=\"western\"> The following steps describe the process of obtaining data associated with different fields to create a segment of child segments:<ul> <li> A valid categoryId can be obtained from <u>this</u> request by setting query parameter \"associationType\" as segments. in your hierarchy of categories. </li> <li> Segments are uniquely identified by segmentId. To retrieve a list of valid segments that belong to a particular child category, you have to use<u><a href=\"#operation/Retrieve_Segments\">this</a></u> request.</li> <li>[<b>doubt</b>]Users or Owners are uniquely identified by user_no, which can be obtained by using <u>this</u> request. </li></ul></p><p class=\"western\"> The panel on the right displays request body and response body samples associated with segment creation using both units and segments. Refer to these examples to better understand how to successfully make these requests.</p>",
+        "description": "<p class=\"western\">Make a POST request to the specified endpoint to create a segment.</p><table width=\"100%\" class=\"endpoint-table\"> <tr> <td width=\"25%\"><strong>Operation Name</strong></td> <td width=\"1%\">:</td> <td>POST</td> </tr> <tr> <td><strong>Production API Endpoint (segment of units)</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]]</td> </tr> <tr> <td><strong>Production API Endpoint (segment of segments)</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]]</td> </tr> <tr> <td><strong>UAT API Endpoint (segment of units)</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]</td> </tr> <tr> <td><strong>UAT API Endpoint (segment of segments)</strong></td> <td>:</td> <td valign=\"top\">[url needs reviewing]</td> </tr></table>The following items must be included in the header of the request:<ol> <li> <p>\"Authorization\" as the key and its value in the format \"Bearer access_token\". This access_token is generated as a part of authentication. Click <u><a href=\"#tag/Authentication\">here</a></u> for details on the steps to generate the access token.</p> </li> <li> <p>&ldquo;Content-Type&rdquo; as the key and its value in the format &ldquo;application/json&rdquo;.</p> </li> <li> <p>&ldquo;X-TenantId&rdquo; as the key and its value based on your FranConnect system&rsquo;s URL. Click <u><a href=\"#tag/Authentication\">here</a></u>&nbsp;for details on identifying the &ldquo;X-TenantId&rdquo;.</p> <p><img src=\"images/Create_Segment.PNG\"></p></ol><p class=\"western\"> You can create two kinds of segments in your system. One is made up of \"units\" (also known as franchises) while the other one is made up of child \"segments\". If the categoryId of your segment belongs to the lowest level of category hierarchy, your segment will only accept valid \"units\". If your categoryId does not belong to the lowest level of category hierarchy, your segment will accept valid child \"segments\". The type of segment will depend on the value passed into the \"associationType\" query parameter.</p><p class=\"western\"> The following steps describe the process of obtaining data associated with different fields to create a segment of units:<ul> <li> A valid categoryId can be obtained from <u><a href=\"#operation/Retrieve_Type-Specific_Categories\">this</u> request by setting query parameter \"associationType\" as units. in your hierarchy of categories. </li> <li> Units are uniquely identified by franchisee_no, which can be obtained for specific locations using <u><a href=\"#operation/Retrieve_Franchise_Number_Specific\">this</a></u> request. </li> <li> [<b>doubt</b>]Users or Owners are uniquely identified by user_no, which can be obtained by using <u>this</u> request. </li></ul></p><p class=\"western\"> The following steps describe the process of obtaining data associated with different fields to create a segment of child segments:<ul> <li> A valid categoryId can be obtained from <u><a href=\"#operation/Retrieve_Type-Specific_Categories\">this</u> request by setting query parameter \"associationType\" as segments. in your hierarchy of categories. </li> <li> Segments are uniquely identified by segmentId. To retrieve a list of valid segments that belong to a particular child category, you have to use <u><a href=\"#operation/Retrieve_Segment_By_Categort_Id\">this</a></u> request.</li> <li>[<b>doubt</b>]Users or Owners are uniquely identified by user_no, which can be obtained by using <u>this</u> request. </li></ul></p><p class=\"western\"> The panel on the right displays request body and response body samples associated with segment creation using both units and segments. Refer to these examples to better understand how to successfully make these requests.</p>",
         "operationId": "Create_Segment",
         "consumes": [
           "application/json"
@@ -4350,8 +4350,14 @@
           {
             "in": "query",
             "name": "associationType",
-            "type": "string",
-            "enum": ["units", "segments"]
+            "schema": {
+              "type": "string",
+              "enum": [
+                "units",
+                "segments"
+              ]
+            },
+            "required": "true"
           }
         ],
         "requestBody": {
@@ -4371,7 +4377,10 @@
                   },
                   "accessibility": {
                     "type": "string",
-                    "enum": ["Public", "Private"]
+                    "enum": [
+                      "Public",
+                      "Private"
+                    ]
                   },
                   "characterCode": {
                     "type": "string"
@@ -4393,42 +4402,46 @@
               "example": {
                 "units": {
                   "summary": "Request body sample of segment creation using UNITS",
-                  "value": {
-                    "name": "Segment of units",
-                    "categoryId": "7887788887878",
-                    "customSegmentId": "Custom-1674",
-                    "accessibility": "Public",
-                    "characterCode": "UTF-8",
-                    "description": "This segment contains units",
-                    "owners": [
-                      "1"
-                    ],
-                    "units": [
-                      "1455354069",
-                      "1933677728",
-                      "489668018"
-                    ],
-                    "segments": []
-                  }
+                  "value": [
+                    {
+                      "name": "Segment of units",
+                      "categoryId": "7887788887878",
+                      "customSegmentId": "Custom-1674",
+                      "accessibility": "Public",
+                      "characterCode": "UTF-8",
+                      "description": "This segment contains units",
+                      "owners": [
+                        "1"
+                      ],
+                      "units": [
+                        "1455354069",
+                        "1933677728",
+                        "489668018"
+                      ],
+                      "segments": []
+                    }
+                  ]
                 },
                 "segments": {
                   "summary": "Request body sample of segment creation using child SEGMENTS",
-                  "value": {
-                    "name": "Segment of child segments",
-                    "categoryId": "575561777069162500",
-                    "customSegmentId": "Custom-1614",
-                    "accessibility": "Public",
-                    "characterCode": "UTF-8",
-                    "description": "This segment contains child segments",
-                    "owners": [
-                      "336881778"
-                    ],
-                    "units": [],
-                    "segments": [
-                      "1966879988",
-                      "387567111"
-                    ]
-                  }
+                  "value": [
+                    {
+                      "name": "Segment of child segments",
+                      "categoryId": "575561777069162500",
+                      "customSegmentId": "Custom-1614",
+                      "accessibility": "Public",
+                      "characterCode": "UTF-8",
+                      "description": "This segment contains child segments",
+                      "owners": [
+                        "336881778"
+                      ],
+                      "units": [],
+                      "segments": [
+                        "1966879988",
+                        "387567111"
+                      ]
+                    }
+                  ]
                 }
               }
             }
@@ -8216,51 +8229,51 @@
                 "summary": "Response sample of segment creation using UNITS",
                 "value": {
                   "tenantContext": {
-                      "tenantId": "qamsa6.franconnectqa.net",
-                      "userId": "adm"
+                    "tenantId": "qamsa6.franconnectqa.net",
+                    "userId": "adm"
                   },
                   "data": [
-                      {
-                          "segmentId": "387567111",
-                          "customSegmentId": "Custom-1674",
-                          "name": "Segment of units",
-                          "accessibility": "public",
-                          "description": "This segment contains units",
-                          "links": [
-                              {
-                                  "rel": "self",
-                                  "action": "get",
-                                  "href": "https://api.franconnectqa.net/manage-segment/v2/segments/387567111"
-                              }
-                          ]
-                      }
+                    {
+                      "segmentId": "387567111",
+                      "customSegmentId": "Custom-1674",
+                      "name": "Segment of units",
+                      "accessibility": "public",
+                      "description": "This segment contains units",
+                      "links": [
+                        {
+                          "rel": "self",
+                          "action": "get",
+                          "href": "https://api.franconnectqa.net/manage-segment/v2/segments/387567111"
+                        }
+                      ]
+                    }
                   ]
-              }
+                }
               },
               "segments": {
                 "summary": "Response sample of segment creation using child SEGMENTS",
                 "value": {
                   "tenantContext": {
-                      "tenantId": "qamsa6.franconnectqa.net",
-                      "userId": "adm"
+                    "tenantId": "qamsa6.franconnectqa.net",
+                    "userId": "adm"
                   },
                   "data": [
-                      {
-                          "segmentId": "2036527604",
-                          "customSegmentId": "Custom-1614",
-                          "name": "Segment of child segments",
-                          "accessibility": "public",
-                          "description": "This segment contains child segments",
-                          "links": [
-                              {
-                                  "rel": "self",
-                                  "action": "get",
-                                  "href": "https://api.franconnectqa.net/manage-segment/v2/segments/2036527604"
-                              }
-                          ]
-                      }
+                    {
+                      "segmentId": "2036527604",
+                      "customSegmentId": "Custom-1614",
+                      "name": "Segment of child segments",
+                      "accessibility": "public",
+                      "description": "This segment contains child segments",
+                      "links": [
+                        {
+                          "rel": "self",
+                          "action": "get",
+                          "href": "https://api.franconnectqa.net/manage-segment/v2/segments/2036527604"
+                        }
+                      ]
+                    }
                   ]
-              }
+                }
               }
             }
           }

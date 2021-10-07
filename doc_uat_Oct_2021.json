@@ -4399,8 +4399,8 @@
                   }
                 }
               },
-              "example": {
-                "units": {
+              "examples": {
+                "UNITS": {
                   "summary": "Request body sample of segment creation using UNITS",
                   "value": [
                     {
@@ -4422,7 +4422,7 @@
                     }
                   ]
                 },
-                "segments": {
+                "SEGMENTS": {
                   "summary": "Request body sample of segment creation using child SEGMENTS",
                   "value": [
                     {
